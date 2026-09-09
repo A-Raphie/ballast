@@ -24,15 +24,15 @@ Event: Bitget AI Base Camp Hackathon S2 (bitget.com/activity-hub/hackathon) · D
 | design-direction | 2 | ✅ | embedded in brief (axes/avoid-list/familiarity anchor) |
 | spec | 2 | ✅ | PRD/Architecture/Tasks/Memory/Handoff/design.md written |
 | agents-md | 2 | ✅ | AGENTS.md written |
-| semantic-tokens | 3 | ⏸ | at Next.js scaffold (Phase 0 last item) |
+| semantic-tokens | 3 | ✅ | globals.css token architecture; zero-raw-hex gate clean |
 | winsznx-ui | 2 | 🔍 | corpus style system not needed: sponsor-mined palette + brief suffice; revisit if landing style support needed |
-| deploy-target check | 2 | ✅ | Vercel (UI) + GitHub Actions cron (runner); Railway slot occupied |
+| deploy-target check | 2 | ✅ | Vercel (UI) + local caffeinate runner + GH Actions staged; Railway slot occupied |
 | andrej-karpathy | 3 | ✅ | always-on during coding |
-| lemmaly / invariant-guard | 3 | ⏸ | on policy engine + ledger append logic (subtle correctness) |
-| ui-craft | 3 | ⏸ | per-screen loop from design.md flow order |
-| component-harvest | 3 | ⏸ | before hand-writing UI primitives |
-| ux-laws / humaniser | 3+ | ⏸ | interface decisions + all copy |
-| browser-testing-with-devtools | 3 | ⏸ | inner loop once UI renders |
+| lemmaly | 3 | ✅ | protocol applied to ledger/policy/sensor (O(1) appends, O(m) gate, Set-filter); fell out of invariant-guard: linear code, invariants stated inline |
+| ui-craft | 3 | ✅ | per-screen loop: kit (harvested) -> band -> 5 surfaces; front door = landing with live band; states: halt/deny/allow + empty states shipped |
+| component-harvest | 3 | ✅ | beautifului inventory fetched live; Thinking/Approval/Diff-table grammar re-expressed on tokens; signature (band) bespoke |
+| ux-laws / humaniser | 3+ | ⏸ | copy pass at polish stage (Stage 4) |
+| browser-testing-with-devtools | 3 | ✅ | IAB render verification: control room + landing screenshots, clause-chain interaction clicked live; decision-join bug caught + fixed |
 | dos-verify-done-claims | 3+ | ⏸ | on any "done" report |
 | wallet-connect-fix | 3 | 🔍 | no wallet connect surface (exchange API agent) |
 | terminal-preflight | 5+ | ⏸ | before any recording/browser launch |
