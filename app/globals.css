@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* Ballast semantic tokens. Values mined from bitget.com computed styles Sep 9 2026
+   (docs/design.md). Zero raw hex outside this block: the grep gate fails any component
+   that hardcodes a color. */
+
+:root {
+  /* Elevation ladder: field < panel < raised < overlay */
+  --bg-base: #070808;
+  --bg-surface: #151517;
+  --bg-raised: #252629;
+  --bg-overlay: #1b1c1f;
+
+  /* Text tiers: exactly three */
+  --text-primary: #f4f5f7;
+  --text-secondary: #8e8e92;
+  --text-muted: #57585c;
+
+  /* Border scale */
+  --border-default: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Decision ink: the ONLY chroma. Appears exclusively where Ballast acted
+     (plotted fixes, sealed clause chains, agent-live status). Never decorative. */
+  --decision: #00e5ff;
+  --decision-deep: #03aac7;
+  --decision-subtle: rgba(0, 229, 255, 0.09);
+  --decision-rgb: 0 229 255;
+
+  /* Market context markers (events Ballast did not create): lavender-white */
+  --context-marker: #f8f7ff;
+
+  /* Status: glyphs + labels always; color is never the only signal.
+     Desaturated on purpose: denied/passed are states, not alarms. */
+  --status-pass: #56c99a;
+  --status-pass-bg: rgba(86, 201, 154, 0.1);
+  --status-deny: #d97941;
+  --status-deny-bg: rgba(217, 121, 65, 0.1);
+  --status-neutral: #8e8e92;
+
+  /* Radius: named by role */
+  --radius-input: 6px;
+  --radius-card: 8px;
+  --radius-panel: 12px;
+  --radius-pill: 999px;
+
+  /* Type: Switzer is Bitget's own body face (Fontshare); Archivo carries
+     oversized numerals only. Mono for log lines and ledger evidence. */
+  --font-sans: "Switzer", ui-sans-serif, system-ui, Arial, sans-serif;
+  --font-display: "Archivo", "Switzer", ui-sans-serif, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Spacing 4/8 scale is Tailwind default; no custom scale needed. */
+}
+
+/* Class layer */
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-panel);
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.hairline {
+  border-color: var(--border-default);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px; /* Fitts: touch target */
+  padding: 0 20px;
+  border-radius: var(--radius-input);
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.btn-primary {
+  background: var(--decision);
+  color: var(--bg-base);
+}
+.btn-primary:hover {
+  background: var(--decision-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--text-secondary);
+}
+
+.micro {
+  font-size: 11px;
+  letter-spacing: 0.14em; /* Butterick: all-caps carries +5-12% tracking */
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.caption {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.number-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums; /* financial tables must not jitter */
+  font-variant-numeric: tabular-nums "zero";
+  letter-spacing: -0.02em;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* Focus + motion */
+:focus-visible {
+  outline: 3px solid rgb(var(--decision-rgb) / 0.7);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+[data-reduce-motion="true"] *,
+[data-reduce-motion="true"] *::before,
+[data-reduce-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+}

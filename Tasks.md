@@ -5,16 +5,16 @@ Deadline arithmetic: submission closes Sep 21 (UTC+8). Paper-log days are the sc
 
 ## Phase 0 — Foundations (Sep 9, today)
 - [x] Repo + spec scaffold + design brief — done when docs exist and are pushed
-- [ ] Keyless data probe: public endpoints return rToken + crypto tickers/candles — done when a script prints a dual-market price row with no key
+- [x] Keyless data probe: public endpoints return rToken + crypto tickers/candles — verified live Sep 9 (single bulk call; multi-symbol rejected)
 - [ ] Study `bitget-agent-sdk` paper-trading path (local SDK clone); map exact call surface for orders/fills
-- [ ] Ledger schema + `policy/POLICY.md` v0 draft (5-8 clauses: max book drift, drawdown guard, hedge ratio band, event-severity minimum, blackout, single-asset concentration cap)
-- [ ] Next.js scaffold + semantic tokens from `docs/design.md` (zero raw hex)
+- [x] Ledger schema + `policy/POLICY.md` v0 draft (5-8 clauses: max book drift, drawdown guard, hedge ratio band, event-severity minimum, blackout, single-asset concentration cap)
+- [x] Next.js scaffold + semantic tokens from `docs/design.md` (zero raw hex; grep gate clean)
 
 ## Phase 1 — Spike to running loop (Sep 10-12)
 - [ ] Executor spike with his Demo API key: one paper order + fill recorded in ledger (DEPENDS on his key)
-- [ ] Decision core wired: qwen3.8-max proposal on a sensed event, policy gate verdict, ledger write
+- [~] Decision core wired: threshold-fallback live end-to-end (propose -> gate -> pending-key order); LLM path behind LLM_PROVIDER flag awaiting Qwen key
 - [ ] Runner live: GitHub Actions cron appends + commits; 24h unattended survival
-- [ ] Control room v0: Night Watch Band renders the real ledger (windows, markers, fixes)
+- [x] Control room v0: Night Watch Band renders the real ledger (windows, markers, fixes, clause chain)
 - [ ] Paper-log clock audit: confirm fills timestamp from first executor day (log-days accrue from Sep 10-11)
 
 ## Phase 2 — Continuous run + full surface (Sep 13-16)

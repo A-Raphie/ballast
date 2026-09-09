@@ -1,0 +1,38 @@
+# Ballast tick runner: appends to the ledger every 15 minutes and commits.
+# Secrets required before first run (set when his demo key lands):
+#   BITGET_DEMO_KEY / BITGET_DEMO_SECRET / BITGET_DEMO_PASSPHRASE  (paper env)
+#   LLM_PROVIDER=qwen, LLM_API_KEY (Qwen credits key)
+name: tick
+on:
+  workflow_dispatch: {}
+  # schedule disabled while the local Mac runner owns the ledger (two writers
+  # would conflict on events.jsonl). Enable when switching to remote-only mode.
+  # schedule:
+  #   - cron: "*/15 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: tick
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+      - run: npm run tick
+        env:
+          BITGET_DEMO_KEY: ${{ secrets.BITGET_DEMO_KEY }}
+          BITGET_DEMO_SECRET: ${{ secrets.BITGET_DEMO_SECRET }}
+          BITGET_DEMO_PASSPHRASE: ${{ secrets.BITGET_DEMO_PASSPHRASE }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      - run: |
+          git config user.name "ballast-runner"
+          git config user.email "runner@ballast.local"
+          git add ledger/
+          git diff --cached --quiet || git commit -m "tick: ledger update $(date -u +%FT%TZ)"
+          git push

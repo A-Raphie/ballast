@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "targets": { "rtokenPct": 0.65, "hedgePct": 0.25, "usdtPct": 0.1 },
+  "clauses": [
+    { "id": "B1-drift", "text": "Rebalance only when a sleeve drifts more than 10 percentage points from its written target.", "threshold": "drift > 10pp", "onUnmeasurable": "halt" },
+    { "id": "B2-drawdown", "text": "No action that increases market exposure while the book is down more than 2.5% from its 24h-open value.", "threshold": "dd <= 2.5% or risk-reducing", "onUnmeasurable": "halt" },
+    { "id": "B3-hedge-band", "text": "The crypto hedge sleeve must stay between 20% and 50% of book value.", "threshold": "20%-50%", "onUnmeasurable": "deny" },
+    { "id": "B4-event", "text": "A shift requires a macro event of medium severity or higher within the last 12 hours.", "threshold": "severity >= medium within 12h", "onUnmeasurable": "halt" },
+    { "id": "B5-blackout", "text": "No rebalance within 30 minutes of the US equity open or close (14:30 / 21:00 UTC).", "threshold": "outside open/close +/-30min", "onUnmeasurable": "deny" },
+    { "id": "B6-concentration", "text": "No single position above 35% of book value after the shift.", "threshold": "max position <= 35%", "onUnmeasurable": "halt" },
+    { "id": "B7-stale", "text": "All proposals halt when the freshest market row is older than 10 minutes.", "threshold": "data age <= 600s", "onUnmeasurable": "deny" }
+  ]
+}
