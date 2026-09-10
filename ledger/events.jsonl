@@ -41,3 +41,12 @@
 {"seq":40,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.3,"chg24h":0.02849,"ts":1789077701686}
 {"seq":41,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":489.74,"chg24h":-0.00484,"ts":1789077701686}
 {"seq":42,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.34,"chg24h":-0.00602,"ts":1789077701686}
+{"seq":43,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77186,"chg24h":-0.00897,"ts":1789078604498}
+{"seq":44,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2459.28,"chg24h":0.00483,"ts":1789078604498}
+{"seq":45,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.76,"chg24h":-0.00791,"ts":1789078604498}
+{"seq":46,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.89,"chg24h":-0.02071,"ts":1789078604498}
+{"seq":47,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.82,"chg24h":-0.00957,"ts":1789078604498}
+{"seq":48,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.37,"chg24h":0.02943,"ts":1789078604498}
+{"seq":49,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":490.25,"chg24h":-0.00457,"ts":1789078604498}
+{"seq":50,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.35,"chg24h":-0.00577,"ts":1789078604498}
+{"seq":51,"kind":"macro","source":"yahoo-finance","headline":"Stocks Pressured as Inflation Fears Boost Bond Yields","severity":"medium","assetsAffected":["*"],"ts":1789078604498}
