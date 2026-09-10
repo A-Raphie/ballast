@@ -1,0 +1,32 @@
+name: key-probe
+on:
+  workflow_dispatch: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: |
+          cat > /tmp/probe.mjs << 'PROBE'
+          import { createHmac } from "node:crypto";
+          const KEY = process.env.BITGET_DEMO_KEY, SEC = process.env.BITGET_DEMO_SECRET, PASS = process.env.BITGET_DEMO_PASSPHRASE;
+          async function call(method, path, pap) {
+            const ts = Date.now().toString();
+            const qs = path.includes("?") ? path.slice(path.indexOf("?")+1) : "";
+            const msg = ts + method.toUpperCase() + path.split("?")[0] + qs;
+            const sign = createHmac("sha256", SEC).update(msg).digest("base64");
+            const headers = { "ACCESS-KEY": KEY, "ACCESS-SIGN": sign, "ACCESS-TIMESTAMP": ts, "ACCESS-PASSPHRASE": PASS, "Content-Type": "application/json", locale: "en-US" };
+            if (pap) headers["paptrading"] = "1";
+            const res = await fetch("https://api.bitget.com" + path, { headers });
+            console.log(`${pap ? "DEMO" : "LIVE"} ${path} ->`, JSON.stringify(await res.json()).slice(0, 220));
+          }
+          await call("GET", "/api/v2/spot/account/info", false);
+          await call("GET", "/api/v2/spot/account/info", true);
+          await call("GET", "/api/v2/spot/market/tickers?symbol=BTCUSDT", false);
+          PROBE
+          node /tmp/probe.mjs
+        env:
+          BITGET_DEMO_KEY: ${{ secrets.BITGET_DEMO_KEY }}
+          BITGET_DEMO_SECRET: ${{ secrets.BITGET_DEMO_SECRET }}
+          BITGET_DEMO_PASSPHRASE: ${{ secrets.BITGET_DEMO_PASSPHRASE }}
