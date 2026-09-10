@@ -33,3 +33,11 @@
 {"seq":32,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.15,"chg24h":-0.00595,"ts":1789076797939}
 {"seq":33,"kind":"macro","source":"yahoo-finance","headline":"Look Very Hard at Microsoft and Alphabet as Rate Hike Fears Roil Markets","severity":"medium","assetsAffected":["*"],"ts":1789076797939}
 {"seq":34,"kind":"macro","source":"yahoo-finance","headline":"Bond yields tick higher as oil tops $100: AlphaCheck","severity":"medium","assetsAffected":["*"],"ts":1789076797939}
+{"seq":35,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77114.17,"chg24h":-0.01344,"ts":1789077701686}
+{"seq":36,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2458.91,"chg24h":-0.00129,"ts":1789077701686}
+{"seq":37,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.67,"chg24h":-0.00935,"ts":1789077701686}
+{"seq":38,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.77,"chg24h":-0.02156,"ts":1789077701686}
+{"seq":39,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709,"chg24h":-0.01022,"ts":1789077701686}
+{"seq":40,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.3,"chg24h":0.02849,"ts":1789077701686}
+{"seq":41,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":489.74,"chg24h":-0.00484,"ts":1789077701686}
+{"seq":42,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.34,"chg24h":-0.00602,"ts":1789077701686}
