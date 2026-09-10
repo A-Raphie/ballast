@@ -70,3 +70,12 @@
 {"seq":69,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.05,"chg24h":0.02743,"ts":1789080411399}
 {"seq":70,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":490.02,"chg24h":-0.00402,"ts":1789080411399}
 {"seq":71,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.85,"chg24h":-0.00646,"ts":1789080411399}
+{"seq":72,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76866.86,"chg24h":-0.0144,"ts":1789081313384}
+{"seq":73,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2446.81,"chg24h":-0.0026,"ts":1789081313384}
+{"seq":74,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.53,"chg24h":-0.0084,"ts":1789081313384}
+{"seq":75,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.44,"chg24h":-0.02281,"ts":1789081313384}
+{"seq":76,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.04,"chg24h":-0.0107,"ts":1789081313384}
+{"seq":77,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.05,"chg24h":0.02638,"ts":1789081313384}
+{"seq":78,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":490.06,"chg24h":-0.00431,"ts":1789081313384}
+{"seq":79,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.12,"chg24h":-0.00599,"ts":1789081313384}
+{"seq":80,"kind":"macro","source":"yahoo-finance","headline":"As 10-Year Yields Close In on 5%, Piper Sandler Says Caterpillar and Industrials Are the New AI Winners","severity":"medium","assetsAffected":["*"],"ts":1789081313384}
