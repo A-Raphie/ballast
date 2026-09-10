@@ -54,7 +54,7 @@ export interface OrderEvent {
   market: MarketKind;
   qty: number;
   type: "market";
-  execution: "paper" | "pending-key";
+  execution: "paper" | "pending-key" | "simulated";
   ts: number;
 }
 

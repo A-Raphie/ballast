@@ -8,6 +8,7 @@ import { senseMacro, headlineHashes } from "./macro";
 import { loadBook, saveBook } from "./book";
 import { propose } from "./propose";
 import { evaluate } from "./policy";
+import { execute } from "./executor";
 import type { LedgerEvent, MarketEvent, MacroEvent, ProposalEvent } from "./types";
 
 async function main(): Promise<void> {
@@ -42,33 +43,33 @@ async function main(): Promise<void> {
     const book = await loadBook(now);
     await saveBook(book);
 
-    // 3. propose
-    const proposal: ProposalEvent | null = await propose(book, macroRecent, pxOf, now);
-    if (proposal) {
-      const proposalId = `p${now}`;
-      proposal.id = proposalId;
-      toAppend.push(proposal);
-      // 4. gate
-      const verdict = evaluate(
-        { now, book, pxOf, recentMacro: macroRecent, dataAgeMs },
-        proposal,
-        proposalId,
-      );
-      toAppend.push(verdict);
-      // 5. execute: real paper orders need the demo key; until then the allow is
-      //    recorded honestly as pending-key, never as a fill.
-      if (verdict.result === "allow") {
-        toAppend.push({
-          kind: "order",
-          decisionId: proposalId,
-          side: proposal.to === "crypto" ? "buy" : "sell",
-          symbol: proposal.to === "crypto" ? "BTCUSDT" : "RNVDAUSDT",
-          market: proposal.to === "crypto" ? "crypto" : "rtoken",
-          qty: 0, // sized by the executor once the demo key is live
-          type: "market",
-          execution: process.env.BITGET_DEMO_KEY ? "paper" : "pending-key",
-          ts: now,
-        });
+    // 3. propose — with a cooldown invariant: never re-propose within 60 min of
+    //    the last verdict. Overnight this prevents identical allow-spam while a
+    //    paper order is still pending; fills resolve drift and stop proposals
+    //    naturally.
+    const lastVerdictTs = latestVerdictTs(events);
+    const cooldownMs = 60 * 60 * 1000;
+    if (lastVerdictTs !== undefined && now - lastVerdictTs < cooldownMs) {
+      // still inside cooldown: sense-only tick
+    } else {
+      const proposal: ProposalEvent | null = await propose(book, macroRecent, pxOf, now);
+      if (proposal) {
+        const proposalId = `p${now}`;
+        proposal.id = proposalId;
+        toAppend.push(proposal);
+        // 4. gate
+        const verdict = evaluate(
+          { now, book, pxOf, recentMacro: macroRecent, dataAgeMs },
+          proposal,
+          proposalId,
+        );
+        toAppend.push(verdict);
+        // 5. execute: demo-capable key -> real paper orders; otherwise simulated
+        //    fills against live prices, labeled "simulated" in every ledger line.
+        if (verdict.result === "allow") {
+          const exec = await execute(verdict, proposal, book, pxOf);
+          if (exec) toAppend.push(exec.order, exec.fill);
+        }
       }
     }
   } catch (e) {
@@ -83,6 +84,12 @@ async function main(): Promise<void> {
 function latestMarketTs(events: any[]): number | undefined {
   let latest: number | undefined;
   for (const e of events) if (e.kind === "market" && (latest === undefined || e.ts > latest)) latest = e.ts;
+  return latest;
+}
+
+function latestVerdictTs(events: any[]): number | undefined {
+  let latest: number | undefined;
+  for (const e of events) if (e.kind === "verdict" && (latest === undefined || e.ts > latest)) latest = e.ts;
   return latest;
 }
 
