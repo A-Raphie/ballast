@@ -84,3 +84,72 @@ export function validateWrite(
 export async function writePolicyConfig(next: PolicyConfig): Promise<void> {
   await fs.writeFile(POLICY_PATH, JSON.stringify(next, null, 2) + "\n");
 }
+
+// ---- Remote (GitHub) layer ------------------------------------------------
+// The public deploy holds no writable files, so the site reads the live
+// rulebook from the repo and commits rule edits back through the Contents
+// API. The runner on the agent's host pulls the repo each tick and obeys.
+
+let remoteCache: { at: number; config: PolicyConfig } | null = null;
+const REMOTE_TTL_MS = 60_000;
+
+function gh(): { token: string; repo: string } | null {
+  const token = process.env.GITHUB_TOKEN;
+  const repo = process.env.GITHUB_REPO;
+  if (!token || !repo) return null;
+  return { token, repo };
+}
+
+export function remotePolicyEnabled(): boolean {
+  return Boolean(gh());
+}
+
+export async function readPolicyLive(): Promise<PolicyConfig | null> {
+  const g = gh();
+  if (!g) return null;
+  if (remoteCache && Date.now() - remoteCache.at < REMOTE_TTL_MS) return remoteCache.config;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${g.repo}/contents/policy/policy.json`, {
+      headers: { authorization: `Bearer ${g.token}`, accept: "application/vnd.github+json", user_agent: "ballast" },
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) return null;
+    const body = (await res.json()) as { content?: string; encoding?: string };
+    if (body.encoding !== "base64" || !body.content) return null;
+    const config = JSON.parse(Buffer.from(body.content, "base64").toString("utf8")) as PolicyConfig;
+    remoteCache = { at: Date.now(), config };
+    return config;
+  } catch {
+    return null;
+  }
+}
+
+export async function commitPolicyLive(
+  next: PolicyConfig,
+  message: string,
+): Promise<{ ok: true; commitUrl: string } | { ok: false; error: string }> {
+  const g = gh();
+  if (!g) return { ok: false, error: "no GitHub credential configured" };
+  try {
+    const current = await fetch(`https://api.github.com/repos/${g.repo}/contents/policy/policy.json`, {
+      headers: { authorization: `Bearer ${g.token}`, accept: "application/vnd.github+json", user_agent: "ballast" },
+      signal: AbortSignal.timeout(8000),
+    });
+    const sha = current.ok ? ((await current.json()) as { sha: string }).sha : undefined;
+    const res = await fetch(`https://api.github.com/repos/${g.repo}/contents/policy/policy.json`, {
+      method: "PUT",
+      headers: { authorization: `Bearer ${g.token}`, accept: "application/vnd.github+json", user_agent: "ballast", "content-type": "application/json" },
+      body: JSON.stringify({
+        message,
+        content: Buffer.from(JSON.stringify(next, null, 2) + "\n", "utf8").toString("base64"),
+        ...(sha ? { sha } : {}),
+      }),
+      signal: AbortSignal.timeout(15000),
+    });
+    const body = (await res.json()) as { commit?: { html_url?: string }; message?: string };
+    if (!res.ok) return { ok: false, error: body.message ?? `HTTP ${res.status}` };
+    return { ok: true, commitUrl: body.commit?.html_url ?? "" };
+  } catch (e) {
+    return { ok: false, error: String(e).slice(0, 120) };
+  }
+}

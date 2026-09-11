@@ -111,8 +111,8 @@ export function PolicyEditor({
         The agent cannot skip this trail: its next verdict cites the version you saved.
       </p>
       <p className="caption mt-2 text-[var(--text-muted)]">
-        On the public deploy the rulebook is read-only: the agent holds the pen, and rule changes
-        ship through its repo. Self-hosted instances accept writes.
+        A save commits the new rulebook to the agent's repo. The running agent pulls it before
+        its next tick, obeys it, and cites that version in every verdict that follows.
       </p>
     </div>
   );

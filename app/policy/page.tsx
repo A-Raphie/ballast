@@ -1,4 +1,4 @@
-import { readPolicyConfig } from "@/agent/policy-config";
+import { readPolicyLive, readPolicyConfig, remotePolicyEnabled } from "@/agent/policy-config";
 import { readLedger } from "@/lib/ledger";
 import { Panel } from "@/app/components/kit";
 import { PolicyEditor } from "./policy-editor";
@@ -9,7 +9,11 @@ const pct = (x: number) => `${(x * 100).toFixed(0)}%`;
 const pp = (x: number) => `${(x * 100).toFixed(0)}`;
 
 export default async function PolicyPage() {
-  const [policy, view] = await Promise.all([readPolicyConfig(), readLedger()]);
+  // live rulebook first: the repo is the source of truth the agent pulls from
+  const [policy, view] = await Promise.all([
+    (remotePolicyEnabled() ? await readPolicyLive() : null) ?? readPolicyConfig(),
+    readLedger(),
+  ]);
   const k = policy.knobs;
   const t = policy.targets;
 
