@@ -991,3 +991,11 @@
 {"seq":989,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.86,"chg24h":0.01043,"ts":1789162569969}
 {"seq":990,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.12,"chg24h":0.00764,"ts":1789162569969}
 {"seq":991,"kind":"macro","source":"yahoo-finance","headline":"Stocks Slump as Crude Prices Soar and Bond Yields Surge","severity":"medium","assetsAffected":["*"],"ts":1789162569969}
+{"seq":992,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77246.43,"chg24h":0.00096,"ts":1789163473761}
+{"seq":993,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2529.64,"chg24h":0.02828,"ts":1789163473761}
+{"seq":994,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.64,"chg24h":0.00245,"ts":1789163473761}
+{"seq":995,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.38,"chg24h":-0.00096,"ts":1789163473761}
+{"seq":996,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.93,"chg24h":0.00858,"ts":1789163473761}
+{"seq":997,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.47,"chg24h":0.01928,"ts":1789163473761}
+{"seq":998,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.01,"chg24h":0.01103,"ts":1789163473761}
+{"seq":999,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.54,"chg24h":0.00817,"ts":1789163473761}
