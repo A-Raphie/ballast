@@ -677,3 +677,14 @@
 {"seq":675,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.85,"chg24h":0.00781,"ts":1789137266784}
 {"seq":676,"kind":"macro","source":"yahoo-finance","headline":"Best hedges against inflation: 6 ways to protect your purchasing power","severity":"medium","assetsAffected":["*"],"ts":1789137266784}
 {"seq":677,"kind":"macro","source":"yahoo-finance","headline":"Wall St climbs after August inflation report, oil price slide","severity":"medium","assetsAffected":["*"],"ts":1789137266784}
+{"seq":678,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78630,"chg24h":0.01686,"ts":1789138169939}
+{"seq":679,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2597.53,"chg24h":0.06495,"ts":1789138169939}
+{"seq":680,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.8,"chg24h":-0.00525,"ts":1789138169939}
+{"seq":681,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.82,"chg24h":0.00754,"ts":1789138169939}
+{"seq":682,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.63,"chg24h":0.00515,"ts":1789138169939}
+{"seq":683,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.64,"chg24h":0.04368,"ts":1789138169939}
+{"seq":684,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.55,"chg24h":0.00246,"ts":1789138169939}
+{"seq":685,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.3,"chg24h":0.00734,"ts":1789138169939}
+{"seq":686,"kind":"macro","source":"yahoo-finance","headline":"Fed rate hike odds surge to 90% on monthly jump in core prices","severity":"medium","assetsAffected":["*"],"ts":1789138169939}
+{"seq":687,"kind":"macro","source":"yahoo-finance","headline":"US consumer inflation picks up in August","severity":"medium","assetsAffected":["*"],"ts":1789138169939}
+{"seq":688,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Rallies On Surprise Inflation Data; This Tech Icon Eyes A Breakout (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789138169939}
