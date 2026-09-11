@@ -9,8 +9,21 @@ export default async function Landing() {
   const v = await readLedger();
   const live = v.lastTickTs !== null && Date.now() - v.lastTickTs < 20 * 60 * 1000;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Ballast",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Web",
+    description:
+      "An autonomous agent that shifts tokenized US stock exposure into crypto on overnight macro shocks, with a clause-chain receipt for every decision.",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    author: { "@type": "Person", name: "Raphie", url: "https://x.com/a_raphie" },
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* centered fold: eyebrow, h1, one paragraph, CTAs */}
       <section className="mx-auto max-w-3xl px-6 pb-16 pt-24 text-center">
         <div className="micro mb-5">Bitget AI Base Camp Hackathon S2 · Agentic Trading</div>

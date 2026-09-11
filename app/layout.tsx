@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SkipLink, OfflineBanner } from "./components/site-chrome";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://try-ballast.netlify.app"),
   title: "Ballast: the overnight shift for tokenized US stocks",
   description:
-    "When macro news breaks while Wall Street sleeps, Ballast shifts your tokenized-stock book into crypto. Every shift ships with the clause chain that allowed it.",
+    "When macro news breaks while Wall Street sleeps, Ballast shifts your tokenized-stock book into crypto. Every decision ships with the clause chain that allowed it.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Ballast: the overnight shift for tokenized US stocks",
+    description:
+      "A trading agent that shifts your tokenized-stock book into crypto on overnight shocks, and shows the clause chain behind every move.",
+    url: "https://try-ballast.netlify.app",
+    siteName: "Ballast",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ballast: the overnight shift for tokenized US stocks",
+    description:
+      "Macro shock at 3am? Ballast rebalances your tokenized stocks into crypto and hands you the receipt.",
+  },
 };
 
 export default function RootLayout({
@@ -24,12 +41,14 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <SkipLink />
+        <OfflineBanner />
         <header className="border-b border-[var(--border-default)]">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <nav aria-label="Main" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
             <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
               BALLAST
             </Link>
-            <nav className="flex items-center gap-6 text-sm">
+            <div className="flex items-center gap-6 text-sm">
               <Link href="/control-room" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
                 Control room
               </Link>
@@ -39,10 +58,10 @@ export default function RootLayout({
               <Link href="/log" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
                 Log
               </Link>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </header>
-        {children}
+        <div id="main">{children}</div>
         <footer className="border-t border-[var(--border-default)]">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
             <span className="caption">Ballast · built for the Bitget AI Base Camp Hackathon S2</span>

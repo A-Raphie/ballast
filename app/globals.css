@@ -14,7 +14,7 @@
   /* Text tiers: exactly three */
   --text-primary: #f4f5f7;
   --text-secondary: #8e8e92;
-  --text-muted: #57585c;
+  --text-muted: #7d7e82; /* was #57585c: 2.9:1 on the field, failed AA for small text; 7d7e82 computes ~4.9:1 */
 
   /* Border scale */
   --border-default: rgba(255, 255, 255, 0.06);
@@ -159,4 +159,11 @@ body {
 [data-reduce-motion="true"] *::after {
   animation-duration: 0.01ms !important;
   transition-duration: 0.01ms !important;
+}
+
+/* Night Watch Band: keep SVG text legible when the canvas shrinks */
+@media (max-width: 700px) {
+  .band-text { font-size: 30px !important; letter-spacing: 3px !important; }
+  .band-tick-label { display: none; }
+  .band-now-label { font-size: 30px !important; }
 }

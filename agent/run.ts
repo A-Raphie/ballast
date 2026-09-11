@@ -9,6 +9,7 @@ import { loadBook, saveBook } from "./book";
 import { propose } from "./propose";
 import { evaluate } from "./policy";
 import { execute } from "./executor";
+import { readAgentState } from "./agent-state";
 import type { LedgerEvent, MarketEvent, MacroEvent, ProposalEvent } from "./types";
 
 async function main(): Promise<void> {
@@ -64,10 +65,14 @@ async function main(): Promise<void> {
     //    the last verdict. Overnight this prevents identical allow-spam while a
     //    paper order is still pending; fills resolve drift and stop proposals
     //    naturally. Gauntlet runs bypass the cooldown (deliberate pipeline run).
+    //    A paused agent still senses and records; it only stops deciding.
+    const state = await readAgentState();
     const lastVerdictTs = latestVerdictTs(events);
     const cooldownMs = 60 * 60 * 1000;
     const inCooldown = !gauntlet && lastVerdictTs !== undefined && now - lastVerdictTs < cooldownMs;
-    if (inCooldown) {
+    if (state.paused && !gauntlet) {
+      // paused: sense-only tick (the pause is agent-state, not a policy rule)
+    } else if (!gauntlet && lastVerdictTs !== undefined && now - lastVerdictTs < cooldownMs) {
       // still inside cooldown: sense-only tick
     } else {
       const proposal: ProposalEvent | null = await propose(book, macroRecent, pxOf, now);

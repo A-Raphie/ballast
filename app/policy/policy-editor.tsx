@@ -36,8 +36,13 @@ export function PolicyEditor({
     Object.fromEntries(knobs.map((k) => [`${k.group}.${k.key}`, toDisplay(k.value, k.format)])),
   );
   const [status, setStatus] = useState<{ kind: "idle" | "saving" | "ok" | "error"; message?: string }>({ kind: "idle" });
+  const dirty = knobs.some((k) => toDisplay(k.value, k.format) !== values[`${k.group}.${k.key}`]);
 
   const set = (id: string, v: number) => setValues((s) => ({ ...s, [id]: v }));
+
+  if (typeof window !== "undefined") {
+    window.onbeforeunload = dirty ? () => true : null;
+  }
 
   async function save() {
     setStatus({ kind: "saving" });
@@ -95,8 +100,9 @@ export function PolicyEditor({
       </div>
       <div className="mt-5 flex items-center gap-4">
         <button onClick={save} disabled={status.kind === "saving"} className="btn btn-ghost font-semibold">
-          {status.kind === "saving" ? "Saving…" : "Save rules"}
+          {status.kind === "saving" ? "Saving…" : dirty ? "Save rules" : "No changes to save"}
         </button>
+        {dirty && status.kind !== "saving" && <span className="micro text-[var(--status-deny)]">unsaved changes</span>}
         {status.kind === "ok" && <span className="caption text-[var(--status-pass)]">{status.message}</span>}
         {status.kind === "error" && <span className="caption text-[var(--status-deny)]">{status.message}</span>}
       </div>

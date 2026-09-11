@@ -75,12 +75,12 @@ export function ClauseRow({
 export function StatStrip({
   items,
 }: {
-  items: { label: string; value: ReactNode; tone?: "decision" | "default" }[];
+  items: { label: string; value: ReactNode; tone?: "decision" | "default"; hint?: string }[];
 }) {
   return (
     <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
       {items.map((it) => (
-        <div key={it.label} className="flex items-baseline gap-2">
+        <div key={it.label} className="flex items-baseline gap-2" title={it.hint}>
           <span className="micro">{it.label}</span>
           <span
             className={`num text-sm font-semibold ${it.tone === "decision" ? "text-[var(--decision)]" : "text-[var(--text-primary)]"}`}

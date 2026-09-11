@@ -58,7 +58,7 @@ export function WatchFloor({
           height={TRACK_Y - 20}
           fill="var(--bg-raised)"
         />
-        <text x={(xOf(OPEN_START) + xOf(OPEN_END)) / 2} y={28} textAnchor="middle" className="micro" fill="var(--text-secondary)" fontSize="10" letterSpacing="1.4">
+        <text x={(xOf(OPEN_START) + xOf(OPEN_END)) / 2} y={28} textAnchor="middle" className="micro band-text" fill="var(--text-secondary)" fontSize="10" letterSpacing="1.4">
           US EQUITY OPEN · WALL STREET AWAKE
         </text>
 
@@ -66,7 +66,7 @@ export function WatchFloor({
         {Array.from({ length: 9 }, (_, i) => i * 3).map((h) => (
           <g key={h}>
             <line x1={xOf(h / 24)} y1={TRACK_Y - 8} x2={xOf(h / 24)} y2={TRACK_Y} stroke="var(--border-strong)" />
-            <text x={xOf(h / 24)} y={TRACK_Y + 16} textAnchor="middle" fill="var(--text-muted)" fontSize="10" className="num">
+            <text x={xOf(h / 24)} y={TRACK_Y + 16} textAnchor="middle" fill="var(--text-secondary)" fontSize="10" className="num band-tick-label">
               {String(h).padStart(2, "0")}:00
             </text>
           </g>
@@ -113,10 +113,15 @@ export function WatchFloor({
 
         {/* now line: the only thing that moves, and only when time moves */}
         <line x1={xOfTs(nowTs)} y1={34} x2={xOfTs(nowTs)} y2={TRACK_Y} stroke="var(--text-secondary)" strokeDasharray="3 4" />
-        <text x={xOfTs(nowTs)} y={TRACK_Y + 30} textAnchor="middle" fill="var(--text-secondary)" fontSize="10" className="num">
+        <text x={xOfTs(nowTs)} y={TRACK_Y + 30} textAnchor="middle" fill="var(--text-secondary)" fontSize="10" className="num band-now-label">
           {new Date(nowTs).toISOString().slice(11, 16)} UTC
         </text>
       </svg>
+
+      <div className="mt-3 flex flex-wrap gap-4">
+        <Chip>· macro event (marker size = severity)</Chip>
+        <Chip tone="decision">◆ Ballast decision · click for clause chain</Chip>
+      </div>
 
       {/* clause chain panel: morphs open from the selected fix */}
       <div
