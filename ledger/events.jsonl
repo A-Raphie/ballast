@@ -1134,3 +1134,12 @@
 {"seq":1132,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.97,"chg24h":0.00983,"ts":1789167275505}
 {"seq":1133,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.75,"chg24h":0.00888,"ts":1789167275505}
 {"seq":1134,"kind":"policy_change","version":"1.1.2","changes":{},"ts":1789167275505}
+{"seq":1135,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77190.1,"chg24h":0.00586,"ts":1789168080980}
+{"seq":1136,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2511.76,"chg24h":0.02812,"ts":1789168080980}
+{"seq":1137,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.95,"chg24h":0.00409,"ts":1789168080980}
+{"seq":1138,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.24,"chg24h":-0.00058,"ts":1789168080980}
+{"seq":1139,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.28,"chg24h":0.01035,"ts":1789168080980}
+{"seq":1140,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.52,"chg24h":0.01969,"ts":1789168080980}
+{"seq":1141,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.81,"chg24h":0.00912,"ts":1789168080980}
+{"seq":1142,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.64,"chg24h":0.00861,"ts":1789168080980}
+{"seq":1143,"kind":"macro","source":"yahoo-finance","headline":"I just got a $10K bonus and wondered if I should put it in bonds, but the news paints a varied picture on yields","severity":"medium","assetsAffected":["*"],"ts":1789168080980}
