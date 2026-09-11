@@ -795,3 +795,12 @@
 {"seq":793,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.76,"chg24h":0.02582,"ts":1789148098693}
 {"seq":794,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.18,"chg24h":0.00567,"ts":1789148098693}
 {"seq":795,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.02,"chg24h":0.00989,"ts":1789148098693}
+{"seq":796,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77593.28,"chg24h":0.00256,"ts":1789149000804}
+{"seq":797,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2571.37,"chg24h":0.04142,"ts":1789149000804}
+{"seq":798,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.44,"chg24h":-0.00268,"ts":1789149000804}
+{"seq":799,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.32,"chg24h":0.00463,"ts":1789149000804}
+{"seq":800,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.84,"chg24h":0.00971,"ts":1789149000804}
+{"seq":801,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.12,"chg24h":0.02363,"ts":1789149000804}
+{"seq":802,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.15,"chg24h":0.00569,"ts":1789149000804}
+{"seq":803,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.91,"chg24h":0.01016,"ts":1789149000804}
+{"seq":804,"kind":"macro","source":"yahoo-finance","headline":"Bitcoin and ethereum prices today, Thursday, September 10, 2026: Crypto prices slide back with inflation data on tap","severity":"medium","assetsAffected":["*"],"ts":1789149000804}
