@@ -1152,3 +1152,12 @@
 {"seq":1150,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.86,"chg24h":0.0094,"ts":1789168984582}
 {"seq":1151,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.55,"chg24h":0.0085,"ts":1789168984582}
 {"seq":1152,"kind":"macro","source":"yahoo-finance","headline":"Chewy’s Sell-Off Puts Its Recurring Revenue Story Back on Trial for Investors","severity":"medium","assetsAffected":["*"],"ts":1789168984582}
+{"seq":1153,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77200,"chg24h":0.00536,"ts":1789169889113}
+{"seq":1154,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2512.45,"chg24h":0.0281,"ts":1789169889113}
+{"seq":1155,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.9,"chg24h":0.00374,"ts":1789169889113}
+{"seq":1156,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.29,"chg24h":0.00065,"ts":1789169889113}
+{"seq":1157,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.07,"chg24h":0.01014,"ts":1789169889113}
+{"seq":1158,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.53,"chg24h":0.02099,"ts":1789169889113}
+{"seq":1159,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.88,"chg24h":0.00957,"ts":1789169889113}
+{"seq":1160,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.48,"chg24h":0.00835,"ts":1789169889113}
+{"seq":1161,"kind":"macro","source":"yahoo-finance","headline":"Crude Oil Prices Soar on Fears US-Iran War to Persist","severity":"high","assetsAffected":["*"],"ts":1789169889113}
