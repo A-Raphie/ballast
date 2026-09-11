@@ -999,3 +999,15 @@
 {"seq":997,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.47,"chg24h":0.01928,"ts":1789163473761}
 {"seq":998,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.01,"chg24h":0.01103,"ts":1789163473761}
 {"seq":999,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.54,"chg24h":0.00817,"ts":1789163473761}
+{"seq":1000,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77120,"chg24h":-0.00006,"ts":1789164376423}
+{"seq":1001,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2514.6,"chg24h":0.02241,"ts":1789164376423}
+{"seq":1002,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.71,"chg24h":0.00267,"ts":1789164376423}
+{"seq":1003,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.37,"chg24h":-0.00205,"ts":1789164376423}
+{"seq":1004,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.08,"chg24h":0.00865,"ts":1789164376423}
+{"seq":1005,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.6,"chg24h":0.01943,"ts":1789164376423}
+{"seq":1006,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.18,"chg24h":0.01045,"ts":1789164376423}
+{"seq":1007,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.58,"chg24h":0.0084,"ts":1789164376423}
+{"seq":1008,"kind":"macro","source":"yahoo-finance","headline":"Ahead of a Likely Fed Rate Hike, Make This 1 Trade Now","severity":"medium","assetsAffected":["*"],"ts":1789164376423}
+{"seq":1009,"kind":"macro","source":"yahoo-finance","headline":"$100 Oil Jolts Treasury Yields; Fed Rate-Hike Odds Jump","severity":"medium","assetsAffected":["*"],"ts":1789164376423}
+{"seq":1010,"kind":"macro","source":"yahoo-finance","headline":"Ethereum Price Prediction: ETH Bull Flag Faces Rate Hike Risk","severity":"medium","assetsAffected":["*"],"ts":1789164376423}
+{"seq":1011,"kind":"macro","source":"yahoo-finance","headline":"Dollar Supported by Rising Crude Prices and T-Note Yields","severity":"medium","assetsAffected":["*"],"ts":1789164376423}
