@@ -728,3 +728,12 @@
 {"seq":726,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766,"chg24h":0.0094,"ts":1789141778659}
 {"seq":727,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Rallies On Surprise Inflation Data; These Tech Names Lead This List (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789141778659}
 {"seq":728,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Falls On Soaring Oil Prices, Yields, But Finishes Strong; CPI Inflation, Apple, Oracle, Meta In Focus: Weekly Review","severity":"medium","assetsAffected":["*"],"ts":1789141778659}
+{"seq":729,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77838.42,"chg24h":0.00962,"ts":1789142682364}
+{"seq":730,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2569.61,"chg24h":0.05335,"ts":1789142682364}
+{"seq":731,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":366.25,"chg24h":-0.00034,"ts":1789142682364}
+{"seq":732,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.92,"chg24h":0.00393,"ts":1789142682364}
+{"seq":733,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.16,"chg24h":0.00963,"ts":1789142682364}
+{"seq":734,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.8,"chg24h":0.04523,"ts":1789142682364}
+{"seq":735,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.25,"chg24h":0.00962,"ts":1789142682364}
+{"seq":736,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.18,"chg24h":0.0101,"ts":1789142682364}
+{"seq":737,"kind":"macro","source":"yahoo-finance","headline":"Fed Rate Hike Close To A Lock; Clarity Act Vote Looms: Week Ahead","severity":"medium","assetsAffected":["*"],"ts":1789142682364}
