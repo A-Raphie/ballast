@@ -1,5 +1,5 @@
 {
-  "usdt": 3246.840426358539,
+  "usdt": 2511.792452511203,
   "positions": {
     "BTCUSDT": {
       "qty": 0.0324254215304799,
@@ -12,11 +12,15 @@
     "RTSLAUSDT": {
       "qty": 3.323530862144709,
       "market": "rtoken"
+    },
+    "RAAPLUSDT": {
+      "qty": 2.20883507269947,
+      "market": "rtoken"
     }
   },
   "targetRtokenPct": 0.65,
   "targetHedgePct": 0.25,
   "openValue24h": 10000,
-  "updatedAt": 1789164376423,
+  "updatedAt": 1789165278392,
   "openDay": 20707
 }
