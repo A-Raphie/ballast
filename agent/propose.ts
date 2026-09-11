@@ -54,16 +54,33 @@ function proposeThresholdFallback(
   const sourceExists = movingCrypto ? rtoken > 0.02 : true; // can't shift out of an empty sleeve
   if (!sourceExists) return null;
   const ratio = Math.min(Math.abs(drift), 0.3);
+  const symbol = movingCrypto ? "BTCUSDT" : leastHeldRtoken(book, pxOf);
   return {
     kind: "proposal",
     proposer: "threshold-fallback",
     action: "shift",
     from: movingCrypto ? "rtoken-sleeve" : "usdt-buffer",
     to: movingCrypto ? "crypto" : "rtoken-sleeve",
+    symbol,
     ratio,
-    reason: `Drift ${(Math.abs(drift) * 100).toFixed(1)}pp from written target after ${qualifying.length} qualifying macro event(s); threshold fallback proposing ${movingCrypto ? "hedge" : "restore"} shift of ${(ratio * 100).toFixed(0)}%.`,
+    reason: `Drift ${(Math.abs(drift) * 100).toFixed(1)}pp from written target after ${qualifying.length} qualifying macro event(s); building ${symbol.replace("USDT", "")} to diversify the sleeve.`,
     ts: now,
   };
+}
+
+// Diversification: the rToken sleeve builds into its LEAST-HELD name, so a
+// single position never breaches the B6 concentration cap on the way to the
+// sleeve target. time = O(w), w = rToken watchlist (6).
+const RTOKENS = ["RNVDAUSDT", "RTSLAUSDT", "RAAPLUSDT", "RMSFTUSDT", "RSPYUSDT", "RQQQUSDT"];
+function leastHeldRtoken(book: BookState, pxOf: Map<string, number>): string {
+  let best = RTOKENS[0];
+  let bestV = Infinity;
+  for (const sym of RTOKENS) {
+    const pos = book.positions[sym];
+    const v = pos ? pos.qty * (pxOf.get(sym) ?? 0) : 0;
+    if (v < bestV) { bestV = v; best = sym; }
+  }
+  return best;
 }
 
 async function proposeWithLlm(

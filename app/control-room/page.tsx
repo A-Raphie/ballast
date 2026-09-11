@@ -26,7 +26,7 @@ export default async function ControlRoom() {
         </div>
         <div className="flex items-center gap-3">
           <Chip>{executionMode() === "paper" ? "paper fills · demo env" : "paper book · simulated fills"}</Chip>
-          <AgentDot live={live} />
+          <AgentDot live={live} note={live ? undefined : "sensing every 15 min"} />
         </div>
       </div>
 
@@ -80,6 +80,9 @@ export default async function ControlRoom() {
                     {d.proposal ? `${d.proposal.from.replace("-", " ")} → ${d.proposal.to.replace("-", " ")}` : "decision"}
                   </div>
                   <div className="num caption">{new Date(d.ts).toISOString().replace("T", " ").slice(0, 16)} UTC</div>
+                  {d.failing && d.failing.length > 0 && (
+                    <div className="caption text-[var(--text-muted)]">blocked by {d.failing.join(", ")}</div>
+                  )}
                 </div>
                 <span
                   className={`text-sm font-bold ${

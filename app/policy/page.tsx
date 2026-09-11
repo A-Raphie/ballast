@@ -21,7 +21,12 @@ export default async function PolicyPage() {
     },
     {
       rule: `The crypto shield stays between ${pct(k.hedgeBandMin)} and ${pct(k.hedgeBandMax)} of the book, never outside.`,
-      knob: { key: "hedgeBandMin", group: "knobs", value: k.hedgeBandMin, format: "pct", step: 1, hint: "shield floor (a second control sets the ceiling)" },
+      knob: { key: "hedgeBandMin", group: "knobs", value: k.hedgeBandMin, format: "pct", step: 1, hint: "shield floor" },
+      clauses: ["B3-hedge-band"],
+    },
+    {
+      rule: `The shield ceiling: the crypto sleeve may never exceed ${pct(k.hedgeBandMax)}.`,
+      knob: { key: "hedgeBandMax", group: "knobs", value: k.hedgeBandMax, format: "pct", step: 1, hint: "shield ceiling (the floor is the row above)" },
       clauses: ["B3-hedge-band"],
     },
     {

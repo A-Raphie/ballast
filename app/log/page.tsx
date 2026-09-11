@@ -69,8 +69,15 @@ function summarize(e: any): string {
       return `[${e.severity}] ${e.headline}`;
     case "proposal":
       return `${e.proposer}: ${e.from} -> ${e.to} ${(e.ratio * 100).toFixed(0)}%`;
-    case "verdict":
-      return `${e.result}: ${e.clauses.map((c: any) => c.id).join(", ")}`;
+    case "verdict": {
+      if (e.result === "allow") return "allow: all clauses passed";
+      if (e.result === "halt") {
+        const missing = e.clauses.filter((c: any) => c.pass === null).map((c: any) => c.id);
+        return `halt: unmeasurable ${missing.join(", ")}`;
+      }
+      const failed = e.clauses.filter((c: any) => c.pass === false).map((c: any) => c.id);
+      return `deny: blocked by ${failed.join(", ")}`;
+    }
     case "order":
       return `${e.execution} ${e.side} ${e.symbol}`;
     default:

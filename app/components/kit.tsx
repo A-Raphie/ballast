@@ -93,14 +93,14 @@ export function StatStrip({
   );
 }
 
-export function AgentDot({ live }: { live: boolean }) {
+export function AgentDot({ live, note }: { live: boolean; note?: string }) {
   return (
     <span className="inline-flex items-center gap-2">
       <span
         className={`inline-block h-2 w-2 rounded-full ${live ? "bg-[var(--decision)]" : "bg-[var(--text-muted)]"}`}
         aria-hidden
       />
-      <span className="micro">{live ? "Ballast on shift" : "standing by"}</span>
+      <span className="micro">{live ? "Ballast on shift" : note ?? "standing by"}</span>
     </span>
   );
 }

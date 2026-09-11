@@ -40,14 +40,17 @@ export async function execute(
 
   // Generic mapping: the DESTINATION sleeve is bought into, the SOURCE sleeve
   // is sold out of. USDT as source/destination is a cash move, not an order.
+  // The proposal may pin the concrete instrument (diversified rToken builds).
   const buy = proposal.to === "crypto" || proposal.to === "rtoken-sleeve";
-  const target = buy
-    ? proposal.to === "crypto"
-      ? "BTCUSDT"
-      : "RNVDAUSDT"
-    : proposal.from === "crypto"
-      ? "BTCUSDT"
-      : "RNVDAUSDT";
+  const target = proposal.symbol
+    ? proposal.symbol
+    : buy
+      ? proposal.to === "crypto"
+        ? "BTCUSDT"
+        : "RNVDAUSDT"
+      : proposal.from === "crypto"
+        ? "BTCUSDT"
+        : "RNVDAUSDT";
   const market = target.endsWith("USDT") && target.startsWith("R") ? "rtoken" : "crypto";
   const px = pxOf.get(target);
   if (!px) return null; // no live price: never fabricate a fill

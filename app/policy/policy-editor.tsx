@@ -4,6 +4,9 @@
 // policy.json through /api/policy, which validates, bumps the version, and
 // appends a policy_change event to the ledger. The running agent obeys the new
 // numbers on its next tick (15 min cadence).
+// Unit scaling: pct and pp knobs DISPLAY in human units (65, 2.5, 10) and save
+// as fractions (0.65, 0.025, 0.1) — the UI never shows a raw fraction next to
+// a "%" or "pp" label.
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -13,10 +16,15 @@ interface Knob {
   group: "targets" | "knobs";
   rule: string;
   hint: string;
-  value: number;
+  value: number; // stored fraction / raw seconds
   format: "pct" | "num" | "pp";
   step: number;
 }
+
+const toDisplay = (v: number, format: Knob["format"]) =>
+  format === "pct" || format === "pp" ? Math.round(v * 100 * 100) / 100 : v;
+const toStored = (v: number, format: Knob["format"]) =>
+  format === "pct" || format === "pp" ? v / 100 : v;
 
 export function PolicyEditor({
   knobs,
@@ -25,7 +33,7 @@ export function PolicyEditor({
 }) {
   const router = useRouter();
   const [values, setValues] = useState<Record<string, number>>(
-    Object.fromEntries(knobs.map((k) => [`${k.group}.${k.key}`, k.value])),
+    Object.fromEntries(knobs.map((k) => [`${k.group}.${k.key}`, toDisplay(k.value, k.format)])),
   );
   const [status, setStatus] = useState<{ kind: "idle" | "saving" | "ok" | "error"; message?: string }>({ kind: "idle" });
 
@@ -34,9 +42,9 @@ export function PolicyEditor({
   async function save() {
     setStatus({ kind: "saving" });
     const body: Record<string, Record<string, number>> = { targets: {}, knobs: {} };
-    for (const [id, v] of Object.entries(values)) {
-      const [group, key] = id.split(".");
-      body[group][key] = v;
+    for (const k of knobs) {
+      const id = `${k.group}.${k.key}`;
+      body[k.group][k.key] = toStored(values[id], k.format);
     }
     try {
       const res = await fetch("/api/policy", {
@@ -86,7 +94,7 @@ export function PolicyEditor({
         })}
       </div>
       <div className="mt-5 flex items-center gap-4">
-        <button onClick={save} disabled={status.kind === "saving"} className="btn btn-primary">
+        <button onClick={save} disabled={status.kind === "saving"} className="btn btn-ghost font-semibold">
           {status.kind === "saving" ? "Saving…" : "Save rules"}
         </button>
         {status.kind === "ok" && <span className="caption text-[var(--status-pass)]">{status.message}</span>}

@@ -21,6 +21,7 @@ export interface MacroEvent {
 export interface ProposalEvent {
   kind: "proposal";
   id?: string; // decision id; verdicts and orders link back via this
+  symbol?: string; // concrete instrument when the destination sleeve maps to one
   proposer: "llm" | "threshold-fallback";
   action: "shift";
   from: string;

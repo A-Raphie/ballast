@@ -105,7 +105,8 @@ export function WatchFloor({
                 stroke="var(--bg-base)"
                 strokeWidth={1.5}
               />
-              <rect x={x - 12} y={y - 12} width={24} height={24} fill="transparent" />
+              <rect x={x - 9} y={y - 9} width={18} height={18} transform={`rotate(45 ${x} ${y})`} fill="transparent" />
+              <circle cx={x} cy={y} r={20} fill="transparent" />
             </g>
           );
         })}

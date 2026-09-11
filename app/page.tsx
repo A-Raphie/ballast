@@ -28,10 +28,10 @@ export default async function Landing() {
           Paper book. Real prices. Simulated fills, labeled on every line.
         </p>
         <div className="mt-8 flex items-center justify-center gap-4">
-          <Link href="/control-room" className="btn btn-primary">
+          <Link href="/control-room" className="btn btn-primary whitespace-nowrap">
             Open the control room
           </Link>
-          <Link href="/policy" className="btn btn-ghost">
+          <Link href="/policy" className="btn btn-ghost whitespace-nowrap">
             Read the policy
           </Link>
         </div>

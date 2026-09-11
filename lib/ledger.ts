@@ -20,6 +20,7 @@ export interface Decision {
   verdict?: VerdictEvent;
   order?: OrderEvent;
   ts: number;
+  failing?: string[]; // clause ids that failed (deny) or blocked (halt), for one-glance reasons
 }
 
 export interface LedgerView {
@@ -66,6 +67,8 @@ export async function readLedger(): Promise<LedgerView> {
       const v = e as VerdictEvent;
       const d = decisions.get(v.proposalId) ?? { id: v.proposalId, ts: v.ts };
       d.verdict = v;
+      d.failing = v.clauses.filter((c) => c.pass === false).map((c) => c.id);
+      if (v.result === "halt") d.failing = v.clauses.filter((c) => c.pass === null).map((c) => c.id);
       decisions.set(v.proposalId, d);
       for (const c of v.clauses) {
         const s = (clauseStats[c.id] ??= { pass: 0, fail: 0, halt: 0 });
