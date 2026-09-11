@@ -688,3 +688,12 @@
 {"seq":686,"kind":"macro","source":"yahoo-finance","headline":"Fed rate hike odds surge to 90% on monthly jump in core prices","severity":"medium","assetsAffected":["*"],"ts":1789138169939}
 {"seq":687,"kind":"macro","source":"yahoo-finance","headline":"US consumer inflation picks up in August","severity":"medium","assetsAffected":["*"],"ts":1789138169939}
 {"seq":688,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Rallies On Surprise Inflation Data; This Tech Icon Eyes A Breakout (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789138169939}
+{"seq":689,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78637,"chg24h":0.01749,"ts":1789139072208}
+{"seq":690,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2603.36,"chg24h":0.06678,"ts":1789139072208}
+{"seq":691,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.98,"chg24h":-0.0013,"ts":1789139072208}
+{"seq":692,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.98,"chg24h":0.00848,"ts":1789139072208}
+{"seq":693,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.85,"chg24h":0.00541,"ts":1789139072208}
+{"seq":694,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.32,"chg24h":0.03905,"ts":1789139072208}
+{"seq":695,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.82,"chg24h":0.00176,"ts":1789139072208}
+{"seq":696,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.38,"chg24h":0.00729,"ts":1789139072208}
+{"seq":697,"kind":"macro","source":"yahoo-finance","headline":"Gold price today, Thursday, September 10, 2026: Gold prices steady ahead of inflation data and the Fed","severity":"medium","assetsAffected":["*"],"ts":1789139072208}
