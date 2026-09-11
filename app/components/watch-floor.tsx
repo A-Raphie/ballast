@@ -165,7 +165,9 @@ function ClauseChain({ decision, onClose }: { decision: Decision; onClose: () =>
           <Chip tone={decision.order.execution === "paper" ? "decision" : "neutral"}>
             {decision.order.execution === "paper"
               ? `paper ${decision.order.side} ${decision.order.symbol}`
-              : `order staged · awaiting demo key (${decision.order.side} ${decision.order.symbol})`}
+              : decision.order.execution === "simulated"
+                ? `simulated ${decision.order.side} ${decision.order.symbol} · filled against real prices, labeled`
+                : `order staged · awaiting demo key (${decision.order.side} ${decision.order.symbol})`}
           </Chip>
         </div>
       )}
