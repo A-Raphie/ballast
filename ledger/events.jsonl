@@ -371,3 +371,13 @@
 {"seq":370,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.28,"chg24h":0.02963,"ts":1789110172082}
 {"seq":371,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.7,"chg24h":-0.00223,"ts":1789110172082}
 {"seq":372,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.44,"chg24h":-0.00377,"ts":1789110172082}
+{"seq":373,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77339.94,"chg24h":-0.01086,"ts":1789111082340}
+{"seq":374,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2469.32,"chg24h":-0.00223,"ts":1789111082340}
+{"seq":375,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365,"chg24h":-0.0058,"ts":1789111082340}
+{"seq":376,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.77,"chg24h":-0.01457,"ts":1789111082340}
+{"seq":377,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":711.78,"chg24h":-0.0067,"ts":1789111082340}
+{"seq":378,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.24,"chg24h":0.02912,"ts":1789111082340}
+{"seq":379,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.86,"chg24h":-0.00049,"ts":1789111082340}
+{"seq":380,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.38,"chg24h":-0.00373,"ts":1789111082340}
+{"seq":381,"kind":"macro","source":"yahoo-finance","headline":"Treasury to buy back up to $6B in longer-term debt as bond yields hit highest level since 2023","severity":"medium","assetsAffected":["*"],"ts":1789111082340}
+{"seq":382,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq fall as Treasury yields climb, oil tops $100","severity":"medium","assetsAffected":["*"],"ts":1789111082340}
