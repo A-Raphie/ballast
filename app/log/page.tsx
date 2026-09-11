@@ -22,7 +22,7 @@ function summarize(e: any): string {
     case "macro":
       return `[${e.severity}] ${e.headline}`;
     case "proposal":
-      return `${e.proposer}: ${e.from} -> ${e.to} ${(e.ratio * 100).toFixed(0)}%`;
+      return `${e.proposer}: ${e.from.replace(/-/g, " ")} -> ${e.to.replace(/-/g, " ")} ${(e.ratio * 100).toFixed(0)}%`;
     case "verdict": {
       if (e.result === "allow") return "allow: all clauses passed";
       if (e.result === "halt") {
@@ -58,7 +58,7 @@ export default async function LogPage() {
         The ledger
       </h1>
       <p className="caption mt-2 max-w-2xl">
-        Append-only. Every line the agent has written since Sep 9, newest first (night one is
+        Append-only. Every line the agent has written since the Sep 9 first tick, newest first (night one is
         archived in the repo at ledger/archive/). This is the raw surface the control room
         renders; nothing on this site can show what is not here. Severity on macro lines is
         assigned by a labeled keyword classifier.

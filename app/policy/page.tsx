@@ -84,7 +84,7 @@ export default async function PolicyPage() {
           {policy.clauses.map((c) => {
             const s = view.clauseStats[c.id] ?? { pass: 0, fail: 0, halt: 0 };
             return (
-              <div key={c.id} className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--border-default)] pb-3 last:border-b-0 last:pb-0">
+              <div key={c.id} id={c.id} className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--border-default)] pb-3 last:border-b-0 last:pb-0 scroll-mt-20">
                 <div>
                   <span className="mono text-[var(--text-secondary)]">{c.id}</span>
                   <span className="ml-3 text-sm">{c.text}</span>

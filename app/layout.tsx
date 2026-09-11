@@ -48,7 +48,7 @@ export default function RootLayout({
             <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
               BALLAST
             </Link>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex items-center gap-3 text-[13px] sm:gap-6 sm:text-sm">
               <Link href="/control-room" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
                 Control room
               </Link>

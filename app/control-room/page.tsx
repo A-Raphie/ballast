@@ -94,7 +94,6 @@ export default async function ControlRoom() {
               value: v.heelPct === null ? "0.0%" : `${v.heelPct >= 0 ? "" : "+"}${(-v.heelPct).toFixed(2)}%`,
               hint: "how far the book lists below its UTC-day open (ship-heel metaphor)",
             },
-            { label: "Last sense", value: ageOf(v.lastTickTs), hint: "age of the freshest market row the agent recorded" },
             { label: "Policy", value: `v${v.policyVersion ?? "?"}`, hint: "the rulebook version the agent obeyed" },
           ]}
         />
@@ -102,10 +101,6 @@ export default async function ControlRoom() {
 
       <Panel className="mb-6 px-4 pb-5 pt-5">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
-        <div className="mt-3 flex flex-wrap gap-4 border-t border-[var(--border-default)] pt-3">
-          <Chip>· macro event (marker size = severity)</Chip>
-          <Chip tone="decision">◆ Ballast decision · click for clause chain</Chip>
-        </div>
         {sessionSummary(v.decisions) && (
           <p className="caption mt-3 border-t border-[var(--border-default)] pt-3">
             This shift: {sessionSummary(v.decisions)}
@@ -134,7 +129,16 @@ export default async function ControlRoom() {
                   </div>
                   <div className="num caption">
                     {new Date(r.latestTs).toISOString().replace("T", " ").slice(0, 16)} UTC
-                    {r.failing && r.failing.length > 0 ? ` · blocked by ${r.failing.join(", ")}` : ""}
+                    {r.failing && r.failing.length > 0 ? (
+                      <>
+                        {" · blocked by "}
+                        {r.failing.map((f) => (
+                          <a key={f} href={`/policy#${f}`} className="underline decoration-dotted hover:text-[var(--text-primary)]">
+                            {f}
+                          </a>
+                        ))}
+                      </>
+                    ) : ""}
                   </div>
                 </div>
                 <span

@@ -30,10 +30,23 @@ export interface LedgerView {
   macroEvents: MacroEvent[];
   clauseStats: Record<string, { pass: number; fail: number; halt: number }>;
   bookValue: number | null;
+  sensingSince: number | null;
   exposure: { rtokenPct: number; cryptoPct: number; usdtPct: number } | null;
   heelPct: number | null;
   lastTickTs: number | null;
   policyVersion: string | null;
+}
+
+async function firstTickTs(): Promise<number | null> {
+  // sensing began Sep 9 (night one lives in ledger/archive/); fall back to the
+  // current ledger's first line
+  try {
+    const raw = await fs.readFile(path.join(process.cwd(), "ledger", "archive", "night1-2026-09-09.jsonl"), "utf8");
+    const first = JSON.parse(raw.split("\n")[0]);
+    return first.ts ?? null;
+  } catch {
+    return null;
+  }
 }
 
 export async function readLedger(): Promise<LedgerView> {
@@ -102,6 +115,7 @@ export async function readLedger(): Promise<LedgerView> {
   const book = await readBook();
   const policyJson = await readPolicyVersion();
   const view = emptyView();
+  view.sensingSince = await firstTickTs();
   view.events = events;
   view.decisions = [...decisions.values()].sort((a, b) => b.ts - a.ts);
   view.marketSnapshot = [...latest.values()];
@@ -158,6 +172,7 @@ function emptyView(): LedgerView {
     macroEvents: [],
     clauseStats: {},
     bookValue: null,
+    sensingSince: null,
     exposure: null,
     heelPct: null,
     lastTickTs: null,

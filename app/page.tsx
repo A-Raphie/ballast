@@ -51,7 +51,7 @@ export default async function Landing() {
         <div className="mt-6 flex justify-center">
           <StatStrip
             items={[
-              { label: "Sensing since", value: v.lastTickTs ? new Date(v.lastTickTs).toISOString().slice(0, 10) : "arming" },
+              { label: "Sensing since", value: v.sensingSince ? new Date(v.sensingSince).toISOString().slice(0, 10) : "arming" },
               { label: "Ledger lines", value: v.events.length },
               { label: "Clauses enforced", value: 7 },
               { label: "Risk violations", value: 0, tone: "decision" },
