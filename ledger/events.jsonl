@@ -297,3 +297,12 @@
 {"seq":296,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":325.67,"chg24h":0.02644,"ts":1789102956759}
 {"seq":297,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.31,"chg24h":-0.00175,"ts":1789102956759}
 {"seq":298,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.36,"chg24h":-0.00603,"ts":1789102956759}
+{"seq":299,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77130.01,"chg24h":-0.0162,"ts":1789103858445}
+{"seq":300,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2459.98,"chg24h":-0.00762,"ts":1789103858445}
+{"seq":301,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.38,"chg24h":-0.00819,"ts":1789103858445}
+{"seq":302,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.52,"chg24h":-0.02123,"ts":1789103858445}
+{"seq":303,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709.16,"chg24h":-0.01022,"ts":1789103858445}
+{"seq":304,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":325.81,"chg24h":0.02711,"ts":1789103858445}
+{"seq":305,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.13,"chg24h":-0.00225,"ts":1789103858445}
+{"seq":306,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.8,"chg24h":-0.00552,"ts":1789103858445}
+{"seq":307,"kind":"macro","source":"yahoo-finance","headline":"AI Boom Could Worsen Stock Sell-Off, Analysts Warn. These Are The Risks They See.","severity":"medium","assetsAffected":["*"],"ts":1789103858445}
