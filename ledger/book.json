@@ -2,13 +2,13 @@
   "usdt": 7498.75,
   "positions": {
     "BTCUSDT": {
-      "qty": 0.03237712879621835,
+      "qty": 0.0324254215304799,
       "market": "crypto"
     }
   },
   "targetRtokenPct": 0.65,
   "targetHedgePct": 0.25,
-  "openValue24h": 7498.75,
-  "updatedAt": 1789121005347,
+  "openValue24h": 10000,
+  "updatedAt": 1789121709276,
   "openDay": 20707
 }

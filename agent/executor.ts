@@ -38,20 +38,38 @@ export async function execute(
 ): Promise<{ order: OrderEvent; fill: FillEvent } | null> {
   if (verdict.result !== "allow") return null;
 
-  const target = proposal.to === "crypto" ? "BTCUSDT" : "RNVDAUSDT";
-  const market = proposal.to === "crypto" ? "crypto" : "rtoken";
+  // Generic mapping: the DESTINATION sleeve is bought into, the SOURCE sleeve
+  // is sold out of. USDT as source/destination is a cash move, not an order.
+  const buy = proposal.to === "crypto" || proposal.to === "rtoken-sleeve";
+  const target = buy
+    ? proposal.to === "crypto"
+      ? "BTCUSDT"
+      : "RNVDAUSDT"
+    : proposal.from === "crypto"
+      ? "BTCUSDT"
+      : "RNVDAUSDT";
+  const market = target.endsWith("USDT") && target.startsWith("R") ? "rtoken" : "crypto";
   const px = pxOf.get(target);
   if (!px) return null; // no live price: never fabricate a fill
 
   const notional = book.usdt * proposal.ratio;
-  const qty = notional / px;
-  const side = proposal.to === "crypto" ? "buy" : "sell";
+  let qty = notional / px;
+  const side: "buy" | "sell" = buy ? "buy" : "sell";
+
+  // Sell guard: never sell more than held, never sell a position that does not
+  // exist (a sell without a position would credit USDT from nothing).
+  if (side === "sell") {
+    const held = book.positions[target]?.qty ?? 0;
+    if (held <= 0) return null;
+    qty = Math.min(qty, held);
+  }
+
   const decisionId = proposal.id ?? `p${proposal.ts}`;
 
   const order: OrderEvent = {
     kind: "order",
     decisionId,
-    side: side === "buy" ? "buy" : "sell",
+    side,
     symbol: target,
     market,
     qty,
@@ -62,7 +80,7 @@ export async function execute(
   const fillPx = side === "buy" ? px * (1 + SLIPPAGE) : px * (1 - SLIPPAGE);
   const fill: FillEvent = { kind: "fill", orderId: decisionId, px: fillPx, qty, ts: order.ts };
 
-  applyFillToBook(book, side, target, market, qty, fillPx);
+  applyFillToBook(book, side, target, qty, fillPx);
   saveBook(book);
 
   return { order, fill };
@@ -72,21 +90,20 @@ function applyFillToBook(
   book: BookState,
   side: "buy" | "sell",
   symbol: string,
-  market: "rtoken" | "crypto",
   qty: number,
   px: number,
 ): void {
   if (side === "buy") {
     book.usdt -= qty * px;
-    const pos = book.positions[symbol] ?? { qty: 0, market };
+    const pos = book.positions[symbol] ?? { qty: 0, market: symbol.startsWith("R") ? "rtoken" : "crypto" };
     pos.qty += qty;
     book.positions[symbol] = pos;
   } else {
     const pos = book.positions[symbol];
-    if (pos) {
-      pos.qty = Math.max(0, pos.qty - qty);
-      book.usdt += qty * px;
-    }
+    if (!pos) return; // guarded upstream; double-guard here
+    const sold = Math.min(qty, pos.qty);
+    pos.qty -= sold;
+    book.usdt += sold * px;
   }
 }
 

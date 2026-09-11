@@ -13,6 +13,13 @@ import type { LedgerEvent, MarketEvent, MacroEvent, ProposalEvent } from "./type
 
 async function main(): Promise<void> {
   const now = Date.now();
+  // gauntlet mode: `tsx agent/run.ts --gauntlet "headline"` injects a scripted
+  // high-severity shock (labeled source:"gauntlet-scripted" everywhere), skips
+  // the proposal cooldown, and runs the full pipeline once. Honest by design:
+  // every ledger line from a gauntlet run is traceable to the scripted label.
+  const gauntletIdx = process.argv.indexOf("--gauntlet");
+  const gauntletHeadline = gauntletIdx >= 0 ? process.argv[gauntletIdx + 1] : undefined;
+  const gauntlet = Boolean(gauntletHeadline);
   if (!(await acquireLock(now))) {
     console.log("tick skipped: another run holds the lock");
     return;
@@ -30,6 +37,16 @@ async function main(): Promise<void> {
     if (mkt.error) toAppend.push({ kind: "sensor_error", detail: mkt.error, ts: now });
     toAppend.push(...mkt.events);
     toAppend.push(...macroNew);
+    if (gauntlet) {
+      toAppend.push({
+        kind: "macro",
+        source: "gauntlet-scripted",
+        headline: gauntletHeadline!,
+        severity: "high",
+        assetsAffected: ["*"],
+        ts: now,
+      });
+    }
 
     // 2. context
     const pxOf = new Map<string, number>();
@@ -46,10 +63,11 @@ async function main(): Promise<void> {
     // 3. propose — with a cooldown invariant: never re-propose within 60 min of
     //    the last verdict. Overnight this prevents identical allow-spam while a
     //    paper order is still pending; fills resolve drift and stop proposals
-    //    naturally.
+    //    naturally. Gauntlet runs bypass the cooldown (deliberate pipeline run).
     const lastVerdictTs = latestVerdictTs(events);
     const cooldownMs = 60 * 60 * 1000;
-    if (lastVerdictTs !== undefined && now - lastVerdictTs < cooldownMs) {
+    const inCooldown = !gauntlet && lastVerdictTs !== undefined && now - lastVerdictTs < cooldownMs;
+    if (inCooldown) {
       // still inside cooldown: sense-only tick
     } else {
       const proposal: ProposalEvent | null = await propose(book, macroRecent, pxOf, now);
