@@ -766,3 +766,12 @@
 {"seq":764,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.48,"chg24h":0.00462,"ts":1789145389588}
 {"seq":765,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.35,"chg24h":0.00827,"ts":1789145389588}
 {"seq":766,"kind":"macro","source":"yahoo-finance","headline":"Wall St bounces as oil cools, inflation risks keeps Fed in focus","severity":"medium","assetsAffected":["*"],"ts":1789145389588}
+{"seq":767,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77845,"chg24h":0.00904,"ts":1789146291550}
+{"seq":768,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2578.88,"chg24h":0.0533,"ts":1789146291550}
+{"seq":769,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.72,"chg24h":-0.00284,"ts":1789146291550}
+{"seq":770,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.07,"chg24h":0.00155,"ts":1789146291550}
+{"seq":771,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.23,"chg24h":0.00799,"ts":1789146291550}
+{"seq":772,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.32,"chg24h":0.03424,"ts":1789146291550}
+{"seq":773,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.92,"chg24h":0.00224,"ts":1789146291550}
+{"seq":774,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.63,"chg24h":0.00896,"ts":1789146291550}
+{"seq":775,"kind":"macro","source":"yahoo-finance","headline":"A Rate Hike Is Basically Locked In, and Stock Market Indexes Rose Anyway","severity":"medium","assetsAffected":["*"],"ts":1789146291550}
