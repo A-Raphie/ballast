@@ -442,3 +442,11 @@
 {"seq":441,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.78,"chg24h":0.00049,"ts":1789116493972}
 {"seq":442,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.81,"chg24h":-0.00226,"ts":1789116493972}
 {"seq":443,"kind":"macro","source":"yahoo-finance","headline":"AGCO CEO: We Can Manage Through These Tariffs","severity":"medium","assetsAffected":["*"],"ts":1789116493972}
+{"seq":444,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77336,"chg24h":-0.01073,"ts":1789117395890}
+{"seq":445,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2475.6,"chg24h":0.00088,"ts":1789117395890}
+{"seq":446,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.18,"chg24h":-0.00235,"ts":1789117395890}
+{"seq":447,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.48,"chg24h":-0.01292,"ts":1789117395890}
+{"seq":448,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":713.35,"chg24h":-0.0032,"ts":1789117395890}
+{"seq":449,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":325.99,"chg24h":0.02128,"ts":1789117395890}
+{"seq":450,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.49,"chg24h":0.00307,"ts":1789117395890}
+{"seq":451,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.66,"chg24h":-0.0009,"ts":1789117395890}
