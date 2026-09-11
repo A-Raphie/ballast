@@ -566,3 +566,11 @@
 {"seq":564,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.32,"chg24h":0.006,"ts":1789126436530}
 {"seq":565,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.18,"chg24h":-0.00053,"ts":1789126436530}
 {"seq":566,"kind":"macro","source":"yahoo-finance","headline":"Anthony Pompliano Raises Alarm Over August Jobs Report, Points to ‘Underlying Immigration Story’ — ‘You Don’t Get Such Significantly Skewed Results’","severity":"medium","assetsAffected":["*"],"ts":1789126436530}
+{"seq":567,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76947.04,"chg24h":-0.01255,"ts":1789127338704}
+{"seq":568,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2458.26,"chg24h":-0.00275,"ts":1789127338704}
+{"seq":569,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":361.41,"chg24h":-0.00758,"ts":1789127338704}
+{"seq":570,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.88,"chg24h":-0.01102,"ts":1789127338704}
+{"seq":571,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":713.41,"chg24h":0.00011,"ts":1789127338704}
+{"seq":572,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":326.66,"chg24h":0.02704,"ts":1789127338704}
+{"seq":573,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.25,"chg24h":0.00802,"ts":1789127338704}
+{"seq":574,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.23,"chg24h":-0.00009,"ts":1789127338704}
