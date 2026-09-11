@@ -835,3 +835,11 @@
 {"seq":833,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.07,"chg24h":0.01018,"ts":1789151708778}
 {"seq":834,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.4,"chg24h":0.01029,"ts":1789151708778}
 {"seq":835,"kind":"macro","source":"yahoo-finance","headline":"The Odds of a Rate Hike Are Soaring Ahead of the Sept. 16 FOMC Meeting","severity":"medium","assetsAffected":["*"],"ts":1789151708778}
+{"seq":836,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77070.5,"chg24h":-0.00064,"ts":1789152612015}
+{"seq":837,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2541.76,"chg24h":0.03245,"ts":1789152612015}
+{"seq":838,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.3,"chg24h":-0.00462,"ts":1789152612015}
+{"seq":839,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.47,"chg24h":0.00704,"ts":1789152612015}
+{"seq":840,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.02,"chg24h":0.00933,"ts":1789152612015}
+{"seq":841,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.57,"chg24h":0.0238,"ts":1789152612015}
+{"seq":842,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.1,"chg24h":0.00979,"ts":1789152612015}
+{"seq":843,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.05,"chg24h":0.00964,"ts":1789152612015}
