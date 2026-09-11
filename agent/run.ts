@@ -9,7 +9,8 @@ import { loadBook, saveBook } from "./book";
 import { propose } from "./propose";
 import { evaluate } from "./policy";
 import { execute } from "./executor";
-import { readAgentState } from "./agent-state";
+import { readAgentState, writeAgentState } from "./agent-state";
+import { readPolicyConfig } from "./policy-config";
 import type { LedgerEvent, MarketEvent, MacroEvent, ProposalEvent } from "./types";
 
 async function main(): Promise<void> {
@@ -60,13 +61,25 @@ async function main(): Promise<void> {
     const dataAgeMs = mkt.events.length > 0 ? 0 : now - (latestMarketTs(events) ?? 0);
     const book = await loadBook(now);
     await saveBook(book);
+    const state = await readAgentState();
+    const cfg = await readPolicyConfig();
+    if (state.lastPolicyVersion && state.lastPolicyVersion !== cfg.version) {
+      toAppend.push({
+        kind: "policy_change",
+        version: cfg.version,
+        changes: {},
+        ts: now,
+      });
+    }
+    if (state.lastPolicyVersion !== cfg.version) {
+      await writeAgentState(state.paused, state.note ?? "policy updated from the site", cfg.version);
+    }
 
     // 3. propose — with a cooldown invariant: never re-propose within 60 min of
     //    the last verdict. Overnight this prevents identical allow-spam while a
     //    paper order is still pending; fills resolve drift and stop proposals
     //    naturally. Gauntlet runs bypass the cooldown (deliberate pipeline run).
     //    A paused agent still senses and records; it only stops deciding.
-    const state = await readAgentState();
     const lastVerdictTs = latestVerdictTs(events);
     const cooldownMs = 60 * 60 * 1000;
     const inCooldown = !gauntlet && lastVerdictTs !== undefined && now - lastVerdictTs < cooldownMs;
@@ -85,6 +98,7 @@ async function main(): Promise<void> {
           { now, book, pxOf, recentMacro: macroRecent, dataAgeMs },
           proposal,
           proposalId,
+          cfg,
         );
         toAppend.push(verdict);
         // 5. execute: demo-capable key -> real paper orders; otherwise simulated

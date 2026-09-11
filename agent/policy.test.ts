@@ -95,8 +95,9 @@ describe("policy knobs", () => {
     expect(v.clauses.find((c) => c.id === "B1-drift")?.pass).toBeNull();
   });
   it("carries the policy version into the verdict", async () => {
-    const v = await evaluate(ctx(), shift, "p9");
-    expect(v.policyVersion).toBe("1.1.0");
+    const cfg = await readPolicyConfig();
+    const v = await evaluate(ctx(), shift, "p9", cfg);
+    expect(v.policyVersion).toBe(cfg.version);
   });
 });
 
