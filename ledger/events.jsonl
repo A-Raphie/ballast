@@ -411,3 +411,11 @@
 {"seq":410,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.92,"chg24h":-0.0002,"ts":1789113788040}
 {"seq":411,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.04,"chg24h":-0.00413,"ts":1789113788040}
 {"seq":412,"kind":"macro","source":"yahoo-finance","headline":"U.S. Treasury Yields Rise Ahead of PPI Inflation Data","severity":"medium","assetsAffected":["*"],"ts":1789113788040}
+{"seq":413,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77255,"chg24h":-0.01026,"ts":1789114689791}
+{"seq":414,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2467.69,"chg24h":-0.00098,"ts":1789114689791}
+{"seq":415,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.52,"chg24h":-0.00351,"ts":1789114689791}
+{"seq":416,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.8,"chg24h":-0.0143,"ts":1789114689791}
+{"seq":417,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":711.86,"chg24h":-0.00541,"ts":1789114689791}
+{"seq":418,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":325.93,"chg24h":0.0241,"ts":1789114689791}
+{"seq":419,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.42,"chg24h":-0.00215,"ts":1789114689791}
+{"seq":420,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.97,"chg24h":-0.00373,"ts":1789114689791}
