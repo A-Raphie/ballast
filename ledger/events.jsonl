@@ -954,3 +954,11 @@
 {"seq":952,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.41,"chg24h":0.00664,"ts":1789158957765}
 {"seq":953,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.52,"chg24h":0.00801,"ts":1789158957765}
 {"seq":954,"kind":"macro","source":"yahoo-finance","headline":"Markets News, Sept. 10, 2026: U.S. Indexes Extend Losing Streak; Oil Prices, Treasury Yields Surge","severity":"medium","assetsAffected":["*"],"ts":1789158957765}
+{"seq":955,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77270,"chg24h":0.00013,"ts":1789159859685}
+{"seq":956,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2527.21,"chg24h":0.02633,"ts":1789159859685}
+{"seq":957,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.14,"chg24h":0.00368,"ts":1789159859685}
+{"seq":958,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.4,"chg24h":-0.00031,"ts":1789159859685}
+{"seq":959,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.94,"chg24h":0.00846,"ts":1789159859685}
+{"seq":960,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.58,"chg24h":0.02018,"ts":1789159859685}
+{"seq":961,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.5,"chg24h":0.00636,"ts":1789159859685}
+{"seq":962,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.25,"chg24h":0.00762,"ts":1789159859685}
