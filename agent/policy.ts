@@ -1,20 +1,24 @@
 // Policy engine: the deterministic gate. LLM proposes; this disposes.
-//   time = O(m), space = O(m)   m = clause count (8), per tick
-//   structure: clause array of pure measures over a PolicyContext
+//   time = O(m), space = O(m)   m = clause count (7), per tick
+//   structure: clause array of pure measures over a PolicyContext + PolicyConfig
 //   family: linear scan (map)
 // Invariant: a clause that cannot be measured returns pass=null; any null forces
 // result "halt" (never auto-pass). NaN inputs are unmeasurable, never false-pass.
+//
+// Every number in this file comes from policy/policy.json (readPolicyConfig) —
+// the site's rule editors write that file, and the next tick obeys it. No
+// threshold lives in code.
 
+import { readPolicyConfig, type PolicyConfig } from "./policy-config";
 import type {
   BookState,
   ClauseVerdict,
-  MarketEvent,
   MacroEvent,
   ProposalEvent,
   VerdictEvent,
 } from "./types";
 
-export const POLICY_VERSION = "1.0.0";
+export type { PolicyConfig };
 
 export interface PolicyContext {
   now: number;
@@ -26,8 +30,11 @@ export interface PolicyContext {
 
 export interface Clause {
   id: string;
-  text: string;
-  measure: (ctx: PolicyContext, p: ProposalEvent) => { pass: boolean | null; measured: string };
+  measure: (
+    ctx: PolicyContext,
+    p: ProposalEvent,
+    cfg: PolicyConfig,
+  ) => { pass: boolean | null; measured: string };
 }
 
 const pct = (x: number) => `${(x * 100).toFixed(2)}%`;
@@ -50,35 +57,32 @@ function bookPct(book: BookState, pxOf: Map<string, number>): { rtoken: number; 
 export const CLAUSES: Clause[] = [
   {
     id: "B1-drift",
-    text: "Rebalance only when a sleeve drifts more than 10 percentage points from its written target.",
-    measure: (ctx) => {
+    measure: (ctx, _p, cfg) => {
       const { rtoken } = bookPct(ctx.book, ctx.pxOf);
       const drift = Math.abs(rtoken - ctx.book.targetRtokenPct);
       return {
-        pass: drift > 0.1 ? true : null,
+        pass: drift > cfg.knobs.driftPp ? true : null,
         measured: `rtoken sleeve ${pct(rtoken)} vs target ${pct(ctx.book.targetRtokenPct)}, drift ${pct(drift)}`,
       };
     },
   },
   {
     id: "B2-drawdown",
-    text: "No action that increases market exposure while the book is down more than 2.5% from its 24h-open value.",
-    measure: (ctx, p) => {
+    measure: (ctx, p, cfg) => {
       const bookValue = Object.entries(ctx.book.positions).reduce((sum, [sym, pos]) => sum + pos.qty * (ctx.pxOf.get(sym) ?? 0), ctx.book.usdt);
       const openValue = ctx.book.openValue24h;
       if (!openValue || openValue <= 0) return { pass: null, measured: "no 24h-open book value recorded" };
       const dd = (openValue - bookValue) / openValue;
       const increasesRisk = p.action === "shift" && p.to !== "USDT";
       return {
-        pass: dd > 0.025 && increasesRisk ? false : true,
-        measured: `drawdown ${pct(dd)} vs 2.50% limit, risk-increasing: ${increasesRisk}`,
+        pass: dd > cfg.knobs.drawdownMax && increasesRisk ? false : true,
+        measured: `drawdown ${pct(dd)} vs ${pct(cfg.knobs.drawdownMax)} limit, risk-increasing: ${increasesRisk}`,
       };
     },
   },
   {
     id: "B3-hedge-band",
-    text: "The crypto hedge sleeve must stay between 20% and 50% of book value.",
-    measure: (ctx, p) => {
+    measure: (ctx, p, cfg) => {
       const { crypto } = bookPct(ctx.book, ctx.pxOf);
       // projected crypto depends on what the shift actually touches:
       //   into crypto: ratio of the non-crypto remainder moves in
@@ -89,26 +93,26 @@ export const CLAUSES: Clause[] = [
       else if (p.from === "hedge-sleeve") projected = crypto * (1 - p.ratio);
       else projected = crypto;
       return {
-        pass: projected >= 0.2 && projected <= 0.5 ? true : false,
-        measured: `projected hedge sleeve ${pct(projected)} vs band 20%-50%`,
+        pass: projected >= cfg.knobs.hedgeBandMin && projected <= cfg.knobs.hedgeBandMax ? true : false,
+        measured: `projected hedge sleeve ${pct(projected)} vs band ${pct(cfg.knobs.hedgeBandMin)}-${pct(cfg.knobs.hedgeBandMax)}`,
       };
     },
   },
   {
     id: "B4-event",
-    text: "A shift requires a macro event of medium severity or higher within the last 12 hours.",
-    measure: (ctx) => {
-      const cutoff = ctx.now - 12 * 3600 * 1000;
+    measure: (ctx, _p, cfg) => {
+      const cutoff = ctx.now - cfg.knobs.eventLookbackHours * 3600 * 1000;
       const hit = ctx.recentMacro.find((m) => m.ts >= cutoff && m.severity !== "low");
       return {
         pass: hit ? true : null,
-        measured: hit ? `${hit.severity}: "${hit.headline.slice(0, 80)}" (${new Date(hit.ts).toISOString()})` : "no qualifying macro event in 12h",
+        measured: hit
+          ? `${hit.severity}: "${hit.headline.slice(0, 80)}" (${new Date(hit.ts).toISOString()})`
+          : `no qualifying macro event in ${cfg.knobs.eventLookbackHours}h`,
       };
     },
   },
   {
     id: "B5-blackout",
-    text: "No rebalance within 30 minutes of the US equity open or close (14:30 / 21:00 UTC).",
     measure: (ctx) => {
       const d = new Date(ctx.now);
       const minutesUTC = d.getUTCHours() * 60 + d.getUTCMinutes();
@@ -119,50 +123,54 @@ export const CLAUSES: Clause[] = [
   },
   {
     id: "B6-concentration",
-    text: "No single position above 35% of book value after the shift.",
-    measure: (ctx) => {
+    measure: (ctx, _p, cfg) => {
       const values = Object.entries(ctx.book.positions).map(([sym, pos]) => ({ sym, v: pos.qty * (ctx.pxOf.get(sym) ?? 0) }));
       const total = values.reduce((s, x) => s + x.v, ctx.book.usdt);
       if (total <= 0) return { pass: null, measured: "book value unmeasurable" };
       const top = values.reduce((a, b) => (b.v > a.v ? b : a), { sym: "-", v: 0 });
-      return { pass: top.v / total > 0.35 ? false : true, measured: `largest ${top.sym} at ${pct(top.v / total)} vs 35% cap` };
+      return { pass: top.v / total > cfg.knobs.concentrationMax ? false : true, measured: `largest ${top.sym} at ${pct(top.v / total)} vs ${pct(cfg.knobs.concentrationMax)} cap` };
     },
   },
   {
     id: "B7-stale",
-    text: "All proposals halt when the freshest market row is older than 10 minutes.",
-    measure: (ctx) => {
-      const stale = ctx.dataAgeMs > 10 * 60 * 1000;
-      return { pass: stale ? false : true, measured: `freshest market data ${Math.round(ctx.dataAgeMs / 1000)}s old vs 600s limit` };
+    measure: (ctx, _p, cfg) => {
+      const stale = ctx.dataAgeMs > cfg.knobs.staleMaxSeconds * 1000;
+      return { pass: stale ? false : true, measured: `freshest market data ${Math.round(ctx.dataAgeMs / 1000)}s old vs ${cfg.knobs.staleMaxSeconds}s limit` };
     },
   },
 ];
 
-export function evaluate(
+function clauseThreshold(id: string, cfg: PolicyConfig): string {
+  switch (id) {
+    case "B1-drift": return `drift > ${(cfg.knobs.driftPp * 100).toFixed(0)}pp`;
+    case "B2-drawdown": return `dd <= ${pct(cfg.knobs.drawdownMax)} or risk-reducing`;
+    case "B3-hedge-band": return `${pct(cfg.knobs.hedgeBandMin)}-${pct(cfg.knobs.hedgeBandMax)}`;
+    case "B4-event": return `severity >= medium within ${cfg.knobs.eventLookbackHours}h`;
+    case "B5-blackout": return "outside open/close ±30min";
+    case "B6-concentration": return `max position <= ${pct(cfg.knobs.concentrationMax)}`;
+    case "B7-stale": return `data age <= ${cfg.knobs.staleMaxSeconds}s`;
+    default: return "-";
+  }
+}
+
+export async function evaluate(
   ctx: PolicyContext,
   proposal: ProposalEvent,
   proposalId: string,
-): VerdictEvent {
+  cfg?: PolicyConfig,
+): Promise<VerdictEvent> {
+  const config = cfg ?? (await readPolicyConfig());
   const clauses: ClauseVerdict[] = CLAUSES.map((c) => {
-    const r = c.measure(ctx, proposal);
-    return { id: c.id, text: c.text, measured: r.measured, threshold: clauseThreshold(c.id), pass: r.pass };
+    const r = c.measure(ctx, proposal, config);
+    return { id: c.id, text: clauseText(c.id, config), measured: r.measured, threshold: clauseThreshold(c.id, config), pass: r.pass };
   });
   let result: VerdictEvent["result"];
   if (clauses.some((c) => c.pass === false)) result = "deny";
   else if (clauses.some((c) => c.pass === null)) result = "halt";
   else result = "allow";
-  return { kind: "verdict", proposalId, clauses, result, ts: ctx.now };
+  return { kind: "verdict", proposalId, clauses, result, ts: ctx.now, policyVersion: config.version };
 }
 
-function clauseThreshold(id: string): string {
-  switch (id) {
-    case "B1-drift": return "drift > 10pp";
-    case "B2-drawdown": return "dd <= 2.5% or risk-reducing";
-    case "B3-hedge-band": return "20%-50%";
-    case "B4-event": return "severity >= medium within 12h";
-    case "B5-blackout": return "outside open/close ±30min";
-    case "B6-concentration": return "max position <= 35%";
-    case "B7-stale": return "data age <= 600s";
-    default: return "-";
-  }
+function clauseText(id: string, cfg: PolicyConfig): string {
+  return cfg.clauses.find((c) => c.id === id)?.text ?? id;
 }

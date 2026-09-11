@@ -1,6 +1,7 @@
 import { readLedger } from "@/lib/ledger";
 import { WatchFloor } from "@/app/components/watch-floor";
 import { Panel, StatStrip, AgentDot, Chip } from "@/app/components/kit";
+import { executionMode } from "@/agent/executor";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +24,10 @@ export default async function ControlRoom() {
             Every macro marker the agent sensed, every decision the policy allowed or denied.
           </p>
         </div>
-        <AgentDot live={live} />
+        <div className="flex items-center gap-3">
+          <Chip>{executionMode() === "paper" ? "paper fills · demo env" : "paper book · simulated fills"}</Chip>
+          <AgentDot live={live} />
+        </div>
       </div>
 
       <Panel className="mb-6 px-5 py-4">

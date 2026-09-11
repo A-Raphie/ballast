@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { readLedger } from "@/lib/ledger";
+import { executionMode } from "@/agent/executor";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +12,7 @@ export async function GET() {
     exposure: v.exposure,
     heelPct: v.heelPct,
     policyVersion: v.policyVersion,
+    execution: executionMode(),
     market: v.marketSnapshot.map((m) => ({ symbol: m.symbol, px: m.px, chg24h: m.chg24h })),
     decisions: v.decisions.slice(0, 10).map((d) => ({
       id: d.id,

@@ -43,6 +43,14 @@ export interface VerdictEvent {
   proposalId: string;
   clauses: ClauseVerdict[];
   result: "allow" | "deny" | "halt";
+  policyVersion?: string;
+  ts: number;
+}
+
+export interface PolicyChangeEvent {
+  kind: "policy_change";
+  version: string;
+  changes: Record<string, { from: number; to: number }>;
   ts: number;
 }
 
@@ -88,6 +96,7 @@ export type LedgerEvent =
   | OrderEvent
   | FillEvent
   | ShiftEvent
+  | PolicyChangeEvent
   | ErrorEvent;
 
 export interface BookState {

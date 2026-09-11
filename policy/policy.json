@@ -1,6 +1,16 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "targets": { "rtokenPct": 0.65, "hedgePct": 0.25, "usdtPct": 0.1 },
+  "knobs": {
+    "driftPp": 0.1,
+    "drawdownMax": 0.025,
+    "hedgeBandMin": 0.2,
+    "hedgeBandMax": 0.5,
+    "eventLookbackHours": 12,
+    "blackoutMinutes": 30,
+    "concentrationMax": 0.35,
+    "staleMaxSeconds": 600
+  },
   "clauses": [
     { "id": "B1-drift", "text": "Rebalance only when a sleeve drifts more than 10 percentage points from its written target.", "threshold": "drift > 10pp", "onUnmeasurable": "halt" },
     { "id": "B2-drawdown", "text": "No action that increases market exposure while the book is down more than 2.5% from its 24h-open value.", "threshold": "dd <= 2.5% or risk-reducing", "onUnmeasurable": "halt" },

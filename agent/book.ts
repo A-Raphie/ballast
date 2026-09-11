@@ -4,25 +4,35 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import type { BookState } from "./types";
+import { readPolicyConfig } from "./policy-config";
 
 const BOOK = path.join(process.cwd(), "ledger", "book.json");
 
-export const DEFAULT_BOOK: BookState = {
-  usdt: 10_000,
-  positions: {},
-  targetRtokenPct: 0.65,
-  targetHedgePct: 0.25,
-  openValue24h: undefined,
-  updatedAt: 0,
-};
+export async function defaultBook(): Promise<BookState> {
+  const policy = await readPolicyConfig();
+  return {
+    usdt: 10_000,
+    positions: {},
+    targetRtokenPct: policy.targets.rtokenPct,
+    targetHedgePct: policy.targets.hedgePct,
+    openValue24h: undefined,
+    updatedAt: 0,
+  };
+}
 
 export async function loadBook(now: number): Promise<BookState> {
-  let book = DEFAULT_BOOK;
+  const defaults = await defaultBook();
+  let book = defaults;
   try {
-    book = { ...DEFAULT_BOOK, ...JSON.parse(await fs.readFile(BOOK, "utf8")) };
+    book = { ...defaults, ...JSON.parse(await fs.readFile(BOOK, "utf8")) };
   } catch {
     /* first run: write the default */
   }
+  // the policy file owns the targets: a rules edit on the site reaches the
+  // book here, on the next tick, without touching this code
+  const policy = await readPolicyConfig();
+  book.targetRtokenPct = policy.targets.rtokenPct;
+  book.targetHedgePct = policy.targets.hedgePct;
   // roll the 24h-open reference at each UTC day boundary (B2-drawdown baseline)
   const day = Math.floor(now / 86_400_000);
   if (book.openDay !== day) {

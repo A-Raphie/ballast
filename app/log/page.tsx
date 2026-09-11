@@ -25,8 +25,9 @@ export default async function LogPage() {
         The ledger
       </h1>
       <p className="caption mt-2 max-w-2xl">
-        Append-only. Every line the agent has written since its first tick, newest first. This is
-        the raw surface the control room renders; nothing on this site can show what is not here.
+        Append-only. Every line the agent has written since Sep 9, newest first (night one is
+        archived in the repo at ledger/archive/). This is the raw surface the control room
+        renders; nothing on this site can show what is not here.
       </p>
 
       <Panel className="mt-8 overflow-x-auto p-0">

@@ -76,7 +76,7 @@ async function main(): Promise<void> {
         proposal.id = proposalId;
         toAppend.push(proposal);
         // 4. gate
-        const verdict = evaluate(
+        const verdict = await evaluate(
           { now, book, pxOf, recentMacro: macroRecent, dataAgeMs },
           proposal,
           proposalId,
