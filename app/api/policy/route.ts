@@ -12,6 +12,16 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  // The public deploy holds no pen: function storage is ephemeral and the
+  // agent's policy file lives in its repo. Rule changes ship through the repo
+  // (edit policy.json -> agent obeys next tick -> deploy publishes the new
+  // rulebook). Self-hosted instances accept writes.
+  if (process.env.NETLIFY) {
+    return NextResponse.json(
+      { ok: false, error: "read-only on the public deploy: the agent holds the pen. Rule changes ship through its repo." },
+      { status: 405 },
+    );
+  }
   let write: unknown;
   try {
     write = await request.json();

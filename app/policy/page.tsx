@@ -62,10 +62,9 @@ export default async function PolicyPage() {
         Your rules
       </h1>
       <p className="caption mt-2 max-w-2xl">
-        You write the rules once. The agent cannot trade a proposal these rules do not allow,
-        and no prompt can weaken them: the gate is deterministic code that re-reads this page
-        before every decision. Change a number, save, and the running agent obeys it on its
-        next tick.
+        You write the rules once. The agent re-reads this rulebook before every decision, and no
+        prompt can weaken it: the gate is deterministic code. Every change is versioned and
+        recorded in the ledger; the running agent cites the version it obeyed.
       </p>
 
       <Panel className="mt-8 p-6">

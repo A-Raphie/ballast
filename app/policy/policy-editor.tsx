@@ -96,6 +96,10 @@ export function PolicyEditor({
         Saving writes the policy file, bumps its version, and records the change in the ledger.
         The agent cannot skip this trail: its next verdict cites the version you saved.
       </p>
+      <p className="caption mt-2 text-[var(--text-muted)]">
+        On the public deploy the rulebook is read-only: the agent holds the pen, and rule changes
+        ship through its repo. Self-hosted instances accept writes.
+      </p>
     </div>
   );
 }
