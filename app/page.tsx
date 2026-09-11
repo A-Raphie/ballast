@@ -27,7 +27,7 @@ export default async function Landing() {
       {/* centered fold: eyebrow, h1, one paragraph, CTAs */}
       <section className="mx-auto max-w-3xl px-6 pb-16 pt-24 text-center">
         <div className="micro mb-5">Bitget AI Base Camp Hackathon S2 · Agentic Trading</div>
-        <h1 className="font-[family-name:var(--font-display)] text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+        <h1 style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }} className="font-[family-name:var(--font-display)] font-bold leading-[1.05] tracking-tight">
           Wall Street sleeps.
           <br />
           <span className="text-[var(--decision)]">Your book doesn&apos;t have to.</span>
