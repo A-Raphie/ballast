@@ -644,3 +644,15 @@
 {"seq":642,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.36,"chg24h":0.03432,"ts":1789134560362}
 {"seq":643,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.39,"chg24h":0.01,"ts":1789134560362}
 {"seq":644,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.09,"chg24h":0.00879,"ts":1789134560362}
+{"seq":645,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":79460,"chg24h":0.02881,"ts":1789135462325}
+{"seq":646,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2632.56,"chg24h":0.07981,"ts":1789135462325}
+{"seq":647,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":366.04,"chg24h":-0.00696,"ts":1789135462325}
+{"seq":648,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.83,"chg24h":0.01622,"ts":1789135462325}
+{"seq":649,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.39,"chg24h":0.00813,"ts":1789135462325}
+{"seq":650,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.63,"chg24h":0.04176,"ts":1789135462325}
+{"seq":651,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.53,"chg24h":0.01678,"ts":1789135462325}
+{"seq":652,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.56,"chg24h":0.01052,"ts":1789135462325}
+{"seq":653,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq rise as CPI remains sticky","severity":"medium","assetsAffected":["*"],"ts":1789135462325}
+{"seq":654,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Rallies On Surprise Inflation Data; Nvidia Rebounds, Oracle Jumps (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789135462325}
+{"seq":655,"kind":"macro","source":"yahoo-finance","headline":"CPI report: Prices rose 3.4% in August, matching inflation expectations and raising Fed rate hike odds","severity":"medium","assetsAffected":["*"],"ts":1789135462325}
+{"seq":656,"kind":"macro","source":"yahoo-finance","headline":"Dow rises 622 points as oil prices fall after August CPI report","severity":"medium","assetsAffected":["*"],"ts":1789135462325}
