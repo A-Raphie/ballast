@@ -909,3 +909,11 @@
 {"seq":907,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.14,"chg24h":0.01281,"ts":1789154418121}
 {"seq":908,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.98,"chg24h":0.00985,"ts":1789154418121}
 {"seq":909,"kind":"macro","source":"yahoo-finance","headline":"Dollar Declines Along With Lower Treasury Yields, Oil Prices","severity":"medium","assetsAffected":["*"],"ts":1789154418121}
+{"seq":910,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77245.49,"chg24h":0.00074,"ts":1789155342947}
+{"seq":911,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2545.79,"chg24h":0.03267,"ts":1789155342947}
+{"seq":912,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.02,"chg24h":0.0017,"ts":1789155342947}
+{"seq":913,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.4,"chg24h":-0.00058,"ts":1789155342947}
+{"seq":914,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.58,"chg24h":0.0089,"ts":1789155342947}
+{"seq":915,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.8,"chg24h":0.0223,"ts":1789155342947}
+{"seq":916,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.02,"chg24h":0.01298,"ts":1789155342947}
+{"seq":917,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.9,"chg24h":0.0092,"ts":1789155342947}
