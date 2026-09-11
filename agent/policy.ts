@@ -84,17 +84,22 @@ export const CLAUSES: Clause[] = [
     id: "B3-hedge-band",
     measure: (ctx, p, cfg) => {
       const { crypto } = bookPct(ctx.book, ctx.pxOf);
-      // projected crypto depends on what the shift actually touches:
-      //   into crypto: ratio of the non-crypto remainder moves in
-      //   out of crypto: ratio of the crypto sleeve moves out
-      //   otherwise (usdt/rtoken source): the hedge sleeve is untouched
+      // The band rule judges shifts that TOUCH the crypto sleeve. A shift that
+      // moves cash or rTokens leaves the hedge sleeve untouched, so it cannot
+      // violate the band (a risk-reducing trim must never be blocked here).
       let projected: number;
+      let touched = true;
       if (p.to === "crypto") projected = crypto + p.ratio * (1 - crypto);
       else if (p.from === "hedge-sleeve") projected = crypto * (1 - p.ratio);
-      else projected = crypto;
+      else {
+        touched = false; // the shift moves cash or rTokens: the hedge sleeve is untouched
+        projected = crypto;
+      }
       return {
-        pass: projected >= cfg.knobs.hedgeBandMin && projected <= cfg.knobs.hedgeBandMax ? true : false,
-        measured: `projected hedge sleeve ${pct(projected)} vs band ${pct(cfg.knobs.hedgeBandMin)}-${pct(cfg.knobs.hedgeBandMax)}`,
+        pass: !touched || (projected >= cfg.knobs.hedgeBandMin && projected <= cfg.knobs.hedgeBandMax) ? true : false,
+        measured: touched
+          ? `after shift: hedge sleeve ${pct(projected)} vs band ${pct(cfg.knobs.hedgeBandMin)}-${pct(cfg.knobs.hedgeBandMax)}`
+          : `hedge sleeve untouched at ${pct(crypto)}`,
       };
     },
   },
@@ -123,12 +128,43 @@ export const CLAUSES: Clause[] = [
   },
   {
     id: "B6-concentration",
-    measure: (ctx, _p, cfg) => {
-      const values = Object.entries(ctx.book.positions).map(([sym, pos]) => ({ sym, v: pos.qty * (ctx.pxOf.get(sym) ?? 0) }));
-      const total = values.reduce((s, x) => s + x.v, ctx.book.usdt);
-      if (total <= 0) return { pass: null, measured: "book value unmeasurable" };
-      const top = values.reduce((a, b) => (b.v > a.v ? b : a), { sym: "-", v: 0 });
-      return { pass: top.v / total > cfg.knobs.concentrationMax ? false : true, measured: `largest ${top.sym} at ${pct(top.v / total)} vs ${pct(cfg.knobs.concentrationMax)} cap` };
+    measure: (ctx, p, cfg) => {
+      // Project the book AFTER the shift (the clause promises post-shift
+      // concentration): buying grows the destination position, cash moves the
+      // other way. Measuring the CURRENT book instead would block diversifying
+      // buys that actually dilute the largest position.
+      const positions: Record<string, number> = {};
+      for (const [sym, pos] of Object.entries(ctx.book.positions)) {
+        positions[sym] = pos.qty * (ctx.pxOf.get(sym) ?? 0);
+      }
+      const totalNow = Object.values(positions).reduce((s, v) => s + v, ctx.book.usdt);
+      if (totalNow <= 0) return { pass: null, measured: "book value unmeasurable" };
+      const buy = p.to === "crypto" || p.to === "rtoken-sleeve";
+      // sells size against the SOURCE sleeve's value (same basis as the executor)
+      const srcSymbol = p.from === "hedge-sleeve" ? "BTCUSDT" : "RNVDAUSDT";
+      const notional = buy
+        ? ctx.book.usdt * p.ratio
+        : (positions[srcSymbol] ?? 0) * p.ratio;
+      const destSymbol = p.symbol ?? (p.to === "crypto" ? "BTCUSDT" : "RNVDAUSDT");
+      if (buy) {
+        const destPx = ctx.pxOf.get(destSymbol);
+        if (destPx === undefined) return { pass: null, measured: `no live price for ${destSymbol}` };
+        positions[destSymbol] = (positions[destSymbol] ?? 0) + notional;
+      } else {
+        const srcSymbol = p.from === "hedge-sleeve" ? "BTCUSDT" : "RNVDAUSDT";
+        positions[srcSymbol] = (positions[srcSymbol] ?? 0) - notional;
+      }
+      // a funded buy/sell moves cash against the position: book total ~constant
+      const totalAfter = totalNow;
+      let worst = { sym: "-", share: 0 };
+      for (const [sym, value] of Object.entries(positions)) {
+        const share = Math.max(0, value) / totalAfter;
+        if (share > worst.share) worst = { sym, share };
+      }
+      return {
+        pass: worst.share > cfg.knobs.concentrationMax ? false : true,
+        measured: `after shift: largest ${worst.sym} at ${pct(worst.share)} vs ${pct(cfg.knobs.concentrationMax)} cap`,
+      };
     },
   },
   {

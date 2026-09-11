@@ -49,6 +49,26 @@ function proposeThresholdFallback(
   }
 
   const drift = rtoken - book.targetRtokenPct;
+  // Concentration first: if the largest rToken breaches the cap, trim it before
+  // anything else (a cap-blocked buy would repeat forever otherwise).
+  const rnValue = (book.positions["RNVDAUSDT"]?.qty ?? 0) * (pxOf.get("RNVDAUSDT") ?? 0);
+  const { crypto: cryptoValue } = bookPctFrom(book, pxOf);
+  const cryptoAbs = book.targetHedgePct >= 0 && totalNow(book, pxOf) > 0 ? cryptoValue * totalNow(book, pxOf) : 0;
+  const totalBook = rnValue + cryptoAbs + book.usdt;
+  const share = totalBook > 0 ? rnValue / totalBook : 0;
+  if (share > 0.35) {
+    return {
+      kind: "proposal",
+      proposer: "threshold-fallback",
+      action: "shift",
+      from: "rtoken-sleeve",
+      to: "usdt-buffer",
+      symbol: "RNVDAUSDT",
+      ratio: Math.min((1 - 0.35 / share) * 1.15, 0.9),
+      reason: `Largest position at ${(share * 100).toFixed(1)}% exceeds the 35% concentration cap; trimming before the sleeve build continues.`,
+      ts: now,
+    };
+  }
   if (Math.abs(drift) <= 0.1) return null;
   const movingCrypto = drift > 0;
   const sourceExists = movingCrypto ? rtoken > 0.02 : true; // can't shift out of an empty sleeve
@@ -131,4 +151,13 @@ async function proposeWithLlm(
     reason: String(parsed.reason ?? "").slice(0, 300),
     ts: now,
   };
+}
+
+function totalNow(book: BookState, pxOf: Map<string, number>): number {
+  let v = book.usdt;
+  for (const [sym, pos] of Object.entries(book.positions)) {
+    const px = pxOf.get(sym);
+    if (px !== undefined) v += pos.qty * px;
+  }
+  return v;
 }

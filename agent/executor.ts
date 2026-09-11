@@ -55,7 +55,9 @@ export async function execute(
   const px = pxOf.get(target);
   if (!px) return null; // no live price: never fabricate a fill
 
-  const notional = book.usdt * proposal.ratio;
+  const notional = buy
+    ? book.usdt * proposal.ratio // buys draw from cash
+    : (book.positions[target]?.qty ?? 0) * px * proposal.ratio; // sells size against the held position
   let qty = notional / px;
   const side: "buy" | "sell" = buy ? "buy" : "sell";
 

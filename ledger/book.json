@@ -1,18 +1,22 @@
 {
-  "usdt": 3672.8129312218753,
+  "usdt": 2824.5066360385354,
   "positions": {
     "BTCUSDT": {
       "qty": 0.0324254215304799,
       "market": "crypto"
     },
     "RNVDAUSDT": {
-      "qty": 17.400558107215037,
+      "qty": 15.74206572961122,
+      "market": "rtoken"
+    },
+    "RTSLAUSDT": {
+      "qty": 3.323530862144709,
       "market": "rtoken"
     }
   },
   "targetRtokenPct": 0.65,
   "targetHedgePct": 0.25,
   "openValue24h": 10000,
-  "updatedAt": 1789153514699,
+  "updatedAt": 1789153690664,
   "openDay": 20707
 }
