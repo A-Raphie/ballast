@@ -39,7 +39,7 @@ Event: Bitget AI Base Camp Hackathon S2 (bitget.com/activity-hub/hackathon) · D
 | mock-hunter | 5 | ⏸ | pre-demo mandatory (real ledger vs fixtures) |
 | frontend-lighthouse | 4 | ⏸ | one local run pre-ship |
 | deterministic-design | 4 | ⏸ | UI looks-off pass |
-| ship-rehearsal → pre-release-review → pre-ship-gate | 5 | ⏸ | mandated order before "live" claims |
+| ship-rehearsal → pre-release-review → pre-ship-gate | 5 | ⏸ | site LIVE on Netlify (try-ballast.netlify.app), routes verified in-browser; full rehearsal + claims-verify queued |
 | claims-verify | 5 | ⏸ | before submission, on deployed URL |
 | demo-script → vo-first → desktop-demo | 6 | ⏸ | his VO audio required before takes; ◆ gates apply |
 | submission | 6 | ⏸ | notify-gate + HIS submit click |

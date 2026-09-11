@@ -3,6 +3,8 @@
 Read this first if you're picking up the project.
 
 ## Current state
+**LIVE on Netlify: https://try-ballast.netlify.app** (deployed Sep 10 late). Agent autonomous: local runner ticks every 15 min, commits ledger, book building per policy via simulated-labeled fills. Agentic account (UID 8283456997, unified mode) authorized via OAuth; trio in .env + ~/.bitget/oauth_token.json. Deployed ledger is a build-time snapshot — auto-deploy on push (GitHub Action with NETLIFY_AUTH_TOKEN) is the next automation.
+
 Day 6, Sep 9 evening: the agent is ALIVE. Full tick loop (sense markets + macro RSS -> propose -> 7-clause policy gate -> order) runs every 15 min on his Mac via caffeinate runner (pid see /tmp/ballast-tick.log); ledger events.jsonl is accruing real keyless data and is committed to the repo per tick. Control room + landing + policy + log surfaces render the real ledger (verified in browser). Orders record as pending-key until his Bitget Demo key lands; fills + the formal paper-log clock start that day. Install tool: bun (npm crashes with Arborist edgesOut bug on this machine).
 
 ## What's done

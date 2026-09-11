@@ -27,7 +27,7 @@ Deadline arithmetic: submission closes Sep 21 (UTC+8). Paper-log days are the sc
 ## Phase 3 — Landing + polish + demo (Sep 17-19)
 - [ ] Landing (remlo grammar, band as framed object, front door + enter path)
 - [ ] claims-verify pass on all copy vs deployed build
-- [ ] ship-rehearsal → pre-ship-gate on the deployed URL
+- [~] ship-rehearsal → pre-ship-gate on the deployed URL (deployed + routes verified; full rehearsal pass pending)
 - [ ] Demo video: demo-script storyboard (scenes mapped to judging criteria) → vo-first (his VO) → desktop-demo take
 - [ ] X post drafted (x-post skill; #BitgetHackathon + @Bitget_AI)
 
