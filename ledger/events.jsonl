@@ -718,3 +718,13 @@
 {"seq":716,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.91,"chg24h":0.00856,"ts":1789140876729}
 {"seq":717,"kind":"macro","source":"yahoo-finance","headline":"Should you buy Series I bonds as inflation persists?","severity":"medium","assetsAffected":["*"],"ts":1789140876729}
 {"seq":718,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq rise as CPI remains sticky, Fed rate-hike bets jump","severity":"medium","assetsAffected":["*"],"ts":1789140876729}
+{"seq":719,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78545.54,"chg24h":0.01768,"ts":1789141778659}
+{"seq":720,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2607.46,"chg24h":0.06958,"ts":1789141778659}
+{"seq":721,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.57,"chg24h":-0.00632,"ts":1789141778659}
+{"seq":722,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.8,"chg24h":0.00485,"ts":1789141778659}
+{"seq":723,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.06,"chg24h":0.00886,"ts":1789141778659}
+{"seq":724,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.57,"chg24h":0.04449,"ts":1789141778659}
+{"seq":725,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.21,"chg24h":0.0079,"ts":1789141778659}
+{"seq":726,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766,"chg24h":0.0094,"ts":1789141778659}
+{"seq":727,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Rallies On Surprise Inflation Data; These Tech Names Lead This List (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789141778659}
+{"seq":728,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Falls On Soaring Oil Prices, Yields, But Finishes Strong; CPI Inflation, Apple, Oracle, Meta In Focus: Weekly Review","severity":"medium","assetsAffected":["*"],"ts":1789141778659}
