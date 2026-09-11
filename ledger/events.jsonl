@@ -804,3 +804,14 @@
 {"seq":802,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.15,"chg24h":0.00569,"ts":1789149000804}
 {"seq":803,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.91,"chg24h":0.01016,"ts":1789149000804}
 {"seq":804,"kind":"macro","source":"yahoo-finance","headline":"Bitcoin and ethereum prices today, Thursday, September 10, 2026: Crypto prices slide back with inflation data on tap","severity":"medium","assetsAffected":["*"],"ts":1789149000804}
+{"seq":805,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77150,"chg24h":-0.00058,"ts":1789149904830}
+{"seq":806,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2550.41,"chg24h":0.03587,"ts":1789149904830}
+{"seq":807,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.05,"chg24h":-0.00096,"ts":1789149904830}
+{"seq":808,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.14,"chg24h":0.00408,"ts":1789149904830}
+{"seq":809,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.55,"chg24h":0.01001,"ts":1789149904830}
+{"seq":810,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.34,"chg24h":0.0287,"ts":1789149904830}
+{"seq":811,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.34,"chg24h":0.00724,"ts":1789149904830}
+{"seq":812,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.84,"chg24h":0.01042,"ts":1789149904830}
+{"seq":813,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq rise as CPI fuels Fed rate-hike bets, oil prices fall","severity":"medium","assetsAffected":["*"],"ts":1789149904830}
+{"seq":814,"kind":"macro","source":"yahoo-finance","headline":"US consumer prices accelerate in August, push Fed closer to rate hike","severity":"medium","assetsAffected":["*"],"ts":1789149904830}
+{"seq":815,"kind":"macro","source":"yahoo-finance","headline":"Is gold really a hedge against inflation?","severity":"medium","assetsAffected":["*"],"ts":1789149904830}
