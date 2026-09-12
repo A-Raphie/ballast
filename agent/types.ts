@@ -51,7 +51,7 @@ export interface VerdictEvent {
 export interface PolicyChangeEvent {
   kind: "policy_change";
   version: string;
-  changes: Record<string, { from: number; to: number }>;
+  changes: Record<string, { from: unknown; to: unknown }>;
   ts: number;
 }
 

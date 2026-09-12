@@ -14,7 +14,7 @@ import type { PolicyChangeEvent } from "@/agent/types";
 
 export const dynamic = "force-dynamic";
 
-function summary(changes: Record<string, { from: number; to: number }>): string {
+function summary(changes: Record<string, { from: unknown; to: unknown }>): string {
   return (
     Object.entries(changes)
       .map(([k, v]) => `${k} ${v.from} -> ${v.to}`)

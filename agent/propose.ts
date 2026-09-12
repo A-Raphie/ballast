@@ -6,6 +6,7 @@
 //   time = O(1) per proposal (context is precomputed), space = O(1)
 
 import type { MacroEvent, ProposalEvent, BookState } from "./types";
+import { readPolicyConfig } from "./policy-config";
 import { bookPctFrom } from "./book";
 
 export async function propose(
@@ -20,12 +21,12 @@ export async function propose(
   return proposeThresholdFallback(book, macroEvents, pxOf, now);
 }
 
-function proposeThresholdFallback(
+async function proposeThresholdFallback(
   book: BookState,
   macroEvents: MacroEvent[],
   pxOf: Map<string, number>,
   now: number,
-): ProposalEvent | null {
+): Promise<ProposalEvent | null> {
   const cutoff = now - 12 * 3600 * 1000;
   const qualifying = macroEvents.filter((m) => m.ts >= cutoff && m.severity !== "low");
   if (qualifying.length === 0) return null; // nothing to react to; B4 will halt anyway
@@ -53,10 +54,11 @@ function proposeThresholdFallback(
   // anything else (a cap-blocked buy would repeat forever otherwise).
   const rnValue = (book.positions["RNVDAUSDT"]?.qty ?? 0) * (pxOf.get("RNVDAUSDT") ?? 0);
   const { crypto: cryptoValue } = bookPctFrom(book, pxOf);
-  const cryptoAbs = book.targetHedgePct >= 0 && totalNow(book, pxOf) > 0 ? cryptoValue * totalNow(book, pxOf) : 0;
+  const cryptoAbs = totalNow(book, pxOf) > 0 ? cryptoValue * totalNow(book, pxOf) : 0;
   const totalBook = rnValue + cryptoAbs + book.usdt;
   const share = totalBook > 0 ? rnValue / totalBook : 0;
-  if (share > 0.35) {
+  const cap = (await readPolicyConfig()).knobs.concentrationMax;
+  if (share > cap) {
     return {
       kind: "proposal",
       proposer: "threshold-fallback",
@@ -64,7 +66,7 @@ function proposeThresholdFallback(
       from: "rtoken-sleeve",
       to: "usdt-buffer",
       symbol: "RNVDAUSDT",
-      ratio: Math.min((1 - 0.35 / share) * 1.15, 0.9),
+      ratio: Math.min((1 - cap / share) * 1.15, 0.9),
       reason: `Largest position at ${(share * 100).toFixed(1)}% exceeds the 35% concentration cap; trimming before the sleeve build continues.`,
       ts: now,
     };

@@ -26,8 +26,11 @@ function ctx(over: Record<string, unknown> = {}) {
     now: T0,
     book: book(),
     pxOf,
+    chg24h: new Map([["RNVDAUSDT", -0.01], ["BTCUSDT", 0.005]]),
     recentMacro: [macro()],
     dataAgeMs: 0,
+    ordersToday: 0,
+    turnoverTodayUsdt: 0,
     ...over,
   } as Parameters<typeof evaluate>[0];
 }
@@ -106,7 +109,7 @@ describe("B6 post-shift concentration", () => {
     // BTC at 784.8 of 2433.6 (32%); a 30% cash buy pushes BTC to ~40% > 35% cap
     const small = book({ usdt: 1000, openValue24h: 2450 });
     const pxOf = new Map([["RNVDAUSDT", 223.72], ["BTCUSDT", 78478]]);
-    const v = await evaluate({ now: T0, book: small, pxOf, recentMacro: [macro()], dataAgeMs: 0 }, shift, "pb1");
+    const v = await evaluate({ now: T0, book: small, pxOf, chg24h: new Map(), recentMacro: [macro()], dataAgeMs: 0, ordersToday: 0, turnoverTodayUsdt: 0 }, shift, "pb1");
     const b6 = v.clauses.find((c) => c.id === "B6-concentration");
     expect(b6?.pass).toBe(false);
     expect(v.result).toBe("deny");
@@ -118,9 +121,10 @@ describe("B6 post-shift concentration", () => {
       openValue24h: 4900,
     });
     const pxOf = new Map([["RNVDAUSDT", 223.72]]);
-    const trim = { ...shift, from: "rtoken-sleeve", to: "usdt-buffer", ratio: 0.6 }; // sized past the cap boundary: RNVDA 79.6% -> ~31.8%
-    const v = await evaluate({ now: T0, book: big, pxOf, recentMacro: [macro()], dataAgeMs: 0 }, trim, "pb2");
+    const trim = { ...shift, from: "rtoken-sleeve", to: "usdt-buffer", ratio: 0.68 }; // sized for the live 28% cap: RNVDA 79.6% -> ~25.4%
+    const v = await evaluate({ now: T0, book: big, pxOf, chg24h: new Map(), recentMacro: [macro()], dataAgeMs: 0, ordersToday: 0, turnoverTodayUsdt: 0 }, trim, "pb2");
     expect(v.result).toBe("allow");
   });
 });
+
 

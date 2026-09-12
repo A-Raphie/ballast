@@ -45,7 +45,7 @@ export default async function Landing() {
             Open the control room
           </Link>
           <Link href="/policy" className="btn btn-ghost whitespace-nowrap">
-            Read the policy
+            Read the rules
           </Link>
         </div>
         <div className="mt-6 flex justify-center">

@@ -59,6 +59,16 @@ async function main(): Promise<void> {
       .filter((m) => now - m.ts < 48 * 3600 * 1000)
       .sort((a, b) => b.ts - a.ts);
     const dataAgeMs = mkt.events.length > 0 ? 0 : now - (latestMarketTs(events) ?? 0);
+    // library-rule context: today's trade count/notional + per-symbol 24h moves
+    const dayStart = Math.floor(now / 86_400_000) * 86_400_000;
+    let ordersToday = 0;
+    let turnoverTodayUsdt = 0;
+    for (const e of events) {
+      if (e.kind === "order" && e.ts >= dayStart) ordersToday++;
+      if (e.kind === "fill" && e.ts >= dayStart) turnoverTodayUsdt += e.qty * e.px;
+    }
+    const chg24h = new Map<string, number>();
+    for (const e of mkt.events) chg24h.set(e.symbol, e.chg24h);
     const book = await loadBook(now);
     await saveBook(book);
     const state = await readAgentState();
@@ -95,7 +105,7 @@ async function main(): Promise<void> {
         toAppend.push(proposal);
         // 4. gate
         const verdict = await evaluate(
-          { now, book, pxOf, recentMacro: macroRecent, dataAgeMs },
+          { now, book, pxOf, chg24h, recentMacro: macroRecent, dataAgeMs, ordersToday, turnoverTodayUsdt },
           proposal,
           proposalId,
           cfg,
