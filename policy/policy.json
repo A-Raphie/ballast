@@ -1,5 +1,5 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.3",
   "targets": {
     "rtokenPct": 0.65,
     "hedgePct": 0.25,
@@ -9,10 +9,10 @@
     "driftPp": 0.1,
     "drawdownMax": 0.025,
     "hedgeBandMin": 0.2,
-    "hedgeBandMax": 0.5,
+    "hedgeBandMax": 0.3,
     "eventLookbackHours": 12,
     "blackoutMinutes": 30,
-    "concentrationMax": 0.35,
+    "concentrationMax": 0.28,
     "staleMaxSeconds": 600
   },
   "clauses": [
