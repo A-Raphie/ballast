@@ -8,18 +8,9 @@
       },
       "enabled": true,
       "text": "Stand down while any held symbol moved more than 10% in 24 hours."
-    },
-    {
-      "id": "L2-volatility-halt",
-      "type": "volatility-halt",
-      "params": {
-        "maxMovePct": 10
-      },
-      "enabled": true,
-      "text": "Stand down while any held symbol moved more than 10% in 24 hours."
     }
   ],
-  "version": "1.2.15",
+  "version": "1.2.16",
   "targets": {
     "rtokenPct": 0.65,
     "hedgePct": 0.25,
