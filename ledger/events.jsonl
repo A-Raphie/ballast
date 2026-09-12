@@ -1518,3 +1518,12 @@
 {"seq":1516,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.29,"chg24h":0.02059,"ts":1789205157720}
 {"seq":1517,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789205157720}
 {"seq":1518,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00329,"ts":1789205157720}
+{"seq":1519,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77371.3,"chg24h":0.00613,"ts":1789206063558}
+{"seq":1520,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2533.87,"chg24h":0.02894,"ts":1789206063558}
+{"seq":1521,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.38,"chg24h":-0.00186,"ts":1789206063558}
+{"seq":1522,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.46,"chg24h":-0.00785,"ts":1789206063558}
+{"seq":1523,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.92,"chg24h":0.00358,"ts":1789206063558}
+{"seq":1524,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.29,"chg24h":0.02059,"ts":1789206063558}
+{"seq":1525,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789206063558}
+{"seq":1526,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789206063558}
+{"seq":1527,"kind":"macro","source":"yahoo-finance","headline":"Mortgage and refinance interest rates today, Friday, September 11, 2026: Rates shoot up ahead of CPI data","severity":"medium","assetsAffected":["*"],"ts":1789206063558}
