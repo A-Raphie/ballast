@@ -1621,3 +1621,12 @@
 {"seq":1619,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.77,"chg24h":0.01861,"ts":1789215101123}
 {"seq":1620,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789215101123}
 {"seq":1621,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789215101123}
+{"seq":1622,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77329.99,"chg24h":0.00423,"ts":1789216004511}
+{"seq":1623,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2534.17,"chg24h":0.03119,"ts":1789216004511}
+{"seq":1624,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.38,"chg24h":-0.00088,"ts":1789216004511}
+{"seq":1625,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.98,"chg24h":-0.00236,"ts":1789216004511}
+{"seq":1626,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":0.00234,"ts":1789216004511}
+{"seq":1627,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.77,"chg24h":0.01861,"ts":1789216004511}
+{"seq":1628,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.39,"chg24h":-0.0013,"ts":1789216004511}
+{"seq":1629,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789216004511}
+{"seq":1630,"kind":"macro","source":"yahoo-finance","headline":"US equity funds record nine-month high outflows as oil stokes inflation fears","severity":"medium","assetsAffected":["*"],"ts":1789216004511}
