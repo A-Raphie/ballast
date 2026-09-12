@@ -1787,3 +1787,12 @@
 {"seq":1785,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789230470467}
 {"seq":1786,"kind":"macro","source":"yahoo-finance","headline":"Fed rate-hike odds surge as Warsh faces inflation-weary markets","severity":"medium","assetsAffected":["*"],"ts":1789230470467}
 {"seq":1787,"kind":"policy_change","version":"1.2.18","changes":{},"ts":1789230470467}
+{"seq":1788,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77365,"chg24h":-0.00514,"ts":1789231374493}
+{"seq":1789,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2531.6,"chg24h":-0.01495,"ts":1789231374493}
+{"seq":1790,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.76,"chg24h":0.002,"ts":1789231374493}
+{"seq":1791,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.02,"chg24h":0.00039,"ts":1789231374493}
+{"seq":1792,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00191,"ts":1789231374493}
+{"seq":1793,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.32,"chg24h":-0.00464,"ts":1789231374493}
+{"seq":1794,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.43,"chg24h":0.00395,"ts":1789231374493}
+{"seq":1795,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789231374493}
+{"seq":1796,"kind":"policy_change","version":"1.2.20","changes":{},"ts":1789231374493}
