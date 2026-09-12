@@ -216,6 +216,11 @@ export async function readPolicyLive(): Promise<PolicyConfig | null> {
   }
 }
 
+/** Refresh the remote cache after a successful commit so immediate follow-up writes read fresh. */
+export function setRemotePolicyCache(config: PolicyConfig): void {
+  remoteCache = { at: Date.now(), config };
+}
+
 export async function commitPolicyLive(
   next: PolicyConfig,
   message: string,
