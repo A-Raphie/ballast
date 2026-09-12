@@ -1483,3 +1483,12 @@
 {"seq":1481,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.29,"chg24h":0.01833,"ts":1789201537017}
 {"seq":1482,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.22,"chg24h":0.00775,"ts":1789201537017}
 {"seq":1483,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.0046,"ts":1789201537017}
+{"seq":1484,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77346.89,"chg24h":-0.00077,"ts":1789202440703}
+{"seq":1485,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2531.13,"chg24h":0.0213,"ts":1789202440703}
+{"seq":1486,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.34,"chg24h":-0.00181,"ts":1789202440703}
+{"seq":1487,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.54,"chg24h":-0.00754,"ts":1789202440703}
+{"seq":1488,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.71,"chg24h":0.00607,"ts":1789202440703}
+{"seq":1489,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.29,"chg24h":0.01833,"ts":1789202440703}
+{"seq":1490,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.22,"chg24h":0.00775,"ts":1789202440703}
+{"seq":1491,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00329,"ts":1789202440703}
+{"seq":1492,"kind":"macro","source":"yahoo-finance","headline":"US Dollar Price Forecast: Fed Hike Bets Rise as CPI Takes Center Stage; EUR/USD and GBP/USD Key Levels to Watch","severity":"medium","assetsAffected":["*"],"ts":1789202440703}
