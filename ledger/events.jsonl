@@ -1335,3 +1335,12 @@
 {"seq":1333,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.47,"chg24h":0.0211,"ts":1789186154959}
 {"seq":1334,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789186154959}
 {"seq":1335,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.21,"chg24h":0.00855,"ts":1789186154959}
+{"seq":1336,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77241.13,"chg24h":0.00216,"ts":1789187058464}
+{"seq":1337,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2510.98,"chg24h":0.02211,"ts":1789187058464}
+{"seq":1338,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.66,"chg24h":0.00621,"ts":1789187058464}
+{"seq":1339,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.53,"chg24h":0.00197,"ts":1789187058464}
+{"seq":1340,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.92,"chg24h":0.0115,"ts":1789187058464}
+{"seq":1341,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.47,"chg24h":0.0211,"ts":1789187058464}
+{"seq":1342,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789187058464}
+{"seq":1343,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00741,"ts":1789187058464}
+{"seq":1344,"kind":"macro","source":"yahoo-finance","headline":"Lockheed Martin Yields 2.6% and Trades at 17.6 Times Earnings. Is Wall Street Right to Be Cautious on the Stock ?","severity":"medium","assetsAffected":["*"],"ts":1789187058464}
