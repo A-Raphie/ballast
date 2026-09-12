@@ -1260,3 +1260,12 @@
 {"seq":1258,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq fall for fourth straight day as bond yields jump, oil stays above $100","severity":"medium","assetsAffected":["*"],"ts":1789178925875}
 {"seq":1259,"kind":"macro","source":"yahoo-finance","headline":"Stocks Settle Lower as Surging Crude Prices Boost Fed Rate Hike Chances","severity":"medium","assetsAffected":["*"],"ts":1789178925875}
 {"seq":1260,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Drops 300 Points As Oil, Yields Pop; Nvidia Slides While Apple Gains","severity":"medium","assetsAffected":["*"],"ts":1789178925875}
+{"seq":1261,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77305.59,"chg24h":0.00559,"ts":1789179829533}
+{"seq":1262,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2514.15,"chg24h":0.02635,"ts":1789179829533}
+{"seq":1263,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.8,"chg24h":0.0038,"ts":1789179829533}
+{"seq":1264,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.5,"chg24h":0.00032,"ts":1789179829533}
+{"seq":1265,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.45,"chg24h":0.00977,"ts":1789179829533}
+{"seq":1266,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.51,"chg24h":0.02081,"ts":1789179829533}
+{"seq":1267,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789179829533}
+{"seq":1268,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00605,"ts":1789179829533}
+{"seq":1269,"kind":"macro","source":"yahoo-finance","headline":"U.S. Treasury Yields Climb Ahead of CPI Data","severity":"medium","assetsAffected":["*"],"ts":1789179829533}
