@@ -1,6 +1,16 @@
 {
-  "library": [],
-  "version": "1.2.17",
+  "library": [
+    {
+      "id": "L1-max-trades-per-day",
+      "type": "max-trades-per-day",
+      "params": {
+        "max": 10
+      },
+      "enabled": true,
+      "text": "No more than 10 trades in one UTC day."
+    }
+  ],
+  "version": "1.2.18",
   "targets": {
     "rtokenPct": 0.65,
     "hedgePct": 0.25,
