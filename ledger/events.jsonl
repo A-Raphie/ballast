@@ -1557,3 +1557,11 @@
 {"seq":1555,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789208777183}
 {"seq":1556,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789208777183}
 {"seq":1557,"kind":"macro","source":"yahoo-finance","headline":"Dollar Steady Ahead of U.S. Inflation Data","severity":"medium","assetsAffected":["*"],"ts":1789208777183}
+{"seq":1558,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77369.53,"chg24h":0.00446,"ts":1789209680712}
+{"seq":1559,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2532.47,"chg24h":0.0275,"ts":1789209680712}
+{"seq":1560,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.38,"chg24h":-0.00088,"ts":1789209680712}
+{"seq":1561,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.43,"chg24h":-0.00825,"ts":1789209680712}
+{"seq":1562,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.9,"chg24h":0.00174,"ts":1789209680712}
+{"seq":1563,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.88,"chg24h":0.02176,"ts":1789209680712}
+{"seq":1564,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789209680712}
+{"seq":1565,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789209680712}
