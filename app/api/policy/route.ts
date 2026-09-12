@@ -8,7 +8,6 @@ import {
   writePolicyConfig,
   commitPolicyLive,
   bumpVersion,
-  setRemotePolicyCache,
 } from "@/agent/policy-config";
 import { appendEvents } from "@/agent/ledger";
 import type { PolicyChangeEvent } from "@/agent/types";
@@ -50,7 +49,6 @@ export async function POST(request: Request) {
   if (remotePolicyEnabled()) {
     const commit = await commitPolicyLive(next, message);
     if (!commit.ok) return NextResponse.json({ ok: false, error: commit.error }, { status: 502 });
-    setRemotePolicyCache(next);
     revalidatePath("/policy");
     revalidatePath("/");
     return NextResponse.json({

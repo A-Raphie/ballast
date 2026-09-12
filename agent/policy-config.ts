@@ -182,9 +182,6 @@ export async function writePolicyConfig(next: PolicyConfig): Promise<void> {
 // rulebook from the repo and commits rule edits back through the Contents
 // API. The runner on the agent's host pulls the repo each tick and obeys.
 
-let remoteCache: { at: number; config: PolicyConfig } | null = null;
-const REMOTE_TTL_MS = 60_000;
-
 function gh(): { token: string; repo: string } | null {
   const token = process.env.GITHUB_TOKEN;
   const repo = process.env.GITHUB_REPO;
@@ -197,9 +194,10 @@ export function remotePolicyEnabled(): boolean {
 }
 
 export async function readPolicyLive(): Promise<PolicyConfig | null> {
+  // always fresh: the rulebook display must reflect a save the instant it
+  // lands; GitHub's authenticated rate budget (5k/hr) dwarfs this traffic
   const g = gh();
   if (!g) return null;
-  if (remoteCache && Date.now() - remoteCache.at < REMOTE_TTL_MS) return remoteCache.config;
   try {
     const res = await fetch(`https://api.github.com/repos/${g.repo}/contents/policy/policy.json`, {
       headers: { authorization: `Bearer ${g.token}`, accept: "application/vnd.github+json", user_agent: "ballast" },
@@ -208,17 +206,10 @@ export async function readPolicyLive(): Promise<PolicyConfig | null> {
     if (!res.ok) return null;
     const body = (await res.json()) as { content?: string; encoding?: string };
     if (body.encoding !== "base64" || !body.content) return null;
-    const config = JSON.parse(Buffer.from(body.content, "base64").toString("utf8")) as PolicyConfig;
-    remoteCache = { at: Date.now(), config };
-    return config;
+    return JSON.parse(Buffer.from(body.content, "base64").toString("utf8")) as PolicyConfig;
   } catch {
     return null;
   }
-}
-
-/** Refresh the remote cache after a successful commit so immediate follow-up writes read fresh. */
-export function setRemotePolicyCache(config: PolicyConfig): void {
-  remoteCache = { at: Date.now(), config };
 }
 
 export async function commitPolicyLive(
