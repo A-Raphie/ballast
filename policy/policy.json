@@ -1,6 +1,6 @@
 {
   "library": [],
-  "version": "1.2.2",
+  "version": "1.2.3",
   "targets": {
     "rtokenPct": 0.65,
     "hedgePct": 0.25,
@@ -9,7 +9,7 @@
   "knobs": {
     "driftPp": 0.1,
     "drawdownMax": 0.025,
-    "hedgeBandMin": 0.2,
+    "hedgeBandMin": 0.21,
     "hedgeBandMax": 0.3,
     "eventLookbackHours": 12,
     "blackoutMinutes": 30,
