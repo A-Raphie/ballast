@@ -60,8 +60,9 @@ export default async function LogPage() {
       <p className="caption mt-2 max-w-2xl">
         Append-only. Every line the agent has written since the Sep 9 first tick, newest first (night one is
         archived in the repo at ledger/archive/). This is the raw surface the control room
-        renders; nothing on this site can show what is not here. Severity on macro lines is
-        assigned by a labeled keyword classifier.
+        renders; nothing on this site can show what is not here. Filter by kind, search the
+        lines, and read a verdict as: the result, then exactly which clauses fired. Severity on
+        macro lines is assigned by a labeled keyword classifier.
       </p>
       <div className="mt-8">
         <LogBrowser rows={rows} />

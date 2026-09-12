@@ -62,6 +62,7 @@ export default async function ControlRoom() {
           </h1>
           <p className="caption mt-1">
             Every macro marker the agent sensed, every decision the policy allowed or denied.
+            Click any cyan diamond for the full clause chain behind it.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
