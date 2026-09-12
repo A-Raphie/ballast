@@ -8,18 +8,9 @@
       },
       "enabled": true,
       "text": "No more than 10 trades in one UTC day."
-    },
-    {
-      "id": "L2-max-trades-per-day",
-      "type": "max-trades-per-day",
-      "params": {
-        "max": 10
-      },
-      "enabled": true,
-      "text": "No more than 10 trades in one UTC day."
     }
   ],
-  "version": "1.2.7",
+  "version": "1.2.8",
   "targets": {
     "rtokenPct": 0.65,
     "hedgePct": 0.25,
