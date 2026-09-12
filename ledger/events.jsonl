@@ -1668,3 +1668,12 @@
 {"seq":1666,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.77,"chg24h":0.0208,"ts":1789219619562}
 {"seq":1667,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.39,"chg24h":-0.0013,"ts":1789219619562}
 {"seq":1668,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789219619562}
+{"seq":1669,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77302.4,"chg24h":-0.00753,"ts":1789220523026}
+{"seq":1670,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2539.77,"chg24h":0.00761,"ts":1789220523026}
+{"seq":1671,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.3,"chg24h":0.00137,"ts":1789220523026}
+{"seq":1672,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219,"chg24h":-0.00441,"ts":1789220523026}
+{"seq":1673,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00181,"ts":1789220523026}
+{"seq":1674,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.88,"chg24h":0.01593,"ts":1789220523026}
+{"seq":1675,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.39,"chg24h":-0.0013,"ts":1789220523026}
+{"seq":1676,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789220523026}
+{"seq":1677,"kind":"macro","source":"yahoo-finance","headline":"If a Stock Market Crash Is Coming, History Says This 1 Move Protects Investors Every Single Time","severity":"high","assetsAffected":["*"],"ts":1789220523026}
