@@ -195,21 +195,30 @@ export function remotePolicyEnabled(): boolean {
 
 export async function readPolicyLive(): Promise<PolicyConfig | null> {
   // always fresh: the rulebook display must reflect a save the instant it
-  // lands; GitHub's authenticated rate budget (5k/hr) dwarfs this traffic
+  // lands. Retried: a transient miss here would silently serve the stale
+  // build-time rulebook, which is worse than an honest failure.
   const g = gh();
   if (!g) return null;
-  try {
-    const res = await fetch(`https://api.github.com/repos/${g.repo}/contents/policy/policy.json`, {
-      headers: { authorization: `Bearer ${g.token}`, accept: "application/vnd.github+json", user_agent: "ballast" },
-      signal: AbortSignal.timeout(8000),
-    });
-    if (!res.ok) return null;
-    const body = (await res.json()) as { content?: string; encoding?: string };
-    if (body.encoding !== "base64" || !body.content) return null;
-    return JSON.parse(Buffer.from(body.content, "base64").toString("utf8")) as PolicyConfig;
-  } catch {
-    return null;
+  let lastErr: unknown = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${g.repo}/contents/policy/policy.json`, {
+        headers: { authorization: `Bearer ${g.token}`, accept: "application/vnd.github+json", user_agent: "ballast" },
+        signal: AbortSignal.timeout(8000),
+      });
+      if (res.ok) {
+        const body = (await res.json()) as { content?: string; encoding?: string };
+        if (body.encoding === "base64" && body.content)
+          return JSON.parse(Buffer.from(body.content, "base64").toString("utf8")) as PolicyConfig;
+      }
+      lastErr = new Error(`HTTP ${res.status}`);
+    } catch (e) {
+      lastErr = e;
+    }
+    if (attempt < 2) await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
   }
+  console.error("readPolicyLive failed after retries:", String(lastErr).slice(0, 120));
+  return null;
 }
 
 export async function commitPolicyLive(
