@@ -8,9 +8,18 @@
       },
       "enabled": true,
       "text": "Never let cash fall below 8% of the book."
+    },
+    {
+      "id": "L2-volatility-halt",
+      "type": "volatility-halt",
+      "params": {
+        "maxMovePct": 6
+      },
+      "enabled": true,
+      "text": "Stand down while any held symbol moved more than 6% in 24 hours."
     }
   ],
-  "version": "1.2.22",
+  "version": "1.2.23",
   "targets": {
     "rtokenPct": 0.65,
     "hedgePct": 0.25,
