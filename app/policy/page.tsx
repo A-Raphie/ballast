@@ -12,6 +12,7 @@ export default async function PolicyPage() {
     readLedger(),
   ]);
 
+  const selfHosted = !process.env.NETLIFY;
   return (
     <main className="mx-auto max-w-4xl px-6 py-10">
       <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight">
@@ -30,7 +31,7 @@ export default async function PolicyPage() {
           </h2>
         </div>
         <PolicyBoard
-          version={policy.version}
+          selfHosted={selfHosted}
           targets={policy.targets}
           knobs={policy.knobs}
           coreClauses={policy.clauses.map((c) => ({ id: c.id, text: c.text, threshold: c.threshold, enabled: c.enabled !== false }))}
