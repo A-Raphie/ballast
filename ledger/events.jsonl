@@ -1586,3 +1586,11 @@
 {"seq":1584,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789211487794}
 {"seq":1585,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789211487794}
 {"seq":1586,"kind":"macro","source":"yahoo-finance","headline":"S&amp;P Futures Climb as Oil Retreats Ahead of Key U.S. Inflation Data; Oracle Jumps After Earnings","severity":"medium","assetsAffected":["*"],"ts":1789211487794}
+{"seq":1587,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77295,"chg24h":0.00507,"ts":1789212391098}
+{"seq":1588,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2532.22,"chg24h":0.03001,"ts":1789212391098}
+{"seq":1589,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.38,"chg24h":-0.00088,"ts":1789212391098}
+{"seq":1590,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.05,"chg24h":-0.00432,"ts":1789212391098}
+{"seq":1591,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":0.00279,"ts":1789212391098}
+{"seq":1592,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.28,"chg24h":0.01845,"ts":1789212391098}
+{"seq":1593,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789212391098}
+{"seq":1594,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789212391098}
