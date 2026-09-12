@@ -1226,3 +1226,12 @@
 {"seq":1224,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.57,"chg24h":0.02116,"ts":1789176215186}
 {"seq":1225,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.89,"chg24h":0.00995,"ts":1789176215186}
 {"seq":1226,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00605,"ts":1789176215186}
+{"seq":1227,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77290,"chg24h":0.00659,"ts":1789177118806}
+{"seq":1228,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2513.3,"chg24h":0.0257,"ts":1789177118806}
+{"seq":1229,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.85,"chg24h":0.00258,"ts":1789177118806}
+{"seq":1230,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.38,"chg24h":-0.00055,"ts":1789177118806}
+{"seq":1231,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.45,"chg24h":0.00849,"ts":1789177118806}
+{"seq":1232,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.51,"chg24h":0.02081,"ts":1789177118806}
+{"seq":1233,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.89,"chg24h":0.00995,"ts":1789177118806}
+{"seq":1234,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00605,"ts":1789177118806}
+{"seq":1235,"kind":"macro","source":"yahoo-finance","headline":"Treasury Takes Less Than Expected at Buyback, Pushing Up Yields","severity":"medium","assetsAffected":["*"],"ts":1789177118806}
