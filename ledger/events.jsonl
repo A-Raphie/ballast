@@ -1748,3 +1748,23 @@
 {"seq":1746,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.43,"chg24h":0.00395,"ts":1789227758391}
 {"seq":1747,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789227758391}
 {"seq":1748,"kind":"policy_change","version":"1.2.0","changes":{},"ts":1789227758391}
+{"seq":1749,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77384.17,"chg24h":-0.00451,"ts":1789228408138}
+{"seq":1750,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2533.38,"chg24h":-0.01355,"ts":1789228408138}
+{"seq":1751,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.66,"chg24h":-0.00093,"ts":1789228408138}
+{"seq":1752,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.9,"chg24h":-0.00364,"ts":1789228408138}
+{"seq":1753,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00304,"ts":1789228408138}
+{"seq":1754,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.45,"chg24h":-0.01219,"ts":1789228408138}
+{"seq":1755,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.43,"chg24h":0.00395,"ts":1789228408138}
+{"seq":1756,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789228408138}
+{"seq":1757,"kind":"macro","source":"yahoo-finance","headline":"5 Big Yields That Could Be Slashed: Income Investors Beware","severity":"medium","assetsAffected":["*"],"ts":1789228408138}
+{"seq":1758,"kind":"policy_change","version":"1.2.2","changes":{},"ts":1789228408138}
+{"seq":1759,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77410.01,"chg24h":-0.00418,"ts":1789228662572}
+{"seq":1760,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2534.62,"chg24h":-0.01131,"ts":1789228662572}
+{"seq":1761,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.66,"chg24h":-0.00093,"ts":1789228662572}
+{"seq":1762,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.89,"chg24h":-0.00328,"ts":1789228662572}
+{"seq":1763,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00188,"ts":1789228662572}
+{"seq":1764,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.45,"chg24h":-0.01219,"ts":1789228662572}
+{"seq":1765,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.43,"chg24h":0.00395,"ts":1789228662572}
+{"seq":1766,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00106,"ts":1789228662572}
+{"seq":1767,"kind":"proposal","proposer":"threshold-fallback","action":"shift","from":"rtoken-sleeve","to":"usdt-buffer","symbol":"RNVDAUSDT","ratio":0.2580292522411574,"reason":"Largest position at 36.1% exceeds the 35% concentration cap; trimming before the sleeve build continues.","ts":1789228662572,"id":"p1789228662572"}
+{"seq":1768,"kind":"verdict","proposalId":"p1789228662572","clauses":[{"id":"B1-drift","text":"Rebalance only when a sleeve drifts more than 10 percentage points from its written target.","measured":"rtoken sleeve 55.57% vs target 65.00%, drift 9.43%","threshold":"drift > 10pp","pass":null},{"id":"B2-drawdown","text":"No action that increases market exposure while the book is down more than 2.5% from its 24h-open value.","measured":"drawdown -341.81% vs 2.50% limit, risk-increasing: true","threshold":"dd <= 2.5% or risk-reducing","pass":true},{"id":"B3-hedge-band","text":"The crypto hedge sleeve must stay between 20% and 50% of book value.","measured":"hedge sleeve untouched at 25.12%","threshold":"20%-50%","pass":true},{"id":"B4-event","text":"A shift requires a macro event of medium severity or higher within the last 12 hours.","measured":"medium: \"5 Big Yields That Could Be Slashed: Income Investors Beware\" (2026-09-12T15:53:28.138Z)","threshold":"severity >= medium within 12h","pass":true},{"id":"B5-blackout","text":"No rebalance within 30 minutes of the US equity open or close (14:30 / 21:00 UTC).","measured":"15:57 UTC vs blackout 14:00-15:00 / 20:30-21:30","threshold":"outside open/close +/-30min","pass":true},{"id":"B6-concentration","text":"No single position above 35% of book value after the shift.","measured":"after shift: largest BTCUSDT at 25.12% vs 28.00% cap","threshold":"max position <= 35%","pass":true},{"id":"B7-stale","text":"All proposals halt when the freshest market row is older than 10 minutes.","measured":"freshest market data 0s old vs 600s limit","threshold":"data age <= 600s","pass":true}],"result":"halt","ts":1789228662572,"policyVersion":"1.2.2"}
