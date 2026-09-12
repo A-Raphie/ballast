@@ -1548,3 +1548,12 @@
 {"seq":1546,"kind":"macro","source":"yahoo-finance","headline":"Gold price today, Friday, September 11, 2026: Gold opens at lowest level in over a month ahead of CPI data","severity":"medium","assetsAffected":["*"],"ts":1789207873303}
 {"seq":1547,"kind":"macro","source":"yahoo-finance","headline":"Silver price today, Friday, September 11, 2026: Silver prices turn negative leading up to CPI report","severity":"medium","assetsAffected":["*"],"ts":1789207873303}
 {"seq":1548,"kind":"macro","source":"yahoo-finance","headline":"Bitcoin and ethereum prices today, Friday, September 11, 2026: Bitcoin falls below $77,000 with key inflation data on deck","severity":"medium","assetsAffected":["*"],"ts":1789207873303}
+{"seq":1549,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77380.25,"chg24h":0.00414,"ts":1789208777183}
+{"seq":1550,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2532.01,"chg24h":0.02672,"ts":1789208777183}
+{"seq":1551,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.46,"chg24h":0.00219,"ts":1789208777183}
+{"seq":1552,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.49,"chg24h":-0.00834,"ts":1789208777183}
+{"seq":1553,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.9,"chg24h":0.00174,"ts":1789208777183}
+{"seq":1554,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.29,"chg24h":0.01938,"ts":1789208777183}
+{"seq":1555,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":0.0028,"ts":1789208777183}
+{"seq":1556,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.67,"chg24h":0.0045,"ts":1789208777183}
+{"seq":1557,"kind":"macro","source":"yahoo-finance","headline":"Dollar Steady Ahead of U.S. Inflation Data","severity":"medium","assetsAffected":["*"],"ts":1789208777183}
