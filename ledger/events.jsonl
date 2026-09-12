@@ -1269,3 +1269,12 @@
 {"seq":1267,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789179829533}
 {"seq":1268,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00605,"ts":1789179829533}
 {"seq":1269,"kind":"macro","source":"yahoo-finance","headline":"U.S. Treasury Yields Climb Ahead of CPI Data","severity":"medium","assetsAffected":["*"],"ts":1789179829533}
+{"seq":1270,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77230.01,"chg24h":0.00403,"ts":1789180733146}
+{"seq":1271,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2513.3,"chg24h":0.02581,"ts":1789180733146}
+{"seq":1272,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.55,"chg24h":0.00493,"ts":1789180733146}
+{"seq":1273,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.61,"chg24h":0.00147,"ts":1789180733146}
+{"seq":1274,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.49,"chg24h":0.01104,"ts":1789180733146}
+{"seq":1275,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.51,"chg24h":0.02081,"ts":1789180733146}
+{"seq":1276,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789180733146}
+{"seq":1277,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00605,"ts":1789180733146}
+{"seq":1278,"kind":"macro","source":"yahoo-finance","headline":"U.S. 10-Year Treasury Yield Nears 5% as Oil Fuels Inflation Fears","severity":"medium","assetsAffected":["*"],"ts":1789180733146}
