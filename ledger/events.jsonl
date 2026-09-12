@@ -1299,3 +1299,11 @@
 {"seq":1297,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789182540551}
 {"seq":1298,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":0.00605,"ts":1789182540551}
 {"seq":1299,"kind":"macro","source":"yahoo-finance","headline":"U.S. Stocks Fall as Oil Tops $100, Yields Hit Multiyear Highs","severity":"medium","assetsAffected":["*"],"ts":1789182540551}
+{"seq":1300,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77244.72,"chg24h":0.00608,"ts":1789183444014}
+{"seq":1301,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2512.13,"chg24h":0.02821,"ts":1789183444014}
+{"seq":1302,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.3,"chg24h":0.00711,"ts":1789183444014}
+{"seq":1303,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.6,"chg24h":0.0022,"ts":1789183444014}
+{"seq":1304,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.65,"chg24h":0.01116,"ts":1789183444014}
+{"seq":1305,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.51,"chg24h":0.02081,"ts":1789183444014}
+{"seq":1306,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":0.00729,"ts":1789183444014}
+{"seq":1307,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.91,"chg24h":0.00849,"ts":1789183444014}
