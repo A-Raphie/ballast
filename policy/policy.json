@@ -13,7 +13,7 @@
     "eventLookbackHours": 12,
     "blackoutMinutes": 30,
     "concentrationMax": 0.28,
-    "staleMaxSeconds": 617
+    "staleMaxSeconds": 600
   },
   "clauses": [
     {
