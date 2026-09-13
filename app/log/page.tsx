@@ -23,7 +23,7 @@ function summarize(e: any): string {
     case "macro":
       return `${severityWord(e.severity)}: ${e.headline}`;
     case "proposal":
-      return `${proposerName(e.proposer)} wants to ${shiftPhrase(e.from, e.to)} (${(e.ratio * 100).toFixed(0)}%)`;
+      return `${proposerName(e.proposer)} proposed: ${shiftPhrase(e.from, e.to)} (${(e.ratio * 100).toFixed(0)}%)`;
     case "verdict": {
       if (e.result === "allow") return "allowed: every rule passed";
       if (e.result === "halt") {
