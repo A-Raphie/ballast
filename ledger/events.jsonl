@@ -2097,3 +2097,11 @@
 {"seq":2095,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00038,"ts":1789263065694}
 {"seq":2096,"kind":"macro","source":"yahoo-finance","headline":"U.S. Stocks Gain as Inflation Figure Boosts Odds of Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789263065694}
 {"seq":2097,"kind":"macro","source":"yahoo-finance","headline":"Dollar Gains Ground as CPI Report Produces Higher Odds for a Fed Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789263065694}
+{"seq":2098,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77296.03,"chg24h":0.00014,"ts":1789263969641}
+{"seq":2099,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2525.46,"chg24h":0.00438,"ts":1789263969641}
+{"seq":2100,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.39,"chg24h":0.0071,"ts":1789263969641}
+{"seq":2101,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.23,"chg24h":0.00371,"ts":1789263969641}
+{"seq":2102,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00049,"ts":1789263969641}
+{"seq":2103,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.95,"chg24h":-0.00186,"ts":1789263969641}
+{"seq":2104,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789263969641}
+{"seq":2105,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00038,"ts":1789263969641}
