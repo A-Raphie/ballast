@@ -70,7 +70,7 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
               <th className="micro px-4 py-3">#</th>
               <th className="micro px-4 py-3">time UTC</th>
               <th className="micro px-4 py-3">type</th>
-              <th className="micro px-4 py-3">what happened</th>
+              <th className="micro px-4 py-3">What happened</th>
             </tr>
           </thead>
           <tbody>
