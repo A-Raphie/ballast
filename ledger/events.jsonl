@@ -2413,3 +2413,11 @@
 {"seq":2411,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.68,"chg24h":0.00093,"ts":1789295601450}
 {"seq":2412,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00044,"ts":1789295601450}
 {"seq":2413,"kind":"macro","source":"yahoo-finance","headline":"Is a Stock Market Crash Looming Under President Donald Trump? Nearly 156 Years of History Offers Up an Unpleasant Truth for Wall Street.","severity":"high","assetsAffected":["*"],"ts":1789295601450}
+{"seq":2414,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76749.99,"chg24h":-0.00776,"ts":1789296505059}
+{"seq":2415,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2478.81,"chg24h":-0.02139,"ts":1789296505059}
+{"seq":2416,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.96,"chg24h":0.00159,"ts":1789296505059}
+{"seq":2417,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.92,"chg24h":-0.00548,"ts":1789296505059}
+{"seq":2418,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.71,"chg24h":-0.00892,"ts":1789296505059}
+{"seq":2419,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.78,"chg24h":0.00003,"ts":1789296505059}
+{"seq":2420,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.68,"chg24h":0.00093,"ts":1789296505059}
+{"seq":2421,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00044,"ts":1789296505059}
