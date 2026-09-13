@@ -2134,3 +2134,12 @@
 {"seq":2132,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789266680386}
 {"seq":2133,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00133,"ts":1789266680386}
 {"seq":2134,"kind":"macro","source":"yahoo-finance","headline":"U.S. Treasury Yields Gain Ahead of Fed Meeting","severity":"medium","assetsAffected":["*"],"ts":1789266680386}
+{"seq":2135,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77298.63,"chg24h":0.00051,"ts":1789267584173}
+{"seq":2136,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2523.15,"chg24h":0.00352,"ts":1789267584173}
+{"seq":2137,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.49,"chg24h":0.0071,"ts":1789267584173}
+{"seq":2138,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.32,"chg24h":0.0038,"ts":1789267584173}
+{"seq":2139,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.99,"chg24h":-0.0007,"ts":1789267584173}
+{"seq":2140,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.89,"chg24h":-0.00279,"ts":1789267584173}
+{"seq":2141,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.00166,"ts":1789267584173}
+{"seq":2142,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00133,"ts":1789267584173}
+{"seq":2143,"kind":"macro","source":"yahoo-finance","headline":"Inflation Stays Stubbornly High in August. Here's How Likely a Fed Rate Hike Is Next Week","severity":"medium","assetsAffected":["*"],"ts":1789267584173}
