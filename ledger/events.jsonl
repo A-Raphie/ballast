@@ -2440,3 +2440,11 @@
 {"seq":2438,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.25,"chg24h":-0.00634,"ts":1789298314218}
 {"seq":2439,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00044,"ts":1789298314218}
 {"seq":2440,"kind":"macro","source":"yahoo-finance","headline":"York Water’s (YORW) Rate Hike Just Rewrote Its Earnings Picture","severity":"medium","assetsAffected":["*"],"ts":1789298314218}
+{"seq":2441,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76663.89,"chg24h":-0.00829,"ts":1789299221032}
+{"seq":2442,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2475.04,"chg24h":-0.02369,"ts":1789299221032}
+{"seq":2443,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.46,"chg24h":-0.00274,"ts":1789299221032}
+{"seq":2444,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.75,"chg24h":-0.00384,"ts":1789299221032}
+{"seq":2445,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.76,"chg24h":-0.00885,"ts":1789299221032}
+{"seq":2446,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.02,"chg24h":-0.00526,"ts":1789299221032}
+{"seq":2447,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.25,"chg24h":-0.00634,"ts":1789299221032}
+{"seq":2448,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00044,"ts":1789299221032}
