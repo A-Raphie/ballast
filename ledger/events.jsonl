@@ -2369,3 +2369,11 @@
 {"seq":2367,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.68,"chg24h":0.00093,"ts":1789291080662}
 {"seq":2368,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00044,"ts":1789291080662}
 {"seq":2369,"kind":"macro","source":"yahoo-finance","headline":"Alcoa Sees Aluminum Deficit, Strong Demand and Tariff Upside at Jefferies Conference","severity":"medium","assetsAffected":["*"],"ts":1789291080662}
+{"seq":2370,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76600,"chg24h":-0.00995,"ts":1789291984340}
+{"seq":2371,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2474.63,"chg24h":-0.02318,"ts":1789291984340}
+{"seq":2372,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.67,"chg24h":0.0034,"ts":1789291984340}
+{"seq":2373,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.12,"chg24h":-0.00082,"ts":1789291984340}
+{"seq":2374,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":710.27,"chg24h":-0.00789,"ts":1789291984340}
+{"seq":2375,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.08,"chg24h":-0.00364,"ts":1789291984340}
+{"seq":2376,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.68,"chg24h":0.00093,"ts":1789291984340}
+{"seq":2377,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00044,"ts":1789291984340}
