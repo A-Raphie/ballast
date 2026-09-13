@@ -2125,3 +2125,12 @@
 {"seq":2123,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789265776753}
 {"seq":2124,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":764.34,"chg24h":-0.00075,"ts":1789265776753}
 {"seq":2125,"kind":"macro","source":"yahoo-finance","headline":"S&amp;P 500 ends higher as strong inflation data cements rate-hike bets","severity":"medium","assetsAffected":["*"],"ts":1789265776753}
+{"seq":2126,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77277.98,"chg24h":-0.00011,"ts":1789266680386}
+{"seq":2127,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2523.29,"chg24h":0.00358,"ts":1789266680386}
+{"seq":2128,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.49,"chg24h":0.0071,"ts":1789266680386}
+{"seq":2129,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.19,"chg24h":0.00288,"ts":1789266680386}
+{"seq":2130,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":714.99,"chg24h":-0.0007,"ts":1789266680386}
+{"seq":2131,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.81,"chg24h":-0.00003,"ts":1789266680386}
+{"seq":2132,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789266680386}
+{"seq":2133,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00133,"ts":1789266680386}
+{"seq":2134,"kind":"macro","source":"yahoo-finance","headline":"U.S. Treasury Yields Gain Ahead of Fed Meeting","severity":"medium","assetsAffected":["*"],"ts":1789266680386}
