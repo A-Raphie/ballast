@@ -1,6 +1,6 @@
 import { readLedger, type Decision } from "@/lib/ledger";
 import { readAgentState } from "@/agent/agent-state";
-import { shiftPhrase, clauseReason, ruleName, symbolHint } from "@/lib/display";
+import { shiftPhrase, clauseReason, ruleName, symbolHint, sentence } from "@/lib/display";
 import { WatchFloor } from "@/app/components/watch-floor";
 import { Panel, StatStrip, Chip } from "@/app/components/kit";
 import { StatusBadge, PauseControl } from "@/app/components/status-controls";
@@ -126,7 +126,7 @@ export default async function ControlRoom() {
                 <div className="min-w-0">
                   <div className="text-sm">
                     {r.count > 1 ? <span className="text-[var(--text-secondary)]">{r.count}× </span> : null}
-                    <span className="capitalize">{shiftPhrase(r.from, r.to)}</span>
+                    <span>{sentence(shiftPhrase(r.from, r.to))}</span>
                   </div>
                   <div className="num caption">
                     {new Date(r.latestTs).toISOString().replace("T", " ").slice(0, 16)} UTC

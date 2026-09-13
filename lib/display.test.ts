@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { symbolName, symbolHint, sleeveName, shiftPhrase, ruleName, clauseReason, verdictWord, kindLabel, proposerName, executionLabel, severityWord } from "./display";
+import { symbolName, symbolHint, sleeveName, shiftPhrase, ruleName, clauseReason, verdictWord, kindLabel, proposerName, executionLabel, severityWord, sentence } from "./display";
 
 describe("symbols", () => {
   it("keeps the raw capital exchange tickers (his Sep 13 dial-back)", () => {
@@ -44,8 +44,13 @@ describe("ruleName + clauseReason", () => {
     expect(ruleName("max-trades-per-day")).toBe("the trade-count rule");
     expect(clauseReason("volatility-halt")).toBe("markets were swinging too hard");
   });
-  it("falls back to a humanized id for future rule ids", () => {
+  it("falls back to a humanized id for future rule ids, stripping L-numbers", () => {
     expect(ruleName("something-new")).toBe("the something new rule");
+    expect(ruleName("L3-max-trades-per-day")).toBe("the trade-count rule");
+    expect(ruleName("L7-custom-cap")).toBe("the custom cap rule");
+  });
+  it("sentence() capitalizes only the first letter", () => {
+    expect(sentence("sold tokenized stocks for cash")).toBe("Sold tokenized stocks for cash");
   });
 });
 

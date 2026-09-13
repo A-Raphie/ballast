@@ -59,6 +59,8 @@ export function shiftPhrase(from: string, to: string): string {
 }
 
 // Short human name for a rule, usable mid-sentence: "the news rule said no".
+// Library instances carry generated ids like "L3-max-trades-per-day"; map them
+// by their type suffix so visitors never see the L-number.
 export function ruleName(id: string): string {
   const NAMES: Record<string, string> = {
     "B1-drift": "the target-mix rule",
@@ -73,7 +75,16 @@ export function ruleName(id: string): string {
     "volatility-halt": "the big-swing rule",
     "daily-turnover-cap": "the daily-limit rule",
   };
-  return NAMES[id] ?? `the ${id.replace(/-/g, " ")} rule`;
+  if (NAMES[id]) return NAMES[id];
+  const suffix = Object.keys(NAMES).find((k) => id.endsWith(k));
+  if (suffix) return NAMES[suffix];
+  return `the ${id.replace(/^L\d+-/, "").replace(/-/g, " ")} rule`;
+}
+
+// Sentence-case a plain phrase without title-casing every word (CSS capitalize
+// renders "Sold Tokenized Stocks For Cash"; this renders "Sold tokenized ...").
+export function sentence(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 // What a blocking rule objected to (or could not verify): reads after
