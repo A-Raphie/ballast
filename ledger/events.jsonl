@@ -2690,3 +2690,11 @@
 {"seq":2688,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.3,"chg24h":-0.00638,"ts":1789324585643}
 {"seq":2689,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789324585643}
 {"seq":2690,"kind":"macro","source":"yahoo-finance","headline":"Bessent is doubling down with weekly bank sanctions","severity":"medium","assetsAffected":["*"],"ts":1789324585643}
+{"seq":2691,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77369.99,"chg24h":0.00258,"ts":1789325490069}
+{"seq":2692,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2509.57,"chg24h":-0.0054,"ts":1789325490069}
+{"seq":2693,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.87,"chg24h":-0.00785,"ts":1789325490069}
+{"seq":2694,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.27,"chg24h":-0.00799,"ts":1789325490069}
+{"seq":2695,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.58,"chg24h":-0.0091,"ts":1789325490069}
+{"seq":2696,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.73,"chg24h":-0.00033,"ts":1789325490069}
+{"seq":2697,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.3,"chg24h":-0.00638,"ts":1789325490069}
+{"seq":2698,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789325490069}
