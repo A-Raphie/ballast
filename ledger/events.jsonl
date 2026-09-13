@@ -2206,3 +2206,11 @@
 {"seq":2204,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00133,"ts":1789273909498}
 {"seq":2205,"kind":"macro","source":"yahoo-finance","headline":"Stubbornly Hot Inflation Raises Pressure on the Fed","severity":"medium","assetsAffected":["*"],"ts":1789273909498}
 {"seq":2206,"kind":"macro","source":"yahoo-finance","headline":"Why Rising Bond Yields Aren’t Throttling The Economy, For Now","severity":"medium","assetsAffected":["*"],"ts":1789273909498}
+{"seq":2207,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77214,"chg24h":-0.00024,"ts":1789274812998}
+{"seq":2208,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2520.12,"chg24h":0.00308,"ts":1789274812998}
+{"seq":2209,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":366.94,"chg24h":0.00636,"ts":1789274812998}
+{"seq":2210,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.3,"chg24h":0.00224,"ts":1789274812998}
+{"seq":2211,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":713.67,"chg24h":-0.00295,"ts":1789274812998}
+{"seq":2212,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.89,"chg24h":-0.00279,"ts":1789274812998}
+{"seq":2213,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.72,"chg24h":-0.0001,"ts":1789274812998}
+{"seq":2214,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.93,"chg24h":0.00133,"ts":1789274812998}
