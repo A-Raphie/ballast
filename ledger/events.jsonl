@@ -2049,3 +2049,12 @@
 {"seq":2047,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789258546989}
 {"seq":2048,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00038,"ts":1789258546989}
 {"seq":2049,"kind":"macro","source":"yahoo-finance","headline":"America In Focus: inflation accelerated in August, home sales weaken and diesel prices soar","severity":"medium","assetsAffected":["*"],"ts":1789258546989}
+{"seq":2050,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77269.73,"chg24h":0.00019,"ts":1789259450583}
+{"seq":2051,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2525.71,"chg24h":0.00442,"ts":1789259450583}
+{"seq":2052,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.12,"chg24h":0.00584,"ts":1789259450583}
+{"seq":2053,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.19,"chg24h":0.00389,"ts":1789259450583}
+{"seq":2054,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00048,"ts":1789259450583}
+{"seq":2055,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.81,"chg24h":0.00084,"ts":1789259450583}
+{"seq":2056,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789259450583}
+{"seq":2057,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00038,"ts":1789259450583}
+{"seq":2058,"kind":"macro","source":"yahoo-finance","headline":"Ciena Climbs 5% as Post-Earnings Selloff Reverses; Arista Networks Rises 5%, Cisco Jumps 4%","severity":"medium","assetsAffected":["*"],"ts":1789259450583}
