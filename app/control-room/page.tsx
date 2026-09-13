@@ -1,6 +1,6 @@
 import { readLedger, type Decision } from "@/lib/ledger";
 import { readAgentState } from "@/agent/agent-state";
-import { shiftPhrase, clauseReason, ruleName, symbolHint, sentence } from "@/lib/display";
+import { shiftPhrase, clauseReason, ruleName, symbolHint, symbolName, sentence } from "@/lib/display";
 import { WatchFloor } from "@/app/components/watch-floor";
 import { Panel, StatStrip, Chip } from "@/app/components/kit";
 import { StatusBadge, PauseControl } from "@/app/components/status-controls";
@@ -172,7 +172,7 @@ export default async function ControlRoom() {
           <ul className="space-y-2">
             {v.marketSnapshot.map((m) => (
               <li key={m.symbol} className="flex items-center justify-between border-b border-[var(--border-default)] pb-2 last:border-b-0">
-                <span className="num text-sm" title={symbolHint(m.symbol)}>{m.symbol}</span>
+                <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
                 <span className="flex items-baseline gap-3">
                   <span className="num text-sm">{m.px.toLocaleString()}</span>
                   <span
