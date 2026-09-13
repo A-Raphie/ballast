@@ -1,21 +1,16 @@
 import { describe, it, expect } from "vitest";
-import { symbolName, sleeveName, shiftPhrase, ruleName, clauseReason, verdictWord, kindLabel, proposerName, executionLabel, severityWord } from "./display";
+import { symbolName, symbolHint, sleeveName, shiftPhrase, ruleName, clauseReason, verdictWord, kindLabel, proposerName, executionLabel, severityWord } from "./display";
 
-describe("symbolName", () => {
-  it("maps every watchlist rToken and crypto symbol", () => {
-    expect(symbolName("RNVDAUSDT")).toBe("tokenized Nvidia");
-    expect(symbolName("RTSLAUSDT")).toBe("tokenized Tesla");
-    expect(symbolName("RAAPLUSDT")).toBe("tokenized Apple");
-    expect(symbolName("RMSFTUSDT")).toBe("tokenized Microsoft");
-    expect(symbolName("RSPYUSDT")).toBe("tokenized S&P 500 fund");
-    expect(symbolName("RQQQUSDT")).toBe("tokenized Nasdaq fund");
-    expect(symbolName("BTCUSDT")).toBe("bitcoin");
-    expect(symbolName("ETHUSDT")).toBe("ethereum");
+describe("symbols", () => {
+  it("keeps the raw capital exchange tickers (his Sep 13 dial-back)", () => {
+    expect(symbolName("RNVDAUSDT")).toBe("RNVDAUSDT");
+    expect(symbolName("BTCUSDT")).toBe("BTCUSDT");
+    expect(symbolName("SOLUSDT")).toBe("SOLUSDT");
   });
-  it("falls back to a readable name for unknown tokens", () => {
-    expect(symbolName("RFOOUSDT")).toBe("RFOO (token)");
-    expect(symbolName("SOLUSDT")).toBe("SOL (token)");
-    expect(symbolName("XYZ")).toBe("XYZ");
+  it("symbolHint carries the friendly expansion for tooltips", () => {
+    expect(symbolHint("RNVDAUSDT")).toBe("Nvidia as a tokenized US stock");
+    expect(symbolHint("BTCUSDT")).toBe("bitcoin, priced in USDT");
+    expect(symbolHint("RFOOUSDT")).toBe("RFOO as a tokenized US stock");
   });
 });
 
@@ -54,18 +49,19 @@ describe("ruleName + clauseReason", () => {
   });
 });
 
-describe("small label maps", () => {
-  it("verdicts, kinds, proposers, executions, severity", () => {
+describe("small label maps (capitalized, his capital-letters ask)", () => {
+  it("verdicts stay lowercase mid-sentence; labels start capital", () => {
     expect(verdictWord("allow")).toBe("allowed");
     expect(verdictWord("deny")).toBe("denied");
     expect(verdictWord("halt")).toBe("stopped");
-    expect(kindLabel("macro")).toBe("news");
-    expect(kindLabel("proposal")).toBe("trade idea");
-    expect(proposerName("threshold-fallback")).toBe("built-in logic");
+    expect(kindLabel("all")).toBe("Everything");
+    expect(kindLabel("macro")).toBe("News");
+    expect(kindLabel("proposal")).toBe("Trade idea");
+    expect(proposerName("threshold-fallback")).toBe("Built-in logic");
     expect(proposerName("llm")).toBe("AI model");
-    expect(executionLabel("paper")).toBe("practice");
-    expect(executionLabel("simulated")).toBe("simulated fill");
-    expect(severityWord("high")).toBe("big story");
-    expect(severityWord("medium")).toBe("notable story");
+    expect(executionLabel("paper")).toBe("Practice");
+    expect(executionLabel("simulated")).toBe("Simulated fill");
+    expect(severityWord("high")).toBe("Big story");
+    expect(severityWord("medium")).toBe("Notable story");
   });
 });

@@ -50,7 +50,7 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="search the log…"
+          placeholder="Search the log…"
           className="card ml-auto w-48 bg-[var(--bg-base)] px-3 py-1.5 text-xs outline-none"
           aria-label="Search log entries"
         />
@@ -93,7 +93,7 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
         </table>
       </div>
       <p className="caption mt-4">
-        showing {filtered.length} of {rows.length} entries · full history lives in the repo under ledger/ (night one archived)
+        Showing {filtered.length} of {rows.length} entries · full history lives in the repo under ledger/ (night one archived)
       </p>
     </div>
   );

@@ -120,8 +120,8 @@ export function WatchFloor({
       </svg>
 
       <div className="mt-3 flex flex-wrap gap-4">
-        <Chip>· news story (bigger dot = bigger story)</Chip>
-        <Chip tone="decision">◆ a Ballast decision · click for the full receipt</Chip>
+        <Chip>News story · bigger dot = bigger story</Chip>
+        <Chip tone="decision">◆ A Ballast decision · click for the full receipt</Chip>
       </div>
 
       {/* clause chain panel: morphs open from the selected fix */}
@@ -169,10 +169,10 @@ function ClauseChain({ decision, onClose }: { decision: Decision; onClose: () =>
         <div className="mt-4 flex items-center gap-3 border-t border-[var(--border-default)] pt-3">
           <Chip tone={decision.order.execution === "paper" ? "decision" : "neutral"}>
             {decision.order.execution === "paper"
-              ? `practice order: ${decision.order.side} ${symbolName(decision.order.symbol)}`
+              ? `Practice order: ${decision.order.side} ${symbolName(decision.order.symbol)}`
               : decision.order.execution === "simulated"
-                ? `simulated ${decision.order.side} of ${symbolName(decision.order.symbol)} · matched against real prices, labeled as practice`
-                : `order staged, waiting for demo keys (${decision.order.side} ${symbolName(decision.order.symbol)})`}
+                ? `Simulated ${decision.order.side} of ${symbolName(decision.order.symbol)} · matched against real prices, labeled as practice`
+                : `Order staged, waiting for demo keys (${decision.order.side} ${symbolName(decision.order.symbol)})`}
           </Chip>
         </div>
       )}

@@ -5,21 +5,28 @@
 // safe to import from server pages, client components, and the agent.
 //   time = O(1) table lookups, space = O(1)
 
-const SYMBOL_NAMES: Record<string, string> = {
-  RNVDAUSDT: "tokenized Nvidia",
-  RTSLAUSDT: "tokenized Tesla",
-  RAAPLUSDT: "tokenized Apple",
-  RMSFTUSDT: "tokenized Microsoft",
-  RSPYUSDT: "tokenized S&P 500 fund",
-  RQQQUSDT: "tokenized Nasdaq fund",
-  BTCUSDT: "bitcoin",
-  ETHUSDT: "ethereum",
+// His verdict (Sep 13): "tokenized Tesla" reads weird on a data surface; the
+// capital exchange tickers go back. symbolName returns the raw symbol;
+// symbolHint keeps the friendly expansion for hover tooltips only.
+export function symbolName(sym: string): string {
+  return sym;
+}
+
+const SYMBOL_HINTS: Record<string, string> = {
+  RNVDAUSDT: "Nvidia as a tokenized US stock",
+  RTSLAUSDT: "Tesla as a tokenized US stock",
+  RAAPLUSDT: "Apple as a tokenized US stock",
+  RMSFTUSDT: "Microsoft as a tokenized US stock",
+  RSPYUSDT: "S&P 500 fund as a tokenized US stock",
+  RQQQUSDT: "Nasdaq fund as a tokenized US stock",
+  BTCUSDT: "bitcoin, priced in USDT",
+  ETHUSDT: "ethereum, priced in USDT",
   USDT: "cash",
 };
 
-export function symbolName(sym: string): string {
-  if (SYMBOL_NAMES[sym]) return SYMBOL_NAMES[sym];
-  return sym.endsWith("USDT") ? `${sym.slice(0, -4)} (token)` : sym;
+export function symbolHint(sym: string): string {
+  if (SYMBOL_HINTS[sym]) return SYMBOL_HINTS[sym];
+  return sym.endsWith("USDT") ? `${sym.slice(0, -4)} as a tokenized US stock` : sym;
 }
 
 // Sleeve codes as stored in the ledger's proposal.from / proposal.to.
@@ -99,18 +106,18 @@ export function verdictWord(r: string): string {
   return VERDICT_WORDS[r] ?? r;
 }
 
-// Ledger kinds as a normie reads them (log filter chips + row labels).
+// Ledger kinds as the log filter chips + row labels read them.
 export const KIND_LABELS: Record<string, string> = {
-  all: "everything",
-  macro: "news",
-  market: "prices",
-  proposal: "trade idea",
-  verdict: "decision",
-  order: "order",
-  fill: "fill",
-  correction: "correction",
-  sensor_error: "sensor error",
-  runner_error: "runner error",
+  all: "Everything",
+  macro: "News",
+  market: "Prices",
+  proposal: "Trade idea",
+  verdict: "Decision",
+  order: "Order",
+  fill: "Fill",
+  correction: "Correction",
+  sensor_error: "Sensor error",
+  runner_error: "Runner error",
 };
 
 export function kindLabel(k: string): string {
@@ -119,19 +126,19 @@ export function kindLabel(k: string): string {
 
 // Proposer ids as a normie reads them.
 export function proposerName(p: string): string {
-  if (p === "threshold-fallback") return "built-in logic";
+  if (p === "threshold-fallback") return "Built-in logic";
   if (p === "llm" || p === "qwen") return "AI model";
-  return p;
+  return p.charAt(0).toUpperCase() + p.slice(1);
 }
 
 // Order execution modes as a normie reads them.
 export function executionLabel(e: string): string {
-  if (e === "paper") return "practice";
-  if (e === "simulated") return "simulated fill";
-  return e;
+  if (e === "paper") return "Practice";
+  if (e === "simulated") return "Simulated fill";
+  return e.charAt(0).toUpperCase() + e.slice(1);
 }
 
 // Macro severity as a normie reads it.
 export function severityWord(s: string): string {
-  return s === "high" ? "big story" : s === "medium" ? "notable story" : "small story";
+  return s === "high" ? "Big story" : s === "medium" ? "Notable story" : "Small story";
 }

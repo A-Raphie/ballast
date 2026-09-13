@@ -25,13 +25,13 @@ function summarize(e: any): string {
     case "proposal":
       return `${proposerName(e.proposer)} proposed: ${shiftPhrase(e.from, e.to)} (${(e.ratio * 100).toFixed(0)}%)`;
     case "verdict": {
-      if (e.result === "allow") return "allowed: every rule passed";
+      if (e.result === "allow") return "Allowed: every rule passed";
       if (e.result === "halt") {
         const missing = [...new Set<string>(e.clauses.filter((c: any) => c.pass === null).map((c: any) => String(c.id)))];
-        return `stopped: couldn't check ${missing.map((id) => ruleName(id)).join(", ")}`;
+        return `Stopped: couldn't check ${missing.map((id) => ruleName(id)).join(", ")}`;
       }
       const failed = [...new Set<string>(e.clauses.filter((c: any) => c.pass === false).map((c: any) => String(c.id)))];
-      return `denied: ${failed.map((id) => clauseReason(id)).join("; ")}`;
+      return `Denied: ${failed.map((id) => clauseReason(id)).join("; ")}`;
     }
     case "order":
       return `${executionLabel(e.execution)}: ${e.side} ${symbolName(e.symbol)}`;

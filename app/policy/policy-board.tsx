@@ -213,13 +213,13 @@ export function PolicyBoard({
     setBusy(null);
   }
   const toggleClause = (id: string, current: boolean) =>
-    apply({ setClauseEnabled: [{ id, enabled: !current }] }, current ? `turning off ${ruleName(id)}` : `turning on ${ruleName(id)}`);
-  const deleteRule = (id: string) => apply({ removeClauses: [{ id }] }, `deleting ${ruleName(id)}`);
+    apply({ setClauseEnabled: [{ id, enabled: !current }] }, current ? `Turning off ${ruleName(id)}` : `Turning on ${ruleName(id)}`);
+  const deleteRule = (id: string) => apply({ removeClauses: [{ id }] }, `Deleting ${ruleName(id)}`);
   const addRule = () => {
     const spec = ADDABLE[addType];
     if (!spec) return;
     const params = Object.fromEntries(Object.entries(spec.params).map(([k, p]) => [k, addParams[k] ?? p.def]));
-    return apply({ addClauses: [{ type: addType, params }] }, `adding ${spec.label}`);
+    return apply({ addClauses: [{ type: addType, params }] }, `Adding ${spec.label}`);
   };
 
   const [addType, setAddType] = useState<string>("");
@@ -238,7 +238,7 @@ export function PolicyBoard({
                 <div className="text-sm text-[var(--text-primary)]">{r.sentence}</div>
                 {clause && s && (
                   <div className="num caption mt-1" title={`rule code ${clause.id}`}>
-                    checked {s.pass} times · refused {s.fail} trades
+                    Checked {s.pass} times · refused {s.fail} trades
                     {s.halt > 0 ? ` · stopped ${s.halt}` : ""}
                     <span className="mono ml-2 text-[11px] text-[var(--text-muted)]">{clause.id}</span>
                   </div>
@@ -289,7 +289,7 @@ export function PolicyBoard({
                   <div className="min-w-0">
                     <div className="text-sm">{c.text}</div>
                     <div className="num caption mt-0.5" title={`rule code ${c.id}`}>
-                      checked {stat(c.id).pass} times · refused {stat(c.id).fail} trades
+                      Checked {stat(c.id).pass} times · refused {stat(c.id).fail} trades
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -357,8 +357,7 @@ export function PolicyBoard({
             </button>
           )}
         </div>
-        {busy && <p className="caption mt-2 text-[var(--text-secondary)]">{busy} · saving to the rulebook Ballast reads…</p>}
-        {status && status.kind === "ok" && <p className="caption mt-2 text-[var(--status-pass)]">{status.message}</p>}
+        {busy && <p className="caption mt-2 text-[var(--text-secondary)]">{busy} · saving to the rulebook Ballast reads…</p>}        {status && status.kind === "ok" && <p className="caption mt-2 text-[var(--status-pass)]">{status.message}</p>}
         {status && status.kind === "error" && <p className="caption mt-2 text-[var(--status-deny)]">{status.message}</p>}
       </div>
 

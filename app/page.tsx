@@ -67,8 +67,8 @@ export default async function Landing() {
             <span className="micro">The night watch band</span>
             <span className={`micro ${live ? "text-[var(--decision)]" : ""}`}>
               {v.lastTickTs
-                ? `live snapshot · ${Math.max(0, Math.round((Date.now() - v.lastTickTs) / 60000))} min old`
-                : "arming"}
+                ? `Live snapshot · ${Math.max(0, Math.round((Date.now() - v.lastTickTs) / 60000))} min old`
+                : "Arming"}
             </span>
           </div>
           <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />

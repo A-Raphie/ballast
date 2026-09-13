@@ -1,6 +1,6 @@
 import { readLedger, type Decision } from "@/lib/ledger";
 import { readAgentState } from "@/agent/agent-state";
-import { shiftPhrase, clauseReason, ruleName, verdictWord, symbolName } from "@/lib/display";
+import { shiftPhrase, clauseReason, ruleName, symbolHint } from "@/lib/display";
 import { WatchFloor } from "@/app/components/watch-floor";
 import { Panel, StatStrip, Chip } from "@/app/components/kit";
 import { StatusBadge, PauseControl } from "@/app/components/status-controls";
@@ -66,7 +66,7 @@ export default async function ControlRoom() {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <Chip>practice mode · pretend money, real prices</Chip>
+          <Chip>Practice mode · pretend money, real prices</Chip>
           <StatusBadge status={status} lastSenseAgeMin={lastSenseAge === Infinity ? 0 : lastSenseAge} selfHosted={selfHosted} />
           <PauseControl paused={state.paused} selfHosted={selfHosted} />
         </div>
@@ -135,7 +135,7 @@ export default async function ControlRoom() {
                         {" · "}
                         {r.failing.map((f, i) => (
                           <span key={f}>
-                            {i > 0 ? ", " : r.result === "halt" ? "stopped: couldn't check " : "refused: "}
+                            {i > 0 ? ", " : r.result === "halt" ? "Stopped: couldn't check " : "Refused: "}
                             <a
                               href={`/policy#${f}`}
                               title={`rule ${f}: ${ruleName(f)}`}
@@ -172,7 +172,7 @@ export default async function ControlRoom() {
           <ul className="space-y-2">
             {v.marketSnapshot.map((m) => (
               <li key={m.symbol} className="flex items-center justify-between border-b border-[var(--border-default)] pb-2 last:border-b-0">
-                <span className="text-sm" title={m.symbol}>{symbolName(m.symbol)}</span>
+                <span className="num text-sm" title={symbolHint(m.symbol)}>{m.symbol}</span>
                 <span className="flex items-baseline gap-3">
                   <span className="num text-sm">{m.px.toLocaleString()}</span>
                   <span
@@ -184,8 +184,7 @@ export default async function ControlRoom() {
                 </span>
               </li>
             ))}
-            {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}
-          </ul>
+            {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}          </ul>
         </Panel>
       </div>
     </main>

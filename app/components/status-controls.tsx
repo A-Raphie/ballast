@@ -67,7 +67,7 @@ export function PauseControl({ paused, selfHosted }: { paused: boolean; selfHost
   if (!selfHosted) {
     return (
       <span className="micro text-[var(--text-muted)]" title="the public site mirrors the agent; run your own copy to command it">
-        controls live on the self-hosted copy
+        Controls live on the self-hosted copy
       </span>
     );
   }
