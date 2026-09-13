@@ -2087,3 +2087,13 @@
 {"seq":2085,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789262161835}
 {"seq":2086,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00038,"ts":1789262161835}
 {"seq":2087,"kind":"macro","source":"yahoo-finance","headline":"Gold Little Changed As August CPI Raises Interest-Rate Expectations","severity":"medium","assetsAffected":["*"],"ts":1789262161835}
+{"seq":2088,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77255.01,"chg24h":-0.00084,"ts":1789263065694}
+{"seq":2089,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2524.39,"chg24h":0.00422,"ts":1789263065694}
+{"seq":2090,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.1,"chg24h":0.00493,"ts":1789263065694}
+{"seq":2091,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.25,"chg24h":0.00366,"ts":1789263065694}
+{"seq":2092,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.09,"chg24h":-0.00049,"ts":1789263065694}
+{"seq":2093,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.95,"chg24h":-0.00186,"ts":1789263065694}
+{"seq":2094,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.59,"chg24h":0.0016,"ts":1789263065694}
+{"seq":2095,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.72,"chg24h":0.00038,"ts":1789263065694}
+{"seq":2096,"kind":"macro","source":"yahoo-finance","headline":"U.S. Stocks Gain as Inflation Figure Boosts Odds of Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789263065694}
+{"seq":2097,"kind":"macro","source":"yahoo-finance","headline":"Dollar Gains Ground as CPI Report Produces Higher Odds for a Fed Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789263065694}
