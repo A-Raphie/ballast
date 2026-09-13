@@ -2585,3 +2585,12 @@
 {"seq":2583,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.73,"chg24h":0.00386,"ts":1789313725124}
 {"seq":2584,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.48,"chg24h":-0.00601,"ts":1789313725124}
 {"seq":2585,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.07,"chg24h":0.00046,"ts":1789313725124}
+{"seq":2586,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77159.71,"chg24h":-0.0029,"ts":1789314629720}
+{"seq":2587,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2490.96,"chg24h":-0.01664,"ts":1789314629720}
+{"seq":2588,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363,"chg24h":-0.00727,"ts":1789314629720}
+{"seq":2589,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.41,"chg24h":-0.00735,"ts":1789314629720}
+{"seq":2590,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.81,"chg24h":-0.00878,"ts":1789314629720}
+{"seq":2591,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.03,"chg24h":-0.00547,"ts":1789314629720}
+{"seq":2592,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.48,"chg24h":-0.00601,"ts":1789314629720}
+{"seq":2593,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789314629720}
+{"seq":2594,"kind":"macro","source":"yahoo-finance","headline":"Five Dividend Stocks Crushing Inflation With Consistent Dividend Payout Growth","severity":"medium","assetsAffected":["*"],"ts":1789314629720}
