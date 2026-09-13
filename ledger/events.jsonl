@@ -2482,3 +2482,12 @@
 {"seq":2480,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.78,"chg24h":0.00003,"ts":1789302848713}
 {"seq":2481,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.25,"chg24h":-0.00634,"ts":1789302848713}
 {"seq":2482,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.04,"chg24h":0.00042,"ts":1789302848713}
+{"seq":2483,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76710.01,"chg24h":-0.00799,"ts":1789303752519}
+{"seq":2484,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2475.5,"chg24h":-0.02365,"ts":1789303752519}
+{"seq":2485,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.44,"chg24h":-0.00553,"ts":1789303752519}
+{"seq":2486,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.64,"chg24h":-0.00639,"ts":1789303752519}
+{"seq":2487,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.41,"chg24h":-0.01074,"ts":1789303752519}
+{"seq":2488,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.78,"chg24h":0.00003,"ts":1789303752519}
+{"seq":2489,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.25,"chg24h":-0.00634,"ts":1789303752519}
+{"seq":2490,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.04,"chg24h":0.00042,"ts":1789303752519}
+{"seq":2491,"kind":"macro","source":"yahoo-finance","headline":"JPMorgan Says Rising Bond Yields Unlikely to Derail Equities as Earnings Momentum Continues","severity":"medium","assetsAffected":["*"],"ts":1789303752519}
