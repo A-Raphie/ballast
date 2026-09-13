@@ -10,6 +10,7 @@
 //   - every number comes from policy.json; no threshold lives in code
 
 import { readPolicyConfig, type PolicyConfig } from "./policy-config";
+import { symbolName, severityWord } from "../lib/display";
 import type {
   BookState,
   ClauseVerdict,
@@ -61,7 +62,7 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
     const drift = Math.abs(rtoken - ctx.book.targetRtokenPct);
     return {
       pass: drift > cfg.knobs.driftPp ? true : null,
-      measured: `rtoken sleeve ${pct(rtoken)} vs target ${pct(ctx.book.targetRtokenPct)}, drift ${pct(drift)}`,
+      measured: `tokenized stocks at ${pct(rtoken)}, target ${pct(ctx.book.targetRtokenPct)}, off by ${pct(drift)}`,
     };
   },
   "B2-drawdown": (ctx, p, cfg) => {
@@ -70,12 +71,12 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
       ctx.book.usdt,
     );
     const openValue = ctx.book.openValue24h;
-    if (!openValue || openValue <= 0) return { pass: null, measured: "no 24h-open book value recorded" };
+    if (!openValue || openValue <= 0) return { pass: null, measured: "no start-of-day portfolio value recorded" };
     const dd = (openValue - bookValue) / openValue;
     const increasesRisk = p.action === "shift" && p.to !== "USDT";
     return {
       pass: dd > cfg.knobs.drawdownMax && increasesRisk ? false : true,
-      measured: `drawdown ${pct(dd)} vs ${pct(cfg.knobs.drawdownMax)} limit, risk-increasing: ${increasesRisk}`,
+      measured: `portfolio down ${pct(dd)} today (limit ${pct(cfg.knobs.drawdownMax)}); trade adds risk: ${increasesRisk}`,
     };
   },
   "B3-hedge-band": (ctx, p, cfg) => {
@@ -91,8 +92,8 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
     return {
       pass: !touched || (projected >= cfg.knobs.hedgeBandMin && projected <= cfg.knobs.hedgeBandMax) ? true : false,
       measured: touched
-        ? `after shift: hedge sleeve ${pct(projected)} vs band ${pct(cfg.knobs.hedgeBandMin)}-${pct(cfg.knobs.hedgeBandMax)}`
-        : `hedge sleeve untouched at ${pct(crypto)}`,
+        ? `after the trade: crypto would be ${pct(projected)} (band ${pct(cfg.knobs.hedgeBandMin)}-${pct(cfg.knobs.hedgeBandMax)})`
+        : `crypto untouched at ${pct(crypto)}`,
     };
   },
   "B4-event": (ctx, _p, cfg) => {
@@ -101,8 +102,8 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
     return {
       pass: hit ? true : null,
       measured: hit
-        ? `${hit.severity}: "${hit.headline.slice(0, 80)}" (${new Date(hit.ts).toISOString()})`
-        : `no qualifying macro event in ${cfg.knobs.eventLookbackHours}h`,
+        ? `${severityWord(hit.severity)}: "${hit.headline.slice(0, 80)}" (${new Date(hit.ts).toISOString()})`
+        : `no qualifying news in ${cfg.knobs.eventLookbackHours}h`,
     };
   },
   "B5-blackout": (ctx) => {
@@ -110,7 +111,7 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
     const minutesUTC = d.getUTCHours() * 60 + d.getUTCMinutes();
     const near = (m: number) => Math.abs(minutesUTC - m) <= 30;
     const blocked = near(14 * 60 + 30) || near(21 * 60);
-    return { pass: blocked ? false : true, measured: `${d.toISOString().slice(11, 16)} UTC vs blackout 14:00-15:00 / 20:30-21:30` };
+    return { pass: blocked ? false : true, measured: `${d.toISOString().slice(11, 16)} UTC, quiet window 14:00-15:00 / 20:30-21:30` };
   },
   "B6-concentration": (ctx, p, cfg) => {
     const positions: Record<string, number> = {};
@@ -118,7 +119,7 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
       positions[sym] = pos.qty * (ctx.pxOf.get(sym) ?? 0);
     }
     const totalNow = Object.values(positions).reduce((s, v) => s + v, ctx.book.usdt);
-    if (totalNow <= 0) return { pass: null, measured: "book value unmeasurable" };
+    if (totalNow <= 0) return { pass: null, measured: "portfolio value unmeasurable" };
     const buy = p.to === "crypto" || p.to === "rtoken-sleeve";
     const destSymbol = p.symbol ?? (p.to === "crypto" ? "BTCUSDT" : "RNVDAUSDT");
     const srcSymbol = p.from === "hedge-sleeve" ? "BTCUSDT" : "RNVDAUSDT";
@@ -128,7 +129,7 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
       : Math.max(0, positions[srcSymbol] ?? 0) * p.ratio;
     if (buy) {
       const destPx = ctx.pxOf.get(destSymbol);
-      if (destPx === undefined) return { pass: null, measured: `no live price for ${destSymbol}` };
+      if (destPx === undefined) return { pass: null, measured: `no live price for ${symbolName(destSymbol)}` };
       positions[destSymbol] = (positions[destSymbol] ?? 0) + notional;
     } else {
       positions[srcSymbol] = (positions[srcSymbol] ?? 0) - notional;
@@ -140,12 +141,12 @@ const CORE_MEASURES: Record<string, CoreMeasure> = {
     }
     return {
       pass: worst.share > cfg.knobs.concentrationMax ? false : true,
-      measured: `after shift: largest ${worst.sym} at ${pct(worst.share)} vs ${pct(cfg.knobs.concentrationMax)} cap`,
+      measured: `after the trade: largest holding ${symbolName(worst.sym)} at ${pct(worst.share)} (cap ${pct(cfg.knobs.concentrationMax)})`,
     };
   },
   "B7-stale": (ctx, _p, cfg) => {
     const stale = ctx.dataAgeMs > cfg.knobs.staleMaxSeconds * 1000;
-    return { pass: stale ? false : true, measured: `freshest market data ${Math.round(ctx.dataAgeMs / 1000)}s old vs ${cfg.knobs.staleMaxSeconds}s limit` };
+    return { pass: stale ? false : true, measured: `market data ${Math.round(ctx.dataAgeMs / 1000)} seconds old (limit ${cfg.knobs.staleMaxSeconds})` };
   },
 };
 
@@ -158,7 +159,7 @@ const LIBRARY_MEASURES: Record<string, LibraryMeasure> = {
     const total = ctx.ordersToday + 1;
     return {
       pass: total > params.max ? false : true,
-      measured: `${ctx.ordersToday} trades today, this would be #${total} vs cap ${params.max}`,
+      measured: `${ctx.ordersToday} trades today; this would be #${total} (cap ${params.max})`,
     };
   },
   "min-cash-buffer": (ctx, p, params) => {
@@ -171,7 +172,7 @@ const LIBRARY_MEASURES: Record<string, LibraryMeasure> = {
     const share = bookValue > 0 ? cashAfter / bookValue : 0;
     return {
       pass: buy && share < params.minPct / 100 ? false : true,
-      measured: `cash after shift ${pct(share)} vs ${params.minPct}% floor`,
+      measured: `cash after the trade: ${pct(share)} (floor ${params.minPct}%)`,
     };
   },
   "volatility-halt": (ctx, _p, params) => {
@@ -184,15 +185,15 @@ const LIBRARY_MEASURES: Record<string, LibraryMeasure> = {
     return {
       pass: breached ? false : true,
       measured: breached
-        ? `${worst.sym} moved ${pct(worst.move)} in 24h vs ${params.maxMovePct}% halt`
-        : `worst held move ${pct(worst.move)} vs ${params.maxMovePct}% halt`,
+        ? `${symbolName(worst.sym)} moved ${pct(worst.move)} in 24h (halt at ${params.maxMovePct}%)`
+        : `worst holding moved ${pct(worst.move)} in 24h (halt at ${params.maxMovePct}%)`,
     };
   },
   "daily-turnover-cap": (ctx, p, params) => {
     const projected = ctx.turnoverTodayUsdt + ctx.book.usdt * p.ratio;
     return {
       pass: projected > params.maxNotional ? false : true,
-      measured: `$${Math.round(projected)} traded today vs $${params.maxNotional} cap`,
+      measured: `$${Math.round(projected)} traded today (cap $${params.maxNotional})`,
     };
   },
 };

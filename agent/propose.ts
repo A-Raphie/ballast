@@ -8,7 +8,7 @@
 import type { MacroEvent, ProposalEvent, BookState } from "./types";
 import { readPolicyConfig } from "./policy-config";
 import { bookPctFrom } from "./book";
-import { symbolName } from "@/lib/display";
+import { symbolName } from "../lib/display";
 
 export async function propose(
   book: BookState,
