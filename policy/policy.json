@@ -19,49 +19,49 @@
   "clauses": [
     {
       "id": "B1-drift",
-      "text": "Rebalance only when a sleeve drifts more than 10 percentage points from its written target.",
+      "text": "Only trade when a holding group has wandered far enough from its target share.",
       "threshold": "drift > 10pp",
       "onUnmeasurable": "halt",
       "enabled": true
     },
     {
       "id": "B2-drawdown",
-      "text": "No action that increases market exposure while the book is down more than 2.5% from its 24h-open value.",
+      "text": "If the portfolio is already down on its day, make no trade that adds risk.",
       "threshold": "dd <= 2.5% or risk-reducing",
       "onUnmeasurable": "halt",
       "enabled": true
     },
     {
       "id": "B3-hedge-band",
-      "text": "The crypto hedge sleeve must stay between 20% and 50% of book value.",
+      "text": "The crypto shield must stay inside its written floor and ceiling.",
       "threshold": "20%-50%",
       "onUnmeasurable": "deny",
       "enabled": true
     },
     {
       "id": "B4-event",
-      "text": "A shift requires a macro event of medium severity or higher within the last 12 hours.",
+      "text": "A trade needs a big-enough news story within the recent lookback window.",
       "threshold": "severity >= medium within 12h",
       "onUnmeasurable": "halt",
       "enabled": true
     },
     {
       "id": "B5-blackout",
-      "text": "No rebalance within 30 minutes of the US equity open or close (14:30 / 21:00 UTC).",
+      "text": "Stay quiet in the minutes just before and after the US market opens or closes.",
       "threshold": "outside open/close +/-30min",
       "onUnmeasurable": "deny",
       "enabled": true
     },
     {
       "id": "B6-concentration",
-      "text": "No single position above 35% of book value after the shift.",
+      "text": "No single holding may end up past its size cap after the trade.",
       "threshold": "max position <= 35%",
       "onUnmeasurable": "halt",
       "enabled": true
     },
     {
       "id": "B7-stale",
-      "text": "All proposals halt when the freshest market row is older than 10 minutes.",
+      "text": "If market prices are too old to trust, stop everything.",
       "threshold": "data age <= 600s",
       "onUnmeasurable": "deny",
       "enabled": true

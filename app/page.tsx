@@ -16,7 +16,7 @@ export default async function Landing() {
     applicationCategory: "FinanceApplication",
     operatingSystem: "Web",
     description:
-      "An autonomous agent that shifts tokenized US stock exposure into crypto on overnight macro shocks, with a clause-chain receipt for every decision.",
+      "A trading agent that moves tokenized US stocks into crypto when bad news hits overnight, with a receipt showing the exact rules behind every decision.",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     author: { "@type": "Person", name: "Raphie", url: "https://x.com/a_raphie" },
   };
@@ -30,15 +30,15 @@ export default async function Landing() {
         <h1 style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }} className="font-[family-name:var(--font-display)] font-bold leading-[1.05] tracking-tight">
           Wall Street sleeps.
           <br />
-          <span className="text-[var(--decision)]">Your book doesn&apos;t have to.</span>
+          <span className="text-[var(--decision)]">Your portfolio doesn&apos;t have to.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[var(--text-secondary)]">
-          Tokenized US stocks trade 24/7, and macro news does not wait for the opening bell.
-          Ballast is a trading agent that shifts your tokenized-stock book into crypto when a
-          shock lands overnight, and hands you the clause chain that allowed every single move.
+          Tokenized US stocks trade 24/7, and big news does not wait for the opening bell.
+          Ballast is a trading agent that moves your tokenized stocks into crypto when a shock
+          lands overnight, and hands you a receipt showing exactly why every trade was allowed.
         </p>
         <p className="mx-auto mt-4 max-w-xl text-sm text-[var(--text-muted)]">
-          Paper book. Real prices. Simulated fills, labeled on every line.
+          Practice money. Real prices. Every practice trade labeled as such.
         </p>
         <div className="mt-8 flex items-center justify-center gap-4">
           <Link href="/control-room" className="btn btn-primary whitespace-nowrap">
@@ -51,10 +51,10 @@ export default async function Landing() {
         <div className="mt-6 flex justify-center">
           <StatStrip
             items={[
-              { label: "Sensing since", value: v.sensingSince ? new Date(v.sensingSince).toISOString().slice(0, 10) : "arming" },
-              { label: "Ledger lines", value: v.events.length },
-              { label: "Clauses enforced", value: 7 },
-              { label: "Risk violations", value: 0, tone: "decision" },
+              { label: "Watching since", value: v.sensingSince ? new Date(v.sensingSince).toISOString().slice(0, 10) : "arming" },
+              { label: "Log entries", value: v.events.length },
+              { label: "Rules enforced", value: 7 },
+              { label: "Rule violations", value: 0, tone: "decision" },
             ]}
           />
         </div>
@@ -67,15 +67,15 @@ export default async function Landing() {
             <span className="micro">The night watch band</span>
             <span className={`micro ${live ? "text-[var(--decision)]" : ""}`}>
               {v.lastTickTs
-                ? `ledger snapshot · ${Math.max(0, Math.round((Date.now() - v.lastTickTs) / 60000))}m old`
+                ? `live snapshot · ${Math.max(0, Math.round((Date.now() - v.lastTickTs) / 60000))} min old`
                 : "arming"}
             </span>
           </div>
           <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
         </Panel>
         <p className="caption mt-4 text-center">
-          This is the real control-room surface reading the real ledger. Markers are macro events
-          the agent sensed; diamonds are decisions the policy engine gated.
+          This is the real control-room view reading real data. Dots are news stories the agent
+          noticed; diamonds are decisions its rules allowed or refused.
         </p>
       </section>
 
@@ -84,9 +84,9 @@ export default async function Landing() {
         <div className="micro mb-6 text-center">How it works</div>
         <div className="grid gap-4 text-center sm:grid-cols-3">
           {[
-            ["You write the rules once", "Plain-language rules with real numbers: the mix, the shield band, the blackout. Save them and the running agent obeys within one tick."],
-            ["It watches all night", "Macro headlines and dual-market prices, sensed every 15 minutes on Bitget's public data. When a shock lands, the trade walks every rule before it exists."],
-            ["You read the receipts", "Each decision carries its clause chain: the trigger, each rule checked with the measured numbers, the order, and the counterfactual book."],
+            ["You write the rules once", "Plain-language rules with real numbers: the target mix, the crypto band, the quiet hours. Save them and the running agent obeys within 15 minutes."],
+            ["It watches all night", "News headlines and live prices, checked every 15 minutes on Bitget's public data. When a shock lands, the trade must pass every rule before it exists."],
+            ["You read the receipts", "Every decision ships a receipt: what triggered it, each rule with its measured number, the order, and what the portfolio would look like after."],
           ].map(([t, d]) => (
             <div key={t as string} className="card px-5 py-6 text-left">
               <div className="text-sm font-semibold text-[var(--decision)]">{t as string}</div>
@@ -101,9 +101,9 @@ export default async function Landing() {
         <div className="micro mb-6 text-center">What it works with</div>
         <div className="grid gap-4 text-center sm:grid-cols-3">
           {[
-            ["Bitget Agent Hub", "The agent's account is authorized through Agent Hub's Agentic-account OAuth; market data for rToken and crypto routes through Bitget's stack. Fills are simulated and labeled."],
-            ["Public market data", "Tokenized US stocks (rToken) and crypto prices, keyless, every 15 minutes."],
-            ["The written policy", "A deterministic rules engine decides every trade today. The Qwen decision slot is wired and waits behind one env var."],
+            ["Bitget Agent Hub", "The agent's account is authorized through Agent Hub; market data for tokenized stocks and crypto comes from Bitget's stack. Trades are simulated and labeled."],
+            ["Public market data", "Tokenized US stocks (think Nvidia or Tesla as tokens) and crypto prices, no API keys needed, checked every 15 minutes."],
+            ["The written policy", "Fixed rules, not an AI, decide every trade today. An AI decision slot is wired and waits behind one setting."],
           ].map(([t, d]) => (
             <div key={t as string} className="card px-5 py-6 text-left">
               <div className="text-sm font-semibold">{t as string}</div>

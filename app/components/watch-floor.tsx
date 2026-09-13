@@ -9,6 +9,7 @@
 import { useState } from "react";
 import type { MacroEvent } from "@/agent/types";
 import type { Decision } from "@/lib/ledger";
+import { shiftPhrase, symbolName, severityWord, verdictWord, proposerName } from "@/lib/display";
 import { ClauseRow, VerdictBadge, Chip } from "./kit";
 
 const W = 1200;
@@ -44,7 +45,7 @@ export function WatchFloor({
         viewBox={`0 0 ${W} ${H}`}
         className="w-full select-none"
         role="img"
-        aria-label="Night Watch Band: 24 hour canvas of macro events and Ballast decisions"
+        aria-label="Night watch band: a 24-hour view of news stories and Ballast decisions"
       >
         {/* ballast's shift: everything outside US equity open */}
         <rect x={xOf(0)} y={34} width={xOf(OPEN_START) - xOf(0)} height={TRACK_Y - 20} fill="var(--decision-subtle)" />
@@ -81,7 +82,7 @@ export function WatchFloor({
             <g key={`m${i}`}>
               <circle cx={xOfTs(m.ts)} cy={y} r={r + 3} fill="var(--bg-base)" opacity={0.6} />
               <circle cx={xOfTs(m.ts)} cy={y} r={r} fill="var(--context-marker)" opacity={op}>
-                <title>{`[${m.severity}] ${m.headline}`}</title>
+                <title>{`${severityWord(m.severity)}: ${m.headline}`}</title>
               </circle>
             </g>
           );
@@ -94,7 +95,7 @@ export function WatchFloor({
           const on = d.id === selectedId;
           return (
             <g key={d.id} onClick={() => setSelectedId(on ? null : d.id)} style={{ cursor: "pointer" }}>
-              <title>{`Decision ${d.id}: ${d.verdict?.result ?? ""}`}</title>
+              <title>{`${verdictWord(d.verdict?.result ?? "")}: ${d.proposal ? shiftPhrase(d.proposal.from, d.proposal.to) : "decision"}`}</title>
               <rect
                 x={x - 5.5}
                 y={y - 5.5}
@@ -119,8 +120,8 @@ export function WatchFloor({
       </svg>
 
       <div className="mt-3 flex flex-wrap gap-4">
-        <Chip>· macro event (marker size = severity)</Chip>
-        <Chip tone="decision">◆ Ballast decision · click for clause chain</Chip>
+        <Chip>· news story (bigger dot = bigger story)</Chip>
+        <Chip tone="decision">◆ a Ballast decision · click for the full receipt</Chip>
       </div>
 
       {/* clause chain panel: morphs open from the selected fix */}
@@ -145,7 +146,7 @@ function ClauseChain({ decision, onClose }: { decision: Decision; onClose: () =>
           <VerdictBadge result={v.result} />
           {p && (
             <Chip tone="decision">
-              shift {p.from.replace("-", " ")} → {p.to.replace("-", " ")} · {(p.ratio * 100).toFixed(0)}%
+              {shiftPhrase(p.from, p.to)} · {(p.ratio * 100).toFixed(0)}% of it
             </Chip>
           )}
           <span className="num caption">{new Date(decision.ts).toISOString().replace("T", " ").slice(0, 16)} UTC</span>
@@ -154,7 +155,11 @@ function ClauseChain({ decision, onClose }: { decision: Decision; onClose: () =>
           close
         </button>
       </div>
-      {p && <p className="caption mb-4 max-w-3xl">{p.reason}</p>}
+      {p && (
+        <p className="caption mb-4 max-w-3xl">
+          Proposed by {proposerName(p.proposer)}. {p.reason}
+        </p>
+      )}
       <div>
         {v.clauses.map((c) => (
           <ClauseRow key={c.id} id={c.id} text={c.text} measured={c.measured} pass={c.pass} />
@@ -164,10 +169,10 @@ function ClauseChain({ decision, onClose }: { decision: Decision; onClose: () =>
         <div className="mt-4 flex items-center gap-3 border-t border-[var(--border-default)] pt-3">
           <Chip tone={decision.order.execution === "paper" ? "decision" : "neutral"}>
             {decision.order.execution === "paper"
-              ? `paper ${decision.order.side} ${decision.order.symbol}`
+              ? `practice order: ${decision.order.side} ${symbolName(decision.order.symbol)}`
               : decision.order.execution === "simulated"
-                ? `simulated ${decision.order.side} ${decision.order.symbol} · filled against real prices, labeled`
-                : `order staged · awaiting demo key (${decision.order.side} ${decision.order.symbol})`}
+                ? `simulated ${decision.order.side} of ${symbolName(decision.order.symbol)} · matched against real prices, labeled as practice`
+                : `order staged, waiting for demo keys (${decision.order.side} ${symbolName(decision.order.symbol)})`}
           </Chip>
         </div>
       )}

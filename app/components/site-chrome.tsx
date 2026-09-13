@@ -30,7 +30,7 @@ export function OfflineBanner() {
   if (!offline) return null;
   return (
     <div className="bg-[var(--status-deny-bg)] px-4 py-2 text-center text-xs text-[var(--status-deny)]" role="status">
-      You are offline. Showing the last synced ledger.
+      You are offline. Showing the last synced data.
     </div>
   );
 }

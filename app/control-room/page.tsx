@@ -1,6 +1,6 @@
 import { readLedger, type Decision } from "@/lib/ledger";
 import { readAgentState } from "@/agent/agent-state";
-import { executionMode } from "@/agent/executor";
+import { shiftPhrase, clauseReason, ruleName, verdictWord, symbolName } from "@/lib/display";
 import { WatchFloor } from "@/app/components/watch-floor";
 import { Panel, StatStrip, Chip } from "@/app/components/kit";
 import { StatusBadge, PauseControl } from "@/app/components/status-controls";
@@ -41,8 +41,8 @@ function sessionSummary(decisions: Decision[]): string | null {
     else builds++;
   }
   const acts: string[] = [];
-  if (trims > 0) acts.push(`trimmed an over-concentrated position${trims > 1 ? ` ${trims} times` : ""}`);
-  if (builds > 0) acts.push(`built the book ${builds > 1 ? `${builds} steps` : "one step"} toward its targets`);
+  if (trims > 0) acts.push(`sold down an oversized holding${trims > 1 ? ` ${trims} times` : ""}`);
+  if (builds > 0) acts.push(`moved the portfolio ${builds > 1 ? `${builds} steps` : "one step"} toward its target mix`);
   return acts.length ? acts.join(", ") : null;
 }
 
@@ -61,12 +61,12 @@ export default async function ControlRoom() {
             Control room
           </h1>
           <p className="caption mt-1">
-            Every macro marker the agent sensed, every decision the policy allowed or denied.
-            Click any cyan diamond for the full clause chain behind it.
+            Every news story the agent noticed, every trade it made or refused. Click any cyan
+            diamond to see the full receipt behind it.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <Chip>{executionMode() === "paper" ? "paper fills · demo env" : "paper book · simulated fills"}</Chip>
+          <Chip>practice mode · pretend money, real prices</Chip>
           <StatusBadge status={status} lastSenseAgeMin={lastSenseAge === Infinity ? 0 : lastSenseAge} selfHosted={selfHosted} />
           <PauseControl paused={state.paused} selfHosted={selfHosted} />
         </div>
@@ -74,7 +74,7 @@ export default async function ControlRoom() {
       {state.paused && (
         <Panel className="mb-6 px-5 py-3">
           <span className="caption text-[var(--status-deny)]">
-            Paused{state.note ? ` · ${state.note}` : ""} · sensing continues, decisions stopped.
+            Paused{state.note ? ` · ${state.note}` : ""} · Ballast keeps watching but makes no trades.
           </span>
         </Panel>
       )}
@@ -82,20 +82,20 @@ export default async function ControlRoom() {
       <Panel className="mb-6 px-5 py-4">
         <StatStrip
           items={[
-            { label: "Book", value: v.bookValue === null ? "unfunded" : `$${v.bookValue.toFixed(0)}`, hint: "the paper book this demo trades (simulation, labeled)" },
-            { label: "rToken sleeve", value: v.exposure ? pct(v.exposure.rtokenPct) : "0%", hint: "share held in tokenized US stocks" },
+            { label: "Practice portfolio", value: v.bookValue === null ? "not funded yet" : `$${v.bookValue.toFixed(0)}`, hint: "a practice account with pretend money; the prices are real" },
+            { label: "Tokenized stocks", value: v.exposure ? pct(v.exposure.rtokenPct) : "0%", hint: "how much sits in tokenized US stocks (Nvidia, Tesla, and friends)" },
             {
-              label: "Hedge sleeve",
+              label: "Crypto shield",
               value: v.exposure ? pct(v.exposure.cryptoPct) : "0%",
               tone: v.exposure && v.exposure.cryptoPct > 0 ? "decision" : "default",
-              hint: "the crypto shield: held to soften overnight shocks",
+              hint: "bitcoin and ethereum, held to soften overnight shocks",
             },
             {
-              label: "Heel (24h)",
+              label: "Today's move",
               value: v.heelPct === null ? "0.0%" : `${v.heelPct >= 0 ? "" : "+"}${(-v.heelPct).toFixed(2)}%`,
-              hint: "how far the book lists below its UTC-day open (ship-heel metaphor)",
+              hint: "how far the portfolio is down (or up) from the start of its trading day (UTC)",
             },
-            { label: "Policy", value: `v${v.policyVersion ?? "?"}`, hint: "the rulebook version the agent obeyed" },
+            { label: "Rules version", value: `v${v.policyVersion ?? "?"}`, hint: "which version of the rulebook the agent obeyed" },
           ]}
         />
       </Panel>
@@ -116,27 +116,34 @@ export default async function ControlRoom() {
           </h2>
           {v.decisions.length === 0 && (
             <p className="caption">
-              No decisions yet. The agent proposes only when a qualifying macro event lands; a
-              quiet book is the honest state.
+              Nothing yet. Ballast only trades after big-enough news lands; a quiet list means a
+              quiet night.
             </p>
           )}
           <ul className="space-y-3">
             {rollup(v.decisions).slice(0, 8).map((r) => (
               <li key={r.key} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-3 last:border-b-0">
                 <div className="min-w-0">
-                  <div className="num text-sm">
+                  <div className="text-sm">
                     {r.count > 1 ? <span className="text-[var(--text-secondary)]">{r.count}× </span> : null}
-                    {r.from.replace("-", " ")} → {r.to}
+                    <span className="capitalize">{shiftPhrase(r.from, r.to)}</span>
                   </div>
                   <div className="num caption">
                     {new Date(r.latestTs).toISOString().replace("T", " ").slice(0, 16)} UTC
                     {r.failing && r.failing.length > 0 ? (
                       <>
-                        {" · blocked by "}
-                        {r.failing.map((f) => (
-                          <a key={f} href={`/policy#${f}`} className="underline decoration-dotted hover:text-[var(--text-primary)]">
-                            {f}
-                          </a>
+                        {" · "}
+                        {r.failing.map((f, i) => (
+                          <span key={f}>
+                            {i > 0 ? ", " : r.result === "halt" ? "stopped: couldn't check " : "refused: "}
+                            <a
+                              href={`/policy#${f}`}
+                              title={`rule ${f}: ${ruleName(f)}`}
+                              className="underline decoration-dotted hover:text-[var(--text-primary)]"
+                            >
+                              {r.result === "halt" ? ruleName(f) : clauseReason(f)}
+                            </a>
+                          </span>
                         ))}
                       </>
                     ) : ""}
@@ -151,7 +158,7 @@ export default async function ControlRoom() {
                         : "text-[var(--text-secondary)]"
                   }`}
                 >
-                  {r.result === "allow" ? "✓ allow" : r.result === "deny" ? "✗ deny" : "‖ halt"}
+                  {r.result === "allow" ? "✓ traded" : r.result === "deny" ? "✗ refused" : "‖ stopped"}
                 </span>
               </li>
             ))}
@@ -160,12 +167,12 @@ export default async function ControlRoom() {
 
         <Panel className="p-5">
           <h2 className="font-[family-name:var(--font-display)] mb-4 text-lg font-semibold">
-            Sensed market
+            What it&apos;s watching
           </h2>
           <ul className="space-y-2">
             {v.marketSnapshot.map((m) => (
               <li key={m.symbol} className="flex items-center justify-between border-b border-[var(--border-default)] pb-2 last:border-b-0">
-                <span className="num text-sm">{m.symbol}</span>
+                <span className="text-sm" title={m.symbol}>{symbolName(m.symbol)}</span>
                 <span className="flex items-baseline gap-3">
                   <span className="num text-sm">{m.px.toLocaleString()}</span>
                   <span
@@ -177,7 +184,7 @@ export default async function ControlRoom() {
                 </span>
               </li>
             ))}
-            {v.marketSnapshot.length === 0 && <p className="caption">Awaiting the first sense tick.</p>}
+            {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}
           </ul>
         </Panel>
       </div>

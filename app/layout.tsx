@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://try-ballast.netlify.app"),
   title: "Ballast: the overnight shift for tokenized US stocks",
   description:
-    "When macro news breaks while Wall Street sleeps, Ballast shifts your tokenized-stock book into crypto. Every decision ships with the clause chain that allowed it.",
+    "When big news breaks while Wall Street sleeps, Ballast moves your tokenized stocks into crypto. Every trade ships with a receipt showing the exact rules that allowed it.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Ballast: the overnight shift for tokenized US stocks",
     description:
-      "A trading agent that shifts your tokenized-stock book into crypto on overnight shocks, and shows the clause chain behind every move.",
+      "A trading agent that moves your tokenized stocks into crypto on overnight shocks, and shows the receipt behind every move.",
     url: "https://try-ballast.netlify.app",
     siteName: "Ballast",
     type: "website",

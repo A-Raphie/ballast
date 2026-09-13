@@ -21,9 +21,9 @@ export function StatusBadge({
   selfHosted: boolean;
 }) {
   const map = {
-    "on-shift": { dot: "bg-[var(--decision)]", label: "Ballast on shift", detail: `last sense ${lastSenseAgeMin} min ago` },
-    stale: { dot: "bg-[var(--status-deny)]", label: "mirror stale", detail: `no data for ${lastSenseAgeMin} min — the agent ticks every 15 min on its own host` },
-    paused: { dot: "bg-[var(--text-muted)]", label: "Paused by operator", detail: "sensing continues; decisions are stopped" },
+    "on-shift": { dot: "bg-[var(--decision)]", label: "Ballast on shift", detail: `last check ${lastSenseAgeMin} min ago` },
+    stale: { dot: "bg-[var(--status-deny)]", label: "live feed out of date", detail: `no fresh data for ${lastSenseAgeMin} min · the agent checks every 15 min on its own host` },
+    paused: { dot: "bg-[var(--text-muted)]", label: "Paused by operator", detail: "it keeps watching but makes no trades" },
   } as const;
   const m = map[status];
   return (
@@ -66,8 +66,8 @@ export function PauseControl({ paused, selfHosted }: { paused: boolean; selfHost
 
   if (!selfHosted) {
     return (
-      <span className="micro text-[var(--text-muted)]" title="the public deploy mirrors the agent; run your own instance to command it">
-        controls on self-hosted instances only
+      <span className="micro text-[var(--text-muted)]" title="the public site mirrors the agent; run your own copy to command it">
+        controls live on the self-hosted copy
       </span>
     );
   }
@@ -80,7 +80,7 @@ export function PauseControl({ paused, selfHosted }: { paused: boolean; selfHost
       ) : (
         <>
           <button onClick={() => setPaused(!paused)} disabled={busy} className="btn btn-primary !min-h-0 !px-3 !py-1 text-xs">
-            {paused ? "Resume — it decides again" : "Confirm pause"}
+            {paused ? "Resume: it decides again" : "Confirm pause"}
           </button>
           <button onClick={() => setArmed(false)} className="btn btn-ghost !min-h-0 !px-3 !py-1 text-xs">
             cancel

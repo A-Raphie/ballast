@@ -15,13 +15,13 @@ export function Panel({ children, className = "" }: { children: ReactNode; class
 
 export function VerdictBadge({ result }: { result: "allow" | "deny" | "halt" }) {
   const map = {
-    allow: { bg: "bg-[var(--status-pass-bg)] text-[var(--status-pass)]", glyph: "✓", label: "ALLOWED" },
-    deny: { bg: "bg-[var(--status-deny-bg)] text-[var(--status-deny)]", glyph: "✗", label: "DENIED" },
-    halt: { bg: "bg-[var(--bg-raised)] text-[var(--text-secondary)]", glyph: "‖", label: "HALTED" },
+    allow: { bg: "bg-[var(--status-pass-bg)] text-[var(--status-pass)]", glyph: "✓", label: "ALLOWED", title: "every rule passed; the trade went ahead" },
+    deny: { bg: "bg-[var(--status-deny-bg)] text-[var(--status-deny)]", glyph: "✗", label: "DENIED", title: "at least one rule said no" },
+    halt: { bg: "bg-[var(--bg-raised)] text-[var(--text-secondary)]", glyph: "‖", label: "STOPPED", title: "a rule couldn't be checked, so Ballast paused everything" },
   } as const;
   const m = map[result];
   return (
-    <span className={`inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] px-3 py-1 text-[11px] font-semibold tracking-[0.1em] ${m.bg}`}>
+    <span title={m.title} className={`inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] px-3 py-1 text-[11px] font-semibold tracking-[0.1em] ${m.bg}`}>
       <span aria-hidden>{m.glyph}</span> {m.label}
     </span>
   );
@@ -52,6 +52,7 @@ export function ClauseRow({
   pass: boolean | null;
 }) {
   const mark = pass === true ? "✓" : pass === false ? "✗" : "‖";
+  const word = pass === true ? "passed" : pass === false ? "said no" : "couldn't be checked";
   const tone =
     pass === true
       ? "text-[var(--status-pass)]"
@@ -59,14 +60,16 @@ export function ClauseRow({
         ? "text-[var(--status-deny)]"
         : "text-[var(--text-secondary)]";
   return (
-    <div className="grid grid-cols-[1.5rem_7rem_1fr] gap-3 border-b border-[var(--border-default)] py-3 last:border-b-0">
+    <div className="grid grid-cols-[1.5rem_1fr] gap-3 border-b border-[var(--border-default)] py-3 last:border-b-0">
       <span className={`text-center text-sm font-bold ${tone}`} aria-label={pass === null ? "unmeasurable" : pass ? "passed" : "failed"}>
         {mark}
       </span>
-      <span className="mono pt-0.5 text-[var(--text-secondary)]">{id}</span>
       <span className="text-[13px] leading-snug">
-        <span className="text-[var(--text-primary)]">{measured}</span>
-        <span className="text-[var(--text-muted)]"> · {text}</span>
+        <span className="text-[var(--text-primary)]">{text}</span>{" "}
+        <span className="text-[var(--text-muted)]">({measured})</span>
+        <span className={`mono ml-2 text-[11px] ${tone}`} title={`rule code ${id} · ${word}`}>
+          {id}
+        </span>
       </span>
     </div>
   );

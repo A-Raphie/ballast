@@ -8,6 +8,7 @@
 import type { MacroEvent, ProposalEvent, BookState } from "./types";
 import { readPolicyConfig } from "./policy-config";
 import { bookPctFrom } from "./book";
+import { symbolName } from "@/lib/display";
 
 export async function propose(
   book: BookState,
@@ -44,7 +45,7 @@ async function proposeThresholdFallback(
       from: "usdt-buffer",
       to: "crypto",
       ratio: Math.min(book.targetHedgePct - crypto, 0.3),
-      reason: `Hedge sleeve at ${(crypto * 100).toFixed(0)}% is below the written 20% floor with ${qualifying.length} qualifying macro event(s); building the hedge from the USDT buffer first.`,
+      reason: `Crypto is only ${(crypto * 100).toFixed(0)}% of the portfolio, below its written floor, and ${qualifying.length} big-enough news ${qualifying.length === 1 ? "story" : "stories"} landed. Buying crypto with spare cash first.`,
       ts: now,
     };
   }
@@ -67,7 +68,7 @@ async function proposeThresholdFallback(
       to: "usdt-buffer",
       symbol: "RNVDAUSDT",
       ratio: Math.min((1 - cap / share) * 1.15, 0.9),
-      reason: `Largest position at ${(share * 100).toFixed(1)}% exceeds the 35% concentration cap; trimming before the sleeve build continues.`,
+      reason: `The largest holding takes ${(share * 100).toFixed(1)}% of the portfolio, over its size cap. Trimming it before adding anything else.`,
       ts: now,
     };
   }
@@ -85,7 +86,7 @@ async function proposeThresholdFallback(
     to: movingCrypto ? "crypto" : "rtoken-sleeve",
     symbol,
     ratio,
-    reason: `Drift ${(Math.abs(drift) * 100).toFixed(1)}pp from written target after ${qualifying.length} qualifying macro event(s); building ${symbol.replace("USDT", "")} to diversify the sleeve.`,
+    reason: `After ${qualifying.length} big-enough news ${qualifying.length === 1 ? "story" : "stories"}, part of the portfolio sits ${(Math.abs(drift) * 100).toFixed(1)} points from the target mix. Buying ${symbolName(symbol)} to bring the mix back toward its targets.`,
     ts: now,
   };
 }

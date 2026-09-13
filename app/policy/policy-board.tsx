@@ -10,6 +10,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { ruleName } from "@/lib/display";
 
 type Format = "pct" | "num" | "pp";
 
@@ -134,36 +135,36 @@ export function PolicyBoard({
       setStatus({ kind: "error", message: r.error ?? "failed" });
       return;
     }
-    setStatus({ kind: "ok", message: `Numbers saved (policy v${r.version}). The agent obeys them before its next tick.` });
+    setStatus({ kind: "ok", message: `Saved (rules v${r.version}). Ballast picks them up on its next check, within 15 minutes.` });
     router.refresh();
   }
 
   const coreRules: CoreRule[] = [
     {
       id: "targets",
-      sentence: `Keep ${show("targets.rtokenPct")}% of the book in tokenized US stocks, ${show("targets.hedgePct")}% in crypto as the shield, ${show("targets.usdtPct")}% in cash.`,
+      sentence: `Keep ${show("targets.rtokenPct")}% of the portfolio in tokenized US stocks, ${show("targets.hedgePct")}% in crypto as the shield, and ${show("targets.usdtPct")}% in cash.`,
       toggle: false,
       inputs: [
-        { key: "targets.rtokenPct", label: "rToken sleeve", format: "pct", step: 1 },
+        { key: "targets.rtokenPct", label: "tokenized stocks", format: "pct", step: 1 },
         { key: "targets.hedgePct", label: "crypto shield", format: "pct", step: 1 },
         { key: "targets.usdtPct", label: "cash", format: "pct", step: 1 },
       ],
     },
     {
       id: "B1-drift",
-      sentence: `Only act when a sleeve drifts more than ${show("knobs.driftPp")} points from its target.`,
+      sentence: `Only trade when a holding group has wandered more than ${show("knobs.driftPp")} points away from its target share.`,
       toggle: true,
-      inputs: [{ key: "knobs.driftPp", label: "drift tolerance", format: "pp", step: 1 }],
+      inputs: [{ key: "knobs.driftPp", label: "points of drift allowed", format: "pp", step: 1 }],
     },
     {
       id: "B2-drawdown",
-      sentence: `Never add risk while the book is down more than ${show("knobs.drawdownMax")}% on its day.`,
+      sentence: `If the portfolio is down more than ${show("knobs.drawdownMax")}% on its day, make no trade that adds risk.`,
       toggle: true,
-      inputs: [{ key: "knobs.drawdownMax", label: "drawdown guard", format: "pct", step: 0.5 }],
+      inputs: [{ key: "knobs.drawdownMax", label: "bad-day limit", format: "pct", step: 0.5 }],
     },
     {
       id: "B3-hedge-band",
-      sentence: `The crypto shield stays between ${show("knobs.hedgeBandMin")}% and ${show("knobs.hedgeBandMax")}% of the book, never outside.`,
+      sentence: `The crypto shield must stay between ${show("knobs.hedgeBandMin")}% and ${show("knobs.hedgeBandMax")}% of the portfolio.`,
       toggle: true,
       inputs: [
         { key: "knobs.hedgeBandMin", label: "shield floor", format: "pct", step: 1 },
@@ -172,27 +173,27 @@ export function PolicyBoard({
     },
     {
       id: "B4-event",
-      sentence: `A shift needs a real headline: medium severity or higher in the last ${show("knobs.eventLookbackHours")} hours.`,
+      sentence: `Only trade after a big-enough news story within the last ${show("knobs.eventLookbackHours")} hours.`,
       toggle: true,
-      inputs: [{ key: "knobs.eventLookbackHours", label: "trigger lookback", format: "num", step: 1 }],
+      inputs: [{ key: "knobs.eventLookbackHours", label: "news lookback (hours)", format: "num", step: 1 }],
     },
     {
       id: "B5-blackout",
-      sentence: `Nothing trades within ${show("knobs.blackoutMinutes")} minutes of the US open or close.`,
+      sentence: `Stay quiet within ${show("knobs.blackoutMinutes")} minutes of the US market opening or closing.`,
       toggle: true,
-      inputs: [{ key: "knobs.blackoutMinutes", label: "bell blackout", format: "num", step: 5 }],
+      inputs: [{ key: "knobs.blackoutMinutes", label: "quiet minutes around open/close", format: "num", step: 5 }],
     },
     {
       id: "B6-concentration",
-      sentence: `No single position grows past ${show("knobs.concentrationMax")}% of the book.`,
+      sentence: `No single holding may grow past ${show("knobs.concentrationMax")}% of the portfolio.`,
       toggle: true,
-      inputs: [{ key: "knobs.concentrationMax", label: "concentration cap", format: "pct", step: 1 }],
+      inputs: [{ key: "knobs.concentrationMax", label: "single-holding cap", format: "pct", step: 1 }],
     },
     {
       id: "B7-stale",
-      sentence: `If market data goes stale beyond ${show("knobs.staleMaxSeconds")} seconds, stand down entirely.`,
+      sentence: `If market prices are older than ${show("knobs.staleMaxSeconds")} seconds, stop everything.`,
       toggle: true,
-      inputs: [{ key: "knobs.staleMaxSeconds", label: "staleness halt", format: "num", step: 30 }],
+      inputs: [{ key: "knobs.staleMaxSeconds", label: "old-data limit (seconds)", format: "num", step: 30 }],
     },
   ];
 
@@ -206,14 +207,14 @@ export function PolicyBoard({
     if (!r.ok) {
       setStatus({ kind: "error", message: r.error ?? "failed" });
     } else {
-      setStatus({ kind: "ok", message: `${what}: done (policy v${r.version}). The agent pulls it before its next tick.` });
+      setStatus({ kind: "ok", message: `${what}: done (rules v${r.version}). Ballast picks it up on its next check, within 15 minutes.` });
       router.refresh();
     }
     setBusy(null);
   }
   const toggleClause = (id: string, current: boolean) =>
-    apply({ setClauseEnabled: [{ id, enabled: !current }] }, current ? `disabling ${id}` : `enabling ${id}`);
-  const deleteRule = (id: string) => apply({ removeClauses: [{ id }] }, `deleting ${id}`);
+    apply({ setClauseEnabled: [{ id, enabled: !current }] }, current ? `turning off ${ruleName(id)}` : `turning on ${ruleName(id)}`);
+  const deleteRule = (id: string) => apply({ removeClauses: [{ id }] }, `deleting ${ruleName(id)}`);
   const addRule = () => {
     const spec = ADDABLE[addType];
     if (!spec) return;
@@ -236,8 +237,10 @@ export function PolicyBoard({
               <div className="min-w-0 flex-1">
                 <div className="text-sm text-[var(--text-primary)]">{r.sentence}</div>
                 {clause && s && (
-                  <div className="num caption mt-1">
-                    {clause.id} · ✓ {s.pass} · ✗ {s.fail} · ‖ {s.halt}
+                  <div className="num caption mt-1" title={`rule code ${clause.id}`}>
+                    checked {s.pass} times · refused {s.fail} trades
+                    {s.halt > 0 ? ` · stopped ${s.halt}` : ""}
+                    <span className="mono ml-2 text-[11px] text-[var(--text-muted)]">{clause.id}</span>
                   </div>
                 )}
               </div>
@@ -284,9 +287,9 @@ export function PolicyBoard({
               <div key={c.id} className={`mb-3 border-b border-[var(--border-default)] pb-3 ${on ? "" : "opacity-50"}`}>
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <div className="num text-sm">{c.text}</div>
-                    <div className="num caption mt-0.5">
-                      {c.id} · ✓ {stat(c.id).pass} · ✗ {stat(c.id).fail}
+                    <div className="text-sm">{c.text}</div>
+                    <div className="num caption mt-0.5" title={`rule code ${c.id}`}>
+                      checked {stat(c.id).pass} times · refused {stat(c.id).fail} trades
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -354,7 +357,7 @@ export function PolicyBoard({
             </button>
           )}
         </div>
-        {busy && <p className="caption mt-2 text-[var(--text-secondary)]">{busy} — committing to the agent's repo…</p>}
+        {busy && <p className="caption mt-2 text-[var(--text-secondary)]">{busy} · saving to the rulebook Ballast reads…</p>}
         {status && status.kind === "ok" && <p className="caption mt-2 text-[var(--status-pass)]">{status.message}</p>}
         {status && status.kind === "error" && <p className="caption mt-2 text-[var(--status-deny)]">{status.message}</p>}
       </div>

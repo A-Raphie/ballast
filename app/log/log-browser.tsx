@@ -5,6 +5,7 @@
 //   time = O(n) per filter pass, n = rendered rows (capped 300 upstream)
 
 import { useMemo, useState } from "react";
+import { kindLabel } from "@/lib/display";
 
 export interface LogRow {
   seq: string;
@@ -43,15 +44,15 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
                 : "border-[var(--border-default)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
             }`}
           >
-            {k}
+            {kindLabel(k)}
           </button>
         ))}
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="search the ledger…"
+          placeholder="search the log…"
           className="card ml-auto w-48 bg-[var(--bg-base)] px-3 py-1.5 text-xs outline-none"
-          aria-label="Search ledger lines"
+          aria-label="Search log entries"
         />
         <button
           onClick={() => setNewest((s) => !s)}
@@ -66,10 +67,10 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
         <table className="w-full text-left text-[13px]">
           <thead>
             <tr className="border-b border-[var(--border-strong)]">
-              <th className="micro px-4 py-3">seq</th>
+              <th className="micro px-4 py-3">#</th>
               <th className="micro px-4 py-3">time UTC</th>
-              <th className="micro px-4 py-3">kind</th>
-              <th className="micro px-4 py-3">line</th>
+              <th className="micro px-4 py-3">type</th>
+              <th className="micro px-4 py-3">what happened</th>
             </tr>
           </thead>
           <tbody>
@@ -77,14 +78,14 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
               <tr key={i} className="border-b border-[var(--border-default)] last:border-b-0">
                 <td className="mono px-4 py-2 text-[var(--text-muted)]">{r.seq}</td>
                 <td className="mono px-4 py-2 text-[var(--text-secondary)]">{r.time}</td>
-                <td className={`mono px-4 py-2 font-semibold ${r.tone}`}>{r.kind}</td>
+                <td className={`mono px-4 py-2 font-semibold ${r.tone}`} title={r.kind}>{kindLabel(r.kind)}</td>
                 <td className="mono px-4 py-2 text-[var(--text-secondary)]">{r.summary}</td>
               </tr>
             ))}
             {filtered.length === 0 && (
               <tr>
                 <td colSpan={4} className="caption px-4 py-6 text-center">
-                  No lines match. Clear the filter to see the full ledger.
+                  Nothing matches. Clear the filter to see the whole log.
                 </td>
               </tr>
             )}
@@ -92,7 +93,7 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
         </table>
       </div>
       <p className="caption mt-4">
-        showing {filtered.length} of {rows.length} rendered lines · full history in the repo at ledger/ (night one archived)
+        showing {filtered.length} of {rows.length} entries · full history lives in the repo under ledger/ (night one archived)
       </p>
     </div>
   );
