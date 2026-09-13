@@ -2,10 +2,15 @@ import { describe, it, expect } from "vitest";
 import { symbolName, symbolHint, sleeveName, shiftPhrase, ruleName, clauseReason, verdictWord, kindLabel, proposerName, executionLabel, severityWord, sentence } from "./display";
 
 describe("symbols", () => {
-  it("keeps the raw capital exchange tickers (his Sep 13 dial-back)", () => {
-    expect(symbolName("RNVDAUSDT")).toBe("RNVDAUSDT");
-    expect(symbolName("BTCUSDT")).toBe("BTCUSDT");
-    expect(symbolName("SOLUSDT")).toBe("SOLUSDT");
+  it("renders the human pair convention (BTC/USDT) on display surfaces", () => {
+    expect(symbolName("BTCUSDT")).toBe("BTC/USDT");
+    expect(symbolName("ETHUSDT")).toBe("ETH/USDT");
+    expect(symbolName("RNVDAUSDT")).toBe("RNVDA/USDT");
+    expect(symbolName("SOLUSDT")).toBe("SOL/USDT");
+  });
+  it("passes through non-pair symbols unchanged", () => {
+    expect(symbolName("USDT")).toBe("USDT");
+    expect(symbolName("BTCUSD")).toBe("BTCUSD");
   });
   it("symbolHint carries the friendly expansion for tooltips", () => {
     expect(symbolHint("RNVDAUSDT")).toBe("Nvidia as a tokenized US stock");

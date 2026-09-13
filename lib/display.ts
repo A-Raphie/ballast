@@ -5,11 +5,11 @@
 // safe to import from server pages, client components, and the agent.
 //   time = O(1) table lookups, space = O(1)
 
-// His verdict (Sep 13): "tokenized Tesla" reads weird on a data surface; the
-// capital exchange tickers go back. symbolName returns the raw symbol;
-// symbolHint keeps the friendly expansion for hover tooltips only.
+// Data surfaces show the human pair convention (BTC/USDT); the API symbol
+// stays raw everywhere data is stored or sent. symbolHint keeps the friendly
+// expansion for hover tooltips only.
 export function symbolName(sym: string): string {
-  return sym;
+  return sym.length > 4 && sym.endsWith("USDT") ? `${sym.slice(0, -4)}/USDT` : sym;
 }
 
 const SYMBOL_HINTS: Record<string, string> = {
