@@ -2864,3 +2864,11 @@
 {"seq":2862,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789342710099}
 {"seq":2863,"kind":"macro","source":"yahoo-finance","headline":"I bond vs. high-yield savings account: Which is better for beating inflation?","severity":"medium","assetsAffected":["*"],"ts":1789342710099}
 {"seq":2864,"kind":"macro","source":"yahoo-finance","headline":"Canadian CRE Investors Shrug Off Trade War, Spend $9B On U.S. Assets","severity":"high","assetsAffected":["*"],"ts":1789342710099}
+{"seq":2865,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76820,"chg24h":-0.00614,"ts":1789343616121}
+{"seq":2866,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2476.47,"chg24h":-0.01977,"ts":1789343616121}
+{"seq":2867,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.59,"chg24h":-0.01258,"ts":1789343616121}
+{"seq":2868,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.06,"chg24h":-0.01003,"ts":1789343616121}
+{"seq":2869,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.32,"chg24h":-0.01087,"ts":1789343616121}
+{"seq":2870,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.73,"chg24h":-0.00033,"ts":1789343616121}
+{"seq":2871,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.73,"chg24h":-0.00402,"ts":1789343616121}
+{"seq":2872,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789343616121}
