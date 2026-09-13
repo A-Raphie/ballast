@@ -2681,3 +2681,12 @@
 {"seq":2679,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.3,"chg24h":-0.00638,"ts":1789323681258}
 {"seq":2680,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789323681258}
 {"seq":2681,"kind":"macro","source":"yahoo-finance","headline":"McDonald's Yields 3%, the Highest in Over 6 Years. Is the Dow Dividend Stock a Value Trap or Too Cheap to Ignore?","severity":"medium","assetsAffected":["*"],"ts":1789323681258}
+{"seq":2682,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77367.63,"chg24h":0.00316,"ts":1789324585643}
+{"seq":2683,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2508.95,"chg24h":-0.00507,"ts":1789324585643}
+{"seq":2684,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.92,"chg24h":-0.00692,"ts":1789324585643}
+{"seq":2685,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.18,"chg24h":-0.00817,"ts":1789324585643}
+{"seq":2686,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.81,"chg24h":-0.00878,"ts":1789324585643}
+{"seq":2687,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.73,"chg24h":-0.00033,"ts":1789324585643}
+{"seq":2688,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.3,"chg24h":-0.00638,"ts":1789324585643}
+{"seq":2689,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":765.77,"chg24h":0.00007,"ts":1789324585643}
+{"seq":2690,"kind":"macro","source":"yahoo-finance","headline":"Bessent is doubling down with weekly bank sanctions","severity":"medium","assetsAffected":["*"],"ts":1789324585643}
