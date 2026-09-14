@@ -3304,3 +3304,14 @@
 {"seq":3302,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.76,"chg24h":0.0031,"ts":1789409019656}
 {"seq":3303,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":509.33,"chg24h":0.03459,"ts":1789409019656}
 {"seq":3304,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.29,"chg24h":-0.00454,"ts":1789409019656}
+{"seq":3305,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78905,"chg24h":0.01981,"ts":1789409928347}
+{"seq":3306,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2531.36,"chg24h":0.00929,"ts":1789409928347}
+{"seq":3307,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":361,"chg24h":-0.00529,"ts":1789409928347}
+{"seq":3308,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.3,"chg24h":-0.02287,"ts":1789409928347}
+{"seq":3309,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":712.22,"chg24h":0.00413,"ts":1789409928347}
+{"seq":3310,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.16,"chg24h":0.0043,"ts":1789409928347}
+{"seq":3311,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":507.66,"chg24h":0.0303,"ts":1789409928347}
+{"seq":3312,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.2,"chg24h":-0.00466,"ts":1789409928347}
+{"seq":3313,"kind":"macro","source":"yahoo-finance","headline":"A highly anticipated Fed meeting, war worries, and an unblinking stock market: What to watch this week","severity":"high","assetsAffected":["*"],"ts":1789409928347}
+{"seq":3314,"kind":"macro","source":"yahoo-finance","headline":"3 Stocks to Buy and Hold Even If There's a Stock Market Sell-Off in September","severity":"medium","assetsAffected":["*"],"ts":1789409928347}
+{"seq":3315,"kind":"macro","source":"yahoo-finance","headline":"Signet Jewelers (SIG) Lifts Guidance on Tariff Refunds and Cost Discipline","severity":"medium","assetsAffected":["*"],"ts":1789409928347}
