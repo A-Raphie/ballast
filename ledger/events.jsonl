@@ -3093,3 +3093,12 @@
 {"seq":3091,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.85,"chg24h":0.01029,"ts":1789387187415}
 {"seq":3092,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.5,"chg24h":-0.00854,"ts":1789387187415}
 {"seq":3093,"kind":"macro","source":"yahoo-finance","headline":"Carney, locked in US trade war, pitches Canada to global investment titans","severity":"high","assetsAffected":["*"],"ts":1789387187415}
+{"seq":3094,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77834.24,"chg24h":0.01346,"ts":1789388091521}
+{"seq":3095,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2511.97,"chg24h":0.01224,"ts":1789388091521}
+{"seq":3096,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.84,"chg24h":-0.01553,"ts":1789388091521}
+{"seq":3097,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.82,"chg24h":-0.02255,"ts":1789388091521}
+{"seq":3098,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":703.49,"chg24h":-0.00629,"ts":1789388091521}
+{"seq":3099,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.51,"chg24h":-0.0009,"ts":1789388091521}
+{"seq":3100,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.37,"chg24h":0.01134,"ts":1789388091521}
+{"seq":3101,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.38,"chg24h":-0.00873,"ts":1789388091521}
+{"seq":3102,"kind":"macro","source":"yahoo-finance","headline":"Goldman Sachs, JPMorgan expect Fed rate hike this week","severity":"medium","assetsAffected":["*"],"ts":1789388091521}
