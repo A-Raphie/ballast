@@ -27,10 +27,9 @@ export default async function Landing() {
       {/* centered fold: eyebrow, h1, one paragraph, CTAs */}
       <section className="mx-auto max-w-3xl px-6 pb-16 pt-24 text-center">
         <div className="micro mb-5">Bitget AI Base Camp Hackathon S2 · Agentic Trading</div>
-        <h1 style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }} className="text-balance font-[family-name:var(--font-display)] font-bold leading-[1.05] tracking-tight">
+        <h1 style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }} className="font-[family-name:var(--font-display)] font-bold leading-[1.05] tracking-tight">
           Wall Street sleeps.
-          <br />
-          <span className="text-[var(--decision)]">Your portfolio doesn&apos;t have to.</span>
+          <span className="text-balance block text-[var(--decision)]">Your portfolio doesn&apos;t have to.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[var(--text-secondary)]">
           Tokenized US stocks trade 24/7, and big news does not wait for the opening bell.
