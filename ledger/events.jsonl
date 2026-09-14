@@ -3056,3 +3056,11 @@
 {"seq":3054,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.03,"chg24h":-0.00119,"ts":1789383571876}
 {"seq":3055,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.44,"chg24h":-0.00862,"ts":1789383571876}
 {"seq":3056,"kind":"macro","source":"yahoo-finance","headline":"If You'd Invested $5,000 in the S&amp;P 500 at the Great Recession Bottom, Here's What You'd Have Today","severity":"medium","assetsAffected":["*"],"ts":1789383571876}
+{"seq":3057,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77767.85,"chg24h":0.01617,"ts":1789384476131}
+{"seq":3058,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2511.87,"chg24h":0.01691,"ts":1789384476131}
+{"seq":3059,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.57,"chg24h":-0.01474,"ts":1789384476131}
+{"seq":3060,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.22,"chg24h":-0.02642,"ts":1789384476131}
+{"seq":3061,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":704.26,"chg24h":-0.00614,"ts":1789384476131}
+{"seq":3062,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.6,"chg24h":0.00779,"ts":1789384476131}
+{"seq":3063,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.93,"chg24h":0.00842,"ts":1789384476131}
+{"seq":3064,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.65,"chg24h":-0.00834,"ts":1789384476131}
