@@ -2976,3 +2976,15 @@
 {"seq":2974,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.73,"chg24h":-0.00347,"ts":1789376342082}
 {"seq":2975,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.46,"chg24h":-0.00839,"ts":1789376342082}
 {"seq":2976,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.85,"chg24h":-0.00924,"ts":1789376342082}
+{"seq":2977,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77730.64,"chg24h":0.01174,"ts":1789377245763}
+{"seq":2978,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2516.22,"chg24h":0.00923,"ts":1789377245763}
+{"seq":2979,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.4,"chg24h":-0.01977,"ts":1789377245763}
+{"seq":2980,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.44,"chg24h":-0.03063,"ts":1789377245763}
+{"seq":2981,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":701.83,"chg24h":-0.01188,"ts":1789377245763}
+{"seq":2982,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.31,"chg24h":-0.00467,"ts":1789377245763}
+{"seq":2983,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.22,"chg24h":-0.00888,"ts":1789377245763}
+{"seq":2984,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.42,"chg24h":-0.00995,"ts":1789377245763}
+{"seq":2985,"kind":"macro","source":"yahoo-finance","headline":"Companies left China to dodge tariffs. Now some are heading back","severity":"medium","assetsAffected":["*"],"ts":1789377245763}
+{"seq":2986,"kind":"macro","source":"yahoo-finance","headline":"Soaring Oil Prices Put Fed on Track for September Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789377245763}
+{"seq":2987,"kind":"macro","source":"yahoo-finance","headline":"'Kevin Warsh has a conundrum': Wall Street weighs Fed's next move as bond yields rise","severity":"medium","assetsAffected":["*"],"ts":1789377245763}
+{"seq":2988,"kind":"macro","source":"yahoo-finance","headline":"Arhaus (ARHS) Turns A Tariff Refund Into A Blowout Quarter","severity":"medium","assetsAffected":["*"],"ts":1789377245763}
