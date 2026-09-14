@@ -61,8 +61,8 @@ export default async function ControlRoom() {
   const biggestMover = [...v.marketSnapshot].sort((a, b) => Math.abs(b.chg24h) - Math.abs(a.chg24h))[0] ?? null;
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-6">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+    <main className="mx-auto max-w-6xl px-6 py-5">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight">
             Control room
@@ -85,7 +85,7 @@ export default async function ControlRoom() {
         </Panel>
       )}
 
-      <Panel className="mb-4 px-5 py-3">
+      <Panel className="mb-3 px-5 py-2.5">
         <StatStrip
           items={[
             { label: "Practice portfolio", value: v.bookValue === null ? "not funded yet" : `$${v.bookValue.toFixed(0)}`, hint: "a practice account with pretend money; the prices are real" },
@@ -111,7 +111,7 @@ export default async function ControlRoom() {
         />
       </Panel>
 
-      <Panel className="mb-4 px-4 pb-3 pt-3">
+      <Panel className="mb-3 px-4 pb-2.5 pt-2.5">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
         {sessionSummary(v.decisions) && (
           <p className="caption mt-2 border-t border-[var(--border-default)] pt-2">
@@ -120,13 +120,18 @@ export default async function ControlRoom() {
         )}
       </Panel>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-3 md:grid-cols-2">
         <Panel className="p-4">
-          <h2 className="font-[family-name:var(--font-display)] mb-3 text-base font-semibold">
-            Decisions
-          </h2>
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <h2 className="font-[family-name:var(--font-display)] text-base font-semibold">
+              Decisions
+            </h2>
+            <a href="/log" className="caption text-[var(--text-secondary)] underline decoration-dotted hover:text-[var(--text-primary)]">
+              Full history in the log →
+            </a>
+          </div>
           {trade && (
-            <div className="mb-3 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-3.5 py-2.5">
+            <div className="mb-2.5 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-3.5 py-2">
               <div className="micro mb-0.5 text-[var(--decision)]">Last trade</div>
               <div className="text-sm">
                 {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)}
@@ -143,9 +148,9 @@ export default async function ControlRoom() {
               quiet night.
             </p>
           )}
-          <ul className="space-y-2">
-            {rollup(v.decisions).slice(0, 5).map((r) => (
-              <li key={r.key} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-2 last:border-b-0">
+          <ul className="space-y-1.5">
+            {rollup(v.decisions).slice(0, 4).map((r) => (
+              <li key={r.key} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-1.5 last:border-b-0">
                 <div className="min-w-0">
                   <div className="text-sm">
                     {r.count > 1 ? <span className="text-[var(--text-secondary)]">{r.count}× </span> : null}
@@ -186,18 +191,15 @@ export default async function ControlRoom() {
               </li>
             ))}
           </ul>
-          <a href="/log" className="caption mt-3 inline-block text-[var(--text-secondary)] underline decoration-dotted hover:text-[var(--text-primary)]">
-            Full history in the log →
-          </a>
         </Panel>
 
         <Panel className="p-4">
-          <h2 className="font-[family-name:var(--font-display)] mb-3 text-base font-semibold">
+          <h2 className="font-[family-name:var(--font-display)] mb-2 text-base font-semibold">
             What it&apos;s watching
           </h2>
-          <ul className="space-y-1.5">
+          <ul className="space-y-1">
             {v.marketSnapshot.map((m) => (
-              <li key={m.symbol} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] py-1 last:border-b-0">
+              <li key={m.symbol} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] py-0.5 last:border-b-0">
                 <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
                 <span className="flex items-center gap-3">
                   <Spark points={v.priceSeries[m.symbol] ?? []} h={16} />

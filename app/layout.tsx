@@ -30,8 +30,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <link
+      <head>        <link
           href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap"
           rel="stylesheet"
         />
@@ -44,7 +43,7 @@ export default function RootLayout({
         <SkipLink />
         <OfflineBanner />
         <header className="border-b border-[var(--border-default)]">
-          <nav aria-label="Main" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <nav aria-label="Main" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
             <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight">
               BALLAST
             </Link>
