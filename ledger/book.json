@@ -1,5 +1,5 @@
 {
-  "usdt": 2158.8594824716856,
+  "usdt": 1893.7088999897646,
   "positions": {
     "BTCUSDT": {
       "qty": 0.0324254215304799,
@@ -22,7 +22,7 @@
       "market": "rtoken"
     },
     "RSPYUSDT": {
-      "qty": 0.4552873922055344,
+      "qty": 0.8044088168468182,
       "market": "rtoken"
     },
     "RQQQUSDT": {
@@ -33,6 +33,6 @@
   "targetRtokenPct": 0.65,
   "targetHedgePct": 0.25,
   "openValue24h": 1928.4168085723404,
-  "updatedAt": 1789388995208,
+  "updatedAt": 1789389900347,
   "openDay": 20710
 }
