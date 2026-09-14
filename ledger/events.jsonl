@@ -3209,3 +3209,11 @@
 {"seq":3207,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":502.82,"chg24h":0.02013,"ts":1789399018395}
 {"seq":3208,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.97,"chg24h":-0.00888,"ts":1789399018395}
 {"seq":3209,"kind":"macro","source":"yahoo-finance","headline":"Marriott International (MAR)’s Middle East Headwind Eases, but War Risks Remain","severity":"high","assetsAffected":["*"],"ts":1789399018395}
+{"seq":3210,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78387.1,"chg24h":0.01676,"ts":1789399933397}
+{"seq":3211,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2499.58,"chg24h":0.00413,"ts":1789399933397}
+{"seq":3212,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.51,"chg24h":-0.00741,"ts":1789399933397}
+{"seq":3213,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.39,"chg24h":-0.02769,"ts":1789399933397}
+{"seq":3214,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.45,"chg24h":-0.00192,"ts":1789399933397}
+{"seq":3215,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.08,"chg24h":0.00105,"ts":1789399933397}
+{"seq":3216,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":502.74,"chg24h":0.01996,"ts":1789399933397}
+{"seq":3217,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.51,"chg24h":-0.00817,"ts":1789399933397}
