@@ -99,7 +99,12 @@ export default async function ControlRoom() {
             },
             {
               label: "Today's move",
-              value: v.heelPct === null ? "n/a" : `${v.heelPct > 0 ? "+" : ""}${v.heelPct.toFixed(2)}%`,
+              value:
+                v.heelPct === null
+                  ? "n/a"
+                  : Math.abs(v.heelPct) < 0.005
+                    ? "0.00%"
+                    : `${v.heelPct > 0 ? "+" : ""}${v.heelPct.toFixed(2)}%`,
               hint: "how far the holdings' market value moved since the UTC-day open (prices only, trade effects excluded)",
             },
             { label: "Rules version", value: `v${v.policyVersion ?? "?"}`, hint: "which version of the rulebook the agent obeyed" },
@@ -121,12 +126,11 @@ export default async function ControlRoom() {
           <h2 className="font-[family-name:var(--font-display)] mb-4 text-lg font-semibold">
             Decisions
           </h2>
-          {trade && (
+              {trade && (
             <div className="mb-4 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-4 py-3">
               <div className="micro mb-1 text-[var(--decision)]">Last trade</div>
               <div className="text-sm">
-                {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)} ·{" "}
-                {sentence(shiftPhrase(trade.proposal!.from, trade.proposal!.to))}
+                {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)}
               </div>
               <div className="num caption mt-0.5">
                 {new Date(trade.ts).toISOString().replace("T", " ").slice(0, 16)} UTC ·{" "}
