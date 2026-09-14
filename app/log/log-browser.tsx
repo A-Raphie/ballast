@@ -76,9 +76,9 @@ export function LogBrowser({ rows }: { rows: LogRow[] }) {
           <tbody>
             {filtered.map((r, i) => (
               <tr key={i} className="border-b border-[var(--border-default)] last:border-b-0">
-                <td className="mono px-4 py-2 text-[var(--text-muted)]">{r.seq}</td>
-                <td className="mono px-4 py-2 text-[var(--text-secondary)]">{r.time}</td>
-                <td className={`mono px-4 py-2 font-semibold ${r.tone}`} title={r.kind}>{kindLabel(r.kind)}</td>
+                <td className="mono whitespace-nowrap px-4 py-2 text-[var(--text-muted)]">{r.seq}</td>
+                <td className="mono whitespace-nowrap px-4 py-2 text-[var(--text-secondary)]">{r.time}</td>
+                <td className={`mono whitespace-nowrap px-4 py-2 font-semibold ${r.tone}`} title={r.kind}>{kindLabel(r.kind)}</td>
                 <td className="mono px-4 py-2 text-[var(--text-secondary)]">{r.summary}</td>
               </tr>
             ))}

@@ -89,28 +89,49 @@ export function WatchFloor({
         })}
 
         {/* decision diamonds: the only decision ink on the band */}
-        {allowed.map((d) => {
-          const x = xOfTs(d.ts);
-          const y = 100;
-          const on = d.id === selectedId;
-          return (
-            <g key={d.id} onClick={() => setSelectedId(on ? null : d.id)} style={{ cursor: "pointer" }}>
-              <title>{`${verdictWord(d.verdict?.result ?? "")}: ${d.proposal ? shiftPhrase(d.proposal.from, d.proposal.to) : "decision"}`}</title>
-              <rect
-                x={x - 5.5}
-                y={y - 5.5}
-                width={11}
-                height={11}
-                transform={`rotate(45 ${x} ${y})`}
-                fill={on ? "var(--decision-deep)" : "var(--decision)"}
-                stroke="var(--bg-base)"
-                strokeWidth={1.5}
-              />
-              <rect x={x - 9} y={y - 9} width={18} height={18} transform={`rotate(45 ${x} ${y})`} fill="transparent" />
-              <circle cx={x} cy={y} r={20} fill="transparent" />
-            </g>
-          );
-        })}
+        {(() => {
+          // pixel-bucketed: decisions landing on the same ~14px slot render as
+          // ONE diamond sized by count, so a dense day reads as weight, not
+          // noise. Click opens the latest receipt in the bucket.
+          const buckets = new Map<number, { x: number; latest: Decision; count: number }>();
+          for (const d of allowed) {
+            const x = xOfTs(d.ts);
+            const key = Math.round(x / 14);
+            const hit = buckets.get(key);
+            if (hit) {
+              hit.count++;
+              if (d.ts > hit.latest.ts) hit.latest = d;
+            } else {
+              buckets.set(key, { x, latest: d, count: 1 });
+            }
+          }
+          return [...buckets.values()].map(({ x, latest: d, count }) => {
+            const y = 100;
+            const on = d.id === selectedId;
+            const size = 11 + Math.min(count - 1, 5) * 1.6;
+            return (
+              <g key={d.id} onClick={() => setSelectedId(on ? null : d.id)} style={{ cursor: "pointer" }}>
+                <title>
+                  {count > 1
+                    ? `${count} decisions here · latest: ${verdictWord(d.verdict?.result ?? "")}: ${d.proposal ? shiftPhrase(d.proposal.from, d.proposal.to) : "decision"}`
+                    : `${verdictWord(d.verdict?.result ?? "")}: ${d.proposal ? shiftPhrase(d.proposal.from, d.proposal.to) : "decision"}`}
+                </title>
+                <rect
+                  x={x - size / 2}
+                  y={y - size / 2}
+                  width={size}
+                  height={size}
+                  transform={`rotate(45 ${x} ${y})`}
+                  fill={on ? "var(--decision-deep)" : "var(--decision)"}
+                  stroke="var(--bg-base)"
+                  strokeWidth={1.5}
+                />
+                <rect x={x - 9} y={y - 9} width={18} height={18} transform={`rotate(45 ${x} ${y})`} fill="transparent" />
+                <circle cx={x} cy={y} r={20} fill="transparent" />
+              </g>
+            );
+          });
+        })()}
 
         {/* now line: the only thing that moves, and only when time moves */}
         <line x1={xOfTs(nowTs)} y1={34} x2={xOfTs(nowTs)} y2={TRACK_Y} stroke="var(--text-secondary)" strokeDasharray="3 4" />

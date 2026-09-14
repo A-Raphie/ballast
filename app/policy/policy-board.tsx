@@ -238,8 +238,8 @@ export function PolicyBoard({
                 <div className="text-sm text-[var(--text-primary)]">{r.sentence}</div>
                 {clause && s && (
                   <div className="num caption mt-1" title={`rule code ${clause.id}`}>
-                    Checked {s.pass} times · refused {s.fail} trades
-                    {s.halt > 0 ? ` · stopped ${s.halt}` : ""}
+                    Passed {s.pass} checks · refused {s.fail} trades
+                    {s.halt > 0 ? ` · stopped ${s.halt} when it couldn't be measured` : ""}
                     <span className="mono ml-2 text-[11px] text-[var(--text-muted)]">{clause.id}</span>
                   </div>
                 )}
@@ -289,7 +289,7 @@ export function PolicyBoard({
                   <div className="min-w-0">
                     <div className="text-sm">{c.text}</div>
                     <div className="num caption mt-0.5" title={`rule code ${c.id}`}>
-                      Checked {stat(c.id).pass} times · refused {stat(c.id).fail} trades
+                      Passed {stat(c.id).pass} checks · refused {stat(c.id).fail} trades
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -357,6 +357,11 @@ export function PolicyBoard({
             </button>
           )}
         </div>
+        {!addType && (
+          <p className="caption mt-2">
+            Four ready-made rules: max trades per day, minimum cash, big-swing stop, daily spending cap.
+          </p>
+        )}
         {busy && <p className="caption mt-2 text-[var(--text-secondary)]">{busy} · saving to the rulebook Ballast reads…</p>}        {status && status.kind === "ok" && <p className="caption mt-2 text-[var(--status-pass)]">{status.message}</p>}
         {status && status.kind === "error" && <p className="caption mt-2 text-[var(--status-deny)]">{status.message}</p>}
       </div>

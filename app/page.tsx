@@ -27,7 +27,7 @@ export default async function Landing() {
       {/* centered fold: eyebrow, h1, one paragraph, CTAs */}
       <section className="mx-auto max-w-3xl px-6 pb-16 pt-24 text-center">
         <div className="micro mb-5">Bitget AI Base Camp Hackathon S2 · Agentic Trading</div>
-        <h1 style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }} className="font-[family-name:var(--font-display)] font-bold leading-[1.05] tracking-tight">
+        <h1 style={{ fontSize: "clamp(2.25rem, 8vw, 3.75rem)" }} className="text-balance font-[family-name:var(--font-display)] font-bold leading-[1.05] tracking-tight">
           Wall Street sleeps.
           <br />
           <span className="text-[var(--decision)]">Your portfolio doesn&apos;t have to.</span>
@@ -96,18 +96,18 @@ export default async function Landing() {
         </div>
       </section>
 
-      {/* what it works with */}
+      {/* what it works with: a spec-list, deliberately not another card grid */}
       <section className="mx-auto max-w-4xl px-6 pb-24">
         <div className="micro mb-6 text-center">What it works with</div>
-        <div className="grid gap-4 text-center sm:grid-cols-3">
+        <div className="divide-y divide-[var(--border-default)] rounded-[var(--radius-panel)] border border-[var(--border-default)]">
           {[
             ["Bitget Agent Hub", "The agent's account is authorized through Agent Hub; market data for tokenized stocks and crypto comes from Bitget's stack. Trades are simulated and labeled."],
             ["Public market data", "Tokenized US stocks (think Nvidia or Tesla as tokens) and crypto prices, no API keys needed, checked every 15 minutes."],
             ["The written policy", "Fixed rules, not an AI, decide every trade today. An AI decision slot is wired and waits behind one setting."],
           ].map(([t, d]) => (
-            <div key={t as string} className="card px-5 py-6 text-left">
+            <div key={t as string} className="grid gap-1 px-5 py-5 text-left sm:grid-cols-[190px_1fr] sm:gap-8">
               <div className="text-sm font-semibold">{t as string}</div>
-              <p className="caption mt-2">{d as string}</p>
+              <p className="caption">{d as string}</p>
             </div>
           ))}
         </div>

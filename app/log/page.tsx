@@ -16,7 +16,46 @@ const KIND_TONE: Record<string, string> = {
   runner_error: "text-[var(--status-deny)]",
 };
 
+// Eight price rows every 15 minutes flood the feed. Consecutive market rows
+// from the same tick collapse into ONE row: pair count, biggest mover, and the
+// anchor price. The Prices filter still matches the merged row.
+function mergePriceFlood(events: any[]): any[] {
+  const out: any[] = [];
+  let group: any[] = [];
+  const flush = () => {
+    if (group.length === 0) return;
+    const biggest = [...group].sort((a, b) => Math.abs(b.chg24h) - Math.abs(a.chg24h))[0];
+    out.push({
+      kind: "market",
+      seq: group[0].seq,
+      ts: group[0].ts,
+      summaryEvent: true,
+      _count: group.length,
+      _biggest: biggest,
+      _anchor: group.find((g) => g.symbol === "BTCUSDT") ?? group[0],
+    });
+    group = [];
+  };
+  for (const e of events) {
+    if (e.kind === "market" && group.length < 24 && Math.abs((group[0]?.ts ?? e.ts) - e.ts) < 90000) {
+      group.push(e);
+    } else {
+      flush();
+      if (e.kind === "market") group.push(e);
+      else out.push(e);
+    }
+  }
+  flush();
+  return out;
+}
+
 function summarize(e: any): string {
+  if (e.summaryEvent) {
+    const n = e._count;
+    const biggest = e._biggest;
+    const anchor = e._anchor;
+    return `${n} pairs checked · ${symbolName(biggest.symbol)} moved most (${(biggest.chg24h * 100).toFixed(2)}%) · ${symbolName(anchor.symbol)} at $${anchor.px}`;
+  }
   switch (e.kind) {
     case "market":
       return `${symbolName(e.symbol)} at $${e.px} (${(e.chg24h * 100).toFixed(2)}% today)`;
@@ -42,16 +81,13 @@ function summarize(e: any): string {
 
 export default async function LogPage() {
   const v = await readLedger();
-  const rows: LogRow[] = [...v.events]
-    .reverse()
-    .slice(0, 300)
-    .map((e, i) => ({
-      seq: String((e as any).seq ?? "-"),
-      time: new Date(e.ts).toISOString().replace("T", " ").slice(5, 16),
-      kind: e.kind,
-      tone: KIND_TONE[e.kind] ?? "",
-      summary: summarize(e),
-    }));
+  const rows: LogRow[] = mergePriceFlood([...v.events].reverse().slice(0, 300)).map((e, i) => ({
+    seq: String((e as any).seq ?? "-"),
+    time: new Date(e.ts).toISOString().replace("T", " ").slice(5, 16),
+    kind: e.kind,
+    tone: KIND_TONE[e.kind] ?? "",
+    summary: summarize(e),
+  }));
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-10">

@@ -107,3 +107,23 @@ export function AgentDot({ live, note }: { live: boolean; note?: string }) {
     </span>
   );
 }
+
+// Tiny 24h price trail for a market row. Flat prices render a flat line, not
+// a divide-by-zero NaN.
+export function Spark({ points, w = 76, h = 20 }: { points: { px: number }[]; w?: number; h?: number }) {
+  if (points.length < 2) return <svg width={w} height={h} aria-hidden />;
+  const px = points.map((p) => p.px);
+  const min = Math.min(...px);
+  const max = Math.max(...px);
+  const span = max - min || 1;
+  const step = w / (points.length - 1);
+  const d = points
+    .map((p, i) => `${i === 0 ? "M" : "L"}${(i * step).toFixed(1)},${(h - 2 - ((p.px - min) / span) * (h - 4)).toFixed(1)}`)
+    .join(" ");
+  const up = px[px.length - 1] >= px[0];
+  return (
+    <svg width={w} height={h} aria-hidden className="shrink-0">
+      <path d={d} fill="none" stroke={up ? "var(--status-pass)" : "var(--status-deny)"} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+    </svg>
+  );
+}

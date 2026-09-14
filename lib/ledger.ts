@@ -35,6 +35,7 @@ export interface LedgerView {
   heelPct: number | null;
   lastTickTs: number | null;
   policyVersion: string | null;
+  priceSeries: Record<string, { ts: number; px: number }[]>;
 }
 
 async function firstTickTs(): Promise<number | null> {
@@ -101,11 +102,23 @@ export async function readLedger(): Promise<LedgerView> {
 
   // market snapshot: latest row per symbol (Map for O(1) upsert in the scan)
   const latest = new Map<string, MarketEvent>();
+  // first price per symbol inside the current UTC day anchors the day move
+  const openPx = new Map<string, number>();
+  const dayStart = Math.floor(Date.now() / 86400000) * 86400000;
+  // last-24h price series per symbol feeds the control-room sparklines
+  const seriesRaw = new Map<string, { ts: number; px: number }[]>();
+  const seriesSince = Date.now() - 24 * 3600 * 1000;
   let macroEvents: MacroEvent[] = [];
   for (const e of events) {
     if (e.kind === "market") {
       const m = e as MarketEvent;
       latest.set(m.symbol, m); // sorted scan: later rows overwrite
+      if (m.ts >= dayStart && !openPx.has(m.symbol)) openPx.set(m.symbol, m.px);
+      if (m.ts >= seriesSince) {
+        const arr = seriesRaw.get(m.symbol) ?? [];
+        arr.push({ ts: m.ts, px: m.px });
+        seriesRaw.set(m.symbol, arr);
+      }
     } else if (e.kind === "macro") {
       macroEvents.push(e as MacroEvent);
     }
@@ -140,11 +153,43 @@ export async function readLedger(): Promise<LedgerView> {
       view.exposure = { rtokenPct: rtoken / total, cryptoPct: crypto / total, usdtPct: book.usdt / total };
       view.bookValue = total;
     }
-    if (typeof book.openValue24h === "number" && book.openValue24h > 0 && total > 0) {
-      view.heelPct = ((book.openValue24h - total) / book.openValue24h) * 100;
+    // Day move, priced not remembered: hold TODAY'S positions at each symbol's
+    // first price of the UTC day vs now. The book's own openValue24h predates
+    // ledger corrections, so comparing against it produced phantom ±400% days.
+    if (total > 0 && openPx.size > 0) {
+      let openVal = book.usdt;
+      let pricedFully = true;
+      for (const [sym, pos] of positions) {
+        const open = openPx.get(sym);
+        if (open === undefined) { pricedFully = false; break; }
+        openVal += pos.qty * open;
+      }
+      if (pricedFully && openVal > 0) {
+        view.heelPct = ((total - openVal) / openVal) * 100;
+      }
     }
+    // fallback to the book baseline only when today's prices are incomplete;
+    // either way a result beyond ±50% means a corrupted baseline, not a market
+    if (view.heelPct === null && typeof book.openValue24h === "number" && book.openValue24h > 0 && total > 0) {
+      const heel = ((total - book.openValue24h) / book.openValue24h) * 100;
+      if (Math.abs(heel) <= 50) view.heelPct = heel;
+    }
+    if (view.heelPct !== null && Math.abs(view.heelPct) > 50) view.heelPct = null;
+  }
+  view.priceSeries = {};
+  for (const [sym, points] of seriesRaw) {
+    view.priceSeries[sym] = downsample(points, 24);
   }
   return view;
+}
+
+// Even-index downsampling keeps the sparkline shape at a bounded point count.
+export function downsample<T>(points: T[], max: number): T[] {
+  if (points.length <= max) return points;
+  const step = (points.length - 1) / (max - 1);
+  const out: T[] = [];
+  for (let i = 0; i < max; i++) out.push(points[Math.round(i * step)]);
+  return out;
 }
 
 async function readBook(): Promise<any | null> {
@@ -177,5 +222,6 @@ function emptyView(): LedgerView {
     heelPct: null,
     lastTickTs: null,
     policyVersion: null,
+    priceSeries: {},
   };
 }

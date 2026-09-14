@@ -1,8 +1,8 @@
 import { readLedger, type Decision } from "@/lib/ledger";
 import { readAgentState } from "@/agent/agent-state";
-import { shiftPhrase, clauseReason, ruleName, symbolHint, symbolName, sentence } from "@/lib/display";
+import { shiftPhrase, clauseReason, ruleName, symbolHint, symbolName, sentence, executionLabel } from "@/lib/display";
 import { WatchFloor } from "@/app/components/watch-floor";
-import { Panel, StatStrip, Chip } from "@/app/components/kit";
+import { Panel, StatStrip, Chip, Spark } from "@/app/components/kit";
 import { StatusBadge, PauseControl } from "@/app/components/status-controls";
 
 export const dynamic = "force-dynamic";
@@ -30,6 +30,11 @@ function rollup(decisions: Decision[]) {
   return groups;
 }
 
+// The newest decision that actually traded: an allow verdict with an order.
+function lastTrade(decisions: Decision[]): Decision | null {
+  return decisions.find((d) => d.verdict?.result === "allow" && d.order) ?? null;
+}
+
 // One plain sentence about what the agent actually did in the last 24h.
 function sessionSummary(decisions: Decision[]): string | null {
   const cutoff = Date.now() - 24 * 3600 * 1000;
@@ -52,6 +57,8 @@ export default async function ControlRoom() {
   const selfHosted = !process.env.NETLIFY;
   const lastSenseAge = v.lastTickTs === null ? Infinity : Math.round((Date.now() - v.lastTickTs) / 60000);
   const status = state.paused ? "paused" : lastSenseAge <= 20 ? "on-shift" : "stale";
+  const trade = lastTrade(v.decisions);
+  const biggestMover = [...v.marketSnapshot].sort((a, b) => Math.abs(b.chg24h) - Math.abs(a.chg24h))[0] ?? null;
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-10">
@@ -92,8 +99,8 @@ export default async function ControlRoom() {
             },
             {
               label: "Today's move",
-              value: v.heelPct === null ? "0.0%" : `${v.heelPct >= 0 ? "" : "+"}${(-v.heelPct).toFixed(2)}%`,
-              hint: "how far the portfolio is down (or up) from the start of its trading day (UTC)",
+              value: v.heelPct === null ? "n/a" : `${v.heelPct > 0 ? "+" : ""}${v.heelPct.toFixed(2)}%`,
+              hint: "how far the holdings' market value moved since the UTC-day open (prices only, trade effects excluded)",
             },
             { label: "Rules version", value: `v${v.policyVersion ?? "?"}`, hint: "which version of the rulebook the agent obeyed" },
           ]}
@@ -114,6 +121,19 @@ export default async function ControlRoom() {
           <h2 className="font-[family-name:var(--font-display)] mb-4 text-lg font-semibold">
             Decisions
           </h2>
+          {trade && (
+            <div className="mb-4 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-4 py-3">
+              <div className="micro mb-1 text-[var(--decision)]">Last trade</div>
+              <div className="text-sm">
+                {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)} ·{" "}
+                {sentence(shiftPhrase(trade.proposal!.from, trade.proposal!.to))}
+              </div>
+              <div className="num caption mt-0.5">
+                {new Date(trade.ts).toISOString().replace("T", " ").slice(0, 16)} UTC ·{" "}
+                {executionLabel(trade.order!.execution).toLowerCase()}, labeled as practice
+              </div>
+            </div>
+          )}
           {v.decisions.length === 0 && (
             <p className="caption">
               Nothing yet. Ballast only trades after big-enough news lands; a quiet list means a
@@ -171,12 +191,13 @@ export default async function ControlRoom() {
           </h2>
           <ul className="space-y-2">
             {v.marketSnapshot.map((m) => (
-              <li key={m.symbol} className="flex items-center justify-between border-b border-[var(--border-default)] pb-2 last:border-b-0">
+              <li key={m.symbol} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-2 last:border-b-0">
                 <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
-                <span className="flex items-baseline gap-3">
+                <span className="flex items-center gap-3">
+                  <Spark points={v.priceSeries[m.symbol] ?? []} />
                   <span className="num text-sm">{m.px.toLocaleString()}</span>
                   <span
-                    className={`num text-xs ${m.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}`}
+                    className={`num w-16 text-right text-xs ${m.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}`}
                   >
                     {m.chg24h >= 0 ? "+" : ""}
                     {(m.chg24h * 100).toFixed(2)}%
@@ -184,7 +205,17 @@ export default async function ControlRoom() {
                 </span>
               </li>
             ))}
-            {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}          </ul>
+            {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}
+          </ul>
+          {biggestMover && (
+            <p className="caption mt-3">
+              Biggest 24h move: {symbolName(biggestMover.symbol)}{" "}
+              <span className={biggestMover.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}>
+                {biggestMover.chg24h >= 0 ? "+" : ""}
+                {(biggestMover.chg24h * 100).toFixed(2)}%
+              </span>
+            </p>
+          )}
         </Panel>
       </div>
     </main>

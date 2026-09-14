@@ -167,3 +167,10 @@ body {
   .band-tick-label { display: none; }
   .band-now-label { font-size: 30px !important; }
 }
+
+/* Netlify injects its "Powered by" badge as a cross-origin iframe that sits on
+   top of the footer credit; the API flag is not writable on this plan, so the
+   frame itself is dismissed. */
+#nl-badge-frame {
+  display: none !important;
+}

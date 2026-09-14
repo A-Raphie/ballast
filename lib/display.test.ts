@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { symbolName, symbolHint, sleeveName, shiftPhrase, ruleName, clauseReason, verdictWord, kindLabel, proposerName, executionLabel, severityWord, sentence } from "./display";
+import { downsample } from "./ledger";
 
 describe("symbols", () => {
   it("renders the human pair convention (BTC/USDT) on display surfaces", () => {
@@ -56,6 +57,20 @@ describe("ruleName + clauseReason", () => {
   });
   it("sentence() capitalizes only the first letter", () => {
     expect(sentence("sold tokenized stocks for cash")).toBe("Sold tokenized stocks for cash");
+  });
+});
+
+describe("downsample (sparkline series)", () => {
+  it("keeps short series untouched", () => {
+    const pts = [{ ts: 1, px: 1 }, { ts: 2, px: 2 }];
+    expect(downsample(pts, 24)).toBe(pts);
+  });
+  it("bounds long series to the point cap, keeping both endpoints", () => {
+    const pts = Array.from({ length: 100 }, (_, i) => ({ ts: i, px: i }));
+    const out = downsample(pts, 24);
+    expect(out).toHaveLength(24);
+    expect(out[0].ts).toBe(0);
+    expect(out[23].ts).toBe(99);
   });
 });
 
