@@ -40,6 +40,30 @@ export function Chip({ children, tone = "neutral" }: { children: ReactNode; tone
   );
 }
 
+// The "?" affordance: short labels stay inline, the explanation relocates here
+// (progressive disclosure; nobody reads legend sentences). CSS-only popover:
+// hover or keyboard focus reveals it anchored to the trigger; tab-away hides
+// it via focus-within loss.
+export function QHint({ text }: { text: ReactNode }) {
+  return (
+    <span className="group relative inline-flex">
+      <button
+        type="button"
+        aria-label="What am I looking at?"
+        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-[var(--border-strong)] text-[11px] font-semibold leading-none text-[var(--text-secondary)] transition-colors duration-150 ease-out hover:border-[var(--decision)] hover:text-[var(--decision)] focus-visible:border-[var(--decision)] focus-visible:text-[var(--decision)] focus-visible:outline-none"
+      >
+        ?
+      </button>
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute left-0 bottom-full z-10 mb-2 w-72 translate-y-1 rounded-[var(--radius-panel)] border border-[var(--border-strong)] bg-[var(--bg-raised)] px-3.5 py-2.5 text-xs leading-relaxed text-[var(--text-secondary)] opacity-0 transition-all duration-150 ease-out group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        {text}
+      </span>
+    </span>
+  );
+}
+
 export function ClauseRow({
   id,
   text,

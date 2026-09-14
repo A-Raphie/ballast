@@ -10,7 +10,7 @@ import { useState } from "react";
 import type { MacroEvent } from "@/agent/types";
 import type { Decision } from "@/lib/ledger";
 import { shiftPhrase, symbolName, severityWord, verdictWord, proposerName } from "@/lib/display";
-import { ClauseRow, VerdictBadge, Chip } from "./kit";
+import { ClauseRow, VerdictBadge, Chip, QHint } from "./kit";
 
 const W = 1200;
 const H = 190;
@@ -140,9 +140,24 @@ export function WatchFloor({
         </text>
       </svg>
 
-      <div className="mt-3 flex flex-wrap gap-4">
-        <Chip>News story · bigger dot = bigger story</Chip>
-        <Chip tone="decision">◆ A Ballast decision · click for the full receipt</Chip>
+      <div className="mt-3 flex flex-wrap items-center gap-5">
+        <span className="micro inline-flex items-center gap-2">
+          <span className="inline-block h-2 w-2 rounded-full" style={{ background: "var(--context-marker)" }} aria-hidden />
+          News story
+        </span>
+        <span className="micro inline-flex items-center gap-2 text-[var(--decision)]">
+          <span className="inline-block h-2 w-2 rotate-45" style={{ background: "var(--decision)" }} aria-hidden />
+          Decision
+        </span>
+        <QHint
+          text={
+            <>
+              Dots are news stories the agent noticed: the bigger the dot, the bigger the story.
+              Cyan diamonds are decisions the rules allowed or refused. Click any diamond for its
+              full receipt.
+            </>
+          }
+        />
       </div>
 
       {/* clause chain panel: morphs open from the selected fix */}
