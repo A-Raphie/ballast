@@ -3378,3 +3378,11 @@
 {"seq":3376,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":505.65,"chg24h":0.02622,"ts":1789416310081}
 {"seq":3377,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.77,"chg24h":-0.00653,"ts":1789416310081}
 {"seq":3378,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today (Sept. 14, 2026): Nasdaq, S&amp;P 500 falls on rising AI and war tensions","severity":"high","assetsAffected":["*"],"ts":1789416310081}
+{"seq":3379,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":79409.03,"chg24h":0.02702,"ts":1789417219202}
+{"seq":3380,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2594.63,"chg24h":0.03406,"ts":1789417219202}
+{"seq":3381,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.08,"chg24h":-0.0099,"ts":1789417219202}
+{"seq":3382,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.17,"chg24h":-0.02767,"ts":1789417219202}
+{"seq":3383,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709.53,"chg24h":0.00113,"ts":1789417219202}
+{"seq":3384,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.99,"chg24h":0.00592,"ts":1789417219202}
+{"seq":3385,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":504.9,"chg24h":0.0247,"ts":1789417219202}
+{"seq":3386,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.76,"chg24h":-0.00654,"ts":1789417219202}
