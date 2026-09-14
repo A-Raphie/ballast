@@ -3166,3 +3166,11 @@
 {"seq":3164,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.72,"chg24h":0.01814,"ts":1789394422063}
 {"seq":3165,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.18,"chg24h":-0.00769,"ts":1789394422063}
 {"seq":3166,"kind":"macro","source":"yahoo-finance","headline":"Chip stocks fall as oil prices gain, Treasury yields stay elevated: AlphaCheck","severity":"medium","assetsAffected":["*"],"ts":1789394422063}
+{"seq":3167,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78532.71,"chg24h":0.01891,"ts":1789395334274}
+{"seq":3168,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2515.47,"chg24h":0.01143,"ts":1789395334274}
+{"seq":3169,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.85,"chg24h":-0.00745,"ts":1789395334274}
+{"seq":3170,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.41,"chg24h":-0.02693,"ts":1789395334274}
+{"seq":3171,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.49,"chg24h":-0.00199,"ts":1789395334274}
+{"seq":3172,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.44,"chg24h":0.00189,"ts":1789395334274}
+{"seq":3173,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.61,"chg24h":0.01589,"ts":1789395334274}
+{"seq":3174,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.55,"chg24h":-0.00721,"ts":1789395334274}
