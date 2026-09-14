@@ -3350,3 +3350,11 @@
 {"seq":3348,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":506.32,"chg24h":0.02758,"ts":1789413578810}
 {"seq":3349,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.78,"chg24h":-0.00521,"ts":1789413578810}
 {"seq":3350,"kind":"macro","source":"yahoo-finance","headline":"MicroStrategy's Bitcoin Guide Issues a 93% Crash Warning to Investors","severity":"high","assetsAffected":["*"],"ts":1789413578810}
+{"seq":3351,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":79129.99,"chg24h":0.0245,"ts":1789414493054}
+{"seq":3352,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2543.41,"chg24h":0.01582,"ts":1789414493054}
+{"seq":3353,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.3,"chg24h":-0.00653,"ts":1789414493054}
+{"seq":3354,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.77,"chg24h":-0.02487,"ts":1789414493054}
+{"seq":3355,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":711.03,"chg24h":0.00325,"ts":1789414493054}
+{"seq":3356,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.49,"chg24h":0.01045,"ts":1789414493054}
+{"seq":3357,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":507.13,"chg24h":0.02922,"ts":1789414493054}
+{"seq":3358,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.73,"chg24h":-0.00528,"ts":1789414493054}
