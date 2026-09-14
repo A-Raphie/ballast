@@ -3315,3 +3315,11 @@
 {"seq":3313,"kind":"macro","source":"yahoo-finance","headline":"A highly anticipated Fed meeting, war worries, and an unblinking stock market: What to watch this week","severity":"high","assetsAffected":["*"],"ts":1789409928347}
 {"seq":3314,"kind":"macro","source":"yahoo-finance","headline":"3 Stocks to Buy and Hold Even If There's a Stock Market Sell-Off in September","severity":"medium","assetsAffected":["*"],"ts":1789409928347}
 {"seq":3315,"kind":"macro","source":"yahoo-finance","headline":"Signet Jewelers (SIG) Lifts Guidance on Tariff Refunds and Cost Discipline","severity":"medium","assetsAffected":["*"],"ts":1789409928347}
+{"seq":3316,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":79219.28,"chg24h":0.02463,"ts":1789410836676}
+{"seq":3317,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2542.09,"chg24h":0.01418,"ts":1789410836676}
+{"seq":3318,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":361.06,"chg24h":-0.00526,"ts":1789410836676}
+{"seq":3319,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.17,"chg24h":-0.02347,"ts":1789410836676}
+{"seq":3320,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":712.13,"chg24h":0.00468,"ts":1789410836676}
+{"seq":3321,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.44,"chg24h":0.00514,"ts":1789410836676}
+{"seq":3322,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":507.79,"chg24h":0.03056,"ts":1789410836676}
+{"seq":3323,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.24,"chg24h":-0.00461,"ts":1789410836676}
