@@ -3026,3 +3026,11 @@
 {"seq":3024,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.65,"chg24h":-0.00599,"ts":1789380860860}
 {"seq":3025,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.37,"chg24h":-0.01001,"ts":1789380860860}
 {"seq":3026,"kind":"macro","source":"yahoo-finance","headline":"The market says a Fed rate hike is a done deal. Here's why it might hold steady.","severity":"medium","assetsAffected":["*"],"ts":1789380860860}
+{"seq":3027,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77950,"chg24h":0.01546,"ts":1789381764584}
+{"seq":3028,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2516.71,"chg24h":0.01473,"ts":1789381764584}
+{"seq":3029,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.17,"chg24h":-0.01767,"ts":1789381764584}
+{"seq":3030,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212,"chg24h":-0.02743,"ts":1789381764584}
+{"seq":3031,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":703.39,"chg24h":-0.00766,"ts":1789381764584}
+{"seq":3032,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.79,"chg24h":-0.00297,"ts":1789381764584}
+{"seq":3033,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.2,"chg24h":-0.00488,"ts":1789381764584}
+{"seq":3034,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.78,"chg24h":-0.00948,"ts":1789381764584}
