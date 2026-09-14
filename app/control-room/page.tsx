@@ -61,15 +61,14 @@ export default async function ControlRoom() {
   const biggestMover = [...v.marketSnapshot].sort((a, b) => Math.abs(b.chg24h) - Math.abs(a.chg24h))[0] ?? null;
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-10">
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+    <main className="mx-auto max-w-6xl px-6 py-6">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight">
+          <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight">
             Control room
           </h1>
-          <p className="caption mt-1">
-            Every news story the agent noticed, every trade it made or refused. Click any cyan
-            diamond to see the full receipt behind it.
+          <p className="caption mt-0.5">
+            Every story it noticed, every trade it made or refused. Click a diamond for the receipt.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
@@ -79,14 +78,14 @@ export default async function ControlRoom() {
         </div>
       </div>
       {state.paused && (
-        <Panel className="mb-6 px-5 py-3">
+        <Panel className="mb-4 px-5 py-2.5">
           <span className="caption text-[var(--status-deny)]">
             Paused{state.note ? ` · ${state.note}` : ""} · Ballast keeps watching but makes no trades.
           </span>
         </Panel>
       )}
 
-      <Panel className="mb-6 px-5 py-4">
+      <Panel className="mb-4 px-5 py-3">
         <StatStrip
           items={[
             { label: "Practice portfolio", value: v.bookValue === null ? "not funded yet" : `$${v.bookValue.toFixed(0)}`, hint: "a practice account with pretend money; the prices are real" },
@@ -112,23 +111,23 @@ export default async function ControlRoom() {
         />
       </Panel>
 
-      <Panel className="mb-6 px-4 pb-5 pt-5">
+      <Panel className="mb-4 px-4 pb-3 pt-3">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
         {sessionSummary(v.decisions) && (
-          <p className="caption mt-3 border-t border-[var(--border-default)] pt-3">
+          <p className="caption mt-2 border-t border-[var(--border-default)] pt-2">
             This shift: {sessionSummary(v.decisions)}
           </p>
         )}
       </Panel>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <Panel className="p-5">
-          <h2 className="font-[family-name:var(--font-display)] mb-4 text-lg font-semibold">
+      <div className="grid gap-4 md:grid-cols-2">
+        <Panel className="p-4">
+          <h2 className="font-[family-name:var(--font-display)] mb-3 text-base font-semibold">
             Decisions
           </h2>
-              {trade && (
-            <div className="mb-4 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-4 py-3">
-              <div className="micro mb-1 text-[var(--decision)]">Last trade</div>
+          {trade && (
+            <div className="mb-3 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-3.5 py-2.5">
+              <div className="micro mb-0.5 text-[var(--decision)]">Last trade</div>
               <div className="text-sm">
                 {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)}
               </div>
@@ -144,9 +143,9 @@ export default async function ControlRoom() {
               quiet night.
             </p>
           )}
-          <ul className="space-y-3">
-            {rollup(v.decisions).slice(0, 8).map((r) => (
-              <li key={r.key} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-3 last:border-b-0">
+          <ul className="space-y-2">
+            {rollup(v.decisions).slice(0, 5).map((r) => (
+              <li key={r.key} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-2 last:border-b-0">
                 <div className="min-w-0">
                   <div className="text-sm">
                     {r.count > 1 ? <span className="text-[var(--text-secondary)]">{r.count}× </span> : null}
@@ -187,18 +186,21 @@ export default async function ControlRoom() {
               </li>
             ))}
           </ul>
+          <a href="/log" className="caption mt-3 inline-block text-[var(--text-secondary)] underline decoration-dotted hover:text-[var(--text-primary)]">
+            Full history in the log →
+          </a>
         </Panel>
 
-        <Panel className="p-5">
-          <h2 className="font-[family-name:var(--font-display)] mb-4 text-lg font-semibold">
+        <Panel className="p-4">
+          <h2 className="font-[family-name:var(--font-display)] mb-3 text-base font-semibold">
             What it&apos;s watching
           </h2>
-          <ul className="space-y-2">
+          <ul className="space-y-1.5">
             {v.marketSnapshot.map((m) => (
-              <li key={m.symbol} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-2 last:border-b-0">
+              <li key={m.symbol} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] py-1 last:border-b-0">
                 <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
                 <span className="flex items-center gap-3">
-                  <Spark points={v.priceSeries[m.symbol] ?? []} />
+                  <Spark points={v.priceSeries[m.symbol] ?? []} h={16} />
                   <span className="num text-sm">{m.px.toLocaleString()}</span>
                   <span
                     className={`num w-16 text-right text-xs ${m.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}`}
@@ -212,7 +214,7 @@ export default async function ControlRoom() {
             {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}
           </ul>
           {biggestMover && (
-            <p className="caption mt-3">
+            <p className="caption mt-2">
               Biggest 24h move: {symbolName(biggestMover.symbol)}{" "}
               <span className={biggestMover.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}>
                 {biggestMover.chg24h >= 0 ? "+" : ""}

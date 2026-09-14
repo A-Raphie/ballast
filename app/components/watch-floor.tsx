@@ -13,9 +13,9 @@ import { shiftPhrase, symbolName, severityWord, verdictWord, proposerName } from
 import { ClauseRow, VerdictBadge, Chip, QHint } from "./kit";
 
 const W = 1200;
-const H = 190;
+const H = 162;
 const PAD_X = 28;
-const TRACK_Y = 118;
+const TRACK_Y = 112;
 const OPEN_START = (14 * 60 + 30) / 1440;
 const OPEN_END = (21 * 60) / 1440;
 
@@ -140,7 +140,7 @@ export function WatchFloor({
         </text>
       </svg>
 
-      <div className="mt-3 flex flex-wrap items-center gap-5">
+      <div className="mt-2 flex flex-wrap items-center gap-5">
         <span className="micro inline-flex items-center gap-2">
           <span className="inline-block h-2 w-2 rounded-full" style={{ background: "var(--context-marker)" }} aria-hidden />
           News story
