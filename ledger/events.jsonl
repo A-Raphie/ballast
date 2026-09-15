@@ -3807,3 +3807,11 @@
 {"seq":3805,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.21,"chg24h":0.01586,"ts":1789465994237}
 {"seq":3806,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.08,"chg24h":0.00022,"ts":1789465994237}
 {"seq":3807,"kind":"macro","source":"yahoo-finance","headline":"US Stock Futures Fall Ahead of Fed Meeting as Oil and Treasury Yields Rise: Dow Jones, S&amp;P, Nasdaq, Wall Street","severity":"medium","assetsAffected":["*"],"ts":1789465994237}
+{"seq":3808,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76970.92,"chg24h":-0.01404,"ts":1789466900154}
+{"seq":3809,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2476.43,"chg24h":-0.01759,"ts":1789466900154}
+{"seq":3810,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.03,"chg24h":-0.00067,"ts":1789466900154}
+{"seq":3811,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.3,"chg24h":0.00265,"ts":1789466900154}
+{"seq":3812,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":706.76,"chg24h":0.00647,"ts":1789466900154}
+{"seq":3813,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.79,"chg24h":-0.00217,"ts":1789466900154}
+{"seq":3814,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500,"chg24h":0.01504,"ts":1789466900154}
+{"seq":3815,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.27,"chg24h":0.00017,"ts":1789466900154}
