@@ -3958,3 +3958,11 @@
 {"seq":3956,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.47,"chg24h":-0.00404,"ts":1789481394450}
 {"seq":3957,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.51,"chg24h":-0.00324,"ts":1789481394450}
 {"seq":3958,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Falls As Yields, Oil Prices Rise With Fed Meeting Starting; Nvidia Rebounds (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789481394450}
+{"seq":3959,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76403.01,"chg24h":-0.0241,"ts":1789482300700}
+{"seq":3960,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2441.89,"chg24h":-0.02351,"ts":1789482300700}
+{"seq":3961,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.93,"chg24h":0.00179,"ts":1789482300700}
+{"seq":3962,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.64,"chg24h":0.01144,"ts":1789482300700}
+{"seq":3963,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":706.48,"chg24h":0.00043,"ts":1789482300700}
+{"seq":3964,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":329.37,"chg24h":-0.01188,"ts":1789482300700}
+{"seq":3965,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.64,"chg24h":-0.00346,"ts":1789482300700}
+{"seq":3966,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.63,"chg24h":-0.00213,"ts":1789482300700}
