@@ -3745,3 +3745,12 @@
 {"seq":3743,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.63,"chg24h":-0.00311,"ts":1789459646713}
 {"seq":3744,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.01,"chg24h":0.01223,"ts":1789459646713}
 {"seq":3745,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.98,"chg24h":-0.004,"ts":1789459646713}
+{"seq":3746,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76829.99,"chg24h":-0.01276,"ts":1789460553079}
+{"seq":3747,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2472.69,"chg24h":-0.02071,"ts":1789460553079}
+{"seq":3748,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357.4,"chg24h":-0.0036,"ts":1789460553079}
+{"seq":3749,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.5,"chg24h":-0.00792,"ts":1789460553079}
+{"seq":3750,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.83,"chg24h":0.00331,"ts":1789460553079}
+{"seq":3751,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.87,"chg24h":-0.00217,"ts":1789460553079}
+{"seq":3752,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.29,"chg24h":0.01276,"ts":1789460553079}
+{"seq":3753,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.41,"chg24h":-0.0024,"ts":1789460553079}
+{"seq":3754,"kind":"macro","source":"yahoo-finance","headline":"Wall Street Bets on Rate Hike From a Fed Hemmed In by Persistent Inflation","severity":"medium","assetsAffected":["*"],"ts":1789460553079}
