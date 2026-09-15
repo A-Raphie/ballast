@@ -4027,3 +4027,13 @@
 {"seq":4025,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.33,"chg24h":-0.01368,"ts":1789488643352}
 {"seq":4026,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.17,"chg24h":-0.00931,"ts":1789488643352}
 {"seq":4027,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.81,"chg24h":-0.00603,"ts":1789488643352}
+{"seq":4028,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76440,"chg24h":-0.02922,"ts":1789489550420}
+{"seq":4029,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2421.6,"chg24h":-0.04047,"ts":1789489550420}
+{"seq":4030,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.75,"chg24h":-0.0077,"ts":1789489550420}
+{"seq":4031,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.09,"chg24h":0.00113,"ts":1789489550420}
+{"seq":4032,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.64,"chg24h":-0.00738,"ts":1789489550420}
+{"seq":4033,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.72,"chg24h":-0.01194,"ts":1789489550420}
+{"seq":4034,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.4,"chg24h":-0.00981,"ts":1789489550420}
+{"seq":4035,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.62,"chg24h":-0.00628,"ts":1789489550420}
+{"seq":4036,"kind":"macro","source":"yahoo-finance","headline":"Nvidia, AI Chip Stocks Look To Stem The Bleeding After Sell-Off","severity":"medium","assetsAffected":["*"],"ts":1789489550420}
+{"seq":4037,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Dives As Yields Jump; Bitcoin, Coinbase Fall Ahead Of Clarity Act Vote (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789489550420}
