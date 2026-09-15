@@ -4102,3 +4102,11 @@
 {"seq":4100,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.63,"chg24h":-0.00628,"ts":1789495881360}
 {"seq":4101,"kind":"macro","source":"yahoo-finance","headline":"Record US Diesel Prices Raise Fresh Inflation and Growth Concerns","severity":"medium","assetsAffected":["*"],"ts":1789495881360}
 {"seq":4102,"kind":"macro","source":"yahoo-finance","headline":"Gold Falls as Higher Inflation Pushes Federal Reserve to Hike Rakes","severity":"medium","assetsAffected":["*"],"ts":1789495881360}
+{"seq":4103,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76626.28,"chg24h":-0.03213,"ts":1789496784982}
+{"seq":4104,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2427.1,"chg24h":-0.04338,"ts":1789496784982}
+{"seq":4105,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357.48,"chg24h":-0.00986,"ts":1789496784982}
+{"seq":4106,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.01,"chg24h":-0.00028,"ts":1789496784982}
+{"seq":4107,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.09,"chg24h":-0.00969,"ts":1789496784982}
+{"seq":4108,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.28,"chg24h":-0.01176,"ts":1789496784982}
+{"seq":4109,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.22,"chg24h":-0.01883,"ts":1789496784982}
+{"seq":4110,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.42,"chg24h":-0.00622,"ts":1789496784982}
