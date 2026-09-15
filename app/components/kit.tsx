@@ -17,7 +17,7 @@ export function VerdictBadge({ result, size = "md" }: { result: "allow" | "deny"
   const map = {
     allow: { bg: "bg-[var(--status-pass-bg)] text-[var(--status-pass)]", glyph: "✓", label: "ALLOWED", title: "every rule passed; the trade went ahead" },
     deny: { bg: "bg-[var(--status-deny-bg)] text-[var(--status-deny)]", glyph: "✗", label: "DENIED", title: "at least one rule said no" },
-    halt: { bg: "bg-[var(--bg-raised)] text-[var(--text-secondary)]", glyph: "‖", label: "STOPPED", title: "a rule couldn't be checked, so Ballast paused everything" },
+    halt: { bg: "bg-[var(--bg-raised)] text-[var(--text-secondary)] border border-[var(--border-strong)]", glyph: "‖", label: "STOPPED", title: "a rule couldn't be checked, so Ballast paused everything" },
   } as const;
   const m = map[result];
   const pad =
@@ -107,7 +107,7 @@ export function StatStrip({
   items,
   variant = "row",
 }: {
-  items: { label: string; value: ReactNode; tone?: "decision" | "pass" | "deny" | "default"; hint?: string }[];
+  items: { label: string; value: ReactNode; tone?: "decision" | "pass" | "deny" | "default"; hint?: string; hero?: boolean }[];
   variant?: "row" | "tiles";
 }) {
   const ink = (tone?: string) =>
@@ -119,19 +119,31 @@ export function StatStrip({
           ? "text-[var(--status-deny)]"
           : "text-[var(--text-primary)]";
   if (variant === "tiles") {
-    // instrument panel: each metric a raised cell, value promoted to display size
+    // instrument panel: raised cells; a hero cell (col-span-2, display value)
+    // breaks the uniform-card row so the eye lands on the headline number.
     return (
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-        {items.map((it) => (
-          <div
-            key={it.label}
-            title={it.hint}
-            className="rounded-[var(--radius-panel)] border border-[var(--border-default)] bg-[var(--bg-raised)] px-3.5 py-1.5"
-          >
-            <div className="micro">{it.label}</div>
-            <div className={`num mt-0.5 text-base font-semibold tracking-tight tabular-nums ${ink(it.tone)}`}>{it.value}</div>
-          </div>
-        ))}
+        {items.map((it) =>
+          it.hero ? (
+            <div
+              key={it.label}
+              title={it.hint}
+              className="col-span-2 rounded-[var(--radius-panel)] border border-[var(--border-default)] bg-[var(--bg-raised)] px-4 py-2"
+            >
+              <div className="micro">{it.label}</div>
+              <div className={`num mt-0.5 text-2xl font-bold leading-7 tracking-tight tabular-nums ${ink(it.tone)}`}>{it.value}</div>
+            </div>
+          ) : (
+            <div
+              key={it.label}
+              title={it.hint}
+              className="rounded-[var(--radius-panel)] border border-[var(--border-default)] bg-[var(--bg-raised)] px-3.5 py-1.5"
+            >
+              <div className="micro">{it.label}</div>
+              <div className={`num mt-0.5 text-base font-semibold tracking-tight tabular-nums ${ink(it.tone)}`}>{it.value}</div>
+            </div>
+          ),
+        )}
       </div>
     );
   }

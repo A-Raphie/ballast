@@ -61,7 +61,10 @@ export default async function ControlRoom() {
   const biggestMover = [...v.marketSnapshot].sort((a, b) => Math.abs(b.chg24h) - Math.abs(a.chg24h))[0] ?? null;
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-3">
+    <main
+      className="mx-auto max-w-6xl px-6 py-3"
+      style={{ backgroundImage: "radial-gradient(900px 240px at 50% -30px, rgb(var(--decision-rgb) / 0.07), transparent 70%)" }}
+    >
       <div className="mb-2.5 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight">
@@ -89,7 +92,7 @@ export default async function ControlRoom() {
         <StatStrip
           variant="tiles"
           items={[
-            { label: "Practice portfolio", value: v.bookValue === null ? "not funded" : `$${v.bookValue.toLocaleString()}`, hint: "a practice account with pretend money; the prices are real" },
+            { label: "Practice portfolio", value: v.bookValue === null ? "not funded" : `$${v.bookValue.toLocaleString()}`, hint: "a practice account with pretend money; the prices are real", hero: true },
             { label: "Tokenized stocks", value: v.exposure ? pct(v.exposure.rtokenPct) : "0%", hint: "how much sits in tokenized US stocks (Nvidia, Tesla, and friends)" },
             {
               label: "Crypto shield",
@@ -113,7 +116,7 @@ export default async function ControlRoom() {
         />
       </div>
 
-      <Panel className="mb-2.5 px-4 pb-1.5 pt-1.5">
+      <Panel className="mb-2.5 px-5 pb-3 pt-3">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
         {sessionSummary(v.decisions) && (
           <p className="caption mt-1.5 border-t border-[var(--border-default)] pt-1.5">
@@ -122,7 +125,7 @@ export default async function ControlRoom() {
         )}
       </Panel>
 
-      <div className="grid gap-2.5 md:grid-cols-2">
+      <div className="grid gap-2.5 md:grid-cols-[7fr_5fr]">
         <Panel className="p-4">
           <PanelHeader
             title="Decisions"
@@ -133,15 +136,15 @@ export default async function ControlRoom() {
             }
           />
           {trade && (
-            <div className="mb-2 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] border-l-2 border-l-[var(--decision)] bg-[var(--decision-subtle)] px-3.5 py-2">
-              <div className="micro mb-0.5 text-[var(--decision)]">Last trade</div>
-              <div className="text-sm">
+            <div className="mb-2 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] border-l-2 border-l-[var(--decision)] bg-[var(--decision-subtle)] px-3.5 py-1.5">
+              <span className="micro text-[var(--decision)]">Last trade</span>
+              <span className="text-sm font-semibold">
                 {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)}
-              </div>
-              <div className="num caption mt-0.5">
+              </span>
+              <span className="num caption">
                 {new Date(trade.ts).toISOString().replace("T", " ").slice(0, 16)} UTC ·{" "}
                 {executionLabel(trade.order!.execution).toLowerCase()}, labeled as practice
-              </div>
+              </span>
             </div>
           )}
           {v.decisions.length === 0 && (
@@ -152,7 +155,7 @@ export default async function ControlRoom() {
           )}
           <ul className="space-y-1.5">
             {rollup(v.decisions).slice(0, 4).map((r) => (
-              <li key={r.key} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] pb-1.5 last:border-b-0">
+              <li key={r.key} className="-mx-2 flex items-center justify-between gap-3 rounded-[var(--radius-input)] border-b border-[var(--border-default)] px-2 pb-1.5 transition-colors last:border-b-0 hover:bg-[var(--bg-raised)]">
                 <div className="min-w-0">
                   <div className="text-sm">
                     {r.count > 1 ? <span className="text-[var(--text-secondary)]">{r.count}× </span> : null}
@@ -204,12 +207,12 @@ export default async function ControlRoom() {
             {v.marketSnapshot.map((m) => (
               <li
                 key={m.symbol}
-                className="-mx-2 flex items-center justify-between gap-3 rounded-[var(--radius-input)] border-b border-[var(--border-default)] px-2 py-0.5 transition-colors last:border-b-0 hover:bg-[var(--bg-raised)]"
+                className="-mx-2 flex items-center justify-between gap-3 rounded-[var(--radius-input)] border-b border-[var(--border-default)] px-2 py-1 transition-colors last:border-b-0 hover:bg-[var(--bg-raised)]"
               >
                 <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
                 <span className="flex items-center gap-3">
-                  <Spark points={v.priceSeries[m.symbol] ?? []} h={16} />
-                  <span className="num text-sm tabular-nums">{m.px.toLocaleString()}</span>
+                  <Spark points={v.priceSeries[m.symbol] ?? []} w={120} h={26} />
+                  <span className="num text-sm font-semibold tabular-nums">{m.px.toLocaleString()}</span>
                   <DeltaPill
                     value={`${m.chg24h >= 0 ? "+" : ""}${(m.chg24h * 100).toFixed(2)}%`}
                     positive={m.chg24h >= 0}

@@ -76,7 +76,7 @@ export function WatchFloor({
         {/* macro markers: context ink, y by severity, opacity stacks by repeat */}
         {macroEvents.map((m, i) => {
           const y = m.severity === "high" ? 52 : 74;
-          const r = m.severity === "high" ? 5.5 : 4.5;
+          const r = m.severity === "high" ? 6.5 : 5.5;
           const op = m.severity === "high" ? 1 : 0.85;
           return (
             <g key={`m${i}`}>
@@ -108,7 +108,7 @@ export function WatchFloor({
           return [...buckets.values()].map(({ x, latest: d, count }) => {
             const y = 100;
             const on = d.id === selectedId;
-            const size = 11 + Math.min(count - 1, 5) * 1.6;
+            const size = 13 + Math.min(count - 1, 5) * 1.6;
             return (
               <g key={d.id} onClick={() => setSelectedId(on ? null : d.id)} style={{ cursor: "pointer" }}>
                 <title>
