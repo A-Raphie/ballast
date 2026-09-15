@@ -4259,3 +4259,12 @@
 {"seq":4257,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.71,"chg24h":-0.00232,"ts":1789513151465}
 {"seq":4258,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.46,"chg24h":-0.01138,"ts":1789513151465}
 {"seq":4259,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.36,"chg24h":-0.00375,"ts":1789513151465}
+{"seq":4260,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75873.95,"chg24h":-0.03259,"ts":1789514054860}
+{"seq":4261,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2407.8,"chg24h":-0.04638,"ts":1789514054860}
+{"seq":4262,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":356.01,"chg24h":-0.01041,"ts":1789514054860}
+{"seq":4263,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.42,"chg24h":0.00015,"ts":1789514054860}
+{"seq":4264,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.32,"chg24h":-0.00624,"ts":1789514054860}
+{"seq":4265,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.82,"chg24h":-0.00196,"ts":1789514054860}
+{"seq":4266,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.55,"chg24h":-0.01089,"ts":1789514054860}
+{"seq":4267,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.17,"chg24h":-0.00403,"ts":1789514054860}
+{"seq":4268,"kind":"macro","source":"yahoo-finance","headline":"Stocks Slump on AI Slowdown Fears and Rising Bond Yields and Crude Prices","severity":"medium","assetsAffected":["*"],"ts":1789514054860}
