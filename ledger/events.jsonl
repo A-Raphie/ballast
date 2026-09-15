@@ -3915,3 +3915,11 @@
 {"seq":3913,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.26,"chg24h":0.00548,"ts":1789476866584}
 {"seq":3914,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.25,"chg24h":0.00319,"ts":1789476866584}
 {"seq":3915,"kind":"macro","source":"yahoo-finance","headline":"Boomers and Retirees Can Load IRAs With 4 Quality Ultra-High-Yield Dividend Giants (One Yields 12.3%)","severity":"medium","assetsAffected":["*"],"ts":1789476866584}
+{"seq":3916,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77040.11,"chg24h":-0.00698,"ts":1789477772543}
+{"seq":3917,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2481.68,"chg24h":-0.00477,"ts":1789477772543}
+{"seq":3918,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.3,"chg24h":0.00315,"ts":1789477772543}
+{"seq":3919,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.64,"chg24h":0.00335,"ts":1789477772543}
+{"seq":3920,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709.23,"chg24h":0.01078,"ts":1789477772543}
+{"seq":3921,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.5,"chg24h":-0.00695,"ts":1789477772543}
+{"seq":3922,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.93,"chg24h":0.00588,"ts":1789477772543}
+{"seq":3923,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.78,"chg24h":0.00347,"ts":1789477772543}
