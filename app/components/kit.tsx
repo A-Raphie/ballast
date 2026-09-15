@@ -121,8 +121,9 @@ export function StatStrip({
   if (variant === "tiles") {
     // instrument panel: raised cells; a hero cell (col-span-2, display value)
     // breaks the uniform-card row so the eye lands on the headline number.
+    const cols = items.some((it) => it.hero) ? "sm:grid-cols-6" : "sm:grid-cols-5";
     return (
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+      <div className={`grid grid-cols-2 gap-2 ${cols}`}>
         {items.map((it) =>
           it.hero ? (
             <div
