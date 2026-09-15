@@ -3851,3 +3851,11 @@
 {"seq":3849,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.5,"chg24h":0.00537,"ts":1789470525919}
 {"seq":3850,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.5,"chg24h":-0.00012,"ts":1789470525919}
 {"seq":3851,"kind":"macro","source":"yahoo-finance","headline":"Surging US Treasury yields are starting to spook investors","severity":"medium","assetsAffected":["*"],"ts":1789470525919}
+{"seq":3852,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76974,"chg24h":-0.01123,"ts":1789471432140}
+{"seq":3853,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2480.9,"chg24h":-0.01297,"ts":1789471432140}
+{"seq":3854,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.86,"chg24h":-0.00233,"ts":1789471432140}
+{"seq":3855,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.26,"chg24h":-0.00141,"ts":1789471432140}
+{"seq":3856,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.57,"chg24h":0.00598,"ts":1789471432140}
+{"seq":3857,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.97,"chg24h":-0.00933,"ts":1789471432140}
+{"seq":3858,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.42,"chg24h":0.00486,"ts":1789471432140}
+{"seq":3859,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.64,"chg24h":-0.00002,"ts":1789471432140}
