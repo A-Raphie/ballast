@@ -4164,3 +4164,11 @@
 {"seq":4162,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.82,"chg24h":-0.01828,"ts":1789502227044}
 {"seq":4163,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.97,"chg24h":-0.0053,"ts":1789502227044}
 {"seq":4164,"kind":"macro","source":"yahoo-finance","headline":"NEAR Price Risks 50% Crash as Long Liquidations Pile Up","severity":"high","assetsAffected":["*"],"ts":1789502227044}
+{"seq":4165,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76079.08,"chg24h":-0.03942,"ts":1789503138425}
+{"seq":4166,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2411.07,"chg24h":-0.06186,"ts":1789503138425}
+{"seq":4167,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":356.72,"chg24h":-0.00594,"ts":1789503138425}
+{"seq":4168,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.36,"chg24h":0.00574,"ts":1789503138425}
+{"seq":4169,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.54,"chg24h":-0.00561,"ts":1789503138425}
+{"seq":4170,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.74,"chg24h":-0.00378,"ts":1789503138425}
+{"seq":4171,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.66,"chg24h":-0.01533,"ts":1789503138425}
+{"seq":4172,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.15,"chg24h":-0.00342,"ts":1789503138425}
