@@ -3886,3 +3886,13 @@
 {"seq":3884,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.59,"chg24h":-0.00283,"ts":1789474148905}
 {"seq":3885,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.43,"chg24h":0.00613,"ts":1789474148905}
 {"seq":3886,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.78,"chg24h":0.00063,"ts":1789474148905}
+{"seq":3887,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76940.1,"chg24h":-0.01309,"ts":1789475056656}
+{"seq":3888,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2478.1,"chg24h":-0.01461,"ts":1789475056656}
+{"seq":3889,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.52,"chg24h":-0.00086,"ts":1789475056656}
+{"seq":3890,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.38,"chg24h":-0.0024,"ts":1789475056656}
+{"seq":3891,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.2,"chg24h":0.00622,"ts":1789475056656}
+{"seq":3892,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.33,"chg24h":-0.00427,"ts":1789475056656}
+{"seq":3893,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.26,"chg24h":0.00293,"ts":1789475056656}
+{"seq":3894,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.58,"chg24h":0.00015,"ts":1789475056656}
+{"seq":3895,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Falls As Yields, Oil Prices Rise Ahead Of Fed Meeting; Nvidia Set To Rebound (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789475056656}
+{"seq":3896,"kind":"macro","source":"yahoo-finance","headline":"Fed rate hike expected Wednesday under Kevin Warsh","severity":"medium","assetsAffected":["*"],"ts":1789475056656}
