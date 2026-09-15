@@ -113,7 +113,7 @@ export default async function ControlRoom() {
         />
       </div>
 
-      <Panel className="mb-3 px-4 pb-2.5 pt-2.5">
+      <Panel className="mb-3 px-4 pb-2 pt-2">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
         {sessionSummary(v.decisions) && (
           <p className="caption mt-2 border-t border-[var(--border-default)] pt-2">

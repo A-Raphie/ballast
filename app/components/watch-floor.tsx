@@ -140,7 +140,7 @@ export function WatchFloor({
         </text>
       </svg>
 
-      <div className="mt-2 flex flex-wrap items-center gap-5">
+      <div className="mt-1.5 flex flex-wrap items-center gap-5">
         <span className="micro inline-flex items-center gap-2">
           <span className="inline-block h-2 w-2 rounded-full" style={{ background: "var(--context-marker)" }} aria-hidden />
           News story
