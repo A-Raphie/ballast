@@ -25,15 +25,15 @@ Deadline arithmetic: submission closes Sep 21 (UTC+8). Paper-log days are the sc
 - [ ] Go/no-go on kill criteria (Sep 16 checkpoint)
 
 ## Phase 3 — Landing + polish + demo (Sep 17-19)
-- [ ] Landing (remlo grammar, band as framed object, front door + enter path)
-- [ ] claims-verify pass on all copy vs deployed build
-- [~] ship-rehearsal → pre-ship-gate on the deployed URL (deployed + routes verified; full rehearsal pass pending)
-- [ ] Demo video: demo-script storyboard (scenes mapped to judging criteria) → vo-first (his VO) → desktop-demo take
-- [ ] X post drafted (x-post skill; #BitgetHackathon + @Bitget_AI)
+- [x] Landing (remlo grammar, band as framed object, front door + enter path)
+- [x] claims-verify pass on all copy vs deployed build
+- [x] ship-rehearsal → pre-ship-gate on the deployed URL (deployed + routes verified; full rehearsal pass clean)
+- [x] Demo video: demo-script storyboard (scenes mapped to judging criteria) → vo-first (11Labs VO) → desktop-demo take (3420x2224 Retina, demo-final-gate 4/4 PASS, user-approved)
+- [x] X post drafted (x-post skill; #BitgetHackathon + @Bitget_AI compliant contract)
 
 ## Phase 4 — Submission (Sep 20-21)
-- [ ] Google Form answers (6-part description, LLM role incl. Qwen usage, materials link, X link, sub-theme = Cross-Asset Execution Agent, Demo Day = Yes, K3 = Yes)
-- [ ] README = judge front door; judge path < 2 min; staged per winsznx package pattern
+- [x] README = judge front door; judge path < 2 min; staged per winsznx package pattern (zero em dashes, receipts proof table)
+- [x] Google Form answers drafted (6-part description, LLM role incl. Qwen usage, materials link, X link, sub-theme = Cross-Asset Execution Agent, Demo Day = Yes, K3 = Yes)
 - [ ] Notify-gate dump → HIS submit click before Sep 21 deadline (UTC+8)
 
 ## Dependencies
