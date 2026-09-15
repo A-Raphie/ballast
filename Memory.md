@@ -26,3 +26,9 @@
 - Qwen credits form + KYC are HIS moves if wanted (first 300 teams).
 - Public voting window 9/22-10/7 needs the project ID rallied on X (fan-favorite stacks).
 - Sep 16 kill-criteria checkpoint; Sep 13 executor-pivot checkpoint.
+- **Demo Video Production Rules (Hard Invariants)**:
+  1. **Strict Real-App Visual Continuity**: Every scene must use real live deployed application surfaces (`try-ballast.netlify.app`), scaling edge-to-edge across the target canvas (3420x2224 Retina) without unscaled partial crops or black voids.
+  2. **No Nested Media Artifacts**: Never mix prototype player frames, nested window chrome, playback controls (play buttons, scrubber bars, timecodes), subtitle overlays, or ghost/static cursors from earlier draft presentations into real desktop video cuts.
+  3. **Cross-Scene Visual Gate**: Before muxing, audit every scene against the deployed app. If Scene N-1 and Scene N+1 are on the real browser, Scene N must maintain the exact same authentic desktop chrome and site navbar.
+  4. **Self-Inspection Gate Before Delivery**: The agent must always extract and visually inspect milestone frames across all scenes from the final muxed video itself before presenting to the user, ensuring zero visual defects, black voids, or alien elements.
+  5. **Multi-Subagent Visual QA Swarm**: Before presenting any video to the user, run a parallel swarm of specialized subagents (Visual Continuity Auditor, Alien Artifact Hunter, Audio & Pacing Gate, Cursor Dynamics Auditor). No video may be delivered to the user without unconditional PASS verdicts from all subagents.

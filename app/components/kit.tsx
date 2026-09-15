@@ -13,15 +13,19 @@ export function Panel({ children, className = "" }: { children: ReactNode; class
   return <div className={`panel ${className}`}>{children}</div>;
 }
 
-export function VerdictBadge({ result }: { result: "allow" | "deny" | "halt" }) {
+export function VerdictBadge({ result, size = "md" }: { result: "allow" | "deny" | "halt"; size?: "md" | "sm" }) {
   const map = {
     allow: { bg: "bg-[var(--status-pass-bg)] text-[var(--status-pass)]", glyph: "✓", label: "ALLOWED", title: "every rule passed; the trade went ahead" },
     deny: { bg: "bg-[var(--status-deny-bg)] text-[var(--status-deny)]", glyph: "✗", label: "DENIED", title: "at least one rule said no" },
     halt: { bg: "bg-[var(--bg-raised)] text-[var(--text-secondary)]", glyph: "‖", label: "STOPPED", title: "a rule couldn't be checked, so Ballast paused everything" },
   } as const;
   const m = map[result];
+  const pad =
+    size === "sm"
+      ? "gap-1 px-2 py-0.5 text-[10px] tracking-[0.06em]"
+      : "gap-1.5 px-3 py-1 text-[11px] tracking-[0.1em]";
   return (
-    <span title={m.title} className={`inline-flex items-center gap-1.5 rounded-[var(--radius-pill)] px-3 py-1 text-[11px] font-semibold tracking-[0.1em] ${m.bg}`}>
+    <span title={m.title} className={`inline-flex shrink-0 items-center rounded-[var(--radius-pill)] font-semibold ${pad} ${m.bg}`}>
       <span aria-hidden>{m.glyph}</span> {m.label}
     </span>
   );
@@ -101,9 +105,36 @@ export function ClauseRow({
 
 export function StatStrip({
   items,
+  variant = "row",
 }: {
-  items: { label: string; value: ReactNode; tone?: "decision" | "default"; hint?: string }[];
+  items: { label: string; value: ReactNode; tone?: "decision" | "pass" | "deny" | "default"; hint?: string }[];
+  variant?: "row" | "tiles";
 }) {
+  const ink = (tone?: string) =>
+    tone === "decision"
+      ? "text-[var(--decision)]"
+      : tone === "pass"
+        ? "text-[var(--status-pass)]"
+        : tone === "deny"
+          ? "text-[var(--status-deny)]"
+          : "text-[var(--text-primary)]";
+  if (variant === "tiles") {
+    // instrument panel: each metric a raised cell, value promoted to display size
+    return (
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+        {items.map((it) => (
+          <div
+            key={it.label}
+            title={it.hint}
+            className="rounded-[var(--radius-panel)] border border-[var(--border-default)] bg-[var(--bg-raised)] px-3.5 py-2"
+          >
+            <div className="micro">{it.label}</div>
+            <div className={`num mt-0.5 text-lg font-semibold tracking-tight tabular-nums ${ink(it.tone)}`}>{it.value}</div>
+          </div>
+        ))}
+      </div>
+    );
+  }
   return (
     <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
       {items.map((it) => (
@@ -116,6 +147,29 @@ export function StatStrip({
           </span>
         </div>
       ))}
+    </div>
+  );
+}
+
+// Tinted 24h-change pill: the exchange-convention way to carry a delta.
+export function DeltaPill({ value, positive }: { value: string; positive: boolean }) {
+  return (
+    <span
+      className={`num inline-flex min-w-14 justify-center rounded-[var(--radius-pill)] px-2 py-0.5 text-[11px] font-semibold tabular-nums ${
+        positive ? "bg-[var(--status-pass-bg)] text-[var(--status-pass)]" : "bg-[var(--status-deny-bg)] text-[var(--status-deny)]"
+      }`}
+    >
+      {value}
+    </span>
+  );
+}
+
+// One panel-header grammar: display title left, quiet aside right.
+export function PanelHeader({ title, aside }: { title: string; aside?: ReactNode }) {
+  return (
+    <div className="mb-2.5 flex items-center justify-between gap-3">
+      <h2 className="font-[family-name:var(--font-display)] text-base font-semibold">{title}</h2>
+      {aside ? <div className="caption text-[var(--text-secondary)]">{aside}</div> : null}
     </div>
   );
 }

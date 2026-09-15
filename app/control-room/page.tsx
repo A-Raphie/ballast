@@ -2,7 +2,7 @@ import { readLedger, type Decision } from "@/lib/ledger";
 import { readAgentState } from "@/agent/agent-state";
 import { shiftPhrase, clauseReason, ruleName, symbolHint, symbolName, sentence, executionLabel } from "@/lib/display";
 import { WatchFloor } from "@/app/components/watch-floor";
-import { Panel, StatStrip, Chip, Spark } from "@/app/components/kit";
+import { Panel, StatStrip, Chip, Spark, VerdictBadge, DeltaPill, PanelHeader } from "@/app/components/kit";
 import { StatusBadge, PauseControl } from "@/app/components/status-controls";
 
 export const dynamic = "force-dynamic";
@@ -85,10 +85,11 @@ export default async function ControlRoom() {
         </Panel>
       )}
 
-      <Panel className="mb-3 px-5 py-2.5">
+      <div className="mb-3">
         <StatStrip
+          variant="tiles"
           items={[
-            { label: "Practice portfolio", value: v.bookValue === null ? "not funded yet" : `$${v.bookValue.toFixed(0)}`, hint: "a practice account with pretend money; the prices are real" },
+            { label: "Practice portfolio", value: v.bookValue === null ? "not funded" : `$${v.bookValue.toFixed(0)}`, hint: "a practice account with pretend money; the prices are real" },
             { label: "Tokenized stocks", value: v.exposure ? pct(v.exposure.rtokenPct) : "0%", hint: "how much sits in tokenized US stocks (Nvidia, Tesla, and friends)" },
             {
               label: "Crypto shield",
@@ -104,12 +105,13 @@ export default async function ControlRoom() {
                   : Math.abs(v.heelPct) < 0.005
                     ? "0.00%"
                     : `${v.heelPct > 0 ? "+" : ""}${v.heelPct.toFixed(2)}%`,
+              tone: v.heelPct === null ? "default" : v.heelPct >= 0 ? "pass" : "deny",
               hint: "how far the holdings' market value moved since the UTC-day open (prices only, trade effects excluded)",
             },
             { label: "Rules version", value: `v${v.policyVersion ?? "?"}`, hint: "which version of the rulebook the agent obeyed" },
           ]}
         />
-      </Panel>
+      </div>
 
       <Panel className="mb-3 px-4 pb-2.5 pt-2.5">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
@@ -122,16 +124,16 @@ export default async function ControlRoom() {
 
       <div className="grid gap-3 md:grid-cols-2">
         <Panel className="p-4">
-          <div className="mb-2 flex items-center justify-between gap-3">
-            <h2 className="font-[family-name:var(--font-display)] text-base font-semibold">
-              Decisions
-            </h2>
-            <a href="/log" className="caption text-[var(--text-secondary)] underline decoration-dotted hover:text-[var(--text-primary)]">
-              Full history in the log →
-            </a>
-          </div>
+          <PanelHeader
+            title="Decisions"
+            aside={
+              <a href="/log" className="underline decoration-dotted hover:text-[var(--text-primary)]">
+                Full history in the log →
+              </a>
+            }
+          />
           {trade && (
-            <div className="mb-2.5 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] bg-[var(--decision-subtle)] px-3.5 py-2">
+            <div className="mb-2.5 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] border-l-2 border-l-[var(--decision)] bg-[var(--decision-subtle)] px-3.5 py-2">
               <div className="micro mb-0.5 text-[var(--decision)]">Last trade</div>
               <div className="text-sm">
                 {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)}
@@ -177,53 +179,46 @@ export default async function ControlRoom() {
                     ) : ""}
                   </div>
                 </div>
-                <span
-                  className={`text-sm font-bold ${
-                    r.result === "allow"
-                      ? "text-[var(--status-pass)]"
-                      : r.result === "deny"
-                        ? "text-[var(--status-deny)]"
-                        : "text-[var(--text-secondary)]"
-                  }`}
-                >
-                  {r.result === "allow" ? "✓ traded" : r.result === "deny" ? "✗ refused" : "‖ stopped"}
-                </span>
+                <VerdictBadge size="sm" result={r.result === "allow" ? "allow" : r.result === "deny" ? "deny" : "halt"} />
               </li>
             ))}
           </ul>
         </Panel>
 
         <Panel className="p-4">
-          <h2 className="font-[family-name:var(--font-display)] mb-2 text-base font-semibold">
-            What it&apos;s watching
-          </h2>
+          <PanelHeader
+            title="What it's watching"
+            aside={
+              biggestMover ? (
+                <>
+                  Biggest 24h move: {symbolName(biggestMover.symbol)}{" "}
+                  <span className={biggestMover.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}>
+                    {biggestMover.chg24h >= 0 ? "+" : ""}
+                    {(biggestMover.chg24h * 100).toFixed(2)}%
+                  </span>
+                </>
+              ) : undefined
+            }
+          />
           <ul className="space-y-1">
             {v.marketSnapshot.map((m) => (
-              <li key={m.symbol} className="flex items-center justify-between gap-3 border-b border-[var(--border-default)] py-0.5 last:border-b-0">
+              <li
+                key={m.symbol}
+                className="-mx-2 flex items-center justify-between gap-3 rounded-[var(--radius-input)] border-b border-[var(--border-default)] px-2 py-0.5 transition-colors last:border-b-0 hover:bg-[var(--bg-raised)]"
+              >
                 <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
                 <span className="flex items-center gap-3">
                   <Spark points={v.priceSeries[m.symbol] ?? []} h={16} />
-                  <span className="num text-sm">{m.px.toLocaleString()}</span>
-                  <span
-                    className={`num w-16 text-right text-xs ${m.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}`}
-                  >
-                    {m.chg24h >= 0 ? "+" : ""}
-                    {(m.chg24h * 100).toFixed(2)}%
-                  </span>
+                  <span className="num text-sm tabular-nums">{m.px.toLocaleString()}</span>
+                  <DeltaPill
+                    value={`${m.chg24h >= 0 ? "+" : ""}${(m.chg24h * 100).toFixed(2)}%`}
+                    positive={m.chg24h >= 0}
+                  />
                 </span>
               </li>
             ))}
             {v.marketSnapshot.length === 0 && <p className="caption">Waiting for the first price check.</p>}
           </ul>
-          {biggestMover && (
-            <p className="caption mt-2">
-              Biggest 24h move: {symbolName(biggestMover.symbol)}{" "}
-              <span className={biggestMover.chg24h >= 0 ? "text-[var(--status-pass)]" : "text-[var(--status-deny)]"}>
-                {biggestMover.chg24h >= 0 ? "+" : ""}
-                {(biggestMover.chg24h * 100).toFixed(2)}%
-              </span>
-            </p>
-          )}
         </Panel>
       </div>
     </main>
