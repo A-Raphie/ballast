@@ -3985,3 +3985,11 @@
 {"seq":3983,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.38,"chg24h":-0.00214,"ts":1789484116474}
 {"seq":3984,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.55,"chg24h":-0.00222,"ts":1789484116474}
 {"seq":3985,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Dow Dives As Yields Jump; Nvidia Up But This Biotech Play Flashes Sell Signal (Live Coverage)","severity":"medium","assetsAffected":["*"],"ts":1789484116474}
+{"seq":3986,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76055,"chg24h":-0.03117,"ts":1789485021174}
+{"seq":3987,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2413.22,"chg24h":-0.03735,"ts":1789485021174}
+{"seq":3988,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.85,"chg24h":0.00213,"ts":1789485021174}
+{"seq":3989,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.3,"chg24h":0.0064,"ts":1789485021174}
+{"seq":3990,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.39,"chg24h":-0.00173,"ts":1789485021174}
+{"seq":3991,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":329.25,"chg24h":-0.01153,"ts":1789485021174}
+{"seq":3992,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.83,"chg24h":-0.00332,"ts":1789485021174}
+{"seq":3993,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.98,"chg24h":-0.00283,"ts":1789485021174}
