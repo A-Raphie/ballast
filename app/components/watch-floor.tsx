@@ -13,9 +13,9 @@ import { shiftPhrase, symbolName, severityWord, verdictWord, proposerName } from
 import { ClauseRow, VerdictBadge, Chip, QHint } from "./kit";
 
 const W = 1200;
-const H = 162;
+const H = 152;
 const PAD_X = 28;
-const TRACK_Y = 112;
+const TRACK_Y = 104;
 const OPEN_START = (14 * 60 + 30) / 1440;
 const OPEN_END = (21 * 60) / 1440;
 

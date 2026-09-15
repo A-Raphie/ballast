@@ -62,7 +62,7 @@ export default function RootLayout({
         </header>
         <div id="main">{children}</div>
         <footer className="border-t border-[var(--border-default)]">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
             <span className="caption">Ballast · built for the Bitget AI Base Camp Hackathon S2</span>
             <a
               href="https://x.com/a_raphie"

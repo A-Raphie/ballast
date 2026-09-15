@@ -61,7 +61,7 @@ export default async function ControlRoom() {
   const biggestMover = [...v.marketSnapshot].sort((a, b) => Math.abs(b.chg24h) - Math.abs(a.chg24h))[0] ?? null;
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-4">
+    <main className="mx-auto max-w-6xl px-6 py-3">
       <div className="mb-2.5 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight">
@@ -89,7 +89,7 @@ export default async function ControlRoom() {
         <StatStrip
           variant="tiles"
           items={[
-            { label: "Practice portfolio", value: v.bookValue === null ? "not funded" : `$${v.bookValue.toFixed(0)}`, hint: "a practice account with pretend money; the prices are real" },
+            { label: "Practice portfolio", value: v.bookValue === null ? "not funded" : `$${v.bookValue.toLocaleString()}`, hint: "a practice account with pretend money; the prices are real" },
             { label: "Tokenized stocks", value: v.exposure ? pct(v.exposure.rtokenPct) : "0%", hint: "how much sits in tokenized US stocks (Nvidia, Tesla, and friends)" },
             {
               label: "Crypto shield",
@@ -113,16 +113,16 @@ export default async function ControlRoom() {
         />
       </div>
 
-      <Panel className="mb-3 px-4 pb-2 pt-2">
+      <Panel className="mb-2.5 px-4 pb-1.5 pt-1.5">
         <WatchFloor macroEvents={v.macroEvents} decisions={v.decisions} nowTs={Date.now()} />
         {sessionSummary(v.decisions) && (
-          <p className="caption mt-2 border-t border-[var(--border-default)] pt-2">
+          <p className="caption mt-1.5 border-t border-[var(--border-default)] pt-1.5">
             This shift: {sessionSummary(v.decisions)}
           </p>
         )}
       </Panel>
 
-      <div className="grid gap-3 md:grid-cols-2">
+      <div className="grid gap-2.5 md:grid-cols-2">
         <Panel className="p-4">
           <PanelHeader
             title="Decisions"
@@ -133,7 +133,7 @@ export default async function ControlRoom() {
             }
           />
           {trade && (
-            <div className="mb-2.5 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] border-l-2 border-l-[var(--decision)] bg-[var(--decision-subtle)] px-3.5 py-2">
+            <div className="mb-2 rounded-[var(--radius-panel)] border border-[rgb(var(--decision-rgb)/0.35)] border-l-2 border-l-[var(--decision)] bg-[var(--decision-subtle)] px-3.5 py-2">
               <div className="micro mb-0.5 text-[var(--decision)]">Last trade</div>
               <div className="text-sm">
                 {trade.order!.side === "buy" ? "Bought" : "Sold"} {symbolName(trade.order!.symbol)}
