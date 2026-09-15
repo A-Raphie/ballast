@@ -4056,3 +4056,11 @@
 {"seq":4054,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.29,"chg24h":-0.01304,"ts":1789491360056}
 {"seq":4055,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.93,"chg24h":-0.00672,"ts":1789491360056}
 {"seq":4056,"kind":"macro","source":"yahoo-finance","headline":"Zumiez (ZUMZ) Falls on Weak Results and Lower Outlook, But Is the Selloff Overdone?","severity":"medium","assetsAffected":["*"],"ts":1789491360056}
+{"seq":4057,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76260,"chg24h":-0.03248,"ts":1789492265676}
+{"seq":4058,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2414.3,"chg24h":-0.04569,"ts":1789492265676}
+{"seq":4059,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.53,"chg24h":-0.00855,"ts":1789492265676}
+{"seq":4060,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":211.59,"chg24h":-0.00341,"ts":1789492265676}
+{"seq":4061,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.21,"chg24h":-0.00906,"ts":1789492265676}
+{"seq":4062,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":329.85,"chg24h":-0.01378,"ts":1789492265676}
+{"seq":4063,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.38,"chg24h":-0.01427,"ts":1789492265676}
+{"seq":4064,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.48,"chg24h":-0.00652,"ts":1789492265676}
