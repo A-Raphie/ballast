@@ -126,10 +126,10 @@ export function StatStrip({
           <div
             key={it.label}
             title={it.hint}
-            className="rounded-[var(--radius-panel)] border border-[var(--border-default)] bg-[var(--bg-raised)] px-3.5 py-2"
+            className="rounded-[var(--radius-panel)] border border-[var(--border-default)] bg-[var(--bg-raised)] px-3.5 py-1.5"
           >
             <div className="micro">{it.label}</div>
-            <div className={`num mt-0.5 text-lg font-semibold tracking-tight tabular-nums ${ink(it.tone)}`}>{it.value}</div>
+            <div className={`num mt-0.5 text-base font-semibold tracking-tight tabular-nums ${ink(it.tone)}`}>{it.value}</div>
           </div>
         ))}
       </div>

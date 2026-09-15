@@ -62,7 +62,7 @@ export default async function ControlRoom() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-4">
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+      <div className="mb-2.5 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight">
             Control room
@@ -85,7 +85,7 @@ export default async function ControlRoom() {
         </Panel>
       )}
 
-      <div className="mb-3">
+      <div className="mb-2">
         <StatStrip
           variant="tiles"
           items={[
