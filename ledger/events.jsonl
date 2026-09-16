@@ -4470,3 +4470,11 @@
 {"seq":4468,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.8,"chg24h":-0.00821,"ts":1789534856385}
 {"seq":4469,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.74,"chg24h":0.00004,"ts":1789534856385}
 {"seq":4470,"kind":"macro","source":"yahoo-finance","headline":"Benchmark Yield Hits 5%. How Will Stocks Respond To A Fed Rate Hike?","severity":"medium","assetsAffected":["*"],"ts":1789534856385}
+{"seq":4471,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75823.55,"chg24h":-0.02106,"ts":1789535759969}
+{"seq":4472,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2401.11,"chg24h":-0.03365,"ts":1789535759969}
+{"seq":4473,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357,"chg24h":-0.00441,"ts":1789535759969}
+{"seq":4474,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.29,"chg24h":0.00732,"ts":1789535759969}
+{"seq":4475,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":706.35,"chg24h":-0.00011,"ts":1789535759969}
+{"seq":4476,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.71,"chg24h":0.00381,"ts":1789535759969}
+{"seq":4477,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.97,"chg24h":-0.00652,"ts":1789535759969}
+{"seq":4478,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.8,"chg24h":0.00074,"ts":1789535759969}
