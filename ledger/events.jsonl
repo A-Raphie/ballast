@@ -4680,3 +4680,11 @@
 {"seq":4678,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.79,"chg24h":-0.00901,"ts":1789556590039}
 {"seq":4679,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.36,"chg24h":-0.00014,"ts":1789556590039}
 {"seq":4680,"kind":"macro","source":"yahoo-finance","headline":"Dow Jones Futures Rise As ServiceNow, Twilio Lead 8 New Buys; Will Market Bid Bond Voyage After Fed Rate Hike?","severity":"medium","assetsAffected":["*"],"ts":1789556590039}
+{"seq":4681,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75929.97,"chg24h":-0.015,"ts":1789557497646}
+{"seq":4682,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2405.72,"chg24h":-0.03161,"ts":1789557497646}
+{"seq":4683,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357.26,"chg24h":-0.00471,"ts":1789557497646}
+{"seq":4684,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.13,"chg24h":0.00411,"ts":1789557497646}
+{"seq":4685,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.66,"chg24h":-0.00133,"ts":1789557497646}
+{"seq":4686,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.51,"chg24h":0.00159,"ts":1789557497646}
+{"seq":4687,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.3,"chg24h":-0.00758,"ts":1789557497646}
+{"seq":4688,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.19,"chg24h":-0.0007,"ts":1789557497646}
