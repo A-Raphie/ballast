@@ -4651,3 +4651,12 @@
 {"seq":4649,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.26,"chg24h":0.00275,"ts":1789553872014}
 {"seq":4650,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.53,"chg24h":-0.00835,"ts":1789553872014}
 {"seq":4651,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.91,"chg24h":0.00084,"ts":1789553872014}
+{"seq":4652,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75940,"chg24h":-0.01327,"ts":1789554777155}
+{"seq":4653,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2402.12,"chg24h":-0.02957,"ts":1789554777155}
+{"seq":4654,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":356.99,"chg24h":-0.0031,"ts":1789554777155}
+{"seq":4655,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.28,"chg24h":0.0043,"ts":1789554777155}
+{"seq":4656,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.71,"chg24h":0.00067,"ts":1789554777155}
+{"seq":4657,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.43,"chg24h":0.00269,"ts":1789554777155}
+{"seq":4658,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496,"chg24h":-0.00822,"ts":1789554777155}
+{"seq":4659,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.05,"chg24h":0.0007,"ts":1789554777155}
+{"seq":4660,"kind":"macro","source":"yahoo-finance","headline":"U.S. Treasury Yields, Dollar Little Changed Ahead of Fed's Likely Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789554777155}
