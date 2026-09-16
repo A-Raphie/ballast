@@ -4295,3 +4295,11 @@
 {"seq":4293,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.8,"chg24h":-0.01032,"ts":1789516768902}
 {"seq":4294,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.16,"chg24h":-0.00386,"ts":1789516768902}
 {"seq":4295,"kind":"macro","source":"yahoo-finance","headline":"How a Fed rate hike would affect your bank accounts, loans, credit cards, and investments","severity":"medium","assetsAffected":["*"],"ts":1789516768902}
+{"seq":4296,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75721.61,"chg24h":-0.03081,"ts":1789517673750}
+{"seq":4297,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2401.65,"chg24h":-0.04416,"ts":1789517673750}
+{"seq":4298,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":356.55,"chg24h":-0.00945,"ts":1789517673750}
+{"seq":4299,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.39,"chg24h":0.0008,"ts":1789517673750}
+{"seq":4300,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.41,"chg24h":-0.00583,"ts":1789517673750}
+{"seq":4301,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.71,"chg24h":-0.00129,"ts":1789517673750}
+{"seq":4302,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.67,"chg24h":-0.01126,"ts":1789517673750}
+{"seq":4303,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.42,"chg24h":-0.00373,"ts":1789517673750}
