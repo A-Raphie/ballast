@@ -12,6 +12,7 @@
 - No em dashes anywhere in shipped copy/UI/README (hard rule).
 - Numbers in UI: tabular numerals; every verdict carries glyph + text, never color alone.
 - Ledger lines are immutable once committed; corrections are new `correction` events, never edits.
+- Voiceover TTS Voice: ALWAYS use `minimax_273587280617670` for all demo voiceovers and audio takes (hard rule).
 
 ## Gotchas
 - Bitget public tickers v2: multi-symbol query REJECTED (`40034 does not exist` for comma or slash separators, verified Sep 9). Sensor pattern: one keyless `GET /api/v2/spot/market/tickers` (no param) returns ALL symbols, filter in code. Live-verified: RNVDAUSDT/RTSLAUSDT/RAAPLUSDT/RSPYUSDT + BTC/ETH all present, ~1s freshness.
@@ -32,3 +33,5 @@
   3. **Cross-Scene Visual Gate**: Before muxing, audit every scene against the deployed app. If Scene N-1 and Scene N+1 are on the real browser, Scene N must maintain the exact same authentic desktop chrome and site navbar.
   4. **Self-Inspection Gate Before Delivery**: The agent must always extract and visually inspect milestone frames across all scenes from the final muxed video itself before presenting to the user, ensuring zero visual defects, black voids, or alien elements.
   5. **Multi-Subagent Visual QA Swarm**: Before presenting any video to the user, run a parallel swarm of specialized subagents (Visual Continuity Auditor, Alien Artifact Hunter, Audio & Pacing Gate, Cursor Dynamics Auditor). No video may be delivered to the user without unconditional PASS verdicts from all subagents.
+  6. **Voice Selection (Hard Invariant)**: Always use `minimax_273587280617670` for demo narrations and audio samples.
+  7. **Recording Environment (Hard Invariant)**: ALWAYS record on Desktop 2 and make sure Chrome is on fullscreen (`--start-fullscreen`). Never record on Desktop 1.

@@ -7,7 +7,7 @@ Autonomous continuous governance for 24/7 tokenized stock books.
 
 [![Live Demo](https://img.shields.io/badge/demo-try--ballast.netlify.app-00e5ff?style=flat-square)](https://try-ballast.netlify.app)
 [![Track](https://img.shields.io/badge/Bitget_Hackathon-Cross--Asset_Execution_Agent-blue?style=flat-square)](https://try-ballast.netlify.app)
-[![Tests](https://img.shields.io/badge/vitest-7%2F7_passing-success?style=flat-square)](./policy/POLICY.md)
+[![Tests](https://img.shields.io/badge/vitest-24%2F24_passing-success?style=flat-square)](./policy/POLICY.md)
 [![Violations](https://img.shields.io/badge/policy_violations-0-brightgreen?style=flat-square)](https://try-ballast.netlify.app/log)
 [![License: MIT](https://img.shields.io/badge/license-MIT-white?style=flat-square)](./LICENSE)
 
