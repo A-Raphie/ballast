@@ -4819,3 +4819,12 @@
 {"seq":4817,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.83,"chg24h":0.0121,"ts":1789571094076}
 {"seq":4818,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493,"chg24h":-0.01504,"ts":1789571094076}
 {"seq":4819,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.58,"chg24h":0.00468,"ts":1789571094076}
+{"seq":4820,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75692.83,"chg24h":-0.00437,"ts":1789571998753}
+{"seq":4821,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2389.4,"chg24h":-0.01019,"ts":1789571998753}
+{"seq":4822,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.62,"chg24h":0.01063,"ts":1789571998753}
+{"seq":4823,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.79,"chg24h":0.01709,"ts":1789571998753}
+{"seq":4824,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":710.93,"chg24h":0.00734,"ts":1789571998753}
+{"seq":4825,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.65,"chg24h":0.01183,"ts":1789571998753}
+{"seq":4826,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.54,"chg24h":-0.01284,"ts":1789571998753}
+{"seq":4827,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.64,"chg24h":0.00438,"ts":1789571998753}
+{"seq":4828,"kind":"macro","source":"yahoo-finance","headline":"Direxion Semiconductor Bull ETF Drops 14% as Chip Sector Faces Sharp Selloff","severity":"medium","assetsAffected":["*"],"ts":1789571998753}
