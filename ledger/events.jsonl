@@ -4928,3 +4928,14 @@
 {"seq":4926,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.56,"chg24h":-0.00961,"ts":1789582693176}
 {"seq":4927,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.03,"chg24h":0.0033,"ts":1789582693176}
 {"seq":4928,"kind":"macro","source":"yahoo-finance","headline":"Bitcoin Price Forecast: 3 Macro Signals Hinting at BTC Crash Toward $70K","severity":"high","assetsAffected":["*"],"ts":1789582693176}
+{"seq":4929,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75588.5,"chg24h":-0.01191,"ts":1789583598898}
+{"seq":4930,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2399.98,"chg24h":-0.00819,"ts":1789583598898}
+{"seq":4931,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.64,"chg24h":0.00611,"ts":1789583598898}
+{"seq":4932,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.14,"chg24h":0.01486,"ts":1789583598898}
+{"seq":4933,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.11,"chg24h":0.00455,"ts":1789583598898}
+{"seq":4934,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.98,"chg24h":0.01169,"ts":1789583598898}
+{"seq":4935,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.84,"chg24h":-0.01137,"ts":1789583598898}
+{"seq":4936,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.18,"chg24h":0.00131,"ts":1789583598898}
+{"seq":4937,"kind":"macro","source":"yahoo-finance","headline":"SocGen Says Higher Yields May Put AI Debt Capex at Risk","severity":"medium","assetsAffected":["*"],"ts":1789583598898}
+{"seq":4938,"kind":"macro","source":"yahoo-finance","headline":"Gold Falls Below $4,300 as Dollar and Treasury Yields Rise Ahead of Fed Decision","severity":"medium","assetsAffected":["*"],"ts":1789583598898}
+{"seq":4939,"kind":"macro","source":"yahoo-finance","headline":"Stocks Selloff Rages on as AI and Bond Fears Mount","severity":"medium","assetsAffected":["*"],"ts":1789583598898}
