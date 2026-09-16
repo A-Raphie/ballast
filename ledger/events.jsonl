@@ -4723,3 +4723,12 @@
 {"seq":4721,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.54,"chg24h":-0.00033,"ts":1789561118838}
 {"seq":4722,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.95,"chg24h":-0.0098,"ts":1789561118838}
 {"seq":4723,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.09,"chg24h":0.00003,"ts":1789561118838}
+{"seq":4724,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75983.71,"chg24h":-0.01173,"ts":1789562023809}
+{"seq":4725,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2408.92,"chg24h":-0.02746,"ts":1789562023809}
+{"seq":4726,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357.98,"chg24h":-0.00239,"ts":1789562023809}
+{"seq":4727,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.94,"chg24h":0.00887,"ts":1789562023809}
+{"seq":4728,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.45,"chg24h":0.00008,"ts":1789562023809}
+{"seq":4729,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.4,"chg24h":0.00045,"ts":1789562023809}
+{"seq":4730,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.8,"chg24h":-0.00862,"ts":1789562023809}
+{"seq":4731,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.82,"chg24h":0.00013,"ts":1789562023809}
+{"seq":4732,"kind":"macro","source":"yahoo-finance","headline":"Alluvium Increases HCA Healthcare (HCA) Holdings After Its 17.5% Selloff","severity":"medium","assetsAffected":["*"],"ts":1789562023809}
