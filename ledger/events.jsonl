@@ -4407,3 +4407,11 @@
 {"seq":4405,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.16,"chg24h":-0.00994,"ts":1789528527645}
 {"seq":4406,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.09,"chg24h":-0.00187,"ts":1789528527645}
 {"seq":4407,"kind":"macro","source":"yahoo-finance","headline":"5 Names That Showed Signs of Life After Friday's CPI Report","severity":"medium","assetsAffected":["*"],"ts":1789528527645}
+{"seq":4408,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75860,"chg24h":-0.02518,"ts":1789529432133}
+{"seq":4409,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2405.29,"chg24h":-0.03873,"ts":1789529432133}
+{"seq":4410,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":356.93,"chg24h":-0.00682,"ts":1789529432133}
+{"seq":4411,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.03,"chg24h":0.00193,"ts":1789529432133}
+{"seq":4412,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":706.44,"chg24h":-0.00396,"ts":1789529432133}
+{"seq":4413,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.84,"chg24h":0.00063,"ts":1789529432133}
+{"seq":4414,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.9,"chg24h":-0.00864,"ts":1789529432133}
+{"seq":4415,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.19,"chg24h":-0.00159,"ts":1789529432133}
