@@ -4616,3 +4616,12 @@
 {"seq":4614,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.15,"chg24h":0.0011,"ts":1789550252867}
 {"seq":4615,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.38,"chg24h":-0.00765,"ts":1789550252867}
 {"seq":4616,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.67,"chg24h":0.00268,"ts":1789550252867}
+{"seq":4617,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75880,"chg24h":-0.01346,"ts":1789551157213}
+{"seq":4618,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2403.22,"chg24h":-0.02903,"ts":1789551157213}
+{"seq":4619,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357,"chg24h":-0.00048,"ts":1789551157213}
+{"seq":4620,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.2,"chg24h":0.00709,"ts":1789551157213}
+{"seq":4621,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.43,"chg24h":0.00333,"ts":1789551157213}
+{"seq":4622,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.49,"chg24h":0.00212,"ts":1789551157213}
+{"seq":4623,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.25,"chg24h":-0.00795,"ts":1789551157213}
+{"seq":4624,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.62,"chg24h":0.00222,"ts":1789551157213}
+{"seq":4625,"kind":"macro","source":"yahoo-finance","headline":"Bond Yields Near 5% as ETF Investors Keep Buying","severity":"medium","assetsAffected":["*"],"ts":1789551157213}
