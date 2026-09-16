@@ -5108,3 +5108,11 @@
 {"seq":5106,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.09,"chg24h":-0.00259,"ts":1789600830998}
 {"seq":5107,"kind":"macro","source":"yahoo-finance","headline":"Stocks Fall as Crude Prices and Bond Yields Jump","severity":"medium","assetsAffected":["*"],"ts":1789600830998}
 {"seq":5108,"kind":"macro","source":"yahoo-finance","headline":"Robert Kiyosaki Says the Biggest Stock Market Crash in History Has Started","severity":"high","assetsAffected":["*"],"ts":1789600830998}
+{"seq":5109,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76100.36,"chg24h":0.00548,"ts":1789601736666}
+{"seq":5110,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2414.12,"chg24h":0.00496,"ts":1789601736666}
+{"seq":5111,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359.07,"chg24h":0.00908,"ts":1789601736666}
+{"seq":5112,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.19,"chg24h":0.01376,"ts":1789601736666}
+{"seq":5113,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.39,"chg24h":0.00474,"ts":1789601736666}
+{"seq":5114,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.91,"chg24h":0.00328,"ts":1789601736666}
+{"seq":5115,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.2,"chg24h":-0.01245,"ts":1789601736666}
+{"seq":5116,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":756.55,"chg24h":-0.00195,"ts":1789601736666}
