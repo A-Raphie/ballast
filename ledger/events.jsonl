@@ -4443,3 +4443,11 @@
 {"seq":4441,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.38,"chg24h":-0.00855,"ts":1789532143960}
 {"seq":4442,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.03,"chg24h":-0.00084,"ts":1789532143960}
 {"seq":4443,"kind":"macro","source":"yahoo-finance","headline":"What Bond Yields Do After a Hiking Cycle Starts","severity":"medium","assetsAffected":["*"],"ts":1789532143960}
+{"seq":4444,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75877.51,"chg24h":-0.02267,"ts":1789533047982}
+{"seq":4445,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2404.08,"chg24h":-0.03628,"ts":1789533047982}
+{"seq":4446,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":357.31,"chg24h":-0.00623,"ts":1789533047982}
+{"seq":4447,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.06,"chg24h":0.005,"ts":1789533047982}
+{"seq":4448,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":706.38,"chg24h":-0.00229,"ts":1789533047982}
+{"seq":4449,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.56,"chg24h":0,"ts":1789533047982}
+{"seq":4450,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.98,"chg24h":-0.00826,"ts":1789533047982}
+{"seq":4451,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.86,"chg24h":-0.00036,"ts":1789533047982}
