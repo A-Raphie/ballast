@@ -4338,3 +4338,11 @@
 {"seq":4336,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.8,"chg24h":-0.01324,"ts":1789521292291}
 {"seq":4337,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.4,"chg24h":-0.00423,"ts":1789521292291}
 {"seq":4338,"kind":"macro","source":"yahoo-finance","headline":"Crypto Market Braces for Volatility as Goldman Sachs &amp; JPMorgan Expect Fed Rate Hike This Week","severity":"medium","assetsAffected":["*"],"ts":1789521292291}
+{"seq":4339,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75880.01,"chg24h":-0.02547,"ts":1789522196201}
+{"seq":4340,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2404.27,"chg24h":-0.0427,"ts":1789522196201}
+{"seq":4341,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":356.43,"chg24h":-0.00912,"ts":1789522196201}
+{"seq":4342,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":212.37,"chg24h":-0.00019,"ts":1789522196201}
+{"seq":4343,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":705.47,"chg24h":-0.00644,"ts":1789522196201}
+{"seq":4344,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.86,"chg24h":-0.00051,"ts":1789522196201}
+{"seq":4345,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.98,"chg24h":-0.0124,"ts":1789522196201}
+{"seq":4346,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.45,"chg24h":-0.0039,"ts":1789522196201}
