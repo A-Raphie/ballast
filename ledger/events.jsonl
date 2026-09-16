@@ -4855,3 +4855,11 @@
 {"seq":4853,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.88,"chg24h":-0.01224,"ts":1789575445760}
 {"seq":4854,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.28,"chg24h":0.00462,"ts":1789575445760}
 {"seq":4855,"kind":"macro","source":"yahoo-finance","headline":"Robust US retail sales underscore economy's resilience; inflation pressures building","severity":"medium","assetsAffected":["*"],"ts":1789575445760}
+{"seq":4856,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75768.32,"chg24h":-0.00859,"ts":1789576351005}
+{"seq":4857,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2393.54,"chg24h":-0.01199,"ts":1789576351005}
+{"seq":4858,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.76,"chg24h":-0.00039,"ts":1789576351005}
+{"seq":4859,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.88,"chg24h":0.019,"ts":1789576351005}
+{"seq":4860,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":710.06,"chg24h":0.00656,"ts":1789576351005}
+{"seq":4861,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.35,"chg24h":0.00578,"ts":1789576351005}
+{"seq":4862,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.32,"chg24h":-0.01446,"ts":1789576351005}
+{"seq":4863,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.87,"chg24h":0.00305,"ts":1789576351005}
