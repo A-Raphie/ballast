@@ -5080,3 +5080,11 @@
 {"seq":5078,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.31,"chg24h":-0.015,"ts":1789598116543}
 {"seq":5079,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":755.33,"chg24h":-0.00372,"ts":1789598116543}
 {"seq":5080,"kind":"macro","source":"yahoo-finance","headline":"Dollar Supported by Higher Crude Prices and T-Note Yields","severity":"medium","assetsAffected":["*"],"ts":1789598116543}
+{"seq":5081,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75715.01,"chg24h":-0.00007,"ts":1789599021784}
+{"seq":5082,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2393.29,"chg24h":-0.0027,"ts":1789599021784}
+{"seq":5083,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.4,"chg24h":0.00598,"ts":1789599021784}
+{"seq":5084,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.11,"chg24h":0.012,"ts":1789599021784}
+{"seq":5085,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":706.94,"chg24h":0.0022,"ts":1789599021784}
+{"seq":5086,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.63,"chg24h":0.00253,"ts":1789599021784}
+{"seq":5087,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":491.91,"chg24h":-0.01364,"ts":1789599021784}
+{"seq":5088,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":755.45,"chg24h":-0.0038,"ts":1789599021784}
