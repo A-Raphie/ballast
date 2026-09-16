@@ -4538,3 +4538,12 @@
 {"seq":4536,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.5,"chg24h":0.00309,"ts":1789542090715}
 {"seq":4537,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.89,"chg24h":-0.00706,"ts":1789542090715}
 {"seq":4538,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.34,"chg24h":0.00124,"ts":1789542090715}
+{"seq":4539,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75892.99,"chg24h":-0.01713,"ts":1789542994847}
+{"seq":4540,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2402.59,"chg24h":-0.03157,"ts":1789542994847}
+{"seq":4541,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358,"chg24h":-0.00098,"ts":1789542994847}
+{"seq":4542,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":213.84,"chg24h":0.00977,"ts":1789542994847}
+{"seq":4543,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":707.75,"chg24h":0.00163,"ts":1789542994847}
+{"seq":4544,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.28,"chg24h":0.00242,"ts":1789542994847}
+{"seq":4545,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.25,"chg24h":-0.00784,"ts":1789542994847}
+{"seq":4546,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.33,"chg24h":0.00189,"ts":1789542994847}
+{"seq":4547,"kind":"macro","source":"yahoo-finance","headline":"Treasury Yields Slip After Hitting Multi-Year Highs","severity":"medium","assetsAffected":["*"],"ts":1789542994847}
