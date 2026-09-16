@@ -4715,3 +4715,11 @@
 {"seq":4713,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.88,"chg24h":-0.00723,"ts":1789560212956}
 {"seq":4714,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.15,"chg24h":0.00051,"ts":1789560212956}
 {"seq":4715,"kind":"macro","source":"yahoo-finance","headline":"Dow Jones Futures Rise As Oil Prices, Yields Fall Before Fed Rate Hike; Will Market Rally Bid Bond Voyage?","severity":"medium","assetsAffected":["*"],"ts":1789560212956}
+{"seq":4716,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76091,"chg24h":-0.01125,"ts":1789561118838}
+{"seq":4717,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2413.3,"chg24h":-0.0267,"ts":1789561118838}
+{"seq":4718,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":358.02,"chg24h":-0.00329,"ts":1789561118838}
+{"seq":4719,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":214.07,"chg24h":0.00622,"ts":1789561118838}
+{"seq":4720,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.86,"chg24h":-0.00042,"ts":1789561118838}
+{"seq":4721,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":331.54,"chg24h":-0.00033,"ts":1789561118838}
+{"seq":4722,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.95,"chg24h":-0.0098,"ts":1789561118838}
+{"seq":4723,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.09,"chg24h":0.00003,"ts":1789561118838}
