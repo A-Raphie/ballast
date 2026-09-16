@@ -4939,3 +4939,11 @@
 {"seq":4937,"kind":"macro","source":"yahoo-finance","headline":"SocGen Says Higher Yields May Put AI Debt Capex at Risk","severity":"medium","assetsAffected":["*"],"ts":1789583598898}
 {"seq":4938,"kind":"macro","source":"yahoo-finance","headline":"Gold Falls Below $4,300 as Dollar and Treasury Yields Rise Ahead of Fed Decision","severity":"medium","assetsAffected":["*"],"ts":1789583598898}
 {"seq":4939,"kind":"macro","source":"yahoo-finance","headline":"Stocks Selloff Rages on as AI and Bond Fears Mount","severity":"medium","assetsAffected":["*"],"ts":1789583598898}
+{"seq":4940,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75885.33,"chg24h":0.00933,"ts":1789584503858}
+{"seq":4941,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2406.1,"chg24h":0.01715,"ts":1789584503858}
+{"seq":4942,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":359,"chg24h":0.00552,"ts":1789584503858}
+{"seq":4943,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":214.98,"chg24h":0.01406,"ts":1789584503858}
+{"seq":4944,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.33,"chg24h":0.00544,"ts":1789584503858}
+{"seq":4945,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.61,"chg24h":0.01017,"ts":1789584503858}
+{"seq":4946,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.94,"chg24h":-0.01054,"ts":1789584503858}
+{"seq":4947,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.99,"chg24h":0.0014,"ts":1789584503858}
