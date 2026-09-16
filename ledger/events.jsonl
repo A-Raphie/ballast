@@ -4898,3 +4898,12 @@
 {"seq":4896,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.56,"chg24h":-0.01208,"ts":1789579977762}
 {"seq":4897,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.73,"chg24h":0.00354,"ts":1789579977762}
 {"seq":4898,"kind":"macro","source":"yahoo-finance","headline":"Wall Street bets on a rate hike, but the Fed decision could be a close call","severity":"medium","assetsAffected":["*"],"ts":1789579977762}
+{"seq":4899,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":75470,"chg24h":-0.0202,"ts":1789580882832}
+{"seq":4900,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2377.66,"chg24h":-0.026,"ts":1789580882832}
+{"seq":4901,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.31,"chg24h":0.00924,"ts":1789580882832}
+{"seq":4902,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215,"chg24h":0.01563,"ts":1789580882832}
+{"seq":4903,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709.31,"chg24h":0.00653,"ts":1789580882832}
+{"seq":4904,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.2,"chg24h":0.00852,"ts":1789580882832}
+{"seq":4905,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.67,"chg24h":-0.01128,"ts":1789580882832}
+{"seq":4906,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.72,"chg24h":0.0035,"ts":1789580882832}
+{"seq":4907,"kind":"macro","source":"yahoo-finance","headline":"Fed predictions for 2026: Will a rate hike happen by the end of the year?","severity":"medium","assetsAffected":["*"],"ts":1789580882832}
