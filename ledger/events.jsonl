@@ -5552,3 +5552,13 @@
 {"seq":5550,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.06,"chg24h":0.00408,"ts":1789648059498}
 {"seq":5551,"kind":"macro","source":"yahoo-finance","headline":"Fund Capitalizes on Axon Enterprise (AXON) in AI-Related Selloff","severity":"medium","assetsAffected":["*"],"ts":1789648059498}
 {"seq":5552,"kind":"macro","source":"yahoo-finance","headline":"How To Protect Yourself From The Looming AI-Stock Crash","severity":"high","assetsAffected":["*"],"ts":1789648059498}
+{"seq":5553,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76866.01,"chg24h":0.01193,"ts":1789648965333}
+{"seq":5554,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2463.98,"chg24h":0.02366,"ts":1789648965333}
+{"seq":5555,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365,"chg24h":0.02106,"ts":1789648965333}
+{"seq":5556,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.49,"chg24h":0.0218,"ts":1789648965333}
+{"seq":5557,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.15,"chg24h":0.01174,"ts":1789648965333}
+{"seq":5558,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.47,"chg24h":0.00953,"ts":1789648965333}
+{"seq":5559,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.15,"chg24h":-0.0001,"ts":1789648965333}
+{"seq":5560,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.68,"chg24h":0.00545,"ts":1789648965333}
+{"seq":5561,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq rise as Fed rate hike pacifies markets' inflation worries","severity":"medium","assetsAffected":["*"],"ts":1789648965333}
+{"seq":5562,"kind":"macro","source":"yahoo-finance","headline":"Top strategist thinks the Federal Reserve interest rate hike won't fix this huge earnings risk","severity":"medium","assetsAffected":["*"],"ts":1789648965333}
