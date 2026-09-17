@@ -5596,3 +5596,12 @@
 {"seq":5594,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.08,"chg24h":-0.00506,"ts":1789652615841}
 {"seq":5595,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.4,"chg24h":0.00809,"ts":1789652615841}
 {"seq":5596,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.08,"chg24h":0.00298,"ts":1789652615841}
+{"seq":5597,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76581.85,"chg24h":0.01158,"ts":1789653519893}
+{"seq":5598,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2458.31,"chg24h":0.02605,"ts":1789653519893}
+{"seq":5599,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":369.06,"chg24h":0.02609,"ts":1789653519893}
+{"seq":5600,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.87,"chg24h":0.01904,"ts":1789653519893}
+{"seq":5601,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.03,"chg24h":0.00727,"ts":1789653519893}
+{"seq":5602,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":330.92,"chg24h":-0.00511,"ts":1789653519893}
+{"seq":5603,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.81,"chg24h":0.00366,"ts":1789653519893}
+{"seq":5604,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.04,"chg24h":0.00112,"ts":1789653519893}
+{"seq":5605,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today (Sept. 17, 2026): Dow surges after Fed rate hike decision","severity":"medium","assetsAffected":["*"],"ts":1789653519893}
