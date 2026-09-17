@@ -5702,3 +5702,12 @@
 {"seq":5700,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.87,"chg24h":0.0091,"ts":1789663510326}
 {"seq":5701,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.86,"chg24h":0.00427,"ts":1789663510326}
 {"seq":5702,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.62,"chg24h":0.00355,"ts":1789663510326}
+{"seq":5703,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76772.7,"chg24h":0.01341,"ts":1789664417581}
+{"seq":5704,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2470.61,"chg24h":0.03306,"ts":1789664417581}
+{"seq":5705,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":366.81,"chg24h":0.01229,"ts":1789664417581}
+{"seq":5706,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.73,"chg24h":0.01262,"ts":1789664417581}
+{"seq":5707,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.73,"chg24h":0.00951,"ts":1789664417581}
+{"seq":5708,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.08,"chg24h":0.01043,"ts":1789664417581}
+{"seq":5709,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.95,"chg24h":0.00498,"ts":1789664417581}
+{"seq":5710,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.47,"chg24h":0.00355,"ts":1789664417581}
+{"seq":5711,"kind":"macro","source":"yahoo-finance","headline":"A Deadly Amazon (AMZN) Cargo Plane Crash in Miami Puts its Air Network Under Scrutiny","severity":"high","assetsAffected":["*"],"ts":1789664417581}
