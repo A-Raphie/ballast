@@ -5322,3 +5322,11 @@
 {"seq":5320,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.01,"chg24h":-0.00966,"ts":1789623432631}
 {"seq":5321,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.9,"chg24h":-0.0013,"ts":1789623432631}
 {"seq":5322,"kind":"macro","source":"yahoo-finance","headline":"Will the housing market crash this year?","severity":"high","assetsAffected":["*"],"ts":1789623432631}
+{"seq":5323,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76397.23,"chg24h":0.00662,"ts":1789624336416}
+{"seq":5324,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2440.31,"chg24h":0.01494,"ts":1789624336416}
+{"seq":5325,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.22,"chg24h":0.00868,"ts":1789624336416}
+{"seq":5326,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.44,"chg24h":0.0089,"ts":1789624336416}
+{"seq":5327,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":708.07,"chg24h":0.00224,"ts":1789624336416}
+{"seq":5328,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.34,"chg24h":0.00552,"ts":1789624336416}
+{"seq":5329,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.77,"chg24h":-0.00977,"ts":1789624336416}
+{"seq":5330,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":757.68,"chg24h":-0.00153,"ts":1789624336416}
