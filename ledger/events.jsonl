@@ -5431,3 +5431,13 @@
 {"seq":5429,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.82,"chg24h":0.00734,"ts":1789634281088}
 {"seq":5430,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.12,"chg24h":-0.00341,"ts":1789634281088}
 {"seq":5431,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.86,"chg24h":0.00174,"ts":1789634281088}
+{"seq":5432,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76523.77,"chg24h":0.01242,"ts":1789635185971}
+{"seq":5433,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2444.39,"chg24h":0.0202,"ts":1789635185971}
+{"seq":5434,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.2,"chg24h":0.0172,"ts":1789635185971}
+{"seq":5435,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":216.96,"chg24h":0.01674,"ts":1789635185971}
+{"seq":5436,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":711.7,"chg24h":0.0064,"ts":1789635185971}
+{"seq":5437,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.04,"chg24h":0.00861,"ts":1789635185971}
+{"seq":5438,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.2,"chg24h":-0.00356,"ts":1789635185971}
+{"seq":5439,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.99,"chg24h":0.0015,"ts":1789635185971}
+{"seq":5440,"kind":"macro","source":"yahoo-finance","headline":"China’s State Media Calls AI Slowdown a “Cold War” Tactic. Z.AI Is Raising $5 Billion to Do the Opposite","severity":"high","assetsAffected":["*"],"ts":1789635185971}
+{"seq":5441,"kind":"macro","source":"yahoo-finance","headline":"Palantir and Nvidia Are Restricting Anthropic’s AI. Microsoft Could Win the Enterprise Trust War","severity":"high","assetsAffected":["*"],"ts":1789635185971}
