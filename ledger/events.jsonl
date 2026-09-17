@@ -5356,3 +5356,14 @@
 {"seq":5354,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.5,"chg24h":0.00576,"ts":1789627047772}
 {"seq":5355,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.59,"chg24h":-0.00856,"ts":1789627047772}
 {"seq":5356,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.25,"chg24h":0.0005,"ts":1789627047772}
+{"seq":5357,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76520.01,"chg24h":0.00781,"ts":1789627952245}
+{"seq":5358,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2442.61,"chg24h":0.01809,"ts":1789627952245}
+{"seq":5359,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.89,"chg24h":0.0094,"ts":1789627952245}
+{"seq":5360,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.72,"chg24h":0.01035,"ts":1789627952245}
+{"seq":5361,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709.76,"chg24h":0.00348,"ts":1789627952245}
+{"seq":5362,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.45,"chg24h":0.00576,"ts":1789627952245}
+{"seq":5363,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.98,"chg24h":-0.00789,"ts":1789627952245}
+{"seq":5364,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.52,"chg24h":0.00041,"ts":1789627952245}
+{"seq":5365,"kind":"macro","source":"yahoo-finance","headline":"U.S. Steel and Materials Stocks Swing as U.S.-Canada Trade War Escalates With 50% Tariffs","severity":"high","assetsAffected":["*"],"ts":1789627952245}
+{"seq":5366,"kind":"macro","source":"yahoo-finance","headline":"Skyworks Solutions Stock Snaps Back From AI Selloff to Lead the S&amp;P 500","severity":"medium","assetsAffected":["*"],"ts":1789627952245}
+{"seq":5367,"kind":"macro","source":"yahoo-finance","headline":"Dollar Rises on Surging Crude Prices and T-Note Yields","severity":"medium","assetsAffected":["*"],"ts":1789627952245}
