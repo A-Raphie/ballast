@@ -5879,3 +5879,12 @@
 {"seq":5877,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":337.06,"chg24h":0.01302,"ts":1789681635423}
 {"seq":5878,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.81,"chg24h":0.01084,"ts":1789681635423}
 {"seq":5879,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.26,"chg24h":0.0104,"ts":1789681635423}
+{"seq":5880,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76431,"chg24h":0.00866,"ts":1789682543883}
+{"seq":5881,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2448.7,"chg24h":0.02362,"ts":1789682543883}
+{"seq":5882,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":366.04,"chg24h":0.02163,"ts":1789682543883}
+{"seq":5883,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.48,"chg24h":0.02229,"ts":1789682543883}
+{"seq":5884,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.22,"chg24h":0.01576,"ts":1789682543883}
+{"seq":5885,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.78,"chg24h":0.01348,"ts":1789682543883}
+{"seq":5886,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.6,"chg24h":0.01166,"ts":1789682543883}
+{"seq":5887,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.23,"chg24h":0.01093,"ts":1789682543883}
+{"seq":5888,"kind":"macro","source":"yahoo-finance","headline":"Fed hikes main interest rate by quarter point, citing stubborn inflation","severity":"medium","assetsAffected":["*"],"ts":1789682543883}
