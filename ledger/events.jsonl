@@ -5844,3 +5844,12 @@
 {"seq":5842,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.81,"chg24h":0.01324,"ts":1789678015284}
 {"seq":5843,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.95,"chg24h":0.01352,"ts":1789678015284}
 {"seq":5844,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.11,"chg24h":0.01071,"ts":1789678015284}
+{"seq":5845,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76572.93,"chg24h":0.00541,"ts":1789678919819}
+{"seq":5846,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2455.01,"chg24h":0.01849,"ts":1789678919819}
+{"seq":5847,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.92,"chg24h":0.02197,"ts":1789678919819}
+{"seq":5848,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.28,"chg24h":0.02281,"ts":1789678919819}
+{"seq":5849,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.45,"chg24h":0.01626,"ts":1789678919819}
+{"seq":5850,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.73,"chg24h":0.0124,"ts":1789678919819}
+{"seq":5851,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.88,"chg24h":0.01305,"ts":1789678919819}
+{"seq":5852,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.27,"chg24h":0.01085,"ts":1789678919819}
+{"seq":5853,"kind":"macro","source":"yahoo-finance","headline":"This Dividend Stock Is Beating the Market in 2026 and Yields 2.36%","severity":"medium","assetsAffected":["*"],"ts":1789678919819}
