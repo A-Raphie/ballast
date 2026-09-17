@@ -5252,3 +5252,12 @@
 {"seq":5250,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.66,"chg24h":0.00576,"ts":1789616199995}
 {"seq":5251,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.45,"chg24h":-0.00989,"ts":1789616199995}
 {"seq":5252,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.6,"chg24h":-0.00047,"ts":1789616199995}
+{"seq":5253,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76471.01,"chg24h":0.00917,"ts":1789617103605}
+{"seq":5254,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2437.15,"chg24h":0.01496,"ts":1789617103605}
+{"seq":5255,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":360.76,"chg24h":0.01039,"ts":1789617103605}
+{"seq":5256,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":215.67,"chg24h":0.01301,"ts":1789617103605}
+{"seq":5257,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":709.57,"chg24h":0.00422,"ts":1789617103605}
+{"seq":5258,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.64,"chg24h":0.00558,"ts":1789617103605}
+{"seq":5259,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.48,"chg24h":-0.01021,"ts":1789617103605}
+{"seq":5260,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":758.74,"chg24h":-0.00042,"ts":1789617103605}
+{"seq":5261,"kind":"macro","source":"yahoo-finance","headline":"Ciena Rises 4% as Optics Selloff Unwinds; Coherent Edges Higher, Corning Holds Steady","severity":"medium","assetsAffected":["*"],"ts":1789617103605}
