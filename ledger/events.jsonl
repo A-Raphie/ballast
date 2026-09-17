@@ -5562,3 +5562,11 @@
 {"seq":5560,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.68,"chg24h":0.00545,"ts":1789648965333}
 {"seq":5561,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq rise as Fed rate hike pacifies markets' inflation worries","severity":"medium","assetsAffected":["*"],"ts":1789648965333}
 {"seq":5562,"kind":"macro","source":"yahoo-finance","headline":"Top strategist thinks the Federal Reserve interest rate hike won't fix this huge earnings risk","severity":"medium","assetsAffected":["*"],"ts":1789648965333}
+{"seq":5563,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76785,"chg24h":0.01098,"ts":1789649870654}
+{"seq":5564,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2463.18,"chg24h":0.02385,"ts":1789649870654}
+{"seq":5565,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.96,"chg24h":0.02087,"ts":1789649870654}
+{"seq":5566,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":218.73,"chg24h":0.02306,"ts":1789649870654}
+{"seq":5567,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.19,"chg24h":0.01164,"ts":1789649870654}
+{"seq":5568,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.24,"chg24h":0.00846,"ts":1789649870654}
+{"seq":5569,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.35,"chg24h":0.0017,"ts":1789649870654}
+{"seq":5570,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.66,"chg24h":0.00533,"ts":1789649870654}
