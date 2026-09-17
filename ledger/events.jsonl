@@ -5626,3 +5626,11 @@
 {"seq":5624,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.9,"chg24h":0.00397,"ts":1789655342815}
 {"seq":5625,"kind":"macro","source":"yahoo-finance","headline":"Renewed Industry Competition Sparks T-Mobile US’s (TMUS) Sell-Off","severity":"medium","assetsAffected":["*"],"ts":1789655342815}
 {"seq":5626,"kind":"macro","source":"yahoo-finance","headline":"Energy markets grapple with Iran war uncertainty: 'We simply don't know how to model the endgame'","severity":"high","assetsAffected":["*"],"ts":1789655342815}
+{"seq":5627,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76625.14,"chg24h":0.01142,"ts":1789656251133}
+{"seq":5628,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2465.44,"chg24h":0.03079,"ts":1789656251133}
+{"seq":5629,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":370,"chg24h":0.01779,"ts":1789656251133}
+{"seq":5630,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.57,"chg24h":0.01983,"ts":1789656251133}
+{"seq":5631,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.36,"chg24h":0.00936,"ts":1789656251133}
+{"seq":5632,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":332.77,"chg24h":-0.00258,"ts":1789656251133}
+{"seq":5633,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.42,"chg24h":0.00817,"ts":1789656251133}
+{"seq":5634,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.06,"chg24h":0.00295,"ts":1789656251133}
