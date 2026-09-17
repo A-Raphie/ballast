@@ -5453,3 +5453,11 @@
 {"seq":5451,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.03,"chg24h":-0.00295,"ts":1789637018488}
 {"seq":5452,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.41,"chg24h":0.00247,"ts":1789637018488}
 {"seq":5453,"kind":"macro","source":"yahoo-finance","headline":"Anthropic Just Put Claude Inside Schwab and BlackRock. The AI Agent War Has Reached Wealth Management","severity":"high","assetsAffected":["*"],"ts":1789637018488}
+{"seq":5454,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76709.2,"chg24h":0.01059,"ts":1789637926747}
+{"seq":5455,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2446.81,"chg24h":0.01815,"ts":1789637926747}
+{"seq":5456,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.89,"chg24h":0.0165,"ts":1789637926747}
+{"seq":5457,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":217.41,"chg24h":0.01938,"ts":1789637926747}
+{"seq":5458,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":712.33,"chg24h":0.00676,"ts":1789637926747}
+{"seq":5459,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.14,"chg24h":0.00929,"ts":1789637926747}
+{"seq":5460,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.29,"chg24h":-0.00212,"ts":1789637926747}
+{"seq":5461,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.45,"chg24h":0.00218,"ts":1789637926747}
