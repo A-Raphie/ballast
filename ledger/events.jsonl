@@ -5481,3 +5481,11 @@
 {"seq":5479,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.79,"chg24h":-0.00377,"ts":1789640726771}
 {"seq":5480,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.68,"chg24h":0.00223,"ts":1789640726771}
 {"seq":5481,"kind":"macro","source":"yahoo-finance","headline":"BOJ set to raise interest rates to 31-year high as inflation risks loom","severity":"medium","assetsAffected":["*"],"ts":1789640726771}
+{"seq":5482,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76386,"chg24h":0.00543,"ts":1789641632217}
+{"seq":5483,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2434.8,"chg24h":0.01243,"ts":1789641632217}
+{"seq":5484,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.78,"chg24h":0.01608,"ts":1789641632217}
+{"seq":5485,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":216.96,"chg24h":0.0176,"ts":1789641632217}
+{"seq":5486,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":712.62,"chg24h":0.00667,"ts":1789641632217}
+{"seq":5487,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.35,"chg24h":0.00949,"ts":1789641632217}
+{"seq":5488,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.53,"chg24h":-0.00264,"ts":1789641632217}
+{"seq":5489,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.52,"chg24h":0.00188,"ts":1789641632217}
