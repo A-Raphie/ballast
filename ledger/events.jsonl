@@ -5908,3 +5908,11 @@
 {"seq":5906,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.31,"chg24h":0.00995,"ts":1789684352703}
 {"seq":5907,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.81,"chg24h":0.00878,"ts":1789684352703}
 {"seq":5908,"kind":"macro","source":"yahoo-finance","headline":"6 Dividend Stocks With Huge Yields and Even Bigger Warning Signs","severity":"medium","assetsAffected":["*"],"ts":1789684352703}
+{"seq":5909,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76415.28,"chg24h":0.00838,"ts":1789685256304}
+{"seq":5910,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2447.08,"chg24h":0.0209,"ts":1789685256304}
+{"seq":5911,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":365.46,"chg24h":0.01817,"ts":1789685256304}
+{"seq":5912,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.12,"chg24h":0.01831,"ts":1789685256304}
+{"seq":5913,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":715.47,"chg24h":0.01159,"ts":1789685256304}
+{"seq":5914,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.35,"chg24h":0.01109,"ts":1789685256304}
+{"seq":5915,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.06,"chg24h":0.00825,"ts":1789685256304}
+{"seq":5916,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.79,"chg24h":0.00802,"ts":1789685256304}
