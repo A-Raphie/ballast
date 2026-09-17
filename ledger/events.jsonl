@@ -5387,3 +5387,12 @@
 {"seq":5385,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.74,"chg24h":0.00767,"ts":1789629760013}
 {"seq":5386,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.77,"chg24h":-0.00362,"ts":1789629760013}
 {"seq":5387,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.81,"chg24h":0.00084,"ts":1789629760013}
+{"seq":5388,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76500.02,"chg24h":0.00882,"ts":1789630664199}
+{"seq":5389,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2447.52,"chg24h":0.0196,"ts":1789630664199}
+{"seq":5390,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.24,"chg24h":0.01424,"ts":1789630664199}
+{"seq":5391,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":216.36,"chg24h":0.01221,"ts":1789630664199}
+{"seq":5392,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":711.77,"chg24h":0.00552,"ts":1789630664199}
+{"seq":5393,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.19,"chg24h":0.00918,"ts":1789630664199}
+{"seq":5394,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.46,"chg24h":-0.00187,"ts":1789630664199}
+{"seq":5395,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.48,"chg24h":0.00163,"ts":1789630664199}
+{"seq":5396,"kind":"macro","source":"yahoo-finance","headline":"Will Be 'Extremely Difficult' For The FOMC To Not Raise Rates Says Richards","severity":"medium","assetsAffected":["*"],"ts":1789630664199}
