@@ -5524,3 +5524,11 @@
 {"seq":5522,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.17,"chg24h":-0.00415,"ts":1789645344380}
 {"seq":5523,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.23,"chg24h":0.00087,"ts":1789645344380}
 {"seq":5524,"kind":"macro","source":"yahoo-finance","headline":"Bond Yields at 2007 Levels Undermine 60/40 Portfolio Rationale","severity":"medium","assetsAffected":["*"],"ts":1789645344380}
+{"seq":5525,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":76275.63,"chg24h":0.00053,"ts":1789646249431}
+{"seq":5526,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2434.04,"chg24h":0.00555,"ts":1789646249431}
+{"seq":5527,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.25,"chg24h":0.01526,"ts":1789646249431}
+{"seq":5528,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":216.74,"chg24h":0.01399,"ts":1789646249431}
+{"seq":5529,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":712.65,"chg24h":0.00579,"ts":1789646249431}
+{"seq":5530,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334,"chg24h":0.00732,"ts":1789646249431}
+{"seq":5531,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.31,"chg24h":-0.00151,"ts":1789646249431}
+{"seq":5532,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.61,"chg24h":0.00063,"ts":1789646249431}
