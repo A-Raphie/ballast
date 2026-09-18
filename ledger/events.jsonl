@@ -6400,3 +6400,12 @@
 {"seq":6398,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":337.14,"chg24h":0.0085,"ts":1789734980262}
 {"seq":6399,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.4,"chg24h":0.00045,"ts":1789734980262}
 {"seq":6400,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.54,"chg24h":-0.00429,"ts":1789734980262}
+{"seq":6401,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78081,"chg24h":0.01564,"ts":1789735884149}
+{"seq":6402,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2503.39,"chg24h":0.01566,"ts":1789735884149}
+{"seq":6403,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.56,"chg24h":0.00737,"ts":1789735884149}
+{"seq":6404,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.14,"chg24h":0.0033,"ts":1789735884149}
+{"seq":6405,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":718.12,"chg24h":0.00304,"ts":1789735884149}
+{"seq":6406,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":337.18,"chg24h":0.00925,"ts":1789735884149}
+{"seq":6407,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.15,"chg24h":0.00191,"ts":1789735884149}
+{"seq":6408,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.43,"chg24h":-0.0042,"ts":1789735884149}
+{"seq":6409,"kind":"macro","source":"yahoo-finance","headline":"Solana gets the default spot for stablecoins at FDIC-insured bank","severity":"high","assetsAffected":["*"],"ts":1789735884149}
