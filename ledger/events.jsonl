@@ -6262,3 +6262,12 @@
 {"seq":6260,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.99,"chg24h":0.00767,"ts":1789720515996}
 {"seq":6261,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.06,"chg24h":0.00454,"ts":1789720515996}
 {"seq":6262,"kind":"macro","source":"yahoo-finance","headline":"Stock Market Today: Nasdaq Ends Flat After Rate Hike; AI Play SpaceX Eyes Early Entry","severity":"medium","assetsAffected":["*"],"ts":1789720515996}
+{"seq":6263,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77986.45,"chg24h":0.01943,"ts":1789721422285}
+{"seq":6264,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2496.98,"chg24h":0.02213,"ts":1789721422285}
+{"seq":6265,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":369,"chg24h":0.01555,"ts":1789721422285}
+{"seq":6266,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.56,"chg24h":0.02173,"ts":1789721422285}
+{"seq":6267,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.06,"chg24h":0.01317,"ts":1789721422285}
+{"seq":6268,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.26,"chg24h":0.00676,"ts":1789721422285}
+{"seq":6269,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.19,"chg24h":0.00836,"ts":1789721422285}
+{"seq":6270,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.15,"chg24h":0.00428,"ts":1789721422285}
+{"seq":6271,"kind":"macro","source":"yahoo-finance","headline":"ETF fueled by Iran war goes bonkers, gains 3,600%","severity":"high","assetsAffected":["*"],"ts":1789721422285}
