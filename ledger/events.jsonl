@@ -6409,3 +6409,12 @@
 {"seq":6407,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.15,"chg24h":0.00191,"ts":1789735884149}
 {"seq":6408,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.43,"chg24h":-0.0042,"ts":1789735884149}
 {"seq":6409,"kind":"macro","source":"yahoo-finance","headline":"Solana gets the default spot for stablecoins at FDIC-insured bank","severity":"high","assetsAffected":["*"],"ts":1789735884149}
+{"seq":6410,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78080,"chg24h":0.0169,"ts":1789736788007}
+{"seq":6411,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2500.03,"chg24h":0.01601,"ts":1789736788007}
+{"seq":6412,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.5,"chg24h":0.00737,"ts":1789736788007}
+{"seq":6413,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.1,"chg24h":0.00321,"ts":1789736788007}
+{"seq":6414,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.99,"chg24h":0.00244,"ts":1789736788007}
+{"seq":6415,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.97,"chg24h":0.00808,"ts":1789736788007}
+{"seq":6416,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.6,"chg24h":0.00393,"ts":1789736788007}
+{"seq":6417,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.52,"chg24h":-0.00403,"ts":1789736788007}
+{"seq":6418,"kind":"macro","source":"yahoo-finance","headline":"US stocks rally to their best day in 6 weeks after oil prices and bond yields ease","severity":"medium","assetsAffected":["*"],"ts":1789736788007}
