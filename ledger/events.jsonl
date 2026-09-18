@@ -6651,3 +6651,11 @@
 {"seq":6649,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.1,"chg24h":-0.00246,"ts":1789760435893}
 {"seq":6650,"kind":"macro","source":"yahoo-finance","headline":"ECB's Makhlouf on Inflation, Economy, Rates","severity":"medium","assetsAffected":["*"],"ts":1789760435893}
 {"seq":6651,"kind":"macro","source":"yahoo-finance","headline":"Fed Rate Increase Puts Borrowers on Notice as Warsh Takes Hard Line on Inflation","severity":"medium","assetsAffected":["*"],"ts":1789760435893}
+{"seq":6652,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81189.99,"chg24h":0.06025,"ts":1789761353275}
+{"seq":6653,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2639.64,"chg24h":0.07705,"ts":1789761353275}
+{"seq":6654,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.91,"chg24h":-0.00567,"ts":1789761353275}
+{"seq":6655,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222,"chg24h":0.01093,"ts":1789761353275}
+{"seq":6656,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.11,"chg24h":0.00517,"ts":1789761353275}
+{"seq":6657,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.32,"chg24h":-0.00336,"ts":1789761353275}
+{"seq":6658,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.42,"chg24h":-0.00945,"ts":1789761353275}
+{"seq":6659,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.71,"chg24h":-0.00183,"ts":1789761353275}
