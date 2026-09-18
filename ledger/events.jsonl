@@ -6150,3 +6150,15 @@
 {"seq":6148,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.3,"chg24h":0.00882,"ts":1789709667196}
 {"seq":6149,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.67,"chg24h":0.00925,"ts":1789709667196}
 {"seq":6150,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.82,"chg24h":0.00621,"ts":1789709667196}
+{"seq":6151,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77490.77,"chg24h":0.01465,"ts":1789710570985}
+{"seq":6152,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2481.8,"chg24h":0.01709,"ts":1789710570985}
+{"seq":6153,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":368.24,"chg24h":0.02209,"ts":1789710570985}
+{"seq":6154,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.74,"chg24h":0.02446,"ts":1789710570985}
+{"seq":6155,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":719.64,"chg24h":0.01615,"ts":1789710570985}
+{"seq":6156,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.46,"chg24h":0.00948,"ts":1789710570985}
+{"seq":6157,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.82,"chg24h":0.00986,"ts":1789710570985}
+{"seq":6158,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.12,"chg24h":0.00705,"ts":1789710570985}
+{"seq":6159,"kind":"macro","source":"yahoo-finance","headline":"First Rate Hike Since 2023 Lands Atop 5% Treasury Yield, Ratcheting Up Capital Pressure","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
+{"seq":6160,"kind":"macro","source":"yahoo-finance","headline":"Treasury Yields Hold Declines After Fed Raises Rates","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
+{"seq":6161,"kind":"macro","source":"yahoo-finance","headline":"Fed officials' forecasts project one more rate hike to come in 2026","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
+{"seq":6162,"kind":"macro","source":"yahoo-finance","headline":"Robust US retail sales underscore economy's resilience, inflation pressures building","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
