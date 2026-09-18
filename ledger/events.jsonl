@@ -6579,3 +6579,12 @@
 {"seq":6577,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.59,"chg24h":-0.00018,"ts":1789753111277}
 {"seq":6578,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.92,"chg24h":-0.00083,"ts":1789753111277}
 {"seq":6579,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.64,"chg24h":-0.00335,"ts":1789753111277}
+{"seq":6580,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80896.7,"chg24h":0.05589,"ts":1789754033559}
+{"seq":6581,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2606.54,"chg24h":0.05902,"ts":1789754033559}
+{"seq":6582,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.65,"chg24h":-0.01115,"ts":1789754033559}
+{"seq":6583,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.77,"chg24h":0.00292,"ts":1789754033559}
+{"seq":6584,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.58,"chg24h":0.00165,"ts":1789754033559}
+{"seq":6585,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.46,"chg24h":-0.00121,"ts":1789754033559}
+{"seq":6586,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.23,"chg24h":-0.00062,"ts":1789754033559}
+{"seq":6587,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.85,"chg24h":-0.00324,"ts":1789754033559}
+{"seq":6588,"kind":"macro","source":"yahoo-finance","headline":"Goldman Sachs drops surprise call for next Fed interest-rate hike","severity":"medium","assetsAffected":["*"],"ts":1789754033559}
