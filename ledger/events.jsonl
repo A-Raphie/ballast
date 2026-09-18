@@ -6481,3 +6481,11 @@
 {"seq":6479,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.48,"chg24h":-0.00909,"ts":1789743122637}
 {"seq":6480,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.72,"chg24h":-0.00179,"ts":1789743122637}
 {"seq":6481,"kind":"macro","source":"yahoo-finance","headline":"Buffett's stark stock rule is hard to ignore at 5% yields","severity":"medium","assetsAffected":["*"],"ts":1789743122637}
+{"seq":6482,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80792.06,"chg24h":0.05802,"ts":1789744026116}
+{"seq":6483,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2582.72,"chg24h":0.05324,"ts":1789744026116}
+{"seq":6484,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":368.17,"chg24h":0.0066,"ts":1789744026116}
+{"seq":6485,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.5,"chg24h":0.0016,"ts":1789744026116}
+{"seq":6486,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.63,"chg24h":0.00386,"ts":1789744026116}
+{"seq":6487,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.87,"chg24h":0.00649,"ts":1789744026116}
+{"seq":6488,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.96,"chg24h":-0.00198,"ts":1789744026116}
+{"seq":6489,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.98,"chg24h":-0.00087,"ts":1789744026116}
