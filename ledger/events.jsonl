@@ -6223,3 +6223,12 @@
 {"seq":6221,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.27,"chg24h":0.00734,"ts":1789716897090}
 {"seq":6222,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.84,"chg24h":0.00438,"ts":1789716897090}
 {"seq":6223,"kind":"macro","source":"yahoo-finance","headline":"10-Year Yields Move Past 5% Again","severity":"medium","assetsAffected":["*"],"ts":1789716897090}
+{"seq":6224,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77751.32,"chg24h":0.01636,"ts":1789717803003}
+{"seq":6225,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2490.06,"chg24h":0.01818,"ts":1789717803003}
+{"seq":6226,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":369.34,"chg24h":0.01777,"ts":1789717803003}
+{"seq":6227,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.71,"chg24h":0.0252,"ts":1789717803003}
+{"seq":6228,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.94,"chg24h":0.0146,"ts":1789717803003}
+{"seq":6229,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":337.21,"chg24h":0.00925,"ts":1789717803003}
+{"seq":6230,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.03,"chg24h":0.00765,"ts":1789717803003}
+{"seq":6231,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.77,"chg24h":0.00446,"ts":1789717803003}
+{"seq":6232,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow sinks 600 points, S&amp;P 500 and Nasdaq fall as Fed hikes rates, bond yields rise","severity":"medium","assetsAffected":["*"],"ts":1789717803003}
