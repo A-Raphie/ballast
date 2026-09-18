@@ -6697,3 +6697,11 @@
 {"seq":6695,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.97,"chg24h":-0.00368,"ts":1789764998139}
 {"seq":6696,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.85,"chg24h":0.00084,"ts":1789764998139}
 {"seq":6697,"kind":"macro","source":"yahoo-finance","headline":"BOE Holds Rates. Why It’s on a Different Path From the Fed as the Iran War Spikes Inflation.","severity":"high","assetsAffected":["*"],"ts":1789764998139}
+{"seq":6698,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81243.87,"chg24h":0.06201,"ts":1789765907673}
+{"seq":6699,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2636.41,"chg24h":0.07578,"ts":1789765907673}
+{"seq":6700,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.13,"chg24h":-0.00519,"ts":1789765907673}
+{"seq":6701,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.1,"chg24h":0.01259,"ts":1789765907673}
+{"seq":6702,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":722.01,"chg24h":0.00776,"ts":1789765907673}
+{"seq":6703,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.13,"chg24h":-0.00501,"ts":1789765907673}
+{"seq":6704,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.8,"chg24h":-0.00441,"ts":1789765907673}
+{"seq":6705,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.83,"chg24h":0.00074,"ts":1789765907673}
