@@ -6444,3 +6444,12 @@
 {"seq":6442,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.2,"chg24h":0.01483,"ts":1789739499903}
 {"seq":6443,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.29,"chg24h":-0.00603,"ts":1789739499903}
 {"seq":6444,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":760.18,"chg24h":-0.00185,"ts":1789739499903}
+{"seq":6445,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80402.21,"chg24h":0.05063,"ts":1789740406785}
+{"seq":6446,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2563.34,"chg24h":0.04338,"ts":1789740406785}
+{"seq":6447,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.8,"chg24h":-0.01888,"ts":1789740406785}
+{"seq":6448,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.64,"chg24h":0.00299,"ts":1789740406785}
+{"seq":6449,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.16,"chg24h":0.00299,"ts":1789740406785}
+{"seq":6450,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.11,"chg24h":0.00928,"ts":1789740406785}
+{"seq":6451,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.92,"chg24h":-0.00909,"ts":1789740406785}
+{"seq":6452,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.14,"chg24h":-0.00172,"ts":1789740406785}
+{"seq":6453,"kind":"macro","source":"yahoo-finance","headline":"Global Bonds Recover as Warsh’s Inflation Fight Calms Market","severity":"medium","assetsAffected":["*"],"ts":1789740406785}
