@@ -6517,3 +6517,11 @@
 {"seq":6515,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.74,"chg24h":-0.00666,"ts":1789746737827}
 {"seq":6516,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.07,"chg24h":-0.00416,"ts":1789746737827}
 {"seq":6517,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq slip as bond yields rise","severity":"medium","assetsAffected":["*"],"ts":1789746737827}
+{"seq":6518,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80893.33,"chg24h":0.05455,"ts":1789747645031}
+{"seq":6519,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2593.63,"chg24h":0.05019,"ts":1789747645031}
+{"seq":6520,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.73,"chg24h":-0.01587,"ts":1789747645031}
+{"seq":6521,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.5,"chg24h":0.00375,"ts":1789747645031}
+{"seq":6522,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.5,"chg24h":0.00054,"ts":1789747645031}
+{"seq":6523,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.69,"chg24h":-0.00223,"ts":1789747645031}
+{"seq":6524,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.8,"chg24h":-0.00337,"ts":1789747645031}
+{"seq":6525,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.17,"chg24h":-0.00383,"ts":1789747645031}
