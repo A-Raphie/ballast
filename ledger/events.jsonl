@@ -6508,3 +6508,12 @@
 {"seq":6506,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.77,"chg24h":-0.00656,"ts":1789745834272}
 {"seq":6507,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.79,"chg24h":-0.00277,"ts":1789745834272}
 {"seq":6508,"kind":"macro","source":"yahoo-finance","headline":"Gold price today, Friday, September 18, 2026: Gold hits weekly high as inflation concerns fade","severity":"medium","assetsAffected":["*"],"ts":1789745834272}
+{"seq":6509,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80790.01,"chg24h":0.05258,"ts":1789746737827}
+{"seq":6510,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2583.01,"chg24h":0.04528,"ts":1789746737827}
+{"seq":6511,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":362.96,"chg24h":-0.01245,"ts":1789746737827}
+{"seq":6512,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.58,"chg24h":0.00253,"ts":1789746737827}
+{"seq":6513,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":716.46,"chg24h":-0.00013,"ts":1789746737827}
+{"seq":6514,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.64,"chg24h":0.00054,"ts":1789746737827}
+{"seq":6515,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.74,"chg24h":-0.00666,"ts":1789746737827}
+{"seq":6516,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.07,"chg24h":-0.00416,"ts":1789746737827}
+{"seq":6517,"kind":"macro","source":"yahoo-finance","headline":"Stock market today: Dow, S&amp;P 500, Nasdaq slip as bond yields rise","severity":"medium","assetsAffected":["*"],"ts":1789746737827}
