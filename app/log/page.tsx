@@ -1,5 +1,5 @@
 import { readLedger } from "@/lib/ledger";
-import { symbolName, shiftPhrase, clauseReason, ruleName, proposerName, executionLabel, severityWord } from "@/lib/display";
+import { symbolName, shiftPhrase, clauseReason, ruleName, proposerName, executionLabel, severityWord, decodeEntities } from "@/lib/display";
 import { LogBrowser, type LogRow } from "./log-browser";
 
 export const dynamic = "force-dynamic";
@@ -60,7 +60,7 @@ function summarize(e: any): string {
     case "market":
       return `${symbolName(e.symbol)} at $${e.px} (${(e.chg24h * 100).toFixed(2)}% today)`;
     case "macro":
-      return `${severityWord(e.severity)}: ${e.headline}`;
+      return `${severityWord(e.severity)}: ${decodeEntities(e.headline)}`;
     case "proposal":
       return `${proposerName(e.proposer)} proposed: ${shiftPhrase(e.from, e.to)} (${(e.ratio * 100).toFixed(0)}%)`;
     case "verdict": {

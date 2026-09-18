@@ -47,7 +47,8 @@ export function Chip({ children, tone = "neutral" }: { children: ReactNode; tone
 // The "?" affordance: short labels stay inline, the explanation relocates here
 // (progressive disclosure; nobody reads legend sentences). CSS-only popover:
 // hover or keyboard focus reveals it anchored to the trigger; tab-away hides
-// it via focus-within loss.
+// it via focus-within loss. display toggles (not opacity) so the closed
+// popover occupies no layout and cannot overflow small viewports.
 export function QHint({ text }: { text: ReactNode }) {
   return (
     <span className="group relative inline-flex">
@@ -60,7 +61,7 @@ export function QHint({ text }: { text: ReactNode }) {
       </button>
       <span
         role="tooltip"
-        className="pointer-events-none absolute left-0 bottom-full z-10 mb-2 w-72 translate-y-1 rounded-[var(--radius-panel)] border border-[var(--border-strong)] bg-[var(--bg-raised)] px-3.5 py-2.5 text-xs leading-relaxed text-[var(--text-secondary)] opacity-0 transition-all duration-150 ease-out group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
+        className="hidden absolute left-0 bottom-full z-10 mb-2 w-72 max-w-[calc(100vw-2.5rem)] rounded-[var(--radius-panel)] border border-[var(--border-strong)] bg-[var(--bg-raised)] px-3.5 py-2.5 text-xs leading-relaxed text-[var(--text-secondary)] group-focus-within:block group-hover:block"
       >
         {text}
       </span>

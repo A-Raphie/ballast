@@ -9,7 +9,7 @@
 import { useState } from "react";
 import type { MacroEvent } from "@/agent/types";
 import type { Decision } from "@/lib/ledger";
-import { shiftPhrase, symbolName, severityWord, verdictWord, proposerName } from "@/lib/display";
+import { shiftPhrase, symbolName, severityWord, verdictWord, proposerName, decodeEntities } from "@/lib/display";
 import { ClauseRow, VerdictBadge, Chip, QHint } from "./kit";
 
 const W = 1200;
@@ -82,7 +82,7 @@ export function WatchFloor({
             <g key={`m${i}`}>
               <circle cx={xOfTs(m.ts)} cy={y} r={r + 3} fill="var(--bg-base)" opacity={0.6} />
               <circle cx={xOfTs(m.ts)} cy={y} r={r} fill="var(--context-marker)" opacity={op}>
-                <title>{`${severityWord(m.severity)}: ${m.headline}`}</title>
+                <title>{`${severityWord(m.severity)}: ${decodeEntities(m.headline)}`}</title>
               </circle>
             </g>
           );
@@ -90,27 +90,34 @@ export function WatchFloor({
 
         {/* decision diamonds: the only decision ink on the band */}
         {(() => {
-          // pixel-bucketed: decisions landing on the same ~14px slot render as
-          // ONE diamond sized by count, so a dense day reads as weight, not
-          // noise. Click opens the latest receipt in the bucket.
-          const buckets = new Map<number, { x: number; latest: Decision; count: number }>();
+          // pixel-bucketed + verdict-weighted: same-slot decisions merge into
+          // ONE diamond; executed trades (allow) render at full strength,
+          // refusals dimmer, stops lightest — so a dense day reads as
+          // activity density with the real trades standing out. Click opens
+          // the latest receipt in the bucket.
+          const buckets = new Map<number, { x: number; latest: Decision; count: number; best: string }>();
+          const rank: Record<string, number> = { allow: 2, deny: 1, halt: 0 };
           for (const d of allowed) {
             const x = xOfTs(d.ts);
-            const key = Math.round(x / 14);
+            const key = Math.round(x / 22);
             const hit = buckets.get(key);
+            const res = d.verdict?.result ?? "halt";
             if (hit) {
               hit.count++;
               if (d.ts > hit.latest.ts) hit.latest = d;
+              if ((rank[res] ?? 0) > (rank[hit.best] ?? 0)) hit.best = res;
             } else {
-              buckets.set(key, { x, latest: d, count: 1 });
+              buckets.set(key, { x, latest: d, count: 1, best: res });
             }
           }
-          return [...buckets.values()].map(({ x, latest: d, count }) => {
+          const strength: Record<string, number> = { allow: 1, deny: 0.72, halt: 0.45 };
+          return [...buckets.values()].map(({ x, latest: d, count, best }) => {
             const y = 100;
             const on = d.id === selectedId;
-            const size = 13 + Math.min(count - 1, 5) * 1.6;
+            const size = (best === "allow" ? 15 : 11) + Math.min(count - 1, 5) * 1.6;
+            const op = on ? 1 : (strength[best] ?? 0.45);
             return (
-              <g key={d.id} onClick={() => setSelectedId(on ? null : d.id)} style={{ cursor: "pointer" }}>
+              <g key={d.id} onClick={() => setSelectedId(on ? null : d.id)} style={{ cursor: "pointer" }} opacity={op}>
                 <title>
                   {count > 1
                     ? `${count} decisions here · latest: ${verdictWord(d.verdict?.result ?? "")}: ${d.proposal ? shiftPhrase(d.proposal.from, d.proposal.to) : "decision"}`

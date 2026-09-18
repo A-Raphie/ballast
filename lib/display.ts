@@ -153,3 +153,15 @@ export function executionLabel(e: string): string {
 export function severityWord(s: string): string {
   return s === "high" ? "Big story" : s === "medium" ? "Notable story" : "Small story";
 }
+
+// RSS headlines arrive with XML entities intact ("S&amp;P"); the log and the
+// band tooltips decode the handful that matter instead of shipping raw markup.
+export function decodeEntities(s: string): string {
+  return s
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;|&#x27;/g, "'")
+    .replace(/&nbsp;/g, " ");
+}
