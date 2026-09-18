@@ -30,14 +30,16 @@ The 2:36 showcase records the real control room running live (1080p desktop capt
 
 | Timestamp | Scene | What you see |
 | :--- | :--- | :--- |
-| **0:00** | Front door | Live proof strip: entries logged, rules enforced, violations 0 |
-| **0:11** | The overnight problem | 24/7 rToken + crypto watchlist and the written target mix |
-| **0:33** | Night watch band | 24-hour canvas: news dots vs decision diamonds, in UTC |
-| **0:55** | A decision receipt | Verdict pill, the plain-English action, every rule with its measured number |
-| **1:29** | Sense, Propose, Gate | Feeds feed a proposer; the written rules dispose; the ledger records |
-| **1:41** | The seven rules | Plain sentences with real numbers, editable on the site |
-| **2:01** | The log | Append-only record: news, prices, trade ideas, verdicts, orders |
-| **2:17** | Close | The portfolio, the shield, and today's move at a glance |
+| **0:00** | The hook | 2:47 a.m. New York: the market is closed, and the agent just made a trade |
+| **0:16** | The overnight problem | Tokenized stocks trade 24/7; a 3 a.m. rate shock moves them before any human wakes |
+| **0:34** | The control room | The band: shaded hours, headline dots, decision diamonds, and the live paper-book strip |
+| **0:59** | A decision receipt | Seven rules checked in order, each with its measured number; the order with its counterfactual book |
+| **1:30** | Sense, Propose, Gate | The brain proposes, the rules dispose |
+| **1:45** | Edit a rule on the site | Save commits to the agent's repo; the next receipt cites the new version |
+| **2:05** | The append-only ledger | Simulated fills, labeled as such on every surface, running on Bitget's Agent Hub |
+| **2:23** | The close | Seven rules, zero violations, everything live on screen |
+
+Timestamps measured from the final cut (scene durations via ffprobe), not estimated from a storyboard.
 
 ---
 
@@ -158,9 +160,23 @@ bun agent/run.ts
 bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Without Bitget credentials the agent runs in paper mode against public endpoints, exactly as the live site does.
+The local server runs at `http://localhost:3000`. Without Bitget credentials the agent runs in paper mode against public endpoints, exactly as the live site does.
 
 ---
+
+## The core loop, in five lines
+
+```ts
+// agent/run.ts, every 15 minutes
+const proposal = await propose(book, macroEvents, pxOf, now);
+const verdict = evaluate(proposal, policy);              // 7 deterministic rules
+if (verdict.result === "allow") await execute(proposal); // simulated, labeled
+ledger.append([proposal, verdict, order]);               // the receipt, whatever happened
+```
+
+## Deployment
+
+Live site: **[try-ballast.netlify.app](https://try-ballast.netlify.app)** on Netlify. The agent ticks every 15 minutes on a private runner and commits its ledger to this repo. Rule edits made on the website commit through the GitHub Contents API, and the runner pulls them before its next check.
 
 ## License
 
