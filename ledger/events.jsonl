@@ -6123,3 +6123,12 @@
 {"seq":6121,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.21,"chg24h":0.00734,"ts":1789706958230}
 {"seq":6122,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.07,"chg24h":0.00717,"ts":1789706958230}
 {"seq":6123,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.22,"chg24h":0.00451,"ts":1789706958230}
+{"seq":6124,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77503.28,"chg24h":0.01273,"ts":1789707861317}
+{"seq":6125,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2477.97,"chg24h":0.0142,"ts":1789707861317}
+{"seq":6126,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":367.52,"chg24h":0.01803,"ts":1789707861317}
+{"seq":6127,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.61,"chg24h":0.02248,"ts":1789707861317}
+{"seq":6128,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":718.67,"chg24h":0.01292,"ts":1789707861317}
+{"seq":6129,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.15,"chg24h":0.0077,"ts":1789707861317}
+{"seq":6130,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.24,"chg24h":0.0076,"ts":1789707861317}
+{"seq":6131,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.46,"chg24h":0.00513,"ts":1789707861317}
+{"seq":6132,"kind":"macro","source":"yahoo-finance","headline":"Firms Shy Away From Long-Dated Bond Offerings as US Yields Surge","severity":"medium","assetsAffected":["*"],"ts":1789707861317}
