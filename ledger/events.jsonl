@@ -6588,3 +6588,12 @@
 {"seq":6586,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.23,"chg24h":-0.00062,"ts":1789754033559}
 {"seq":6587,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.85,"chg24h":-0.00324,"ts":1789754033559}
 {"seq":6588,"kind":"macro","source":"yahoo-finance","headline":"Goldman Sachs drops surprise call for next Fed interest-rate hike","severity":"medium","assetsAffected":["*"],"ts":1789754033559}
+{"seq":6589,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80905.01,"chg24h":0.05544,"ts":1789754947878}
+{"seq":6590,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2606.31,"chg24h":0.05969,"ts":1789754947878}
+{"seq":6591,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.04,"chg24h":-0.01367,"ts":1789754947878}
+{"seq":6592,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.49,"chg24h":0.00025,"ts":1789754947878}
+{"seq":6593,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.46,"chg24h":0.00149,"ts":1789754947878}
+{"seq":6594,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.64,"chg24h":-0.00012,"ts":1789754947878}
+{"seq":6595,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.49,"chg24h":-0.00171,"ts":1789754947878}
+{"seq":6596,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.76,"chg24h":-0.00359,"ts":1789754947878}
+{"seq":6597,"kind":"macro","source":"yahoo-finance","headline":"JPMorgan CEO Jamie Dimon: 'It's not clear to me we've slayed inflation'","severity":"medium","assetsAffected":["*"],"ts":1789754947878}
