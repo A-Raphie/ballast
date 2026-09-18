@@ -209,9 +209,9 @@ export default async function ControlRoom() {
                 key={m.symbol}
                 className="-mx-2 flex items-center justify-between gap-3 rounded-[var(--radius-input)] border-b border-[var(--border-default)] px-2 py-1 transition-colors last:border-b-0 hover:bg-[var(--bg-raised)]"
               >
-                <span className="num text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
+                <span className="num max-w-[110px] truncate text-sm" title={symbolHint(m.symbol)}>{symbolName(m.symbol)}</span>
                 <span className="flex items-center gap-3">
-                  <Spark points={v.priceSeries[m.symbol] ?? []} w={120} h={26} />
+                  <Spark points={v.priceSeries[m.symbol] ?? []} w={120} h={26} className="w-[70px] shrink-0 sm:w-[120px]" />
                   <span className="num text-sm font-semibold tabular-nums">{m.px.toLocaleString()}</span>
                   <DeltaPill
                     value={`${m.chg24h >= 0 ? "+" : ""}${(m.chg24h * 100).toFixed(2)}%`}

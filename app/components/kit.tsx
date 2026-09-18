@@ -202,8 +202,8 @@ export function AgentDot({ live, note }: { live: boolean; note?: string }) {
 
 // Tiny 24h price trail for a market row. Flat prices render a flat line, not
 // a divide-by-zero NaN.
-export function Spark({ points, w = 76, h = 20 }: { points: { px: number }[]; w?: number; h?: number }) {
-  if (points.length < 2) return <svg width={w} height={h} aria-hidden />;
+export function Spark({ points, w = 76, h = 20, className = "shrink-0" }: { points: { px: number }[]; w?: number; h?: number; className?: string }) {
+  if (points.length < 2) return <svg width={w} height={h} aria-hidden className={className} />;
   const px = points.map((p) => p.px);
   const min = Math.min(...px);
   const max = Math.max(...px);
@@ -214,7 +214,7 @@ export function Spark({ points, w = 76, h = 20 }: { points: { px: number }[]; w?
     .join(" ");
   const up = px[px.length - 1] >= px[0];
   return (
-    <svg width={w} height={h} aria-hidden className="shrink-0">
+    <svg width={w} height={h} aria-hidden className={className}>
       <path d={d} fill="none" stroke={up ? "var(--status-pass)" : "var(--status-deny)"} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
     </svg>
   );
