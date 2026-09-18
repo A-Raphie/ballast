@@ -6688,3 +6688,12 @@
 {"seq":6686,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.3,"chg24h":-0.00325,"ts":1789764088119}
 {"seq":6687,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.98,"chg24h":0.00104,"ts":1789764088119}
 {"seq":6688,"kind":"macro","source":"yahoo-finance","headline":"Oracle Is Slashing Payroll While Borrowing Billions for AI. What It Means for ORCL Stock.","severity":"medium","assetsAffected":["*"],"ts":1789764088119}
+{"seq":6689,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81075.01,"chg24h":0.05929,"ts":1789764998139}
+{"seq":6690,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2631.42,"chg24h":0.07311,"ts":1789764998139}
+{"seq":6691,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.07,"chg24h":-0.00491,"ts":1789764998139}
+{"seq":6692,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.04,"chg24h":0.01296,"ts":1789764998139}
+{"seq":6693,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":722.2,"chg24h":0.00821,"ts":1789764998139}
+{"seq":6694,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.35,"chg24h":-0.00442,"ts":1789764998139}
+{"seq":6695,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.97,"chg24h":-0.00368,"ts":1789764998139}
+{"seq":6696,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.85,"chg24h":0.00084,"ts":1789764998139}
+{"seq":6697,"kind":"macro","source":"yahoo-finance","headline":"BOE Holds Rates. Why It’s on a Different Path From the Fed as the Iran War Spikes Inflation.","severity":"high","assetsAffected":["*"],"ts":1789764998139}
