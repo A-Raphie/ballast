@@ -6472,3 +6472,12 @@
 {"seq":6470,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.21,"chg24h":-0.01277,"ts":1789742218603}
 {"seq":6471,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.09,"chg24h":-0.00368,"ts":1789742218603}
 {"seq":6472,"kind":"macro","source":"yahoo-finance","headline":"These Huge Mortgage REIT Yields Are Really a Bet on Interest Rates","severity":"medium","assetsAffected":["*"],"ts":1789742218603}
+{"seq":6473,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80943.92,"chg24h":0.0555,"ts":1789743122637}
+{"seq":6474,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2579.18,"chg24h":0.04742,"ts":1789743122637}
+{"seq":6475,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":368.09,"chg24h":-0.00198,"ts":1789743122637}
+{"seq":6476,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":219.4,"chg24h":0.00087,"ts":1789743122637}
+{"seq":6477,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":717.36,"chg24h":0.00252,"ts":1789743122637}
+{"seq":6478,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.46,"chg24h":0.00307,"ts":1789743122637}
+{"seq":6479,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":492.48,"chg24h":-0.00909,"ts":1789743122637}
+{"seq":6480,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":759.72,"chg24h":-0.00179,"ts":1789743122637}
+{"seq":6481,"kind":"macro","source":"yahoo-finance","headline":"Buffett's stark stock rule is hard to ignore at 5% yields","severity":"medium","assetsAffected":["*"],"ts":1789743122637}
