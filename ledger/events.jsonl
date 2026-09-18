@@ -6659,3 +6659,13 @@
 {"seq":6657,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.32,"chg24h":-0.00336,"ts":1789761353275}
 {"seq":6658,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.42,"chg24h":-0.00945,"ts":1789761353275}
 {"seq":6659,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":761.71,"chg24h":-0.00183,"ts":1789761353275}
+{"seq":6660,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81025.2,"chg24h":0.05747,"ts":1789762258897}
+{"seq":6661,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2633.41,"chg24h":0.07409,"ts":1789762258897}
+{"seq":6662,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.1,"chg24h":-0.00542,"ts":1789762258897}
+{"seq":6663,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.74,"chg24h":0.01159,"ts":1789762258897}
+{"seq":6664,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":722.58,"chg24h":0.00805,"ts":1789762258897}
+{"seq":6665,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.53,"chg24h":-0.00472,"ts":1789762258897}
+{"seq":6666,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.3,"chg24h":-0.00693,"ts":1789762258897}
+{"seq":6667,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.85,"chg24h":0.00014,"ts":1789762258897}
+{"seq":6668,"kind":"macro","source":"yahoo-finance","headline":"U.S. Stock Futures Rally as Bond Yields Fall on Fed’s Inflation Resolve","severity":"medium","assetsAffected":["*"],"ts":1789762258897}
+{"seq":6669,"kind":"macro","source":"yahoo-finance","headline":"Federal Reserve interest rate hike may trigger another brutal move for US Treasury yields","severity":"medium","assetsAffected":["*"],"ts":1789762258897}
