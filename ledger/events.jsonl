@@ -6800,3 +6800,11 @@
 {"seq":6798,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.9,"chg24h":0.00105,"ts":1789775045135}
 {"seq":6799,"kind":"macro","source":"yahoo-finance","headline":"3 Financial Stocks Whose Dividends Survived the Last Recession Intact","severity":"medium","assetsAffected":["*"],"ts":1789775045135}
 {"seq":6800,"kind":"macro","source":"yahoo-finance","headline":"Market Indexes Bounce Back From the Fed's Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789775045135}
+{"seq":6801,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80910.01,"chg24h":0.05869,"ts":1789775949669}
+{"seq":6802,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2612.2,"chg24h":0.06727,"ts":1789775949669}
+{"seq":6803,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.14,"chg24h":-0.00389,"ts":1789775949669}
+{"seq":6804,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.53,"chg24h":0.01542,"ts":1789775949669}
+{"seq":6805,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":722.1,"chg24h":0.00884,"ts":1789775949669}
+{"seq":6806,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.76,"chg24h":-0.00399,"ts":1789775949669}
+{"seq":6807,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.99,"chg24h":-0.00496,"ts":1789775949669}
+{"seq":6808,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.94,"chg24h":0.00108,"ts":1789775949669}
