@@ -6726,3 +6726,12 @@
 {"seq":6724,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.81,"chg24h":0.00062,"ts":1789767743244}
 {"seq":6725,"kind":"macro","source":"yahoo-finance","headline":"Britain’s Economy Is Growing. So Is Inflation.","severity":"medium","assetsAffected":["*"],"ts":1789767743244}
 {"seq":6726,"kind":"macro","source":"yahoo-finance","headline":"Stocks Rally as Crude Prices and Bond Yields Fall","severity":"medium","assetsAffected":["*"],"ts":1789767743244}
+{"seq":6727,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81240,"chg24h":0.06292,"ts":1789768667470}
+{"seq":6728,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2626.82,"chg24h":0.07296,"ts":1789768667470}
+{"seq":6729,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.19,"chg24h":-0.00554,"ts":1789768667470}
+{"seq":6730,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.33,"chg24h":0.01331,"ts":1789768667470}
+{"seq":6731,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":722.55,"chg24h":0.00821,"ts":1789768667470}
+{"seq":6732,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.78,"chg24h":-0.00673,"ts":1789768667470}
+{"seq":6733,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.85,"chg24h":-0.00376,"ts":1789768667470}
+{"seq":6734,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.05,"chg24h":0.00098,"ts":1789768667470}
+{"seq":6735,"kind":"macro","source":"yahoo-finance","headline":"Dollar Weakens with Crude Oil Prices and T-Note Yields","severity":"medium","assetsAffected":["*"],"ts":1789768667470}
