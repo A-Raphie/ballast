@@ -6271,3 +6271,11 @@
 {"seq":6269,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.19,"chg24h":0.00836,"ts":1789721422285}
 {"seq":6270,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.15,"chg24h":0.00428,"ts":1789721422285}
 {"seq":6271,"kind":"macro","source":"yahoo-finance","headline":"ETF fueled by Iran war goes bonkers, gains 3,600%","severity":"high","assetsAffected":["*"],"ts":1789721422285}
+{"seq":6272,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":78308.56,"chg24h":0.02144,"ts":1789722325642}
+{"seq":6273,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2506.92,"chg24h":0.02458,"ts":1789722325642}
+{"seq":6274,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":368.85,"chg24h":0.0153,"ts":1789722325642}
+{"seq":6275,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.32,"chg24h":0.01879,"ts":1789722325642}
+{"seq":6276,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":720.43,"chg24h":0.01128,"ts":1789722325642}
+{"seq":6277,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.25,"chg24h":0.00592,"ts":1789722325642}
+{"seq":6278,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":497.94,"chg24h":0.00745,"ts":1789722325642}
+{"seq":6279,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.9,"chg24h":0.00337,"ts":1789722325642}
