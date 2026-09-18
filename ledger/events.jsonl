@@ -6162,3 +6162,11 @@
 {"seq":6160,"kind":"macro","source":"yahoo-finance","headline":"Treasury Yields Hold Declines After Fed Raises Rates","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
 {"seq":6161,"kind":"macro","source":"yahoo-finance","headline":"Fed officials' forecasts project one more rate hike to come in 2026","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
 {"seq":6162,"kind":"macro","source":"yahoo-finance","headline":"Robust US retail sales underscore economy's resilience, inflation pressures building","severity":"medium","assetsAffected":["*"],"ts":1789710570985}
+{"seq":6163,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":77554.99,"chg24h":0.01529,"ts":1789711474055}
+{"seq":6164,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2486.42,"chg24h":0.01919,"ts":1789711474055}
+{"seq":6165,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":368.13,"chg24h":0.02196,"ts":1789711474055}
+{"seq":6166,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.82,"chg24h":0.02478,"ts":1789711474055}
+{"seq":6167,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":719.99,"chg24h":0.01643,"ts":1789711474055}
+{"seq":6168,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.47,"chg24h":0.0093,"ts":1789711474055}
+{"seq":6169,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.41,"chg24h":0.01138,"ts":1789711474055}
+{"seq":6170,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.04,"chg24h":0.00653,"ts":1789711474055}
