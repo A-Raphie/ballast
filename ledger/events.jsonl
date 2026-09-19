@@ -7199,3 +7199,12 @@
 {"seq":7197,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789816247076}
 {"seq":7198,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.64,"chg24h":0.00079,"ts":1789816247076}
 {"seq":7199,"kind":"macro","source":"yahoo-finance","headline":"Why gold is a safe-haven investment during inflation and market volatility","severity":"medium","assetsAffected":["*"],"ts":1789816247076}
+{"seq":7200,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81305.02,"chg24h":0.04166,"ts":1789817150512}
+{"seq":7201,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2639.29,"chg24h":0.05424,"ts":1789817150512}
+{"seq":7202,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.47,"chg24h":-0.01169,"ts":1789817150512}
+{"seq":7203,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.18,"chg24h":0.00785,"ts":1789817150512}
+{"seq":7204,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.08,"chg24h":0.00254,"ts":1789817150512}
+{"seq":7205,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.26,"chg24h":-0.00657,"ts":1789817150512}
+{"seq":7206,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789817150512}
+{"seq":7207,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789817150512}
+{"seq":7208,"kind":"macro","source":"yahoo-finance","headline":"Nasdaq Futures Pare Gains as Treasury Yields Climb","severity":"medium","assetsAffected":["*"],"ts":1789817150512}
