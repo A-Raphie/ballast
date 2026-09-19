@@ -6808,3 +6808,12 @@
 {"seq":6806,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.76,"chg24h":-0.00399,"ts":1789775949669}
 {"seq":6807,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.99,"chg24h":-0.00496,"ts":1789775949669}
 {"seq":6808,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.94,"chg24h":0.00108,"ts":1789775949669}
+{"seq":6809,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80954.99,"chg24h":0.05865,"ts":1789776853128}
+{"seq":6810,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2610.45,"chg24h":0.06802,"ts":1789776853128}
+{"seq":6811,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.18,"chg24h":-0.00378,"ts":1789776853128}
+{"seq":6812,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.41,"chg24h":0.01534,"ts":1789776853128}
+{"seq":6813,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":722.1,"chg24h":0.00879,"ts":1789776853128}
+{"seq":6814,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.77,"chg24h":-0.00405,"ts":1789776853128}
+{"seq":6815,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.84,"chg24h":-0.0057,"ts":1789776853128}
+{"seq":6816,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.95,"chg24h":0.00111,"ts":1789776853128}
+{"seq":6817,"kind":"macro","source":"yahoo-finance","headline":"The Fed’s Rate Hike Could Backfire If Oil Prices Collapse","severity":"medium","assetsAffected":["*"],"ts":1789776853128}
