@@ -7060,3 +7060,12 @@
 {"seq":7058,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.66,"chg24h":-0.0075,"ts":1789801253786}
 {"seq":7059,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.09,"chg24h":-0.00568,"ts":1789801253786}
 {"seq":7060,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.62,"chg24h":0.00188,"ts":1789801253786}
+{"seq":7061,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81156.61,"chg24h":0.04545,"ts":1789802159522}
+{"seq":7062,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2630.18,"chg24h":0.05648,"ts":1789802159522}
+{"seq":7063,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.49,"chg24h":-0.00921,"ts":1789802159522}
+{"seq":7064,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.39,"chg24h":0.00443,"ts":1789802159522}
+{"seq":7065,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.84,"chg24h":0.00032,"ts":1789802159522}
+{"seq":7066,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.58,"chg24h":-0.00774,"ts":1789802159522}
+{"seq":7067,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00932,"ts":1789802159522}
+{"seq":7068,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.62,"chg24h":0.00188,"ts":1789802159522}
+{"seq":7069,"kind":"macro","source":"yahoo-finance","headline":"Wall Street drifts lower as bond yields rise and oil prices swing","severity":"medium","assetsAffected":["*"],"ts":1789802159522}
