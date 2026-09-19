@@ -6921,3 +6921,11 @@
 {"seq":6919,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.84,"chg24h":-0.0057,"ts":1789786786909}
 {"seq":6920,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.95,"chg24h":0.00111,"ts":1789786786909}
 {"seq":6921,"kind":"macro","source":"yahoo-finance","headline":"U.S. Stocks Up on Hopes Rising Inflation, Oil Prices Are Now Contained","severity":"medium","assetsAffected":["*"],"ts":1789786786909}
+{"seq":6922,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81285.01,"chg24h":0.05126,"ts":1789787689823}
+{"seq":6923,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2626.13,"chg24h":0.06128,"ts":1789787689823}
+{"seq":6924,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.49,"chg24h":-0.00483,"ts":1789787689823}
+{"seq":6925,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.36,"chg24h":0.00853,"ts":1789787689823}
+{"seq":6926,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.96,"chg24h":0.00892,"ts":1789787689823}
+{"seq":6927,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.05,"chg24h":-0.00378,"ts":1789787689823}
+{"seq":6928,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.84,"chg24h":-0.0057,"ts":1789787689823}
+{"seq":6929,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.95,"chg24h":0.00111,"ts":1789787689823}
