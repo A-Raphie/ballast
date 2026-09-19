@@ -7270,3 +7270,12 @@
 {"seq":7268,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.26,"chg24h":-0.00657,"ts":1789823553384}
 {"seq":7269,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789823553384}
 {"seq":7270,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789823553384}
+{"seq":7271,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81269.39,"chg24h":0.03952,"ts":1789824482462}
+{"seq":7272,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2635.65,"chg24h":0.05168,"ts":1789824482462}
+{"seq":7273,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.54,"chg24h":-0.00792,"ts":1789824482462}
+{"seq":7274,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.12,"chg24h":0.01296,"ts":1789824482462}
+{"seq":7275,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.32,"chg24h":0.00453,"ts":1789824482462}
+{"seq":7276,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.26,"chg24h":-0.00657,"ts":1789824482462}
+{"seq":7277,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789824482462}
+{"seq":7278,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789824482462}
+{"seq":7279,"kind":"macro","source":"yahoo-finance","headline":"What History Reveals About Investing Through a Stock Market Crash","severity":"high","assetsAffected":["*"],"ts":1789824482462}
