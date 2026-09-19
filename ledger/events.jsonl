@@ -6883,3 +6883,13 @@
 {"seq":6881,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.05,"chg24h":-0.00342,"ts":1789783173819}
 {"seq":6882,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.84,"chg24h":-0.0057,"ts":1789783173819}
 {"seq":6883,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.95,"chg24h":0.00111,"ts":1789783173819}
+{"seq":6884,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81375.01,"chg24h":0.06005,"ts":1789784076899}
+{"seq":6885,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2616.39,"chg24h":0.06515,"ts":1789784076899}
+{"seq":6886,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364,"chg24h":-0.00312,"ts":1789784076899}
+{"seq":6887,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.33,"chg24h":0.01479,"ts":1789784076899}
+{"seq":6888,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.87,"chg24h":0.00911,"ts":1789784076899}
+{"seq":6889,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.05,"chg24h":-0.00342,"ts":1789784076899}
+{"seq":6890,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":493.84,"chg24h":-0.0057,"ts":1789784076899}
+{"seq":6891,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.95,"chg24h":0.00111,"ts":1789784076899}
+{"seq":6892,"kind":"macro","source":"yahoo-finance","headline":"Stocks Settle Sharply Higher as Crude Oil and Bond Yields Fall","severity":"medium","assetsAffected":["*"],"ts":1789784076899}
+{"seq":6893,"kind":"macro","source":"yahoo-finance","headline":"The Children’s Place (PLCE) Reports a $39M Tariff Refund. Are Margins Recovering?","severity":"medium","assetsAffected":["*"],"ts":1789784076899}
