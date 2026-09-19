@@ -6983,3 +6983,12 @@
 {"seq":6981,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.05,"chg24h":-0.00315,"ts":1789793116173}
 {"seq":6982,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.09,"chg24h":-0.00568,"ts":1789793116173}
 {"seq":6983,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.56,"chg24h":0.00228,"ts":1789793116173}
+{"seq":6984,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81029.65,"chg24h":0.04366,"ts":1789794019293}
+{"seq":6985,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2620.04,"chg24h":0.05557,"ts":1789794019293}
+{"seq":6986,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.49,"chg24h":-0.00757,"ts":1789794019293}
+{"seq":6987,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.75,"chg24h":0.01085,"ts":1789794019293}
+{"seq":6988,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.52,"chg24h":0.00445,"ts":1789794019293}
+{"seq":6989,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.05,"chg24h":-0.00315,"ts":1789794019293}
+{"seq":6990,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.09,"chg24h":-0.00568,"ts":1789794019293}
+{"seq":6991,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.62,"chg24h":0.00188,"ts":1789794019293}
+{"seq":6992,"kind":"macro","source":"yahoo-finance","headline":"The Fed’s Inflation Target Keeps Slipping Farther Into The Future","severity":"medium","assetsAffected":["*"],"ts":1789794019293}
