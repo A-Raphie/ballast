@@ -7378,3 +7378,11 @@
 {"seq":7376,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":0.00173,"ts":1789834430689}
 {"seq":7377,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.36,"chg24h":0.00548,"ts":1789834430689}
 {"seq":7378,"kind":"macro","source":"yahoo-finance","headline":"Federal Reserve Inflation Outlook Signals a Critical Warning for Investors","severity":"medium","assetsAffected":["*"],"ts":1789834430689}
+{"seq":7379,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81846.6,"chg24h":0.01039,"ts":1789835333693}
+{"seq":7380,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2649.21,"chg24h":0.01984,"ts":1789835333693}
+{"seq":7381,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.55,"chg24h":0.00416,"ts":1789835333693}
+{"seq":7382,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.25,"chg24h":0.0129,"ts":1789835333693}
+{"seq":7383,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.01,"chg24h":0.00667,"ts":1789835333693}
+{"seq":7384,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.38,"chg24h":-0.00072,"ts":1789835333693}
+{"seq":7385,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":0.00173,"ts":1789835333693}
+{"seq":7386,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789835333693}
