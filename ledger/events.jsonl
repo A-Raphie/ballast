@@ -7299,3 +7299,12 @@
 {"seq":7297,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789826298741}
 {"seq":7298,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789826298741}
 {"seq":7299,"kind":"macro","source":"yahoo-finance","headline":"What History Says About Owning Berkshire Hathaway Through a Recession","severity":"medium","assetsAffected":["*"],"ts":1789826298741}
+{"seq":7300,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81379.99,"chg24h":0.01323,"ts":1789827201993}
+{"seq":7301,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2638.06,"chg24h":0.02948,"ts":1789827201993}
+{"seq":7302,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.57,"chg24h":-0.00271,"ts":1789827201993}
+{"seq":7303,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.23,"chg24h":0.00925,"ts":1789827201993}
+{"seq":7304,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.19,"chg24h":0.00457,"ts":1789827201993}
+{"seq":7305,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.98,"chg24h":-0.00891,"ts":1789827201993}
+{"seq":7306,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789827201993}
+{"seq":7307,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789827201993}
+{"seq":7308,"kind":"macro","source":"yahoo-finance","headline":"IBM Has Raised Its Dividend for 31 Years. Inflation Is Still Winning","severity":"medium","assetsAffected":["*"],"ts":1789827201993}
