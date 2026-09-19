@@ -7618,3 +7618,12 @@
 {"seq":7616,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.31,"chg24h":-0.00191,"ts":1789859754514}
 {"seq":7617,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.54,"chg24h":-0.00036,"ts":1789859754514}
 {"seq":7618,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789859754514}
+{"seq":7619,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81310,"chg24h":0.00408,"ts":1789860659199}
+{"seq":7620,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2632.38,"chg24h":0.00741,"ts":1789860659199}
+{"seq":7621,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.88,"chg24h":0.00327,"ts":1789860659199}
+{"seq":7622,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.94,"chg24h":-0.00238,"ts":1789860659199}
+{"seq":7623,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.92,"chg24h":-0.00051,"ts":1789860659199}
+{"seq":7624,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.31,"chg24h":-0.00191,"ts":1789860659199}
+{"seq":7625,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.54,"chg24h":-0.00036,"ts":1789860659199}
+{"seq":7626,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789860659199}
+{"seq":7627,"kind":"macro","source":"yahoo-finance","headline":"Why a Doctor Who Owns Her Practice Can Get Under 30% While Her Salaried Colleague Pays 37% Plus Payroll Tax","severity":"medium","assetsAffected":["*"],"ts":1789860659199}
