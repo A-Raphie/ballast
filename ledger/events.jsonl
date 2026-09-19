@@ -7308,3 +7308,11 @@
 {"seq":7306,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789827201993}
 {"seq":7307,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789827201993}
 {"seq":7308,"kind":"macro","source":"yahoo-finance","headline":"IBM Has Raised Its Dividend for 31 Years. Inflation Is Still Winning","severity":"medium","assetsAffected":["*"],"ts":1789827201993}
+{"seq":7309,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81537.12,"chg24h":0.00968,"ts":1789828105019}
+{"seq":7310,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2642.38,"chg24h":0.02736,"ts":1789828105019}
+{"seq":7311,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.57,"chg24h":-0.00271,"ts":1789828105019}
+{"seq":7312,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.38,"chg24h":0.01147,"ts":1789828105019}
+{"seq":7313,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.19,"chg24h":0.00457,"ts":1789828105019}
+{"seq":7314,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.98,"chg24h":-0.00891,"ts":1789828105019}
+{"seq":7315,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789828105019}
+{"seq":7316,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789828105019}
