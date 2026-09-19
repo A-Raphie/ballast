@@ -7575,3 +7575,12 @@
 {"seq":7573,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.38,"chg24h":-0.00155,"ts":1789855227616}
 {"seq":7574,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.53,"chg24h":0.00055,"ts":1789855227616}
 {"seq":7575,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789855227616}
+{"seq":7576,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81023.83,"chg24h":-0.00309,"ts":1789856131887}
+{"seq":7577,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2621.35,"chg24h":-0.00346,"ts":1789856131887}
+{"seq":7578,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.85,"chg24h":0.00331,"ts":1789856131887}
+{"seq":7579,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":221.95,"chg24h":-0.00188,"ts":1789856131887}
+{"seq":7580,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.92,"chg24h":-0.00026,"ts":1789856131887}
+{"seq":7581,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.38,"chg24h":-0.00155,"ts":1789856131887}
+{"seq":7582,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.53,"chg24h":0.00055,"ts":1789856131887}
+{"seq":7583,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789856131887}
+{"seq":7584,"kind":"macro","source":"yahoo-finance","headline":"If a Stock Market Crash Is Coming, I'm Buying This 1 Vanguard ETF Without Hesitation","severity":"high","assetsAffected":["*"],"ts":1789856131887}
