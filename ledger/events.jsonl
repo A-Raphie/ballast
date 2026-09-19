@@ -7541,3 +7541,11 @@
 {"seq":7539,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.53,"chg24h":0.00055,"ts":1789851612757}
 {"seq":7540,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789851612757}
 {"seq":7541,"kind":"macro","source":"yahoo-finance","headline":"The S&amp;P 500 Yields Just 1.1% While 10-Year Treasury Yields Have Surged to 5%. This Dividend Stock Provides a Middle Ground for Long-Term Investors.","severity":"medium","assetsAffected":["*"],"ts":1789851612757}
+{"seq":7542,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80992.83,"chg24h":-0.00256,"ts":1789852516932}
+{"seq":7543,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2624.34,"chg24h":-0.00422,"ts":1789852516932}
+{"seq":7544,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.85,"chg24h":0.00331,"ts":1789852516932}
+{"seq":7545,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.21,"chg24h":0.00077,"ts":1789852516932}
+{"seq":7546,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.59,"chg24h":-0.00111,"ts":1789852516932}
+{"seq":7547,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.38,"chg24h":-0.00155,"ts":1789852516932}
+{"seq":7548,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.53,"chg24h":0.00055,"ts":1789852516932}
+{"seq":7549,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00513,"ts":1789852516932}
