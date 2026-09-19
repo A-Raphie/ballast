@@ -7227,3 +7227,11 @@
 {"seq":7225,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789818964704}
 {"seq":7226,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789818964704}
 {"seq":7227,"kind":"macro","source":"yahoo-finance","headline":"U.K. Retail Sales Climbed Despite Inflation Pickup","severity":"medium","assetsAffected":["*"],"ts":1789818964704}
+{"seq":7228,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81349.99,"chg24h":0.04298,"ts":1789819867930}
+{"seq":7229,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2641.72,"chg24h":0.0562,"ts":1789819867930}
+{"seq":7230,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.47,"chg24h":-0.01169,"ts":1789819867930}
+{"seq":7231,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.13,"chg24h":0.01148,"ts":1789819867930}
+{"seq":7232,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.08,"chg24h":0.00254,"ts":1789819867930}
+{"seq":7233,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.26,"chg24h":-0.00657,"ts":1789819867930}
+{"seq":7234,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789819867930}
+{"seq":7235,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":0.00162,"ts":1789819867930}
