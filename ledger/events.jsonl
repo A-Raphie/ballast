@@ -7190,3 +7190,12 @@
 {"seq":7188,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.26,"chg24h":-0.00657,"ts":1789815343870}
 {"seq":7189,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00932,"ts":1789815343870}
 {"seq":7190,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.64,"chg24h":0.00079,"ts":1789815343870}
+{"seq":7191,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81350,"chg24h":0.04127,"ts":1789816247076}
+{"seq":7192,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2641.35,"chg24h":0.05436,"ts":1789816247076}
+{"seq":7193,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.47,"chg24h":-0.01169,"ts":1789816247076}
+{"seq":7194,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":222.16,"chg24h":0.0058,"ts":1789816247076}
+{"seq":7195,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.17,"chg24h":0.0021,"ts":1789816247076}
+{"seq":7196,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.26,"chg24h":-0.00657,"ts":1789816247076}
+{"seq":7197,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.19,"chg24h":-0.00625,"ts":1789816247076}
+{"seq":7198,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":763.64,"chg24h":0.00079,"ts":1789816247076}
+{"seq":7199,"kind":"macro","source":"yahoo-finance","headline":"Why gold is a safe-haven investment during inflation and market volatility","severity":"medium","assetsAffected":["*"],"ts":1789816247076}
