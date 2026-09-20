@@ -7815,3 +7815,12 @@
 {"seq":7813,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.12,"chg24h":0.00021,"ts":1789880536558}
 {"seq":7814,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.21,"chg24h":0.00014,"ts":1789880536558}
 {"seq":7815,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":-0.00085,"ts":1789880536558}
+{"seq":7816,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80511.17,"chg24h":-0.00671,"ts":1789881439973}
+{"seq":7817,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2579.83,"chg24h":-0.01774,"ts":1789881439973}
+{"seq":7818,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.4,"chg24h":-0.00036,"ts":1789881439973}
+{"seq":7819,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.99,"chg24h":-0.00661,"ts":1789881439973}
+{"seq":7820,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.09,"chg24h":-0.00061,"ts":1789881439973}
+{"seq":7821,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.12,"chg24h":0.00021,"ts":1789881439973}
+{"seq":7822,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.21,"chg24h":0.00014,"ts":1789881439973}
+{"seq":7823,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.89,"chg24h":-0.00098,"ts":1789881439973}
+{"seq":7824,"kind":"macro","source":"yahoo-finance","headline":"Forget VYM: BlackRock’s High-Dividend Fund Is Beating It by 9 Points, Yields More, and Charges 0.08%","severity":"medium","assetsAffected":["*"],"ts":1789881439973}
