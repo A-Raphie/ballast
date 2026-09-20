@@ -8092,3 +8092,11 @@
 {"seq":8090,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494,"chg24h":-0.00038,"ts":1789909475648}
 {"seq":8091,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":-0.00063,"ts":1789909475648}
 {"seq":8092,"kind":"macro","source":"yahoo-finance","headline":"Not Just Banks: 3 Trading Stocks to Watch After the Fed Rate Hike","severity":"medium","assetsAffected":["*"],"ts":1789909475648}
+{"seq":8093,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80540,"chg24h":-0.00923,"ts":1789910378821}
+{"seq":8094,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2580.81,"chg24h":-0.02191,"ts":1789910378821}
+{"seq":8095,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.37,"chg24h":-0.00047,"ts":1789910378821}
+{"seq":8096,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.9,"chg24h":-0.00581,"ts":1789910378821}
+{"seq":8097,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":720.47,"chg24h":-0.00118,"ts":1789910378821}
+{"seq":8098,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.19,"chg24h":-0.00236,"ts":1789910378821}
+{"seq":8099,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.14,"chg24h":-0.0001,"ts":1789910378821}
+{"seq":8100,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":-0.00063,"ts":1789910378821}
