@@ -8196,3 +8196,11 @@
 {"seq":8194,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.14,"chg24h":-0.0001,"ts":1789920324446}
 {"seq":8195,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":-0.00028,"ts":1789920324446}
 {"seq":8196,"kind":"macro","source":"yahoo-finance","headline":"Scott Bessent helped George Soros net $1 billion breaking the Bank of England — now he's fighting a U.S. bond selloff","severity":"medium","assetsAffected":["*"],"ts":1789920324446}
+{"seq":8197,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":81075,"chg24h":-0.0089,"ts":1789921230167}
+{"seq":8198,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2617.1,"chg24h":-0.01059,"ts":1789921230167}
+{"seq":8199,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":363.97,"chg24h":-0.00159,"ts":1789921230167}
+{"seq":8200,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.97,"chg24h":-0.00567,"ts":1789921230167}
+{"seq":8201,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":721.42,"chg24h":-0.00028,"ts":1789921230167}
+{"seq":8202,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":333.99,"chg24h":-0.00328,"ts":1789921230167}
+{"seq":8203,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.14,"chg24h":-0.0001,"ts":1789921230167}
+{"seq":8204,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":-0.00028,"ts":1789921230167}
