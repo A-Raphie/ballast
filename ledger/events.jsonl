@@ -7918,3 +7918,12 @@
 {"seq":7916,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.23,"chg24h":-0.00128,"ts":1789891379533}
 {"seq":7917,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.57,"chg24h":0.00077,"ts":1789891379533}
 {"seq":7918,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.89,"chg24h":-0.00098,"ts":1789891379533}
+{"seq":7919,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80432.28,"chg24h":-0.00994,"ts":1789892283067}
+{"seq":7920,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2580.44,"chg24h":-0.02097,"ts":1789892283067}
+{"seq":7921,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.11,"chg24h":-0.00107,"ts":1789892283067}
+{"seq":7922,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.89,"chg24h":-0.00674,"ts":1789892283067}
+{"seq":7923,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":720.92,"chg24h":-0.0005,"ts":1789892283067}
+{"seq":7924,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":334.16,"chg24h":-0.00266,"ts":1789892283067}
+{"seq":7925,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.57,"chg24h":0.00077,"ts":1789892283067}
+{"seq":7926,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.89,"chg24h":-0.00098,"ts":1789892283067}
+{"seq":7927,"kind":"macro","source":"yahoo-finance","headline":"What History Says About Insurance Stocks When Bond Yields Rise","severity":"medium","assetsAffected":["*"],"ts":1789892283067}
