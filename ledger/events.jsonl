@@ -8031,3 +8031,11 @@
 {"seq":8029,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.16,"chg24h":-0.00006,"ts":1789903144807}
 {"seq":8030,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.86,"chg24h":-0.00018,"ts":1789903144807}
 {"seq":8031,"kind":"macro","source":"yahoo-finance","headline":"From BFFs to open war: Better.com’s founder vs. the investor who replaced him","severity":"high","assetsAffected":["*"],"ts":1789903144807}
+{"seq":8032,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":80488.54,"chg24h":-0.00941,"ts":1789904047911}
+{"seq":8033,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2577.65,"chg24h":-0.02293,"ts":1789904047911}
+{"seq":8034,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":364.11,"chg24h":-0.00099,"ts":1789904047911}
+{"seq":8035,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":220.89,"chg24h":-0.00581,"ts":1789904047911}
+{"seq":8036,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":720.48,"chg24h":-0.00085,"ts":1789904047911}
+{"seq":8037,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":335.12,"chg24h":0.00042,"ts":1789904047911}
+{"seq":8038,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.16,"chg24h":-0.00006,"ts":1789904047911}
+{"seq":8039,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":762.88,"chg24h":-0.00063,"ts":1789904047911}
