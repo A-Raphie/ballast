@@ -8598,3 +8598,11 @@
 {"seq":8596,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.55,"chg24h":0.00285,"ts":1789994503558}
 {"seq":8597,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.61,"chg24h":0.00492,"ts":1789994503558}
 {"seq":8598,"kind":"macro","source":"yahoo-finance","headline":"I Keep Buying Nvidia Over and Over Despite China Concerns, Despite The Tech Selloff","severity":"medium","assetsAffected":["*"],"ts":1789994503558}
+{"seq":8599,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":85337.48,"chg24h":0.06069,"ts":1789995408156}
+{"seq":8600,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2730.27,"chg24h":0.05892,"ts":1789995408156}
+{"seq":8601,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":369.3,"chg24h":0.01425,"ts":1789995408156}
+{"seq":8602,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":223.67,"chg24h":0.01259,"ts":1789995408156}
+{"seq":8603,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":728.01,"chg24h":0.01047,"ts":1789995408156}
+{"seq":8604,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.07,"chg24h":0.00283,"ts":1789995408156}
+{"seq":8605,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.08,"chg24h":0.0019,"ts":1789995408156}
+{"seq":8606,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.37,"chg24h":0.0046,"ts":1789995408156}
