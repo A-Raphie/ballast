@@ -8642,3 +8642,13 @@
 {"seq":8640,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.03,"chg24h":0.00514,"ts":1789999021925}
 {"seq":8641,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":495.21,"chg24h":0.00217,"ts":1789999021925}
 {"seq":8642,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":767.31,"chg24h":0.00583,"ts":1789999021925}
+{"seq":8643,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":85371.73,"chg24h":0.05919,"ts":1789999925361}
+{"seq":8644,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2724.5,"chg24h":0.05503,"ts":1789999925361}
+{"seq":8645,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":376.17,"chg24h":0.03341,"ts":1789999925361}
+{"seq":8646,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":223.05,"chg24h":0.00992,"ts":1789999925361}
+{"seq":8647,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":732.79,"chg24h":0.0171,"ts":1789999925361}
+{"seq":8648,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.51,"chg24h":0.00658,"ts":1789999925361}
+{"seq":8649,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":494.89,"chg24h":0.00152,"ts":1789999925361}
+{"seq":8650,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":767.54,"chg24h":0.00613,"ts":1789999925361}
+{"seq":8651,"kind":"macro","source":"yahoo-finance","headline":"Tech stocks rise, Bitcoin rallied as Treasury yields ease: AlphaCheck","severity":"medium","assetsAffected":["*"],"ts":1789999925361}
+{"seq":8652,"kind":"macro","source":"yahoo-finance","headline":"Telix Beefs Up Radioisotopes Supply With $2.35 Billion Deal; Shares Crash","severity":"high","assetsAffected":["*"],"ts":1789999925361}
