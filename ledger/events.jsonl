@@ -9408,3 +9408,11 @@
 {"seq":9406,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.18,"chg24h":0.00097,"ts":1790085743323}
 {"seq":9407,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":774.03,"chg24h":0.00842,"ts":1790085743323}
 {"seq":9408,"kind":"macro","source":"yahoo-finance","headline":"Treasury yields ease, oil falls as Trump-Xi meeting looms: AlphaCheck","severity":"medium","assetsAffected":["*"],"ts":1790085743323}
+{"seq":9409,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86193.39,"chg24h":0.00915,"ts":1790086647433}
+{"seq":9410,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2749.6,"chg24h":0.00898,"ts":1790086647433}
+{"seq":9411,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.23,"chg24h":0.00643,"ts":1790086647433}
+{"seq":9412,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":228.25,"chg24h":0.0218,"ts":1790086647433}
+{"seq":9413,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":745.64,"chg24h":0.0162,"ts":1790086647433}
+{"seq":9414,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.64,"chg24h":0.0093,"ts":1790086647433}
+{"seq":9415,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.76,"chg24h":0.00786,"ts":1790086647433}
+{"seq":9416,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.91,"chg24h":0.00734,"ts":1790086647433}
