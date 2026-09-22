@@ -9335,3 +9335,12 @@
 {"seq":9333,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.9,"chg24h":0.01152,"ts":1790078503994}
 {"seq":9334,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":506.4,"chg24h":0.0216,"ts":1790078503994}
 {"seq":9335,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.92,"chg24h":0.00914,"ts":1790078503994}
+{"seq":9336,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":85858.44,"chg24h":0.00953,"ts":1790079412556}
+{"seq":9337,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2737.8,"chg24h":0.00536,"ts":1790079412556}
+{"seq":9338,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":376.86,"chg24h":0.01923,"ts":1790079412556}
+{"seq":9339,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":226.83,"chg24h":0.01196,"ts":1790079412556}
+{"seq":9340,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":740.8,"chg24h":0.0166,"ts":1790079412556}
+{"seq":9341,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.97,"chg24h":0.01133,"ts":1790079412556}
+{"seq":9342,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":507.77,"chg24h":0.02528,"ts":1790079412556}
+{"seq":9343,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.98,"chg24h":0.00942,"ts":1790079412556}
+{"seq":9344,"kind":"macro","source":"yahoo-finance","headline":"'We simply don't know': JPMorgan waves the white flag forecasting where oil prices will go due to Iran War","severity":"high","assetsAffected":["*"],"ts":1790079412556}
