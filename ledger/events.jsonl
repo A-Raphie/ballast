@@ -9372,3 +9372,11 @@
 {"seq":9370,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":507.75,"chg24h":0.02504,"ts":1790082127649}
 {"seq":9371,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":774.24,"chg24h":0.01027,"ts":1790082127649}
 {"seq":9372,"kind":"macro","source":"yahoo-finance","headline":"BMW CEO sees risk of cheap Chinese cars in Europe but opposes tariffs","severity":"medium","assetsAffected":["*"],"ts":1790082127649}
+{"seq":9373,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86012.75,"chg24h":0.01063,"ts":1790083031787}
+{"seq":9374,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2753.12,"chg24h":0.00754,"ts":1790083031787}
+{"seq":9375,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.94,"chg24h":0.02322,"ts":1790083031787}
+{"seq":9376,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":226.12,"chg24h":0.01173,"ts":1790083031787}
+{"seq":9377,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":741.03,"chg24h":0.01795,"ts":1790083031787}
+{"seq":9378,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":340.11,"chg24h":0.0126,"ts":1790083031787}
+{"seq":9379,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":508,"chg24h":0.02481,"ts":1790083031787}
+{"seq":9380,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":774.48,"chg24h":0.01053,"ts":1790083031787}
