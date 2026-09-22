@@ -8981,3 +8981,11 @@
 {"seq":8979,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.55,"chg24h":0.01325,"ts":1790034334631}
 {"seq":8980,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.84,"chg24h":0.0139,"ts":1790034334631}
 {"seq":8981,"kind":"macro","source":"yahoo-finance","headline":"The S&amp;P 500 Is Approaching a Valuation Not Seen in 26 Years, and History Suggests a Crash Could Follow","severity":"high","assetsAffected":["*"],"ts":1790034334631}
+{"seq":8982,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86588.99,"chg24h":0.0663,"ts":1790035239941}
+{"seq":8983,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2772.8,"chg24h":0.04769,"ts":1790035239941}
+{"seq":8984,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":375.3,"chg24h":0.02847,"ts":1790035239941}
+{"seq":8985,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":227.38,"chg24h":0.02124,"ts":1790035239941}
+{"seq":8986,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":742.97,"chg24h":0.02762,"ts":1790035239941}
+{"seq":8987,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":338.71,"chg24h":0.01017,"ts":1790035239941}
+{"seq":8988,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.58,"chg24h":0.01331,"ts":1790035239941}
+{"seq":8989,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.72,"chg24h":0.01374,"ts":1790035239941}
