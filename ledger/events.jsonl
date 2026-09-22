@@ -9608,3 +9608,11 @@
 {"seq":9606,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.91,"chg24h":-0.00371,"ts":1790106619260}
 {"seq":9607,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":774.69,"chg24h":0.00078,"ts":1790106619260}
 {"seq":9608,"kind":"macro","source":"yahoo-finance","headline":"This ETF Is Obliterating the S&amp;P 500 and the Nasdaq-100 in 2026, but a Crash Might Be on the Horizon","severity":"high","assetsAffected":["*"],"ts":1790106619260}
+{"seq":9609,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86274.69,"chg24h":-0.00404,"ts":1790107525494}
+{"seq":9610,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2752.44,"chg24h":-0.00555,"ts":1790107525494}
+{"seq":9611,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.42,"chg24h":0.00802,"ts":1790107525494}
+{"seq":9612,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":228.35,"chg24h":0.0044,"ts":1790107525494}
+{"seq":9613,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":747.35,"chg24h":0.0086,"ts":1790107525494}
+{"seq":9614,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.95,"chg24h":0.00326,"ts":1790107525494}
+{"seq":9615,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.05,"chg24h":-0.00731,"ts":1790107525494}
+{"seq":9616,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.55,"chg24h":0.0005,"ts":1790107525494}
