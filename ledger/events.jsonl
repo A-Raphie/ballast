@@ -9678,3 +9678,11 @@
 {"seq":9676,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.58,"chg24h":-0.00152,"ts":1790113871740}
 {"seq":9677,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.3,"chg24h":-0.00014,"ts":1790113871740}
 {"seq":9678,"kind":"macro","source":"yahoo-finance","headline":"Record diesel prices hit transport stocks, threaten U.S. inflation","severity":"medium","assetsAffected":["*"],"ts":1790113871740}
+{"seq":9679,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86173.7,"chg24h":-0.00496,"ts":1790114777020}
+{"seq":9680,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2745.99,"chg24h":-0.00979,"ts":1790114777020}
+{"seq":9681,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.59,"chg24h":0.00909,"ts":1790114777020}
+{"seq":9682,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":228.22,"chg24h":0.00489,"ts":1790114777020}
+{"seq":9683,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":747.47,"chg24h":0.00756,"ts":1790114777020}
+{"seq":9684,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":340.06,"chg24h":0.00345,"ts":1790114777020}
+{"seq":9685,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.8,"chg24h":-0.00163,"ts":1790114777020}
+{"seq":9686,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.6,"chg24h":0.00013,"ts":1790114777020}
