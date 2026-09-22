@@ -9686,3 +9686,12 @@
 {"seq":9684,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":340.06,"chg24h":0.00345,"ts":1790114777020}
 {"seq":9685,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.8,"chg24h":-0.00163,"ts":1790114777020}
 {"seq":9686,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.6,"chg24h":0.00013,"ts":1790114777020}
+{"seq":9687,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86187.09,"chg24h":-0.00518,"ts":1790115681875}
+{"seq":9688,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2745.31,"chg24h":-0.01151,"ts":1790115681875}
+{"seq":9689,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.55,"chg24h":0.00931,"ts":1790115681875}
+{"seq":9690,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":228.44,"chg24h":0.00502,"ts":1790115681875}
+{"seq":9691,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":747.88,"chg24h":0.00805,"ts":1790115681875}
+{"seq":9692,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.96,"chg24h":0.00328,"ts":1790115681875}
+{"seq":9693,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500,"chg24h":-0.00269,"ts":1790115681875}
+{"seq":9694,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.63,"chg24h":0.00003,"ts":1790115681875}
+{"seq":9695,"kind":"macro","source":"yahoo-finance","headline":"Stocks Supported by Lower Crude Prices and Bond Yields","severity":"medium","assetsAffected":["*"],"ts":1790115681875}
