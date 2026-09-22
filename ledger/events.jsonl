@@ -9399,3 +9399,12 @@
 {"seq":9397,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.2,"chg24h":0.00918,"ts":1790084839348}
 {"seq":9398,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.97,"chg24h":0.00897,"ts":1790084839348}
 {"seq":9399,"kind":"macro","source":"yahoo-finance","headline":"Binance Investigated By U.S. For Potential Sanctions Violations","severity":"medium","assetsAffected":["*"],"ts":1790084839348}
+{"seq":9400,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86191.68,"chg24h":0.00798,"ts":1790085743323}
+{"seq":9401,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2755.04,"chg24h":0.00718,"ts":1790085743323}
+{"seq":9402,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":376.07,"chg24h":-0.00326,"ts":1790085743323}
+{"seq":9403,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":227.29,"chg24h":0.01759,"ts":1790085743323}
+{"seq":9404,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":744.98,"chg24h":0.01651,"ts":1790085743323}
+{"seq":9405,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":340.3,"chg24h":0.01191,"ts":1790085743323}
+{"seq":9406,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.18,"chg24h":0.00097,"ts":1790085743323}
+{"seq":9407,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":774.03,"chg24h":0.00842,"ts":1790085743323}
+{"seq":9408,"kind":"macro","source":"yahoo-finance","headline":"Treasury yields ease, oil falls as Trump-Xi meeting looms: AlphaCheck","severity":"medium","assetsAffected":["*"],"ts":1790085743323}
