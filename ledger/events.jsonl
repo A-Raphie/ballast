@@ -9504,3 +9504,12 @@
 {"seq":9502,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":342.47,"chg24h":0.00999,"ts":1790095743506}
 {"seq":9503,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.65,"chg24h":0.0001,"ts":1790095743506}
 {"seq":9504,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.35,"chg24h":0.00149,"ts":1790095743506}
+{"seq":9505,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86529,"chg24h":0.00733,"ts":1790096648520}
+{"seq":9506,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2747.91,"chg24h":-0.00156,"ts":1790096648520}
+{"seq":9507,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.19,"chg24h":0.01195,"ts":1790096648520}
+{"seq":9508,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":229.64,"chg24h":0.01375,"ts":1790096648520}
+{"seq":9509,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":745.29,"chg24h":0.00862,"ts":1790096648520}
+{"seq":9510,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":342.43,"chg24h":0.01051,"ts":1790096648520}
+{"seq":9511,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":496.99,"chg24h":0.00129,"ts":1790096648520}
+{"seq":9512,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.47,"chg24h":0.00153,"ts":1790096648520}
+{"seq":9513,"kind":"macro","source":"yahoo-finance","headline":"Fed's Barkin says economy may be firming, inflation not limited to energy, tariff shocks","severity":"medium","assetsAffected":["*"],"ts":1790096648520}
