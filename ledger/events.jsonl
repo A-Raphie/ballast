@@ -9024,3 +9024,11 @@
 {"seq":9022,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":501.08,"chg24h":0.01279,"ts":1790038856310}
 {"seq":9023,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.82,"chg24h":0.01244,"ts":1790038856310}
 {"seq":9024,"kind":"macro","source":"yahoo-finance","headline":"Is a Recession Coming in 2026? History Has Good and Bad News for Investors.","severity":"medium","assetsAffected":["*"],"ts":1790038856310}
+{"seq":9025,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":85878.62,"chg24h":0.05028,"ts":1790039759193}
+{"seq":9026,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2754.68,"chg24h":0.02538,"ts":1790039759193}
+{"seq":9027,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":376.75,"chg24h":0.02657,"ts":1790039759193}
+{"seq":9028,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":227.53,"chg24h":0.01794,"ts":1790039759193}
+{"seq":9029,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":743.65,"chg24h":0.02537,"ts":1790039759193}
+{"seq":9030,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":338.74,"chg24h":0.01125,"ts":1790039759193}
+{"seq":9031,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":500.8,"chg24h":0.012,"ts":1790039759193}
+{"seq":9032,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.66,"chg24h":0.0118,"ts":1790039759193}
