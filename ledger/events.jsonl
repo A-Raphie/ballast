@@ -9722,3 +9722,12 @@
 {"seq":9720,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.98,"chg24h":0.00339,"ts":1790118400002}
 {"seq":9721,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.5,"chg24h":-0.00452,"ts":1790118400002}
 {"seq":9722,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.61,"chg24h":-0.00018,"ts":1790118400002}
+{"seq":9723,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":86321.74,"chg24h":-0.00289,"ts":1790119303141}
+{"seq":9724,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2763.3,"chg24h":-0.00529,"ts":1790119303141}
+{"seq":9725,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":379.11,"chg24h":0.00975,"ts":1790119303141}
+{"seq":9726,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":228.36,"chg24h":0.00488,"ts":1790119303141}
+{"seq":9727,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":747.99,"chg24h":0.00714,"ts":1790119303141}
+{"seq":9728,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.96,"chg24h":0.00368,"ts":1790119303141}
+{"seq":9729,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.38,"chg24h":-0.00486,"ts":1790119303141}
+{"seq":9730,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.55,"chg24h":-0.00035,"ts":1790119303141}
+{"seq":9731,"kind":"macro","source":"yahoo-finance","headline":"Stocks and Bonds Climb as Slumping Crude Prices Ease Inflation Risks","severity":"medium","assetsAffected":["*"],"ts":1790119303141}
