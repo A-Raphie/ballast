@@ -9265,3 +9265,4 @@
 {"seq":9263,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":339.61,"chg24h":0.01279,"ts":1790070346408}
 {"seq":9264,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":503.75,"chg24h":0.01897,"ts":1790070346408}
 {"seq":9265,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":773.6,"chg24h":0.00912,"ts":1790070346408}
+{"seq":9266,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790071252563}
