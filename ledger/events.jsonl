@@ -9860,3 +9860,13 @@
 {"seq":9858,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.41,"chg24h":-0.02084,"ts":1790177810805}
 {"seq":9859,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.98,"chg24h":0.00841,"ts":1790177810805}
 {"seq":9860,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":768.93,"chg24h":-0.00516,"ts":1790177810805}
+{"seq":9861,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":84248.49,"chg24h":-0.02432,"ts":1790178715083}
+{"seq":9862,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2658.8,"chg24h":-0.03131,"ts":1790178715083}
+{"seq":9863,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":380.5,"chg24h":0.01137,"ts":1790178715083}
+{"seq":9864,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":224.86,"chg24h":-0.01619,"ts":1790178715083}
+{"seq":9865,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":740.33,"chg24h":-0.00561,"ts":1790178715083}
+{"seq":9866,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.74,"chg24h":-0.01799,"ts":1790178715083}
+{"seq":9867,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.04,"chg24h":0.00759,"ts":1790178715083}
+{"seq":9868,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":768.32,"chg24h":-0.00589,"ts":1790178715083}
+{"seq":9869,"kind":"macro","source":"yahoo-finance","headline":"10-year Treasury yield hits highest level since 2007 as market prices in another Fed rate hike","severity":"medium","assetsAffected":["*"],"ts":1790178715083}
+{"seq":9870,"kind":"macro","source":"yahoo-finance","headline":"ARM Vs. AMD: Who Is Going to Win the Agentic AI CPU Revival War?","severity":"high","assetsAffected":["*"],"ts":1790178715083}
