@@ -10212,3 +10212,11 @@
 {"seq":10210,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.45,"chg24h":-0.00062,"ts":1790214917665}
 {"seq":10211,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.92,"chg24h":-0.00876,"ts":1790214917665}
 {"seq":10212,"kind":"macro","source":"yahoo-finance","headline":"Fed’s Collins Says Rate Hike Will Help Return Inflation to Goal","severity":"medium","assetsAffected":["*"],"ts":1790214917665}
+{"seq":10213,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":83782.02,"chg24h":-0.02937,"ts":1790215821031}
+{"seq":10214,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2666.71,"chg24h":-0.03022,"ts":1790215821031}
+{"seq":10215,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":379.31,"chg24h":0.00174,"ts":1790215821031}
+{"seq":10216,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":224.88,"chg24h":-0.01377,"ts":1790215821031}
+{"seq":10217,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":739.89,"chg24h":-0.00953,"ts":1790215821031}
+{"seq":10218,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.75,"chg24h":-0.01049,"ts":1790215821031}
+{"seq":10219,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":499.12,"chg24h":-0.00112,"ts":1790215821031}
+{"seq":10220,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.47,"chg24h":-0.00913,"ts":1790215821031}
