@@ -10274,3 +10274,11 @@
 {"seq":10272,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.47,"chg24h":-0.00979,"ts":1790221241780}
 {"seq":10273,"kind":"macro","source":"yahoo-finance","headline":"A Bank Alleged a Loan Default. Then a Dave's Operator Declared Chapter 11 Bankruptcy and Filed a Countersuit.","severity":"high","assetsAffected":["*"],"ts":1790221241780}
 {"seq":10274,"kind":"macro","source":"yahoo-finance","headline":"World’s Best-Performing ETF Is Up 4,427% in 2026 Alone. Blame the Iran War.","severity":"high","assetsAffected":["*"],"ts":1790221241780}
+{"seq":10275,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":83888.63,"chg24h":-0.0328,"ts":1790222145302}
+{"seq":10276,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2675.16,"chg24h":-0.03619,"ts":1790222145302}
+{"seq":10277,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":378.8,"chg24h":-0.00076,"ts":1790222145302}
+{"seq":10278,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":225.09,"chg24h":-0.01518,"ts":1790222145302}
+{"seq":10279,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":739.74,"chg24h":-0.01024,"ts":1790222145302}
+{"seq":10280,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":336.11,"chg24h":-0.01292,"ts":1790222145302}
+{"seq":10281,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":498.45,"chg24h":-0.0033,"ts":1790222145302}
+{"seq":10282,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":766.46,"chg24h":-0.00993,"ts":1790222145302}
