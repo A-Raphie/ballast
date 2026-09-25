@@ -10730,3 +10730,4 @@
 {"seq":10728,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790312738055}
 {"seq":10729,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790313638840}
 {"seq":10730,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790314539917}
+{"seq":10731,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790315440974}
