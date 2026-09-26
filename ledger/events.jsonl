@@ -11353,3 +11353,4 @@
 {"seq":11351,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790415668986}
 {"seq":11352,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790416570106}
 {"seq":11353,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790417471222}
+{"seq":11354,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1790418372320}
