@@ -12492,3 +12492,11 @@
 {"seq":12490,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":340.2,"chg24h":0.00088,"ts":1790567919129}
 {"seq":12491,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":516.64,"chg24h":-0.00185,"ts":1790567919129}
 {"seq":12492,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":768.37,"chg24h":-0.00368,"ts":1790567919129}
+{"seq":12493,"kind":"market","symbol":"BTCUSDT","market":"crypto","px":83445.27,"chg24h":-0.0124,"ts":1790568826257}
+{"seq":12494,"kind":"market","symbol":"ETHUSDT","market":"crypto","px":2655.16,"chg24h":-0.01636,"ts":1790568826257}
+{"seq":12495,"kind":"market","symbol":"RTSLAUSDT","market":"rtoken","px":370.34,"chg24h":-0.00323,"ts":1790568826257}
+{"seq":12496,"kind":"market","symbol":"RNVDAUSDT","market":"rtoken","px":224.1,"chg24h":0.00031,"ts":1790568826257}
+{"seq":12497,"kind":"market","symbol":"RQQQUSDT","market":"rtoken","px":739.43,"chg24h":-0.00669,"ts":1790568826257}
+{"seq":12498,"kind":"market","symbol":"RAAPLUSDT","market":"rtoken","px":340.23,"chg24h":0.00097,"ts":1790568826257}
+{"seq":12499,"kind":"market","symbol":"RMSFTUSDT","market":"rtoken","px":516.83,"chg24h":-0.00149,"ts":1790568826257}
+{"seq":12500,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":768.71,"chg24h":-0.00324,"ts":1790568826257}
