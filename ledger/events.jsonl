@@ -15412,3 +15412,4 @@
 {"seq":15410,"kind":"market","symbol":"RSPYUSDT","market":"rtoken","px":769.45,"chg24h":0.00711,"ts":1790975959880}
 {"seq":15411,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1791033232367}
 {"seq":15412,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1791034133052}
+{"seq":15413,"kind":"sensor_error","detail":"tickers fetch failed: TypeError: fetch failed","ts":1791035033734}
